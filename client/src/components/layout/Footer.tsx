@@ -6,8 +6,8 @@ export function Footer() {
     <footer className="bg-slate-950 text-slate-400 pt-20 pb-10 px-4 border-t border-slate-900">
       <div className="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         <div className="col-span-1 lg:col-span-1">
-          <div className="flex items-center gap-2 mb-6">
-              <Rocket className="w-6 h-6 text-lime-400" />
+          <div className="flex items-center gap-3 mb-6">
+              <img src="/logo.png" alt="Web Nova Crew Logo" className="h-12 w-auto object-contain" />
               <span className="font-poppins font-bold text-xl text-white">WEB NOVA CREW</span>
           </div>
           <p className="mb-6 leading-relaxed text-slate-400">

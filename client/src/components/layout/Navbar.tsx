@@ -37,9 +37,11 @@ export function Navbar() {
         <div className="container mx-auto px-4 md:px-6 flex items-center justify-between text-white">
           <Link href="/">
             <a className="flex items-center gap-2 group">
-               <div className="relative flex items-center justify-center w-10 h-10 bg-lime-400 rounded-lg transform -rotate-3 shadow-lg group-hover:rotate-0 transition-transform duration-300">
-                  <Rocket className="w-6 h-6 text-blue-900" />
-               </div>
+               <img 
+                 src="/logo.png" 
+                 alt="Web Nova Crew Logo" 
+                 className="h-10 w-auto object-contain"
+               />
                <div className="flex flex-col">
                   <span className="font-poppins font-bold text-xl leading-none tracking-tight">WEB NOVA</span>
                   <span className="font-poppins font-bold text-sm text-lime-400 leading-none tracking-widest">CREW</span>
