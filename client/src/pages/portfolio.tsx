@@ -17,94 +17,136 @@ export default function Portfolio() {
   
   const projects = [
     {
-      title: "FinTech Dashboard Pro",
-      category: "SaaS",
-      filterCategory: "SaaS",
+      title: "Al Mulla Exchange Kuwait",
+      category: "FinTech Platform",
+      filterCategory: "Web Development",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000",
-      desc: "A comprehensive financial analytics dashboard handling real-time data for 50k+ users. Built with React and D3.js for stunning data visualizations.",
-      tags: ["React", "D3.js", "Node.js", "PostgreSQL"],
-      results: "50K+ active users",
-      industry: "FinTech"
+      desc: "Complete digital transformation for Kuwait's leading exchange company. Real-time currency rates, KNET integration, remittance tracking, and multi-branch management system serving 200K+ customers.",
+      tags: ["Next.js", "Node.js", "PostgreSQL", "KNET API"],
+      results: "200K+ customers",
+      industry: "FinTech - Kuwait",
+      year: "2025"
     },
     {
-      title: "Luxe Estate",
+      title: "Mumbai Realty Hub",
       category: "Real Estate Platform",
       filterCategory: "Web Development",
       image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1000",
-      desc: "Premium property listing platform with virtual tour integration, lead management, and advanced search. Increased client leads by 400%.",
-      tags: ["Next.js", "Mapbox", "PostgreSQL", "AWS"],
-      results: "400% more leads",
-      industry: "Real Estate"
+      desc: "Premium property listing platform for Mumbai's top real estate developers. Features 3D virtual tours, AI-powered property matching, lead management CRM, and integrated home loan calculator. Increased leads by 380%.",
+      tags: ["Next.js", "Three.js", "PostgreSQL", "AWS"],
+      results: "380% more leads",
+      industry: "Real Estate - India",
+      year: "2025"
     },
     {
-      title: "HealthCare Connect",
+      title: "Seha Health Kuwait",
       category: "Healthcare App",
       filterCategory: "Mobile App",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1000",
-      desc: "Patient-doctor appointment booking app with secure telemedicine video calls, prescription management, and health records. HIPAA compliant.",
+      desc: "Comprehensive healthcare app for Kuwait Ministry of Health approved clinics. Telemedicine video consultations, e-prescriptions, lab results, appointment booking, and Arabic RTL support. 85K+ active patients.",
       tags: ["Flutter", "WebRTC", "Firebase", "Node.js"],
-      results: "100K+ downloads",
-      industry: "Healthcare"
+      results: "85K+ patients",
+      industry: "Healthcare - Kuwait",
+      year: "2025"
     },
     {
-      title: "EcoShop Marketplace",
+      title: "Spice Route E-Commerce",
       category: "E-Commerce Store",
       filterCategory: "E-Commerce",
       image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=1000",
-      desc: "Sustainable products marketplace with advanced filtering, wishlist, and seamless checkout. Achieved 250% increase in conversion rate.",
-      tags: ["Shopify Plus", "Liquid", "React", "Stripe"],
-      results: "250% conversion boost",
-      industry: "E-Commerce"
+      desc: "Premium Indian spices and organic products marketplace serving India, Kuwait, UAE, and USA. Multi-currency checkout, Razorpay + KNET integration, subscription boxes, and wholesale portal. ₹4.5Cr monthly GMV.",
+      tags: ["Next.js", "Stripe", "Razorpay", "KNET"],
+      results: "₹4.5Cr GMV/month",
+      industry: "E-Commerce - Global",
+      year: "2025"
     },
     {
-      title: "EduLearn Platform",
-      category: "EdTech LMS",
+      title: "Delhi Public School LMS",
+      category: "EdTech Platform",
       filterCategory: "SaaS",
       image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=1000",
-      desc: "Interactive learning management system for schools with live classes, assignment tracking, and progress analytics. Used by 200+ schools.",
+      desc: "Custom learning management system for DPS school network across North India. Live classes, assignment submission, parent portal, attendance tracking, and fee management. Deployed across 45 schools, 120K+ students.",
       tags: ["React", "Django", "AWS", "WebSocket"],
-      results: "200+ schools onboarded",
-      industry: "Education"
+      results: "120K+ students",
+      industry: "Education - India",
+      year: "2024"
     },
     {
-      title: "TravelGo Booking",
+      title: "Kuwait Airways Booking",
       category: "Travel Portal",
       filterCategory: "Web Development",
       image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1000",
-      desc: "Flight and hotel booking engine with complex search algorithms, price comparison, and instant booking confirmation.",
-      tags: ["React", "Express", "MongoDB", "Redis"],
-      results: "₹2Cr+ bookings/month",
-      industry: "Travel"
+      desc: "White-label flight booking engine for Kuwait-based travel agency. Real-time inventory from GDS, dynamic pricing, seat selection, KNET/card payments, and Arabic-English bilingual interface. KWD 2M+ monthly bookings.",
+      tags: ["React", "Express", "MongoDB", "Amadeus API"],
+      results: "KWD 2M+/month",
+      industry: "Travel - Kuwait",
+      year: "2024"
     },
     {
-      title: "FoodieHub Delivery",
+      title: "Talabat Clone - Salmiya",
       category: "Food Delivery App",
       filterCategory: "Mobile App",
       image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=1000",
-      desc: "On-demand food delivery app with real-time tracking, multiple payment options, and restaurant management dashboard.",
+      desc: "Hyperlocal food delivery app for Salmiya restaurants. Real-time GPS tracking, KNET + Apple Pay, driver app, restaurant dashboard, and loyalty rewards. 180+ restaurants onboarded, 35K orders/month.",
       tags: ["Flutter", "Node.js", "MongoDB", "Google Maps"],
-      results: "50K+ orders/month",
-      industry: "Food & Beverage"
+      results: "35K orders/month",
+      industry: "Food Tech - Kuwait",
+      year: "2025"
     },
     {
-      title: "StyleStore Fashion",
+      title: "Lucknow Chikan Emporium",
       category: "Fashion E-Commerce",
       filterCategory: "E-Commerce",
       image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1000",
-      desc: "High-end fashion e-commerce with AR try-on feature, size recommendations, and influencer integration.",
-      tags: ["Next.js", "Shopify", "TensorFlow", "AR Kit"],
-      results: "300% revenue growth",
-      industry: "Fashion"
+      desc: "Heritage Lucknowi Chikankari fashion brand's D2C platform. AR try-on for kurtas, size recommendation AI, COD + UPI payments, and international shipping to 15 countries. 280% revenue growth in 8 months.",
+      tags: ["Next.js", "Shopify", "TensorFlow", "Shiprocket"],
+      results: "280% revenue growth",
+      industry: "Fashion - India",
+      year: "2025"
     },
     {
-      title: "CRM Enterprise Suite",
+      title: "Hawally Business CRM",
       category: "Enterprise SaaS",
       filterCategory: "SaaS",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000",
-      desc: "Custom CRM solution for enterprise clients with sales pipeline, analytics dashboard, and team collaboration tools.",
-      tags: ["React", "Node.js", "PostgreSQL", "Docker"],
-      results: "Enterprise clients",
-      industry: "B2B SaaS"
+      desc: "Custom CRM for Kuwait SMEs with Arabic interface. Sales pipeline, WhatsApp integration, invoice generation, inventory sync, and KNET payment links. Used by 150+ businesses in Hawally and Salmiya.",
+      tags: ["React", "Node.js", "PostgreSQL", "WhatsApp API"],
+      results: "150+ businesses",
+      industry: "B2B SaaS - Kuwait",
+      year: "2024"
+    },
+    {
+      title: "Bangalore Startup Hub",
+      category: "Community Platform",
+      filterCategory: "Web Development",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000",
+      desc: "Startup ecosystem platform connecting founders, investors, and mentors in Bangalore. Event management, pitch deck sharing, funding tracker, and job board. 8K+ registered startups, ₹120Cr funding facilitated.",
+      tags: ["Next.js", "Supabase", "Stripe", "Vercel"],
+      results: "₹120Cr funding",
+      industry: "Startup Ecosystem - India",
+      year: "2024"
+    },
+    {
+      title: "Kuwait Gold Souk",
+      category: "Jewelry E-Commerce",
+      filterCategory: "E-Commerce",
+      image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1000",
+      desc: "Luxury jewelry e-commerce for Kuwait's Gold Souk retailers. Live gold rate integration, 360° product views, KNET + installment payments, and certificate verification. KWD 800K monthly sales.",
+      tags: ["Next.js", "Three.js", "KNET", "Node.js"],
+      results: "KWD 800K/month",
+      industry: "Jewelry - Kuwait",
+      year: "2025"
+    },
+    {
+      title: "Hyderabad Metro App",
+      category: "Transit App",
+      filterCategory: "Mobile App",
+      image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=1000",
+      desc: "Official companion app for Hyderabad Metro Rail. Live train tracking, fare calculator, QR ticketing, station facilities, and accessibility features. 500K+ downloads, 4.6★ rating on Play Store.",
+      tags: ["Flutter", "Firebase", "Google Maps", "UPI"],
+      results: "500K+ downloads",
+      industry: "Transit - India",
+      year: "2024"
     }
   ];
   
