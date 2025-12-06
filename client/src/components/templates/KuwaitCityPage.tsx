@@ -1,0 +1,372 @@
+import { Link } from "wouter";
+import { 
+  ArrowRight, CheckCircle2, Smartphone, MapPin, Building2, Users, 
+  TrendingUp, Phone, Award, Rocket, Star, Zap, Shield, Code2, Globe
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { SEO } from "@/components/seo/Head";
+import { LocalBusinessSchema, BreadcrumbSchema, ServiceSchema } from "@/components/seo/SchemaMarkup";
+import { TestimonialsSection } from "@/components/sections/Testimonials";
+import { KuwaitCityData } from "@/data/kuwait-cities";
+
+interface KuwaitCityPageProps {
+  city: KuwaitCityData;
+}
+
+export function KuwaitCityPage({ city }: KuwaitCityPageProps) {
+  const services = [
+    { title: "Android & iOS Apps", desc: `Native apps for ${city.name} businesses`, icon: <Smartphone className="w-6 h-6" /> },
+    { title: "Arabic + English Apps", desc: `Bilingual RTL apps for Kuwait market`, icon: <Globe className="w-6 h-6" /> },
+    { title: "KNET Integration", desc: `Kuwait payment gateway integration`, icon: <Code2 className="w-6 h-6" /> },
+    { title: "AI-Powered Apps", desc: `Intelligent apps with automation`, icon: <Zap className="w-6 h-6" /> },
+  ];
+
+  const kuwaitFeatures = [
+    "RTL Arabic Layout & Bilingual UI",
+    "KNET, TAP, STC Pay Integration",
+    "Kuwait Cloud Hosting",
+    "Arabic Content Management",
+    "Kuwait Business Compliance",
+    "Local Payment Methods",
+    "Arabic Push Notifications",
+    "Kuwait Phone Number Integration",
+    "Arabic Customer Support",
+    "Kuwait Market Optimization"
+  ];
+
+  const whyChooseUs = [
+    { title: `${city.name} Expertise`, desc: "Deep understanding of Kuwait market and culture", icon: <MapPin className="w-5 h-5" /> },
+    { title: "Arabic + English Team", desc: "Bilingual development and support", icon: <Globe className="w-5 h-5" /> },
+    { title: "Fast Delivery", desc: "Launch in 15-60 days", icon: <Rocket className="w-5 h-5" /> },
+    { title: "Kuwait Pricing", desc: "200-4,500 KWD transparent pricing", icon: <Star className="w-5 h-5" /> },
+    { title: "Local Support", desc: "Kuwait business hours support", icon: <Users className="w-5 h-5" /> },
+    { title: "Secure & Compliant", desc: "Enterprise-grade security", icon: <Shield className="w-5 h-5" /> },
+  ];
+
+  const faqs = [
+    {
+      question: `How much does app development cost in ${city.name}, Kuwait?`,
+      answer: `App development costs in ${city.name} range from 200 KWD to 4,500 KWD depending on features and complexity. Simple apps start at 200-600 KWD, business apps cost 650-1,400 KWD, and premium AI apps cost 1,500-4,500 KWD.`
+    },
+    {
+      question: `Do you provide Arabic language support for ${city.name} apps?`,
+      answer: `Yes! All our apps for ${city.name} and Kuwait include full Arabic + English bilingual support with RTL (right-to-left) layout, Arabic content management, and Arabic push notifications.`
+    },
+    {
+      question: `Can you integrate KNET payment gateway for ${city.name} businesses?`,
+      answer: `Absolutely! We specialize in KNET integration for ${city.name} businesses, along with TAP, STC Pay, and other Kuwait payment gateways. We ensure secure, compliant payment processing.`
+    },
+    {
+      question: `How long does app development take in ${city.name}?`,
+      answer: `App development in ${city.name} takes 15-60 days. Simple apps take 15-25 days, business apps require 4-8 weeks, and complex enterprise apps take 8-16 weeks including Arabic localization.`
+    },
+    {
+      question: `Do you provide support in ${city.name}, Kuwait?`,
+      answer: `Yes, we provide dedicated support for ${city.name} clients during Kuwait business hours. Our bilingual team handles technical support, updates, and feature additions for all ${city.name} projects.`
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-950 font-sans">
+      <SEO 
+        title={`App Development Company in ${city.name}, Kuwait | Mobile App Developers`}
+        description={`Leading app development company in ${city.name}, Kuwait. We build Arabic + English apps with KNET integration for ${city.governorate}. ${city.industries.slice(0, 3).join(', ')}. 200 KWD onwards.`}
+        keywords={city.keywords.join(', ')}
+      />
+      <LocalBusinessSchema />
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Kuwait Locations", url: "https://webnovacrew.com/locations/kuwait" },
+        { name: `${city.name}`, url: `https://webnovacrew.com/locations/app-development-${city.slug}` }
+      ]} />
+      <ServiceSchema 
+        serviceName={`App Development in ${city.name}, Kuwait`}
+        serviceDescription={`Professional mobile app development services in ${city.name}, ${city.governorate}. Arabic + English apps with KNET integration for Kuwait businesses.`}
+        serviceUrl={`https://webnovacrew.com/locations/app-development-${city.slug}`}
+      />
+      
+      <Navbar />
+
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-emerald-950/30 to-slate-950">
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-emerald-500/20 rounded-full blur-[100px]"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-teal-500/20 rounded-full blur-[80px]"></div>
+        </div>
+
+        <div className="container mx-auto max-w-7xl px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-6">
+              <MapPin className="w-4 h-4 text-emerald-400" />
+              <span className="text-sm text-emerald-300">{city.name} ({city.nameArabic}) • {city.governorate} • {city.population}</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-emerald-100 to-teal-100 bg-clip-text text-transparent">
+              App Development Company in {city.name}, Kuwait
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
+              {city.description}
+            </p>
+
+            <p className="text-lg text-slate-400 mb-8">
+              We build <span className="text-emerald-400 font-semibold">Arabic + English bilingual apps</span> with KNET integration for {city.name} businesses in {city.industries.slice(0, 3).join(', ')}, and more.
+            </p>
+
+            <div className="flex flex-wrap gap-4 justify-center mb-12">
+              <Button size="lg" className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8">
+                <Link href="/contact" className="flex items-center gap-2">
+                  Get Free Quote <ArrowRight className="w-5 h-5" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-slate-700 hover:bg-slate-800">
+                <Link href="/portfolio" className="flex items-center gap-2">
+                  View Kuwait Apps
+                </Link>
+              </Button>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-emerald-400 mb-1">150+</div>
+                <div className="text-sm text-slate-400">Kuwait Apps</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-teal-400 mb-1">200</div>
+                <div className="text-sm text-slate-400">KWD Starting</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-emerald-400 mb-1">15-60</div>
+                <div className="text-sm text-slate-400">Days Delivery</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-teal-400 mb-1">100%</div>
+                <div className="text-sm text-slate-400">Arabic Support</div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Industries We Serve */}
+      <section className="py-20 bg-slate-900/50">
+        <div className="container mx-auto max-w-7xl px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+              Industries We Serve in {city.name}
+            </h2>
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+              Custom app solutions for {city.name}'s key business sectors
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {city.industries.map((industry, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: index * 0.05 }}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-emerald-500/50 transition-all"
+              >
+                <div className="flex items-center gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                  <h3 className="text-lg font-semibold text-white">{industry}</h3>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="py-20">
+        <div className="container mx-auto max-w-7xl px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+              Our App Development Services in {city.name}
+            </h2>
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+              Complete mobile app solutions for Kuwait businesses
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-emerald-500/50 transition-all"
+              >
+                <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 mb-4">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                <p className="text-slate-400">{service.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Kuwait-Specific Features */}
+      <section className="py-20 bg-slate-900/50">
+        <div className="container mx-auto max-w-7xl px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+              Kuwait-Specific Features
+            </h2>
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+              Apps built specifically for Kuwait market requirements
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            {kuwaitFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.03 }}
+                className="flex items-center gap-3 bg-slate-800/30 border border-slate-700/50 rounded-lg p-4"
+              >
+                <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                <span className="text-slate-200">{feature}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20">
+        <div className="container mx-auto max-w-7xl px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+              Why {city.name} Businesses Choose Us
+            </h2>
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+              Your trusted app development partner in Kuwait
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {whyChooseUs.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-emerald-500/50 transition-all"
+              >
+                <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 mb-4">
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                <p className="text-slate-400">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Landmarks */}
+      <section className="py-20 bg-slate-900/50">
+        <div className="container mx-auto max-w-7xl px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+              Serving Businesses Across {city.name}
+            </h2>
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+              We work with clients in all major areas of {city.name}
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-4 justify-center max-w-4xl mx-auto">
+            {city.landmarks.map((landmark, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: index * 0.05 }}
+                className="px-6 py-3 bg-slate-800/50 border border-slate-700 rounded-full text-slate-300 hover:border-emerald-500/50 transition-all"
+              >
+                <MapPin className="w-4 h-4 inline mr-2 text-emerald-400" />
+                {landmark}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <TestimonialsSection />
+
+      {/* FAQs */}
+      <section className="py-20">
+        <div className="container mx-auto max-w-4xl px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+              App Development FAQs - {city.name}
+            </h2>
+            <p className="text-xl text-slate-400">
+              Common questions from {city.name} businesses
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6"
+              >
+                <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
+                <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-br from-emerald-950/50 to-teal-950/50 border-t border-slate-800">
+        <div className="container mx-auto max-w-4xl px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            Ready to Build Your App in {city.name}?
+          </h2>
+          <p className="text-xl text-slate-300 mb-8">
+            Get a free consultation and detailed proposal for your {city.name} app project
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button size="lg" className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8">
+              <Link href="/contact" className="flex items-center gap-2">
+                <Phone className="w-5 h-5" />
+                Contact {city.name} Team
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" className="border-slate-600 hover:bg-slate-800 text-white">
+              <Link href="/pricing">
+                View Kuwait Pricing
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}

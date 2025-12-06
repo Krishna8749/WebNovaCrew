@@ -26,10 +26,14 @@ export function Footer() {
           <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-sm border-l-4 border-lime-500 pl-3">Quick Links</h4>
           <ul className="space-y-3">
             <li><Link href="/"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-lime-500"></span> Home</a></Link></li>
-            <li><Link href="/about"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-700 hover:bg-lime-500 transition-colors"></span> About Us</a></Link></li>
-            <li><Link href="/services"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-700 hover:bg-lime-500 transition-colors"></span> Services</a></Link></li>
-            <li><Link href="/portfolio"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-700 hover:bg-lime-500 transition-colors"></span> Portfolio</a></Link></li>
-            <li><Link href="/contact"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-700 hover:bg-lime-500 transition-colors"></span> Contact</a></Link></li>
+            <li><Link href="/about"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span> About Us</a></Link></li>
+            <li><Link href="/services"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span> Services</a></Link></li>
+            <li><Link href="/portfolio"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span> Portfolio</a></Link></li>
+            <li><Link href="/blog"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span> Blog</a></Link></li>
+            <li><Link href="/pricing"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span> Pricing</a></Link></li>
+            <li><Link href="/team"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span> Our Team</a></Link></li>
+            <li><Link href="/careers"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span> Careers</a></Link></li>
+            <li><Link href="/contact"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span> Contact</a></Link></li>
           </ul>
         </div>
 
@@ -49,11 +53,11 @@ export function Footer() {
           <ul className="space-y-4">
             <li className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-lime-400 mt-1 shrink-0" /> 
-              <span>4th Floor, Cabin 403 B, E-195, Phase 8B, Sector 74, Mohali, India 160055</span>
+              <span>2nd Floor, Shree Plaza Complex, Vikas Nagar, Ring Road, Lucknow 226022, UP, India</span>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="w-5 h-5 text-lime-400 shrink-0" /> 
-              <a href="tel:+919876543210" className="hover:text-white">+91 98765 43210</a>
+              <a href="tel:+919872364476" className="hover:text-white">+91 98723 64476</a>
             </li>
             <li className="flex items-center gap-3">
               <Mail className="w-5 h-5 text-lime-400 shrink-0" /> 
@@ -72,15 +76,6 @@ export function Footer() {
         </div>
       </div>
 
-      {/* WhatsApp Floating Button */}
-      <a 
-        href="https://wa.me/919876543210" 
-        target="_blank" 
-        className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg shadow-green-500/30 hover:scale-110 transition-transform flex items-center justify-center"
-        aria-label="Chat on WhatsApp"
-      >
-        <MessageCircle className="w-7 h-7 fill-current" />
-      </a>
     </footer>
   );
 }
