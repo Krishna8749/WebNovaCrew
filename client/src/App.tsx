@@ -34,6 +34,7 @@ import OnDemandAppDevelopment from "@/pages/services/on-demand-app-development";
 import FlutterAppDevelopment from "@/pages/services/flutter-app-development";
 import ReactNativeDevelopment from "@/pages/services/react-native-development";
 import ERPCRMDevelopment from "@/pages/services/erp-crm-development";
+import AIChatbotDevelopment from "@/pages/services/ai-chatbot-development";
 
 // India Location Pages - Tier 1 (Dedicated Pages)
 import AppDevelopmentMumbai from "@/pages/locations/india/app-development-mumbai";
@@ -126,6 +127,7 @@ function Router() {
       <Route path="/services/flutter-app-development" component={FlutterAppDevelopment} />
       <Route path="/services/react-native-development" component={ReactNativeDevelopment} />
       <Route path="/services/erp-crm-development" component={ERPCRMDevelopment} />
+      <Route path="/services/ai-chatbot-development" component={AIChatbotDevelopment} />
       
       {/* India Location Pages - Tier 1 Metro Cities */}
       <Route path="/locations/app-development-mumbai" component={AppDevelopmentMumbai} />
