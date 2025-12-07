@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Rocket, Globe, Users, Phone, MessageCircle, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Rocket, Globe, Users, Phone, MessageCircle, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube } from "lucide-react";
 
 export function Footer() {
   return (
@@ -14,11 +14,18 @@ export function Footer() {
             India's No.1 Custom Web & App Development Agency. We transform ideas into digital powerhouses using cutting-edge technology.
           </p>
           <div className="flex gap-4">
-            {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
-              <a key={i} href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-lime-500 hover:text-slate-900 transition-all cursor-pointer group">
-                <Icon className="w-5 h-5" />
-              </a>
-            ))}
+            <a href="https://www.facebook.com/61575876269804" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-lime-500 hover:text-slate-900 transition-all cursor-pointer group" aria-label="Facebook">
+              <Facebook className="w-5 h-5" />
+            </a>
+            <a href="https://x.com/WebNovaCrew" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-lime-500 hover:text-slate-900 transition-all cursor-pointer group" aria-label="Twitter">
+              <Twitter className="w-5 h-5" />
+            </a>
+            <a href="https://www.linkedin.com/company/web-nova-crew" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-lime-500 hover:text-slate-900 transition-all cursor-pointer group" aria-label="LinkedIn">
+              <Linkedin className="w-5 h-5" />
+            </a>
+            <a href="https://www.instagram.com/web_nova_crew" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-lime-500 hover:text-slate-900 transition-all cursor-pointer group" aria-label="Instagram">
+              <Instagram className="w-5 h-5" />
+            </a>
           </div>
         </div>
         
@@ -32,6 +39,7 @@ export function Footer() {
             <li><Link href="/blog"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span> Blog</a></Link></li>
             <li><Link href="/pricing"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span> Pricing</a></Link></li>
             <li><Link href="/team"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span> Our Team</a></Link></li>
+            <li><Link href="/founder"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span> Founder</a></Link></li>
             <li><Link href="/careers"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span> Careers</a></Link></li>
             <li><Link href="/contact"><a className="hover:text-lime-400 transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span> Contact</a></Link></li>
           </ul>
@@ -40,11 +48,11 @@ export function Footer() {
         <div>
           <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-sm border-l-4 border-lime-500 pl-3">Our Services</h4>
           <ul className="space-y-3">
-            <li><Link href="/services"><a className="hover:text-lime-400 transition-colors">Custom Web Development</a></Link></li>
-            <li><Link href="/services"><a className="hover:text-lime-400 transition-colors">Mobile App Development</a></Link></li>
-            <li><Link href="/services"><a className="hover:text-lime-400 transition-colors">E-Commerce Solutions</a></Link></li>
-            <li><Link href="/services"><a className="hover:text-lime-400 transition-colors">UI/UX Design</a></Link></li>
-            <li><Link href="/services"><a className="hover:text-lime-400 transition-colors">SEO & Digital Marketing</a></Link></li>
+            <li><Link href="/services/web-app-development"><a className="hover:text-lime-400 transition-colors">Custom Web Development</a></Link></li>
+            <li><Link href="/services/mobile-app-development"><a className="hover:text-lime-400 transition-colors">Mobile App Development</a></Link></li>
+            <li><Link href="/services/ecommerce-app-development"><a className="hover:text-lime-400 transition-colors">E-Commerce Solutions</a></Link></li>
+            <li><Link href="/services/flutter-app-development"><a className="hover:text-lime-400 transition-colors">Flutter Development</a></Link></li>
+            <li><Link href="/services/react-native-development"><a className="hover:text-lime-400 transition-colors">React Native Development</a></Link></li>
           </ul>
         </div>
         
@@ -70,9 +78,9 @@ export function Footer() {
       <div className="container mx-auto max-w-6xl pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-600">
         <p>© {new Date().getFullYear()} Web Nova Crew. All rights reserved.</p>
         <div className="flex gap-6">
-          <a href="#" className="hover:text-slate-300">Privacy Policy</a>
-          <a href="#" className="hover:text-slate-300">Terms of Service</a>
-          <a href="#" className="hover:text-slate-300">Sitemap</a>
+          <Link href="/privacy-policy"><a className="hover:text-slate-300">Privacy Policy</a></Link>
+          <Link href="/terms-of-service"><a className="hover:text-slate-300">Terms of Service</a></Link>
+          <a href="/sitemap.xml" className="hover:text-slate-300">Sitemap</a>
         </div>
       </div>
 

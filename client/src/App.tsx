@@ -16,6 +16,9 @@ import Team from "@/pages/team";
 import Careers from "@/pages/careers";
 import JobDetail from "@/pages/job-detail";
 import Pricing from "@/pages/pricing";
+import PrivacyPolicy from "@/pages/privacy-policy";
+import TermsOfService from "@/pages/terms-of-service";
+import Founder from "@/pages/founder";
 
 // Service Pages
 import AppDevelopmentIndia from "@/pages/services/app-development-india";
@@ -105,6 +108,9 @@ function Router() {
       <Route path="/careers" component={Careers} />
       <Route path="/careers/:slug" component={JobDetail} />
       <Route path="/pricing" component={Pricing} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/terms-of-service" component={TermsOfService} />
+      <Route path="/founder" component={Founder} />
       
       {/* Service Pages - SEO Optimized */}
       <Route path="/services/mobile-app-development" component={MobileAppDevelopment} />
