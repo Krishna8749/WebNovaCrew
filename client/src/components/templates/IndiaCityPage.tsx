@@ -10,6 +10,7 @@ import { Footer } from "@/components/layout/Footer";
 import { SEO } from "@/components/seo/Head";
 import { LocalBusinessSchema, BreadcrumbSchema, ServiceSchema } from "@/components/seo/SchemaMarkup";
 import { TestimonialsSection } from "@/components/sections/Testimonials";
+import { FounderBio } from "@/components/sections/FounderBio";
 import { CityData } from "@/data/india-cities";
 
 interface IndiaCityPageProps {
@@ -266,6 +267,9 @@ export function IndiaCityPage({ city }: IndiaCityPageProps) {
           </div>
         </div>
       </section>
+
+      {/* Founder Bio */}
+      <FounderBio />
 
       {/* Testimonials */}
       <TestimonialsSection />

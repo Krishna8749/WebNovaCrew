@@ -5,6 +5,7 @@ import { LocalBusinessSchema, BreadcrumbSchema } from "@/components/seo/SchemaMa
 import { FAQSection, aboutFAQs } from "@/components/sections/FAQ";
 import { CTASection } from "@/components/sections/CTASection";
 import { StatsSection } from "@/components/sections/Stats";
+import { FounderBio } from "@/components/sections/FounderBio";
 import { motion } from "framer-motion";
 import { CheckCircle2, Code, Users, Trophy, Target, Sparkles, Award, Globe, Zap, Shield, Heart, Star, MapPin, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -70,7 +71,7 @@ export default function About() {
               India's Leading <span className="text-blue-600">Web Development</span> & <span className="text-lime-600">App Development</span> Company
             </h1>
             <p className="text-lg text-slate-600 leading-relaxed mb-8">
-              Founded in 2023 in Lucknow, Uttar Pradesh, Web Nova Crew has rapidly evolved into one of India's most trusted digital agencies. We're a team of 25+ passionate developers, designers, and digital strategists dedicated to transforming businesses through technology. We don't just write code; we craft digital experiences that drive real business growth and deliver measurable ROI.
+              Web Nova Crew is a next-generation web & app development agency founded in 2023 with a mission to transform businesses through technology, automation, and world-class digital experiences. Based in Lucknow, our agency combines creativity with engineering precision to deliver high-performance websites, mobile apps, automation systems, and branding solutions. We believe in innovation, speed, and premium quality—offering digital craftsmanship that helps brands grow faster.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
@@ -112,14 +113,14 @@ export default function About() {
                     <Target className="text-lime-400" /> Our Mission
                   </h3>
                   <p className="text-slate-300 leading-relaxed mb-8">
-                    To empower businesses globally by providing high-quality, scalable, and innovative web and mobile solutions that deliver measurable ROI.
+                    Deliver high-quality, scalable digital solutions. Build AI-driven applications for real estate, e-commerce, and fashion industries. Empower individuals & startups with affordable technology.
                   </p>
                   
                   <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
                     <Sparkles className="text-lime-400" /> Our Vision
                   </h3>
                   <p className="text-slate-300 leading-relaxed">
-                    To become the world's most trusted digital partner, known for technical excellence, transparency, and a client-first approach.
+                    To become India's No. 1 Web Development & AI Automation agency, empowering businesses with future-ready technology.
                   </p>
                </div>
             </div>
@@ -132,9 +133,11 @@ export default function About() {
               
               <div className="space-y-6">
                 {[
-                  { title: "Advanced Tech Stack", desc: "We use the latest frameworks like React, Next.js, and Flutter." },
-                  { title: "SEO-First Development", desc: "Every line of code is written with search engine visibility in mind." },
-                  { title: "Transparent Communication", desc: "No jargon. Just clear weekly updates and honest consulting." },
+                  { title: "Youngest Innovation-Driven Leadership", desc: "Led by 20-year-old founder with international experience." },
+                  { title: "Lightning-Fast Development", desc: "We deliver projects faster without compromising quality." },
+                  { title: "Pixel-Perfect UI/UX", desc: "Beautiful, modern designs with best UX practices." },
+                  { title: "AI-Powered Automation", desc: "Intelligent solutions that scale your business." },
+                  { title: "24×7 Support", desc: "Round-the-clock support for all our clients." },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shrink-0 text-blue-600">
@@ -190,6 +193,53 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* Industries We Serve */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto max-w-6xl px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <span className="text-lime-600 font-bold tracking-wider uppercase text-sm mb-4 block">Our Expertise</span>
+            <h2 className="text-3xl md:text-5xl font-poppins font-bold text-slate-900 mb-4">
+              Industries We Serve
+            </h2>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+              Specialized digital solutions across multiple industries
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              "Real Estate",
+              "Fashion & Lifestyle",
+              "Education",
+              "Health & Clinics",
+              "E-Commerce",
+              "Startups",
+              "Local Businesses",
+              "Technology"
+            ].map((industry, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center hover:border-blue-500 hover:shadow-md transition-all"
+              >
+                <p className="font-semibold text-slate-900">{industry}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Bio Section */}
+      <FounderBio />
 
       {/* Our Journey / Timeline */}
       <section className="py-20 bg-white">

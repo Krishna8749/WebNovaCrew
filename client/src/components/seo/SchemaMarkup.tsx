@@ -283,3 +283,69 @@ export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
 
   return null;
 }
+
+interface PersonSchemaProps {
+  name: string;
+  jobTitle: string;
+  description: string;
+  url: string;
+}
+
+export function PersonSchema({ name, jobTitle, description, url }: PersonSchemaProps) {
+  useEffect(() => {
+    const personSchema = {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": name,
+      "jobTitle": jobTitle,
+      "description": description,
+      "url": url,
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Web Nova Crew",
+        "url": "https://webnovacrew.com"
+      },
+      "nationality": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "birthPlace": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lucknow",
+          "addressRegion": "Uttar Pradesh",
+          "addressCountry": "IN"
+        }
+      },
+      "knowsAbout": [
+        "Web Development",
+        "App Development",
+        "Entrepreneurship",
+        "AI Technology",
+        "Real Estate Technology",
+        "Fashion Business"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/sateeshkumarrawat",
+        "https://twitter.com/sateeshrawat"
+      ]
+    };
+
+    let script = document.querySelector('#person-schema');
+    if (!script) {
+      script = document.createElement('script');
+      script.id = 'person-schema';
+      script.setAttribute('type', 'application/ld+json');
+      document.head.appendChild(script);
+    }
+    script.textContent = JSON.stringify(personSchema);
+
+    return () => {
+      const existingScript = document.querySelector('#person-schema');
+      if (existingScript) existingScript.remove();
+    };
+  }, [name, jobTitle, description, url]);
+
+  return null;
+}
