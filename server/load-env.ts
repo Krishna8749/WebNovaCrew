@@ -4,15 +4,10 @@
  */
 import fs from "fs";
 import path from "path";
-import { fileURLToPath } from "url";
-
-// Handle both ESM and CJS
-const __dirname = typeof import.meta !== 'undefined' && import.meta.url
-  ? path.dirname(fileURLToPath(import.meta.url))
-  : __dirname;
 
 function loadEnv(): void {
-  const envPath = path.resolve(__dirname, "..", ".env");
+  // Use process.cwd() which works in both ESM and CJS
+  const envPath = path.resolve(process.cwd(), ".env");
   if (!fs.existsSync(envPath)) return;
   let content = fs.readFileSync(envPath, "utf-8");
   if (content.charCodeAt(0) === 0xfeff) content = content.slice(1);
