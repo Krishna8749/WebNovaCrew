@@ -191,7 +191,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans no-overflow">
       <SEO 
         title="Top App Development Company in India & Kuwait – AI-Powered Mobile App Solutions" 
         description="India's & Kuwait's leading AI app development company. We build next-generation mobile apps using AI, Flutter, React Native for startups, enterprises & government. 200+ apps delivered. Get free consultation."
@@ -205,17 +205,17 @@ export default function Home() {
       {/* HERO SECTION - Maximum Keyword Power */}
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950">
-          <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] bg-blue-500/20 rounded-full blur-[80px] lg:blur-[120px] animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] bg-purple-500/20 rounded-full blur-[60px] lg:blur-[100px] animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] bg-cyan-500/10 rounded-full blur-[50px] lg:blur-[80px] animate-pulse delay-500"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] bg-blue-500/20 rounded-full blur-[80px] lg:blur-[120px] animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[150px] h-[150px] sm:w-[250px] sm:h-[250px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] bg-purple-500/20 rounded-full blur-[60px] lg:blur-[100px] animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 w-[120px] h-[120px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] bg-cyan-500/10 rounded-full blur-[50px] lg:blur-[80px] animate-pulse delay-500"></div>
         </div>
         
         {/* Grid Pattern Overlay */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0wIDBoNjB2NjBIMHoiLz48cGF0aCBkPSJNMzAgMzBtLTEgMGExIDEgMCAxIDAgMiAwYTEgMSAwIDEgMCAtMiAwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMSkiLz48L2c+PC9zdmc+')] opacity-30"></div>
 
-        <div className="container mx-auto max-w-7xl px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto max-w-7xl px-4 relative z-10 w-full">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
