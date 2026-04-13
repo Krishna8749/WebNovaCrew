@@ -112,32 +112,19 @@
   * {
     @apply border-border;
     box-sizing: border-box;
-    max-width: 100%;
   }
   
   html {
     scroll-behavior: smooth;
     font-size: 16px;
-    overflow-x: hidden !important;
-    max-width: 100vw;
-    width: 100%;
+    overflow-x: hidden;
   }
   
   body {
     @apply font-sans antialiased bg-background text-foreground;
     font-size: 16px;
     line-height: 1.7;
-    overflow-x: hidden !important;
-    max-width: 100vw;
-    width: 100%;
-    position: relative;
-  }
-  
-  /* Prevent any element from causing horizontal scroll */
-  #root {
-    overflow-x: hidden !important;
-    max-width: 100vw;
-    width: 100%;
+    overflow-x: hidden;
   }
 
   /* Responsive typography with clamp */
@@ -376,107 +363,17 @@ img:not([loading]) {
 
 /* Utility to prevent horizontal overflow */
 .no-overflow {
-  max-width: 100vw !important;
-  overflow-x: hidden !important;
-  width: 100% !important;
-}
-
-.safe-area {
-  max-width: calc(100vw - 2rem);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Ensure grid and flex containers don't overflow */
-.grid, .flex {
-  min-width: 0;
-  max-width: 100%;
-}
-
-/* Force all sections to stay within viewport */
-section {
-  max-width: 100vw;
   overflow-x: hidden;
-}
-
-/* Container improvements */
-.container {
-  max-width: 100vw !important;
-  overflow-x: hidden;
-}
-
-/* Prevent absolute positioned elements from causing overflow */
-.absolute {
-  max-width: 100vw;
 }
 
 /* Mobile-specific improvements */
 @media (max-width: 768px) {
-  /* Prevent horizontal scroll - AGGRESSIVE */
-  html, body, #root, * {
-    overflow-x: hidden !important;
-    max-width: 100vw !important;
+  body {
+    overflow-x: hidden;
   }
   
-  /* Ensure all containers stay within viewport */
-  * {
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Fix any potential wide elements */
-  .container, section, div, main, article, aside, nav, header, footer {
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-  }
-  
-  /* Prevent transforms from causing overflow */
-  .transform, .rotate-12, .-rotate-12, .rotate-6 {
-    transform-origin: center center;
-  }
-  
-  /* Better touch targets */
-  button, a {
-    min-height: 44px;
-    min-width: 44px;
-  }
-  
-  /* Improved mobile spacing */
-  .mobile-px {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  
-  .mobile-py {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-  
-  /* Mobile-friendly text sizes */
-  .mobile-text-sm {
-    font-size: 0.875rem;
-  }
-  
-  .mobile-text-base {
-    font-size: 1rem;
-  }
-  
-  .mobile-text-lg {
-    font-size: 1.125rem;
-  }
-  
-  /* Prevent text from breaking layout */
-  h1, h2, h3, h4, h5, h6, p {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    max-width: 100% !important;
-  }
-  
-  /* Force buttons to stay within bounds */
-  button {
-    max-width: 100% !important;
-    word-wrap: break-word;
+  .container {
+    overflow-x: hidden;
   }
 }
 
