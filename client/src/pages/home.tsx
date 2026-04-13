@@ -220,44 +220,45 @@ export default function Home() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
+              className="w-full max-w-full"
             >
               {/* Trust Badge */}
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-blue-500/30 px-4 py-2 rounded-full mb-6">
-                <Sparkles className="w-4 h-4 text-cyan-400" />
-                <span className="text-cyan-400 text-sm font-semibold">🇮🇳 India & 🇰🇼 Kuwait's #1 AI App Development Company</span>
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-blue-500/30 px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6 max-w-full">
+                <Sparkles className="w-4 h-4 text-cyan-400 shrink-0" />
+                <span className="text-cyan-400 text-xs sm:text-sm font-semibold truncate">🇮🇳 India & 🇰🇼 Kuwait's #1 AI App Development Company</span>
               </div>
 
               {/* H1 - Maximum SEO Power */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-4 sm:mb-6 max-w-full">
                 Top <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">App Development</span> Company in India & Kuwait
               </h1>
               
-              <p className="text-xl md:text-2xl text-blue-100/80 mb-8 leading-relaxed">
+              <p className="text-lg sm:text-xl md:text-2xl text-blue-100/80 mb-6 sm:mb-8 leading-relaxed max-w-full">
                 We build <strong className="text-white">next-generation apps</strong> using <strong className="text-cyan-400">AI, automation & advanced technologies</strong> for startups, enterprises, government, and global clients.
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-wrap gap-4 mb-10">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-8 sm:mb-10 w-full">
                 <Link href="/contact">
-                  <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-lg px-8 py-7 rounded-full shadow-2xl shadow-cyan-500/30 group">
+                  <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-base sm:text-lg px-6 sm:px-8 py-6 sm:py-7 rounded-full shadow-2xl shadow-cyan-500/30 group w-full sm:w-auto">
                     Get Free App Consultation
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
                 <a href="https://wa.me/919872364476" target="_blank">
-                  <Button size="lg" variant="outline" className="border-2 border-green-500/50 text-green-400 hover:bg-green-500/10 font-bold text-lg px-8 py-7 rounded-full">
-                    <MessageSquare className="w-5 h-5 mr-2" /> WhatsApp Us
+                  <Button size="lg" variant="outline" className="border-2 border-green-500/50 text-green-400 hover:bg-green-500/10 font-bold text-base sm:text-lg px-6 sm:px-8 py-6 sm:py-7 rounded-full w-full sm:w-auto">
+                    <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5 mr-2" /> WhatsApp Us
                   </Button>
                 </a>
                 <Link href="/pricing">
-                  <Button size="lg" variant="outline" className="border-2 border-white/20 text-white hover:bg-white/10 font-bold text-lg px-8 py-7 rounded-full">
+                  <Button size="lg" variant="outline" className="border-2 border-white/20 text-white hover:bg-white/10 font-bold text-base sm:text-lg px-6 sm:px-8 py-6 sm:py-7 rounded-full w-full sm:w-auto">
                     View Pricing
                   </Button>
                 </Link>
               </div>
 
               {/* Authority Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 w-full max-w-full">
                 {[
                   { value: "250+", label: "Apps Delivered", icon: <Smartphone className="w-6 h-6" /> },
                   { value: "97%", label: "Client Satisfaction", icon: <Star className="w-6 h-6" /> },
@@ -284,26 +285,26 @@ export default function Home() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative hidden lg:block"
+              className="relative hidden lg:block w-full max-w-full overflow-hidden"
             >
-              <div className="relative scale-75 md:scale-90 lg:scale-100">
+              <div className="relative scale-75 md:scale-90 lg:scale-100 w-full max-w-full">
                 {/* Floating App Mockups - Responsive sizing */}
-                <div className="absolute -top-10 -left-10 w-32 h-64 md:w-40 md:h-80 lg:w-48 lg:h-96 bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl shadow-2xl transform -rotate-12 animate-float"></div>
-                <div className="absolute top-10 left-10 md:top-20 md:left-20 w-36 h-72 md:w-44 md:h-80 lg:w-56 lg:h-[450px] bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl shadow-2xl transform rotate-6 z-10">
-                  <div className="p-4">
-                    <div className="w-full h-8 bg-white/20 rounded-full mb-4"></div>
-                    <div className="space-y-3">
-                      <div className="w-full h-24 bg-white/10 rounded-2xl"></div>
-                      <div className="w-3/4 h-4 bg-white/20 rounded-full"></div>
-                      <div className="w-1/2 h-4 bg-white/15 rounded-full"></div>
+                <div className="absolute -top-10 -left-10 w-24 h-48 sm:w-32 sm:h-64 md:w-40 md:h-80 lg:w-48 lg:h-96 bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl shadow-2xl transform -rotate-12 animate-float"></div>
+                <div className="absolute top-10 left-10 md:top-20 md:left-20 w-28 h-56 sm:w-36 sm:h-72 md:w-44 md:h-80 lg:w-56 lg:h-[450px] bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl shadow-2xl transform rotate-6 z-10">
+                  <div className="p-3 sm:p-4">
+                    <div className="w-full h-6 sm:h-8 bg-white/20 rounded-full mb-3 sm:mb-4"></div>
+                    <div className="space-y-2 sm:space-y-3">
+                      <div className="w-full h-16 sm:h-24 bg-white/10 rounded-2xl"></div>
+                      <div className="w-3/4 h-3 sm:h-4 bg-white/20 rounded-full"></div>
+                      <div className="w-1/2 h-3 sm:h-4 bg-white/15 rounded-full"></div>
                     </div>
                   </div>
                 </div>
-                <div className="absolute top-20 right-0 md:top-40 lg:w-44 h-64 md:h-72 lg:h-80 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl shadow-2xl transform rotate-12"></div>
+                <div className="absolute top-20 right-0 md:top-40 w-32 h-48 sm:w-36 sm:h-64 md:h-72 lg:w-44 lg:h-80 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl shadow-2xl transform rotate-12"></div>
                 
                 {/* AI Badge - Responsive positioning */}
-                <div className="absolute bottom-0 md:bottom-10 left-0 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold shadow-xl z-20 flex items-center gap-2 text-sm md:text-base">
-                  <Brain className="w-4 h-4 md:w-5 md:h-5" /> AI-Powered
+                <div className="absolute bottom-0 md:bottom-10 left-0 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 rounded-full font-bold shadow-xl z-20 flex items-center gap-2 text-xs sm:text-sm md:text-base">
+                  <Brain className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" /> AI-Powered
                 </div>
               </div>
             </motion.div>
