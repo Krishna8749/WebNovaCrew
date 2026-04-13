@@ -6,7 +6,10 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+// Handle both ESM and CJS
+const __dirname = typeof import.meta !== 'undefined' && import.meta.url
+  ? path.dirname(fileURLToPath(import.meta.url))
+  : __dirname;
 
 function loadEnv(): void {
   const envPath = path.resolve(__dirname, "..", ".env");

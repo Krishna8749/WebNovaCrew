@@ -1,5 +1,4 @@
 import type { Request, Response } from "express";
-import { createRequire } from "module";
 import { z } from "zod";
 
 const contactSchema = z.object({
@@ -35,8 +34,6 @@ function buildHtml(data: z.infer<typeof contactSchema>): string {
 </body></html>`;
 }
 
-const require = createRequire(import.meta.url);
-
 type SmtpAuthMethod = "LOGIN" | "PLAIN";
 
 function smtpAuthMethodFromEnv(): SmtpAuthMethod {
@@ -61,7 +58,7 @@ async function sendViaSmtp(data: z.infer<typeof contactSchema>): Promise<void> {
   }
   let nodemailer: typeof import("nodemailer");
   try {
-    nodemailer = require("nodemailer");
+    nodemailer = await import("nodemailer").then(m => m.default || m);
   } catch {
     return Promise.reject(
       new Error(
