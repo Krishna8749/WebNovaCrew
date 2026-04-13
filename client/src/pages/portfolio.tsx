@@ -239,18 +239,278 @@ export default function Portfolio() {
                 layout
                 className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100"
               >
-                {/* Image Container */}
-                <div className="relative h-56 overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={`${project.title} - ${project.category} by Web Nova Crew`} 
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                    loading="lazy"
-                  />
+                {/* Detailed UI Mockup */}
+                <div className="relative h-80 overflow-hidden bg-gray-50">
+                  {/* Al Mulla Exchange Kuwait */}
+                  {index === 0 && (
+                    <div className="p-4 h-full">
+                      <div className="bg-gradient-to-r from-green-600 to-emerald-700 rounded-lg p-4 mb-4">
+                        <div className="text-white font-bold text-lg">Al Mulla Exchange</div>
+                        <div className="text-white/80 text-sm">Kuwait's Trusted Exchange</div>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="bg-white rounded-lg p-3 shadow-sm border">
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-gray-700 font-semibold text-sm">USD to KWD</span>
+                            <span className="text-green-600 font-bold">0.307</span>
+                          </div>
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-gray-700 font-semibold text-sm">INR to KWD</span>
+                            <span className="text-green-600 font-bold">0.0037</span>
+                          </div>
+                          <div className="bg-green-600 text-white text-center py-2 rounded text-sm font-semibold">
+                            Send Money Now
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-2">
+                          <div className="bg-white rounded-lg p-2 text-center shadow-sm border">
+                            <div className="text-green-600 font-bold text-lg">200K+</div>
+                            <div className="text-gray-600 text-xs">Customers</div>
+                          </div>
+                          <div className="bg-white rounded-lg p-2 text-center shadow-sm border">
+                            <div className="text-green-600 font-bold text-lg">15</div>
+                            <div className="text-gray-600 text-xs">Branches</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Mumbai Realty Hub */}
+                  {index === 1 && (
+                    <div className="p-4 h-full">
+                      <div className="bg-gradient-to-r from-blue-600 to-purple-700 rounded-lg p-4 mb-4">
+                        <div className="text-white font-bold text-lg">Mumbai Realty Hub</div>
+                        <div className="text-white/80 text-sm">Premium Properties</div>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="bg-white rounded-lg p-3 shadow-sm border">
+                          <div className="w-full h-20 bg-blue-200 rounded mb-2 flex items-center justify-center">
+                            <span className="text-blue-700 text-xs">3D Virtual Tour</span>
+                          </div>
+                          <div className="text-gray-800 font-semibold text-sm mb-1">Luxury 3BHK Apartment</div>
+                          <div className="text-gray-600 text-xs mb-2">Bandra West, Mumbai</div>
+                          <div className="flex items-center justify-between">
+                            <div className="text-blue-600 font-bold">₹2.5 Cr</div>
+                            <div className="bg-blue-600 text-white px-2 py-1 rounded text-xs">View Details</div>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-2">
+                          <div className="bg-white rounded-lg p-2 text-center shadow-sm border">
+                            <div className="text-blue-600 font-bold">380%</div>
+                            <div className="text-gray-600 text-xs">More Leads</div>
+                          </div>
+                          <div className="bg-white rounded-lg p-2 text-center shadow-sm border">
+                            <div className="text-blue-600 font-bold">5K+</div>
+                            <div className="text-gray-600 text-xs">Properties</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Seha Health Kuwait */}
+                  {index === 2 && (
+                    <div className="p-4 h-full">
+                      <div className="bg-gradient-to-r from-teal-500 to-blue-600 rounded-lg p-4 mb-4">
+                        <div className="text-white font-bold text-lg">Seha Health</div>
+                        <div className="text-white/80 text-sm">صحة - Your Health Partner</div>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="bg-white rounded-lg p-3 shadow-sm border">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="w-10 h-10 bg-teal-200 rounded-full flex items-center justify-center">
+                              <span className="text-teal-700 text-xs">Dr</span>
+                            </div>
+                            <div className="flex-1">
+                              <div className="text-gray-800 font-semibold text-sm">Dr. Ahmed Al-Rashid</div>
+                              <div className="text-gray-600 text-xs">Cardiologist • Available</div>
+                            </div>
+                            <div className="bg-teal-500 text-white px-2 py-1 rounded text-xs">Book</div>
+                          </div>
+                          <div className="bg-teal-500 text-white text-center py-2 rounded text-sm font-semibold">
+                            Video Consultation
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-2">
+                          <div className="bg-white rounded-lg p-2 text-center shadow-sm border">
+                            <div className="text-teal-600 font-bold">85K+</div>
+                            <div className="text-gray-600 text-xs">Patients</div>
+                          </div>
+                          <div className="bg-white rounded-lg p-2 text-center shadow-sm border">
+                            <div className="text-teal-600 font-bold">24/7</div>
+                            <div className="text-gray-600 text-xs">Support</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Spice Route E-Commerce */}
+                  {index === 3 && (
+                    <div className="p-4 h-full">
+                      <div className="bg-gradient-to-r from-orange-500 to-red-600 rounded-lg p-4 mb-4">
+                        <div className="text-white font-bold text-lg">Spice Route</div>
+                        <div className="text-white/80 text-sm">Authentic Indian Spices</div>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="grid grid-cols-2 gap-2">
+                          <div className="bg-white rounded-lg p-2 shadow-sm border">
+                            <div className="w-full h-12 bg-orange-200 rounded mb-1"></div>
+                            <div className="text-gray-800 text-xs font-semibold">Garam Masala</div>
+                            <div className="text-orange-600 font-bold text-sm">₹299</div>
+                          </div>
+                          <div className="bg-white rounded-lg p-2 shadow-sm border">
+                            <div className="w-full h-12 bg-red-200 rounded mb-1"></div>
+                            <div className="text-gray-800 text-xs font-semibold">Red Chili</div>
+                            <div className="text-red-600 font-bold text-sm">₹199</div>
+                          </div>
+                        </div>
+                        <div className="bg-orange-500 text-white text-center py-2 rounded text-sm font-semibold">
+                          Add to Cart
+                        </div>
+                        <div className="grid grid-cols-2 gap-2">
+                          <div className="bg-white rounded-lg p-2 text-center shadow-sm border">
+                            <div className="text-orange-600 font-bold">₹4.5Cr</div>
+                            <div className="text-gray-600 text-xs">Monthly GMV</div>
+                          </div>
+                          <div className="bg-white rounded-lg p-2 text-center shadow-sm border">
+                            <div className="text-orange-600 font-bold">Global</div>
+                            <div className="text-gray-600 text-xs">Shipping</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Delhi Public School LMS */}
+                  {index === 4 && (
+                    <div className="p-4 h-full">
+                      <div className="bg-gradient-to-r from-indigo-600 to-purple-700 rounded-lg p-4 mb-4">
+                        <div className="text-white font-bold text-lg">DPS Learning</div>
+                        <div className="text-white/80 text-sm">Smart Education Platform</div>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="bg-white rounded-lg p-3 shadow-sm border">
+                          <div className="flex items-center gap-2 mb-2">
+                            <div className="w-6 h-6 bg-indigo-200 rounded-full"></div>
+                            <span className="text-gray-800 font-semibold text-sm">Mathematics - Class 10</span>
+                          </div>
+                          <div className="text-gray-600 text-xs mb-2">Live Class at 10:00 AM</div>
+                          <div className="bg-indigo-600 text-white text-center py-2 rounded text-sm font-semibold">
+                            Join Class
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-2">
+                          <div className="bg-white rounded-lg p-2 text-center shadow-sm border">
+                            <div className="text-indigo-600 font-bold">120K+</div>
+                            <div className="text-gray-600 text-xs">Students</div>
+                          </div>
+                          <div className="bg-white rounded-lg p-2 text-center shadow-sm border">
+                            <div className="text-indigo-600 font-bold">45</div>
+                            <div className="text-gray-600 text-xs">Schools</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Kuwait Airways Booking */}
+                  {index === 5 && (
+                    <div className="p-4 h-full">
+                      <div className="bg-gradient-to-r from-blue-700 to-sky-600 rounded-lg p-4 mb-4">
+                        <div className="text-white font-bold text-lg">Kuwait Airways</div>
+                        <div className="text-white/80 text-sm">Book Your Journey</div>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="bg-white rounded-lg p-3 shadow-sm border">
+                          <div className="flex items-center justify-between mb-2">
+                            <div>
+                              <div className="text-gray-800 font-semibold text-sm">KWI → BOM</div>
+                              <div className="text-gray-600 text-xs">Kuwait to Mumbai</div>
+                            </div>
+                            <div className="text-blue-600 font-bold">KWD 180</div>
+                          </div>
+                          <div className="bg-blue-600 text-white text-center py-2 rounded text-sm font-semibold">
+                            Book Flight
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-2">
+                          <div className="bg-white rounded-lg p-2 text-center shadow-sm border">
+                            <div className="text-blue-600 font-bold">KWD 2M+</div>
+                            <div className="text-gray-600 text-xs">Monthly</div>
+                          </div>
+                          <div className="bg-white rounded-lg p-2 text-center shadow-sm border">
+                            <div className="text-blue-600 font-bold">Arabic</div>
+                            <div className="text-gray-600 text-xs">Support</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Default mockup for remaining projects */}
+                  {index > 5 && (
+                    <div className="p-4 h-full">
+                      <div className={`bg-gradient-to-r ${
+                        index === 6 ? 'from-orange-500 to-red-500' :
+                        index === 7 ? 'from-pink-500 to-purple-600' :
+                        index === 8 ? 'from-blue-600 to-indigo-700' :
+                        index === 9 ? 'from-green-500 to-emerald-600' :
+                        index === 10 ? 'from-yellow-500 to-orange-500' :
+                        'from-purple-500 to-pink-500'
+                      } rounded-lg p-4 mb-4`}>
+                        <div className="text-white font-bold text-lg">{project.title.split(' ')[0]} {project.title.split(' ')[1]}</div>
+                        <div className="text-white/80 text-sm">{project.category}</div>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="bg-white rounded-lg p-3 shadow-sm border">
+                          <div className="w-full h-16 bg-gray-200 rounded mb-2"></div>
+                          <div className="h-3 bg-gray-300 rounded w-3/4 mb-1"></div>
+                          <div className="h-2 bg-gray-200 rounded w-1/2 mb-2"></div>
+                          <div className={`bg-${
+                            index === 6 ? 'orange' :
+                            index === 7 ? 'pink' :
+                            index === 8 ? 'blue' :
+                            index === 9 ? 'green' :
+                            index === 10 ? 'yellow' :
+                            'purple'
+                          }-500 text-white text-center py-2 rounded text-sm font-semibold`}>
+                            View Project
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-2">
+                          <div className="bg-white rounded-lg p-2 text-center shadow-sm border">
+                            <div className={`text-${
+                              index === 6 ? 'orange' :
+                              index === 7 ? 'pink' :
+                              index === 8 ? 'blue' :
+                              index === 9 ? 'green' :
+                              index === 10 ? 'yellow' :
+                              'purple'
+                            }-600 font-bold text-sm`}>{project.results.split(' ')[0]}</div>
+                            <div className="text-gray-600 text-xs">{project.results.split(' ').slice(1).join(' ')}</div>
+                          </div>
+                          <div className="bg-white rounded-lg p-2 text-center shadow-sm border">
+                            <div className={`text-${
+                              index === 6 ? 'orange' :
+                              index === 7 ? 'pink' :
+                              index === 8 ? 'blue' :
+                              index === 9 ? 'green' :
+                              index === 10 ? 'yellow' :
+                              'purple'
+                            }-600 font-bold text-sm`}>{project.year}</div>
+                            <div className="text-gray-600 text-xs">Launched</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
                     <Link href="/contact">
                       <Button className="rounded-full font-bold bg-lime-400 text-blue-900 hover:bg-white">
-                        View Details <ArrowRight className="w-4 h-4 ml-2" />
+                        View Full Case Study <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
                     </Link>
                   </div>

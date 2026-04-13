@@ -287,23 +287,110 @@ export default function Home() {
               className="relative hidden lg:block"
             >
               <div className="relative scale-75 md:scale-90 lg:scale-100">
-                {/* Floating App Mockups - Responsive sizing */}
-                <div className="absolute -top-10 -left-10 w-32 h-64 md:w-40 md:h-80 lg:w-48 lg:h-96 bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl shadow-2xl transform -rotate-12 animate-float"></div>
-                <div className="absolute top-10 left-10 md:top-20 md:left-20 w-36 h-72 md:w-44 md:h-80 lg:w-56 lg:h-[450px] bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl shadow-2xl transform rotate-6 z-10">
-                  <div className="p-4">
-                    <div className="w-full h-8 bg-white/20 rounded-full mb-4"></div>
-                    <div className="space-y-3">
-                      <div className="w-full h-24 bg-white/10 rounded-2xl"></div>
-                      <div className="w-3/4 h-4 bg-white/20 rounded-full"></div>
-                      <div className="w-1/2 h-4 bg-white/15 rounded-full"></div>
+                {/* Real App Mockup 1 - E-commerce App */}
+                <div className="absolute -top-10 -left-10 w-48 h-96 bg-white rounded-3xl shadow-2xl transform -rotate-12 animate-float overflow-hidden">
+                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 h-24 flex items-end p-4">
+                    <div className="text-white font-bold text-lg">ShopEasy</div>
+                  </div>
+                  <div className="p-4 space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-gray-200 rounded-full"></div>
+                      <div className="flex-1">
+                        <div className="h-3 bg-gray-200 rounded w-3/4 mb-1"></div>
+                        <div className="h-2 bg-gray-100 rounded w-1/2"></div>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="bg-gray-100 rounded-lg h-24 flex items-center justify-center">
+                        <div className="w-8 h-8 bg-purple-200 rounded"></div>
+                      </div>
+                      <div className="bg-gray-100 rounded-lg h-24 flex items-center justify-center">
+                        <div className="w-8 h-8 bg-blue-200 rounded"></div>
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="h-3 bg-gray-200 rounded w-full"></div>
+                      <div className="h-3 bg-gray-200 rounded w-4/5"></div>
+                      <div className="h-3 bg-gray-200 rounded w-3/5"></div>
+                    </div>
+                    <div className="bg-purple-600 text-white text-center py-3 rounded-lg text-sm font-semibold">
+                      Add to Cart
                     </div>
                   </div>
                 </div>
-                <div className="absolute top-20 right-0 md:top-40 lg:w-44 h-64 md:h-72 lg:h-80 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl shadow-2xl transform rotate-12"></div>
+
+                {/* Real App Mockup 2 - Food Delivery App */}
+                <div className="absolute top-10 left-10 md:top-20 md:left-20 w-56 h-[450px] bg-white rounded-3xl shadow-2xl transform rotate-6 z-10 overflow-hidden">
+                  <div className="bg-gradient-to-r from-orange-500 to-red-500 h-32 flex flex-col justify-end p-4">
+                    <div className="text-white font-bold text-xl">FoodieGo</div>
+                    <div className="text-white/80 text-sm">Deliver in 30 mins</div>
+                  </div>
+                  <div className="p-4 space-y-4">
+                    <div className="flex items-center gap-2 bg-gray-50 rounded-full p-2">
+                      <div className="w-4 h-4 bg-gray-300 rounded-full"></div>
+                      <div className="h-2 bg-gray-200 rounded flex-1"></div>
+                    </div>
+                    <div className="space-y-3">
+                      {[1, 2, 3].map((item) => (
+                        <div key={item} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                          <div className="w-12 h-12 bg-orange-200 rounded-lg"></div>
+                          <div className="flex-1">
+                            <div className="h-3 bg-gray-300 rounded w-3/4 mb-1"></div>
+                            <div className="h-2 bg-gray-200 rounded w-1/2 mb-1"></div>
+                            <div className="h-2 bg-green-300 rounded w-1/3"></div>
+                          </div>
+                          <div className="text-orange-600 font-bold text-sm">₹{120 + item * 50}</div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="bg-orange-500 text-white text-center py-3 rounded-lg font-semibold">
+                      Order Now
+                    </div>
+                  </div>
+                </div>
+
+                {/* Real App Mockup 3 - Banking/Finance App */}
+                <div className="absolute top-20 right-0 md:top-40 w-44 h-80 bg-white rounded-3xl shadow-2xl transform rotate-12 overflow-hidden">
+                  <div className="bg-gradient-to-r from-blue-700 to-blue-900 h-28 flex flex-col justify-end p-4">
+                    <div className="text-white font-bold text-lg">PaySecure</div>
+                    <div className="text-blue-200 text-xs">Digital Wallet</div>
+                  </div>
+                  <div className="p-4 space-y-4">
+                    <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-3">
+                      <div className="text-blue-800 text-xs font-semibold">Balance</div>
+                      <div className="text-blue-900 text-xl font-bold">₹12,450</div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="text-gray-600 text-xs font-semibold">Quick Actions</div>
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="bg-gray-100 rounded-lg p-2 text-center">
+                          <div className="w-6 h-6 bg-blue-200 rounded mx-auto mb-1"></div>
+                          <div className="text-xs text-gray-600">Send</div>
+                        </div>
+                        <div className="bg-gray-100 rounded-lg p-2 text-center">
+                          <div className="w-6 h-6 bg-green-200 rounded mx-auto mb-1"></div>
+                          <div className="text-xs text-gray-600">Receive</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="text-gray-600 text-xs font-semibold">Recent</div>
+                      {[1, 2].map((item) => (
+                        <div key={item} className="flex items-center gap-2">
+                          <div className="w-6 h-6 bg-gray-200 rounded-full"></div>
+                          <div className="flex-1">
+                            <div className="h-2 bg-gray-200 rounded w-3/4 mb-1"></div>
+                            <div className="h-1.5 bg-gray-100 rounded w-1/2"></div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
                 
-                {/* AI Badge - Responsive positioning */}
+                {/* AI Badge */}
                 <div className="absolute bottom-0 md:bottom-10 left-0 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold shadow-xl z-20 flex items-center gap-2 text-sm md:text-base">
-                  <Brain className="w-4 h-4 md:w-5 md:h-5" /> AI-Powered
+                  <Brain className="w-4 h-4 md:w-5 md:h-5" /> AI-Powered Apps
                 </div>
               </div>
             </motion.div>
@@ -438,7 +525,249 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DYNAMIC PORTFOLIO SECTION */}
+      {/* APP CATEGORIES SECTION */}
+      <section className="py-24 bg-gradient-to-b from-blue-950/30 to-slate-950">
+        <div className="container mx-auto max-w-7xl px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <span className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-400 px-5 py-2 rounded-full text-sm font-bold mb-6 border border-indigo-500/30">
+              <Building2 className="w-4 h-4" /> Industry Expertise
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Apps for Every <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Industry</span>
+            </h2>
+            <p className="text-xl text-blue-200/70 max-w-3xl mx-auto">
+              From startups to enterprises, we've built successful apps across all major industries.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {[
+              { icon: <ShoppingCart className="w-8 h-8" />, name: "E-commerce", count: "45+" },
+              { icon: <Truck className="w-8 h-8" />, name: "Delivery", count: "32+" },
+              { icon: <HomeIcon className="w-8 h-8" />, name: "Real Estate", count: "28+" },
+              { icon: <Stethoscope className="w-8 h-8" />, name: "Healthcare", count: "25+" },
+              { icon: <GraduationCap className="w-8 h-8" />, name: "Education", count: "35+" },
+              { icon: <Car className="w-8 h-8" />, name: "Transport", count: "18+" },
+              { icon: <CreditCard className="w-8 h-8" />, name: "Fintech", count: "22+" },
+              { icon: <Package className="w-8 h-8" />, name: "Logistics", count: "15+" },
+              { icon: <Users className="w-8 h-8" />, name: "Social", count: "12+" },
+              { icon: <Brain className="w-8 h-8" />, name: "AI/ML", count: "40+" },
+            ].map((category, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                whileHover={{ y: -5, scale: 1.05 }}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-2xl p-6 text-center hover:border-indigo-500/50 transition-all group cursor-pointer"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center text-white mb-4 mx-auto group-hover:scale-110 transition-transform shadow-lg shadow-indigo-500/30">
+                  {category.icon}
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">{category.name}</h3>
+                <div className="text-indigo-400 font-bold text-xl">{category.count}</div>
+                <div className="text-blue-200/60 text-sm">Apps Built</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SHOWCASE SECTION - Real App Screenshots */}
+      <section className="py-24 bg-gradient-to-b from-slate-950 to-blue-950/30">
+        <div className="container mx-auto max-w-7xl px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <span className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-400 px-5 py-2 rounded-full text-sm font-bold mb-6 border border-purple-500/30">
+              <Smartphone className="w-4 h-4" /> Live App Showcase
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Real Apps, <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Real Results</span>
+            </h2>
+            <p className="text-xl text-blue-200/70 max-w-3xl mx-auto">
+              See our actual mobile applications in action - from concept to deployment.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Healthcare App */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-3xl overflow-hidden hover:border-purple-500/50 transition-all group"
+            >
+              <div className="h-64 bg-white relative overflow-hidden">
+                <div className="p-4 h-full">
+                  <div className="bg-gradient-to-r from-teal-500 to-blue-600 rounded-lg p-4 mb-4">
+                    <div className="text-white font-bold text-lg">MediCare+</div>
+                    <div className="text-white/80 text-sm">Your Health Companion</div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3 bg-gray-50 rounded-lg p-3">
+                      <div className="w-10 h-10 bg-teal-200 rounded-full flex items-center justify-center">
+                        <Stethoscope className="w-5 h-5 text-teal-700" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="text-gray-800 font-semibold text-sm">Dr. Sarah Wilson</div>
+                        <div className="text-gray-600 text-xs">Cardiologist • Available</div>
+                      </div>
+                      <div className="bg-teal-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                        Book
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 bg-gray-50 rounded-lg p-3">
+                      <div className="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center">
+                        <Stethoscope className="w-5 h-5 text-blue-700" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="text-gray-800 font-semibold text-sm">Dr. Mike Chen</div>
+                        <div className="text-gray-600 text-xs">Neurologist • Busy</div>
+                      </div>
+                      <div className="bg-gray-300 text-gray-600 px-3 py-1 rounded-full text-xs font-semibold">
+                        Wait
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Healthcare Platform</h3>
+                <p className="text-blue-200/60 text-sm mb-3">Doctor booking, telemedicine, health records management</p>
+                <div className="flex flex-wrap gap-1 mb-3">
+                  <span className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">Flutter</span>
+                  <span className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">Node.js</span>
+                  <span className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">AI</span>
+                </div>
+                <div className="text-green-400 text-sm font-bold">10K+ Consultations</div>
+              </div>
+            </motion.div>
+
+            {/* Travel App */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-3xl overflow-hidden hover:border-purple-500/50 transition-all group"
+            >
+              <div className="h-64 bg-white relative overflow-hidden">
+                <div className="p-4 h-full">
+                  <div className="bg-gradient-to-r from-orange-500 to-pink-500 rounded-lg p-4 mb-4">
+                    <div className="text-white font-bold text-lg">TravelEase</div>
+                    <div className="text-white/80 text-sm">Plan • Book • Explore</div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="bg-gray-50 rounded-lg p-3">
+                      <div className="flex items-center gap-2 mb-2">
+                        <MapPin className="w-4 h-4 text-orange-500" />
+                        <span className="text-gray-800 font-semibold text-sm">Dubai, UAE</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <div className="text-gray-600 text-xs">5 Days • 4 Nights</div>
+                          <div className="text-orange-600 font-bold text-lg">₹45,000</div>
+                        </div>
+                        <div className="bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                          Book Now
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-gray-50 rounded-lg p-3">
+                      <div className="flex items-center gap-2 mb-2">
+                        <MapPin className="w-4 h-4 text-pink-500" />
+                        <span className="text-gray-800 font-semibold text-sm">Bali, Indonesia</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <div className="text-gray-600 text-xs">7 Days • 6 Nights</div>
+                          <div className="text-pink-600 font-bold text-lg">₹65,000</div>
+                        </div>
+                        <div className="bg-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                          Explore
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Travel Booking Platform</h3>
+                <p className="text-blue-200/60 text-sm mb-3">Flight booking, hotel reservations, travel planning</p>
+                <div className="flex flex-wrap gap-1 mb-3">
+                  <span className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">React Native</span>
+                  <span className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">Laravel</span>
+                  <span className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">Maps API</span>
+                </div>
+                <div className="text-green-400 text-sm font-bold">25K+ Bookings</div>
+              </div>
+            </motion.div>
+
+            {/* Fitness App */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-3xl overflow-hidden hover:border-purple-500/50 transition-all group"
+            >
+              <div className="h-64 bg-white relative overflow-hidden">
+                <div className="p-4 h-full">
+                  <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg p-4 mb-4">
+                    <div className="text-white font-bold text-lg">FitTracker</div>
+                    <div className="text-white/80 text-sm">Your Fitness Journey</div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="bg-gray-50 rounded-lg p-3">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-gray-800 font-semibold text-sm">Today's Goal</span>
+                        <span className="text-green-600 font-bold text-sm">85%</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div className="bg-green-500 h-2 rounded-full" style={{ width: '85%' }}></div>
+                      </div>
+                      <div className="flex justify-between text-xs text-gray-600">
+                        <span>8,500 steps</span>
+                        <span>10,000 target</span>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="bg-gray-50 rounded-lg p-2 text-center">
+                        <div className="text-green-600 font-bold text-lg">45</div>
+                        <div className="text-gray-600 text-xs">Workouts</div>
+                      </div>
+                      <div className="bg-gray-50 rounded-lg p-2 text-center">
+                        <div className="text-green-600 font-bold text-lg">12</div>
+                        <div className="text-gray-600 text-xs">Streak</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Fitness Tracking App</h3>
+                <p className="text-blue-200/60 text-sm mb-3">Workout tracking, nutrition planning, progress analytics</p>
+                <div className="flex flex-wrap gap-1 mb-3">
+                  <span className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">Flutter</span>
+                  <span className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">Firebase</span>
+                  <span className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">ML Kit</span>
+                </div>
+                <div className="text-green-400 text-sm font-bold">50K+ Active Users</div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
       <section className="py-24 bg-slate-950">
         <div className="container mx-auto max-w-7xl px-4">
           <motion.div
@@ -469,11 +798,104 @@ export default function Home() {
                 whileHover={{ y: -10 }}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-3xl overflow-hidden group cursor-pointer hover:border-cyan-500/50 transition-all"
               >
-                {/* Project Image Placeholder */}
-                <div className="h-40 bg-gradient-to-br from-blue-600/30 to-purple-600/30 relative">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Smartphone className="w-12 h-12 text-white/30" />
-                  </div>
+                {/* Real App Screenshot Mockup */}
+                <div className="h-48 bg-white relative overflow-hidden">
+                  {i === 0 && (
+                    // Real Estate App UI
+                    <div className="p-4 h-full">
+                      <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-3 mb-3">
+                        <div className="text-white font-bold text-sm">Estato</div>
+                        <div className="text-white/80 text-xs">Find Your Dream Home</div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex gap-2">
+                          <div className="flex-1 bg-gray-100 rounded p-2">
+                            <div className="w-full h-16 bg-blue-200 rounded mb-1"></div>
+                            <div className="h-2 bg-gray-300 rounded w-3/4 mb-1"></div>
+                            <div className="h-2 bg-green-400 rounded w-1/2"></div>
+                          </div>
+                          <div className="flex-1 bg-gray-100 rounded p-2">
+                            <div className="w-full h-16 bg-purple-200 rounded mb-1"></div>
+                            <div className="h-2 bg-gray-300 rounded w-3/4 mb-1"></div>
+                            <div className="h-2 bg-green-400 rounded w-1/2"></div>
+                          </div>
+                        </div>
+                        <div className="bg-blue-600 text-white text-center py-2 rounded text-xs font-semibold">
+                          View Properties
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  {i === 1 && (
+                    // Delivery App UI
+                    <div className="p-4 h-full">
+                      <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-lg p-3 mb-3">
+                        <div className="text-white font-bold text-sm">GroceryGo</div>
+                        <div className="text-white/80 text-xs">30 min delivery</div>
+                      </div>
+                      <div className="space-y-2">
+                        {[1, 2, 3].map((item) => (
+                          <div key={item} className="flex items-center gap-2 bg-gray-50 rounded p-2">
+                            <div className="w-8 h-8 bg-orange-200 rounded"></div>
+                            <div className="flex-1">
+                              <div className="h-2 bg-gray-300 rounded w-3/4 mb-1"></div>
+                              <div className="h-1.5 bg-gray-200 rounded w-1/2"></div>
+                            </div>
+                            <div className="text-orange-600 text-xs font-bold">₹{50 + item * 20}</div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  {i === 2 && (
+                    // Education App UI
+                    <div className="p-4 h-full">
+                      <div className="bg-gradient-to-r from-green-500 to-blue-500 rounded-lg p-3 mb-3">
+                        <div className="text-white font-bold text-sm">EduAI</div>
+                        <div className="text-white/80 text-xs">AI Learning Assistant</div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="bg-gray-50 rounded-lg p-2">
+                          <div className="flex items-center gap-2 mb-2">
+                            <div className="w-6 h-6 bg-green-200 rounded-full"></div>
+                            <div className="h-2 bg-gray-300 rounded flex-1"></div>
+                          </div>
+                          <div className="space-y-1">
+                            <div className="h-2 bg-gray-200 rounded w-full"></div>
+                            <div className="h-2 bg-gray-200 rounded w-4/5"></div>
+                            <div className="h-2 bg-gray-200 rounded w-3/5"></div>
+                          </div>
+                        </div>
+                        <div className="bg-green-500 text-white text-center py-2 rounded text-xs font-semibold">
+                          Start Learning
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  {i === 3 && (
+                    // E-commerce App UI
+                    <div className="p-4 h-full">
+                      <div className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg p-3 mb-3">
+                        <div className="text-white font-bold text-sm">LuxeKart</div>
+                        <div className="text-white/80 text-xs">Premium Shopping</div>
+                      </div>
+                      <div className="grid grid-cols-2 gap-2 mb-2">
+                        <div className="bg-gray-100 rounded p-2">
+                          <div className="w-full h-12 bg-pink-200 rounded mb-1"></div>
+                          <div className="h-1.5 bg-gray-300 rounded w-3/4 mb-1"></div>
+                          <div className="h-1.5 bg-green-400 rounded w-1/2"></div>
+                        </div>
+                        <div className="bg-gray-100 rounded p-2">
+                          <div className="w-full h-12 bg-purple-200 rounded mb-1"></div>
+                          <div className="h-1.5 bg-gray-300 rounded w-3/4 mb-1"></div>
+                          <div className="h-1.5 bg-green-400 rounded w-1/2"></div>
+                        </div>
+                      </div>
+                      <div className="bg-pink-500 text-white text-center py-2 rounded text-xs font-semibold">
+                        Shop Now
+                      </div>
+                    </div>
+                  )}
                   <div className="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1">
                     <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span> Live
                   </div>
