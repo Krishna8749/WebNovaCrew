@@ -124,30 +124,49 @@
     font-size: 16px;
   }
 
-  /* Larger base typography */
+  /* Responsive typography with clamp */
   h1 {
-    @apply text-5xl md:text-6xl lg:text-7xl font-bold leading-tight;
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    @apply font-bold leading-tight;
   }
   
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+    font-size: clamp(1.75rem, 6vw, 3rem);
+    @apply font-bold leading-tight;
   }
   
   h3 {
-    @apply text-2xl md:text-3xl font-bold;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    @apply font-bold;
   }
   
   h4 {
-    @apply text-xl md:text-2xl font-semibold;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    @apply font-semibold;
   }
   
   p {
-    @apply text-base md:text-lg leading-relaxed;
+    font-size: clamp(0.9rem, 2.5vw, 1.125rem);
+    @apply leading-relaxed;
   }
   
-  /* Larger buttons */
+  /* Responsive buttons */
   .btn-lg {
-    @apply px-8 py-4 text-lg font-bold;
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+    font-size: clamp(0.9rem, 2.5vw, 1.125rem);
+    @apply font-bold;
+  }
+  
+  /* Responsive containers */
+  .container {
+    padding-left: clamp(1rem, 4vw, 1.5rem);
+    padding-right: clamp(1rem, 4vw, 1.5rem);
+  }
+  
+  /* Mobile-first spacing */
+  .section-py {
+    padding-top: clamp(3rem, 8vw, 6rem);
+    padding-bottom: clamp(3rem, 8vw, 6rem);
   }
 }
 
@@ -337,6 +356,61 @@ img:not([loading]) {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #2563eb, #0891b2);
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Better touch targets */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improved mobile spacing */
+  .mobile-px {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .mobile-py {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  /* Mobile-friendly text sizes */
+  .mobile-text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .mobile-text-base {
+    font-size: 1rem;
+  }
+  
+  .mobile-text-lg {
+    font-size: 1.125rem;
+  }
+}
+
+/* Tablet improvements */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tablet-px {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Sharper images and icons */
+  img, svg {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
 }
 
 /* Focus States */

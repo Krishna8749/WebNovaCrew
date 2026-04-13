@@ -9,11 +9,11 @@ export function Logo({ variant = 'header', className = '' }: LogoProps) {
   if (variant === 'header') {
     return (
       <div className={`flex flex-col leading-none ${className}`} style={{ display: 'inline-flex' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.4em' }}>
-          <span style={{ fontFamily: font, fontWeight: 700, fontSize: '1.9rem', color: '#ffffff', letterSpacing: '0.08em' }}>WEB</span>
-          <span style={{ fontFamily: font, fontWeight: 700, fontSize: '1.9rem', color: '#3aa6ff', letterSpacing: '0.08em' }}>NOVA</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.3em' }}>
+          <span style={{ fontFamily: font, fontWeight: 700, fontSize: 'clamp(1.1rem, 3vw, 1.5rem)', color: '#ffffff', letterSpacing: '0.08em' }}>WEB</span>
+          <span style={{ fontFamily: font, fontWeight: 700, fontSize: 'clamp(1.1rem, 3vw, 1.5rem)', color: '#3aa6ff', letterSpacing: '0.08em' }}>NOVA</span>
         </div>
-        <span style={{ fontFamily: font, fontWeight: 700, fontSize: '1.75rem', color: '#7ed957', letterSpacing: '0.72em', marginLeft: '0.05em' }}>CREW</span>
+        <span style={{ fontFamily: font, fontWeight: 700, fontSize: 'clamp(1.2rem, 3.2vw, 1.6rem)', color: '#7ed957', letterSpacing: 'clamp(0.4em, 1vw, 0.72em)', marginLeft: '0.05em' }}>CREW</span>
       </div>
     );
   }

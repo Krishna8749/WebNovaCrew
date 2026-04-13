@@ -35,15 +35,15 @@ export function Navbar() {
           isScrolled || isMobileMenuOpen ? "bg-blue-900 shadow-md py-3" : "bg-blue-900/95 backdrop-blur-sm py-4"
         }`}
       >
-        <div className="container mx-auto px-4 md:px-6 flex items-center justify-between text-white">
+        <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between text-white">
           <Link href="/">
             <a className="flex items-center gap-1 group">
-               <Logo variant="header" className="h-12" />
+               <Logo variant="header" className="h-10 sm:h-12" />
             </a>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8 font-medium text-sm">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 font-medium text-sm">
             {navLinks.map((link) => (
               <Link key={link.name} href={link.href}>
                 <a className={`transition-colors relative group ${location === link.href ? "text-lime-400" : "hover:text-lime-300"}`}>
@@ -55,7 +55,7 @@ export function Navbar() {
               </Link>
             ))}
             <Link href="/contact">
-              <Button className="bg-lime-500 text-blue-900 hover:bg-lime-400 font-bold rounded-full px-6">
+              <Button className="bg-lime-500 text-blue-900 hover:bg-lime-400 font-bold rounded-full px-4 xl:px-6 text-sm">
                 Get a Quote
               </Button>
             </Link>
@@ -63,10 +63,10 @@ export function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button 
-            className="md:hidden p-2 text-white hover:text-lime-400 transition-colors"
+            className="lg:hidden p-2 text-white hover:text-lime-400 transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X /> : <Menu />}
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </header>
@@ -78,7 +78,7 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "100vh" }}
             exit={{ opacity: 0, height: 0 }}
-            className="fixed inset-0 z-40 bg-blue-900 pt-24 px-6 md:hidden overflow-hidden"
+            className="fixed inset-0 z-40 bg-blue-900 pt-20 px-4 lg:hidden overflow-hidden"
           >
             <nav className="flex flex-col gap-6 text-white text-xl font-semibold">
               {navLinks.map((link) => (
