@@ -205,6 +205,25 @@
   animation: float 6s ease-in-out infinite;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-glow,
+  .animate-shimmer,
+  .animate-gradient,
+  .animate-bounce-subtle,
+  .animate-fade-in-up,
+  .animate-scale-in,
+  .animate-pulse {
+    animation: none;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 .animate-glow {
   animation: glow 2s ease-in-out infinite;
 }

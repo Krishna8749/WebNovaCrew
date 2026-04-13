@@ -324,8 +324,8 @@ export default function AppDevelopmentBangalore() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-purple-950/30 to-slate-950">
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-[100px]"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-pink-500/20 rounded-full blur-[80px]"></div>
+          <div className="absolute top-1/4 left-1/4 w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] bg-purple-500/20 rounded-full blur-[60px] lg:blur-[100px]"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] bg-pink-500/20 rounded-full blur-[50px] lg:blur-[80px]"></div>
         </div>
 
         <div className="container mx-auto max-w-7xl px-4 relative z-10">
@@ -366,7 +366,7 @@ export default function AppDevelopmentBangalore() {
               </a>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 max-w-3xl mx-auto">
               <div className="text-center bg-white/5 rounded-xl p-4 border border-purple-500/20">
                 <div className="text-3xl font-bold text-purple-400 mb-1">50+</div>
                 <div className="text-sm text-slate-400">Bangalore Startups</div>
@@ -474,7 +474,7 @@ export default function AppDevelopmentBangalore() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
               <motion.div
                 key={index}

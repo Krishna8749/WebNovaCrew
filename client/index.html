@@ -46,21 +46,27 @@
     <meta name="geo.position" content="30.7046;76.7179" />
     <meta name="ICBM" content="30.7046, 76.7179" />
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- Favicon - SVG for modern browsers, PNG fallback -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
     
     <!-- Theme Color -->
-    <meta name="theme-color" content="#1e3a8a" />
-    <meta name="msapplication-TileColor" content="#1e3a8a" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="msapplication-TileColor" content="#0f172a" />
     
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://wa.me" />
     
-    <!-- Fonts: Poppins for Headings, Inter for Body -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Prefetch Critical Resources -->
+    <link rel="prefetch" href="/logo.png" as="image" />
+    <link rel="prefetch" href="/src/pages/home.tsx" as="script" />
+    
+    <!-- Fonts: Poppins for Headings, Inter for Body, Logo Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&family=Orbitron:wght@700;900&family=Rajdhani:wght@600;700&family=Exo+2:wght@700;900&family=Audiowide&family=Russo+One&family=Oxanium:wght@700;800&family=Quantico:wght@700&family=Michroma&family=Syncopate:wght@700&family=Teko:wght@600;700&display=swap" rel="stylesheet" fetchpriority="high" />
     
     <!-- DNS Prefetch -->
     <link rel="dns-prefetch" href="//www.google-analytics.com" />

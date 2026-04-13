@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Rocket, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import { Logo } from "@/components/ui/Logo";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,16 +37,8 @@ export function Navbar() {
       >
         <div className="container mx-auto px-4 md:px-6 flex items-center justify-between text-white">
           <Link href="/">
-            <a className="flex items-center gap-2 group">
-               <img 
-                 src="/logo.png" 
-                 alt="Web Nova Crew Logo" 
-                 className="h-10 w-auto object-contain"
-               />
-               <div className="flex flex-col">
-                  <span className="font-poppins font-bold text-xl leading-none tracking-tight">WEB NOVA</span>
-                  <span className="font-poppins font-bold text-sm text-lime-400 leading-none tracking-widest">CREW</span>
-               </div>
+            <a className="flex items-center gap-1 group">
+               <Logo variant="header" className="h-12" />
             </a>
           </Link>
 

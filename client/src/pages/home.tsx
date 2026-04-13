@@ -206,9 +206,9 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950">
-          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-blue-500/20 rounded-full blur-[120px] animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-[100px] animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-[80px] animate-pulse delay-500"></div>
+          <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] bg-blue-500/20 rounded-full blur-[80px] lg:blur-[120px] animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] bg-purple-500/20 rounded-full blur-[60px] lg:blur-[100px] animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] bg-cyan-500/10 rounded-full blur-[50px] lg:blur-[80px] animate-pulse delay-500"></div>
         </div>
         
         {/* Grid Pattern Overlay */}
@@ -286,10 +286,10 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="relative hidden lg:block"
             >
-              <div className="relative">
-                {/* Floating App Mockups */}
-                <div className="absolute -top-10 -left-10 w-48 h-96 bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl shadow-2xl transform -rotate-12 animate-float"></div>
-                <div className="absolute top-20 left-20 w-56 h-[450px] bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl shadow-2xl transform rotate-6 z-10">
+              <div className="relative scale-75 md:scale-90 lg:scale-100">
+                {/* Floating App Mockups - Responsive sizing */}
+                <div className="absolute -top-10 -left-10 w-32 h-64 md:w-40 md:h-80 lg:w-48 lg:h-96 bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl shadow-2xl transform -rotate-12 animate-float"></div>
+                <div className="absolute top-10 left-10 md:top-20 md:left-20 w-36 h-72 md:w-44 md:h-80 lg:w-56 lg:h-[450px] bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl shadow-2xl transform rotate-6 z-10">
                   <div className="p-4">
                     <div className="w-full h-8 bg-white/20 rounded-full mb-4"></div>
                     <div className="space-y-3">
@@ -299,11 +299,11 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute top-40 right-0 w-44 h-80 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl shadow-2xl transform rotate-12"></div>
+                <div className="absolute top-20 right-0 md:top-40 lg:w-44 h-64 md:h-72 lg:h-80 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl shadow-2xl transform rotate-12"></div>
                 
-                {/* AI Badge */}
-                <div className="absolute bottom-10 left-0 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-full font-bold shadow-xl z-20 flex items-center gap-2">
-                  <Brain className="w-5 h-5" /> AI-Powered
+                {/* AI Badge - Responsive positioning */}
+                <div className="absolute bottom-0 md:bottom-10 left-0 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold shadow-xl z-20 flex items-center gap-2 text-sm md:text-base">
+                  <Brain className="w-4 h-4 md:w-5 md:h-5" /> AI-Powered
                 </div>
               </div>
             </motion.div>
@@ -344,7 +344,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {coreServices.map((service, i) => (
               <motion.div
                 key={i}
@@ -458,7 +458,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {portfolioProjects.map((project, i) => (
               <motion.div
                 key={i}

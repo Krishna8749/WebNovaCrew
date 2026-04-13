@@ -1,3 +1,6 @@
+# Blueprint: https://render.com/docs/infrastructure-as-code
+# After push, open Render → New → Blueprint → connect this repo, or link an existing service.
+
 services:
   - type: web
     name: webnovacrew
@@ -9,5 +12,20 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-      - key: PORT
-        value: 10000
+      # Render sets PORT automatically — do not hardcode.
+      # Zoho / contact form (set in Dashboard if not prompted at deploy):
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_SECURE
+        sync: false
+      - key: CONTACT_FROM
+        sync: false
+      # Optional alternative to SMTP:
+      - key: RESEND_API_KEY
+        sync: false

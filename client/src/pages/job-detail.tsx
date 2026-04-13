@@ -179,11 +179,11 @@ export default function JobDetail() {
                   <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                     <div>
                       <label className="text-sm font-medium text-slate-700 mb-1 block">Full Name *</label>
-                      <Input placeholder="John Doe" className="bg-slate-50" />
+                      <Input placeholder="Your Name" className="bg-slate-50" />
                     </div>
                     <div>
                       <label className="text-sm font-medium text-slate-700 mb-1 block">Email *</label>
-                      <Input type="email" placeholder="john@example.com" className="bg-slate-50" />
+                      <Input type="email" placeholder="your@email.com" className="bg-slate-50" />
                     </div>
                     <div>
                       <label className="text-sm font-medium text-slate-700 mb-1 block">Phone *</label>
