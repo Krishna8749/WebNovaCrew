@@ -1,0 +1,21 @@
+node_modules
+.env
+.env.local
+dist
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz
+
+# Vite prebundle cache (do not commit)
+.vite-cache/
+node_modules/.vite/
+
+# Nested clone / accidental repo inside this project
+web-Xc-Flown-ai-company/
+
+# Local editor settings (optional)
+.vscode/
+
+# Runtime share link store (project root only)
+/data/

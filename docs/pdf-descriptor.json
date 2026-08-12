@@ -1,0 +1,1176 @@
+{
+  "title": "XcFlownWeb - Complete Codebase Documentation",
+  "author": "XcFlown",
+  "subject": "Codebase Documentation with Mind Mapping",
+  "creator": "XcFlown",
+  "producer": "XcFlown PDF Generator",
+  "pages": [
+    {
+      "width": 595,
+      "height": 842,
+      "elements": [
+        {
+          "type": "rect",
+          "x": 0, "y": 0,
+          "width": 595, "height": 842,
+          "color": { "r": 0.02, "g": 0.04, "b": 0.08 }
+        },
+        {
+          "type": "rect",
+          "x": 0, "y": 720,
+          "width": 595, "height": 122,
+          "color": { "r": 0.06, "g": 0.09, "b": 0.16 }
+        },
+        {
+          "type": "text",
+          "text": "XcFlownWeb",
+          "x": 50, "y": 780,
+          "size": 42,
+          "font": "Helvetica-Bold",
+          "color": { "r": 1.0, "g": 1.0, "b": 1.0 }
+        },
+        {
+          "type": "text",
+          "text": "Complete Codebase Documentation",
+          "x": 50, "y": 745,
+          "size": 18,
+          "font": "Helvetica",
+          "color": { "r": 0.6, "g": 0.7, "b": 0.9 }
+        },
+        {
+          "type": "text",
+          "text": "Website App | AI Automation | Tools | Services",
+          "x": 50, "y": 720,
+          "size": 14,
+          "font": "Helvetica-Oblique",
+          "color": { "r": 0.4, "g": 0.5, "b": 0.7 }
+        },
+        {
+          "type": "line",
+          "startX": 50, "startY": 680,
+          "endX": 545, "endY": 680,
+          "color": { "r": 0.2, "g": 0.3, "b": 0.5 },
+          "thickness": 1
+        },
+        {
+          "type": "text",
+          "text": "Purpose & Vision",
+          "x": 50, "y": 650,
+          "size": 16,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "A full-stack web application for XcFlown - a professional app development company serving India & Kuwait markets. The platform showcases services, generates leads, displays portfolio, and automates business operations through AI-powered tools.",
+          "x": 50, "y": 620,
+          "size": 11,
+          "font": "Helvetica",
+          "maxWidth": 495,
+          "lineHeight": 15
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 520,
+          "width": 495, "height": 80,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "borderWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "Key Metrics",
+          "x": 60, "y": 540,
+          "size": 12,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "7+ Years Experience  |  250+ Apps Delivered  |  India & Kuwait Markets  |  40% Lower Cost",
+          "x": 60, "y": 560,
+          "size": 10,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 }
+        },
+        {
+          "type": "text",
+          "text": "Tech Stack: React 19 | Vite | TypeScript | TailwindCSS | Radix UI | Express | Node.js | PostgreSQL",
+          "x": 60, "y": 580,
+          "size": 10,
+          "font": "Helvetica",
+          "color": { "r": 0.6, "g": 0.7, "b": 0.85 }
+        }
+      ]
+    },
+    {
+      "width": 595,
+      "height": 842,
+      "elements": [
+        {
+          "type": "rect",
+          "x": 0, "y": 0,
+          "width": 595, "height": 842,
+          "color": { "r": 0.02, "g": 0.04, "b": 0.08 }
+        },
+        {
+          "type": "rect",
+          "x": 30, "y": 750,
+          "width": 535, "height": 40,
+          "color": { "r": 0.06, "g": 0.09, "b": 0.16 }
+        },
+        {
+          "type": "text",
+          "text": "MIND MAP: Project Architecture",
+          "x": 50, "y": 775,
+          "size": 16,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 650,
+          "width": 200, "height": 60,
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "XcFlownWeb",
+          "x": 70, "y": 680,
+          "size": 14,
+          "font": "Helvetica-Bold",
+          "color": { "r": 1.0, "g": 1.0, "b": 1.0 }
+        },
+        {
+          "type": "text",
+          "text": "Full-Stack Application",
+          "x": 70, "y": 665,
+          "size": 9,
+          "font": "Helvetica",
+          "color": { "r": 0.9, "g": 0.95, "b": 1.0 }
+        },
+        {
+          "type": "line",
+          "startX": 150, "startY": 650,
+          "endX": 150, "endY": 580,
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "thickness": 2
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 540,
+          "width": 90, "height": 40,
+          "color": { "r": 0.1, "g": 0.2, "b": 0.35 }
+        },
+        {
+          "type": "text",
+          "text": "CLIENT",
+          "x": 60, "y": 565,
+          "size": 10,
+          "font": "Helvetica-Bold",
+          "color": { "r": 1.0, "g": 1.0, "b": 1.0 }
+        },
+        {
+          "type": "text",
+          "text": "React/Vite",
+          "x": 60, "y": 552,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.7, "g": 0.8, "b": 0.95 }
+        },
+        {
+          "type": "line",
+          "startX": 140, "startY": 540,
+          "endX": 200, "endY": 540,
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "thickness": 2
+        },
+        {
+          "type": "rect",
+          "x": 200, "y": 540,
+          "width": 90, "height": 40,
+          "color": { "r": 0.1, "g": 0.2, "b": 0.35 }
+        },
+        {
+          "type": "text",
+          "text": "SERVER",
+          "x": 210, "y": 565,
+          "size": 10,
+          "font": "Helvetica-Bold",
+          "color": { "r": 1.0, "g": 1.0, "b": 1.0 }
+        },
+        {
+          "type": "text",
+          "text": "Express/Node",
+          "x": 210, "y": 552,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.7, "g": 0.8, "b": 0.95 }
+        },
+        {
+          "type": "line",
+          "startX": 290, "startY": 540,
+          "endX": 350, "endY": 540,
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "thickness": 2
+        },
+        {
+          "type": "rect",
+          "x": 350, "y": 540,
+          "width": 90, "height": 40,
+          "color": { "r": 0.1, "g": 0.2, "b": 0.35 }
+        },
+        {
+          "type": "text",
+          "text": "DATABASE",
+          "x": 360, "y": 565,
+          "size": 10,
+          "font": "Helvetica-Bold",
+          "color": { "r": 1.0, "g": 1.0, "b": 1.0 }
+        },
+        {
+          "type": "text",
+          "text": "PostgreSQL",
+          "x": 360, "y": 552,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.7, "g": 0.8, "b": 0.95 }
+        },
+        {
+          "type": "line",
+          "startX": 150, "startY": 540,
+          "endX": 150, "endY": 470,
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "thickness": 2
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 430,
+          "width": 200, "height": 40,
+          "color": { "r": 0.08, "g": 0.15, "b": 0.28 }
+        },
+        {
+          "type": "text",
+          "text": "Key Technologies Used",
+          "x": 60, "y": 450,
+          "size": 10,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "React 19 | TypeScript | TailwindCSS | Radix UI | Vite | Wouter | React Query | Framer Motion | Zod | Drizzle ORM | Express | Nodemailer | Passport",
+          "x": 60, "y": 438,
+          "size": 7,
+          "font": "Helvetica",
+          "color": { "r": 0.7, "g": 0.8, "b": 0.95 }
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 350,
+          "width": 495, "height": 60,
+          "color": { "r": 0.06, "g": 0.09, "b": 0.14 },
+          "borderColor": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "borderWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "Website App Structure",
+          "x": 60, "y": 370,
+          "size": 12,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "Pages: Home | About | Services | Portfolio | Blog | Contact | Careers | Pricing | Team | Privacy Policy | Terms of Service",
+          "x": 60, "y": 390,
+          "size": 9,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 }
+        },
+        {
+          "type": "text",
+          "text": "Service Pages: 14 specialized service pages | Location Pages: 60+ city-specific landing pages (India: 25+, Kuwait: 15+, Lucknow: 19)",
+          "x": 60, "y": 405,
+          "size": 9,
+          "font": "Helvetica",
+          "color": { "r": 0.6, "g": 0.7, "b": 0.85 }
+        }
+      ]
+    },
+    {
+      "width": 595,
+      "height": 842,
+      "elements": [
+        {
+          "type": "rect",
+          "x": 0, "y": 0,
+          "width": 595, "height": 842,
+          "color": { "r": 0.02, "g": 0.04, "b": 0.08 }
+        },
+        {
+          "type": "rect",
+          "x": 30, "y": 750,
+          "width": 535, "height": 40,
+          "color": { "r": 0.06, "g": 0.09, "b": 0.16 }
+        },
+        {
+          "type": "text",
+          "text": "AI & AUTOMATION TOOLS",
+          "x": 50, "y": 775,
+          "size": 16,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 600,
+          "width": 230, "height": 130,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.5, "g": 0.2, "b": 0.8 },
+          "borderWidth": 2
+        },
+        {
+          "type": "text",
+          "text": "AI App Development",
+          "x": 60, "y": 710,
+          "size": 13,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.6, "g": 0.4, "b": 0.9 }
+        },
+        {
+          "type": "text",
+          "text": "- GPT-4 / GPT-4o Integration\n- Claude 3.5 AI Models\n- LangChain Framework\n- TensorFlow & PyTorch ML\n- Hugging Face Models\n- Voice AI & Speech Recognition\n- Facial Recognition & Biometrics\n- LLM-Powered Semantic Search\n- Predictive Analytics",
+          "x": 60, "y": 610,
+          "size": 9,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 13
+        },
+        {
+          "type": "rect",
+          "x": 300, "y": 600,
+          "width": 230, "height": 130,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.2, "g": 0.7, "b": 0.5 },
+          "borderWidth": 2
+        },
+        {
+          "type": "text",
+          "text": "AI Chatbot Development",
+          "x": 310, "y": 710,
+          "size": 13,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.3, "g": 0.8, "b": 0.6 }
+        },
+        {
+          "type": "text",
+          "text": "- WhatsApp AI Bots\n- Website AI Chatbots\n- Customer Service Automation\n- Sales AI Agents\n- Lead Generation Bots\n- Multi-language Support (50+)\n- CRM Integration\n- Analytics Dashboard\n- Custom Training on Business Data",
+          "x": 310, "y": 610,
+          "size": 9,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 13
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 440,
+          "width": 495, "height": 140,
+          "color": { "r": 0.06, "g": 0.09, "b": 0.14 },
+          "borderColor": { "r": 0.9, "g": 0.6, "b": 0.2 },
+          "borderWidth": 2
+        },
+        {
+          "type": "text",
+          "text": "AI Use Cases & Industries",
+          "x": 60, "y": 560,
+          "size": 12,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.9, "g": 0.65, "b": 0.25 }
+        },
+        {
+          "type": "text",
+          "text": "E-commerce AI           → Product recommendations, dynamic pricing, inventory forecasting\nHealthcare AI         → Symptom analysis, appointment scheduling, patient monitoring\nReal Estate AI        → Property valuation, lead scoring, virtual property tours\nFinTech AI            → Fraud detection, credit scoring, investment recommendations\nEducation AI          → Personalized learning, automated grading, tutoring bots\nCustomer Service AI    → 24/7 chatbots, ticket routing, sentiment analysis",
+          "x": 60, "y": 455,
+          "size": 9,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 15
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 280,
+          "width": 495, "height": 140,
+          "color": { "r": 0.06, "g": 0.09, "b": 0.14 },
+          "borderColor": { "r": 0.2, "g": 0.6, "b": 0.9 },
+          "borderWidth": 2
+        },
+        {
+          "type": "text",
+          "text": "Chatbot Types Offered",
+          "x": 60, "y": 400,
+          "size": 12,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.3, "g": 0.7, "b": 0.95 }
+        },
+        {
+          "type": "text",
+          "text": "Customer Support Chatbot     → ₹50,000+ | Ticket creation, FAQ automation, escalation, sentiment analysis\nSales & Lead Gen Chatbot      → ₹75,000+ | Lead scoring, calendar booking, product recommendations\nE-commerce Chatbot              → ₹80,000+ | Product catalog search, order status, cart recovery\nEnterprise AI Assistant        → ₹1,50,000+ | Knowledge base RAG, document Q&A, IT helpdesk",
+          "x": 60, "y": 295,
+          "size": 9,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 15
+        }
+      ]
+    },
+    {
+      "width": 595,
+      "height": 842,
+      "elements": [
+        {
+          "type": "rect",
+          "x": 0, "y": 0,
+          "width": 595, "height": 842,
+          "color": { "r": 0.02, "g": 0.04, "b": 0.08 }
+        },
+        {
+          "type": "rect",
+          "x": 30, "y": 750,
+          "width": 535, "height": 40,
+          "color": { "r": 0.06, "g": 0.09, "b": 0.16 }
+        },
+        {
+          "type": "text",
+          "text": "SERVICES OFFERED",
+          "x": 50, "y": 775,
+          "size": 16,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 620,
+          "width": 150, "height": 110,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "borderWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "Mobile Development",
+          "x": 58, "y": 710,
+          "size": 10,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "• Android (Kotlin)\n• iOS (Swift)\n• Flutter Cross-Platform\n• React Native\n• App UI/UX Design\n• App Store Optimization",
+          "x": 58, "y": 630,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 12
+        },
+        {
+          "type": "rect",
+          "x": 215, "y": 620,
+          "width": 150, "height": 110,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "borderWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "Web Development",
+          "x": 223, "y": 710,
+          "size": 10,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "• React.js & Next.js\n• Laravel / PHP\n• WordPress / Shopify\n• Progressive Web Apps\n• SaaS Platforms\n• Landing Pages",
+          "x": 223, "y": 630,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 12
+        },
+        {
+          "type": "rect",
+          "x": 380, "y": 620,
+          "width": 150, "height": 110,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "borderWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "E-Commerce",
+          "x": 388, "y": 710,
+          "size": 10,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "• Shopify / WooCommerce\n• Multi-vendor Marketplace\n• Payment Gateway\n• Inventory Management\n• B2B / B2C Solutions\n• Delivery Integration",
+          "x": 388, "y": 630,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 12
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 490,
+          "width": 150, "height": 110,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "borderWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "Real Estate Apps",
+          "x": 58, "y": 580,
+          "size": 10,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "• Property Marketplace\n• Agent CRM Panel\n• Hyper-local Search\n• Map Integration\n• Admin Dashboard\n• Rental / Sale Listings",
+          "x": 58, "y": 500,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 12
+        },
+        {
+          "type": "rect",
+          "x": 215, "y": 490,
+          "width": 150, "height": 110,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "borderWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "On-Demand Apps",
+          "x": 223, "y": 580,
+          "size": 10,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "• Food Delivery\n• Grocery Delivery\n• Medicine Delivery\n• Parcel / Logistics\n• Delivery Boy App\n• Store Manager Panel",
+          "x": 223, "y": 500,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 12
+        },
+        {
+          "type": "rect",
+          "x": 380, "y": 490,
+          "width": 150, "height": 110,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "borderWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "ERP & CRM Systems",
+          "x": 388, "y": 580,
+          "size": 10,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "• Custom Business Software\n• Laravel / Node.js / Python\n• Lead Management\n• HR Management Systems\n• Inventory & Accounting\n• API Integrations",
+          "x": 388, "y": 500,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 12
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 340,
+          "width": 495, "height": 130,
+          "color": { "r": 0.06, "g": 0.09, "b": 0.14 },
+          "borderColor": { "r": 0.9, "g": 0.5, "b": 0.2 },
+          "borderWidth": 2
+        },
+        {
+          "type": "text",
+          "text": "Pricing Overview (India & Kuwait)",
+          "x": 60, "y": 450,
+          "size": 12,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.9, "g": 0.55, "b": 0.25 }
+        },
+        {
+          "type": "text",
+          "text": "INDIA PRICING:\n• Starter App: ₹25,000 – ₹60,000 (Basic UI/UX, 5-7 Screens, 7-15 Days)\n• Business App: ₹65,000 – ₹1,20,000 (Custom Design, Admin Panel, Payment Gateway, 15-30 Days)\n• AI/Enterprise App: ₹1,20,000 – ₹5,00,000 (AI Features, Multi-platform, Analytics, 30-45 Days)\n\nKUWAIT PRICING:\n• Mobile App (Basic): 200 – 600 KWD (Arabic Support, KNET Ready)\n• E-commerce App: 450 – 1,100 KWD (Multi-vendor, Payment Gateway)\n• Premium AI App: 1,200 – 4,500 KWD (Enterprise Grade, Full Support)",
+          "x": 60, "y": 350,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 14
+        }
+      ]
+    },
+    {
+      "width": 595,
+      "height": 842,
+      "elements": [
+        {
+          "type": "rect",
+          "x": 0, "y": 0,
+          "width": 595, "height": 842,
+          "color": { "r": 0.02, "g": 0.04, "b": 0.08 }
+        },
+        {
+          "type": "rect",
+          "x": 30, "y": 750,
+          "width": 535, "height": 40,
+          "color": { "r": 0.06, "g": 0.09, "b": 0.16 }
+        },
+        {
+          "type": "text",
+          "text": "UI COMPONENTS & TOOLS LIBRARY",
+          "x": 50, "y": 775,
+          "size": 16,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 630,
+          "width": 230, "height": 100,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "borderWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "UI Components (45+)",
+          "x": 60, "y": 710,
+          "size": 11,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "Button, Input, Textarea, Select, Checkbox, Radio, Switch, Slider, Toggle, Badge, Card, Avatar, Alert, Dialog, Drawer, Sheet, Popover, Tooltip, Collapsible, Accordion, Tabs, Table, Pagination, Toast, Sonner, Spinner, Skeleton, Progress, Separator, Kbd, Label, Breadcrumb",
+          "x": 60, "y": 640,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 11,
+          "maxWidth": 210
+        },
+        {
+          "type": "rect",
+          "x": 300, "y": 630,
+          "width": 230, "height": 100,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "borderWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "Advanced Components",
+          "x": 310, "y": 710,
+          "size": 11,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "Carousel, Chart, Calendar, DatePicker, Command (Search), Context Menu, Data Table, Dropdown Menu, Hover Card, Input OTP, Item, Menubar, Navigation Menu, Resizable Panels, Scroll Area, Form with Validation, Aspect Ratio, Input Group",
+          "x": 310, "y": 640,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 11,
+          "maxWidth": 210
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 510,
+          "width": 495, "height": 100,
+          "color": { "r": 0.06, "g": 0.09, "b": 0.14 },
+          "borderColor": { "r": 0.5, "g": 0.3, "b": 0.7 },
+          "borderWidth": 2
+        },
+        {
+          "type": "text",
+          "text": "Libraries & Dependencies",
+          "x": 60, "y": 590,
+          "size": 11,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.6, "g": 0.4, "b": 0.8 }
+        },
+        {
+          "type": "text",
+          "text": "UI: Radix UI, TailwindCSS, Framer Motion, Lucide React Icons, Recharts, Shadcn/ui patterns\nRouting: Wouter, React Hook Form + Zod validation, TanStack React Query\nState: React Query, Next Themes (dark/light mode)\nBackend: Express, Passport.js, Nodemailer, Drizzle ORM, PostgreSQL, Neon Serverless\nBuild: Vite, TypeScript, esbuild, Tailwind CSS Vite Plugin",
+          "x": 60, "y": 520,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 12,
+          "maxWidth": 475
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 380,
+          "width": 495, "height": 110,
+          "color": { "r": 0.06, "g": 0.09, "b": 0.14 },
+          "borderColor": { "r": 0.2, "g": 0.7, "b": 0.5 },
+          "borderWidth": 2
+        },
+        {
+          "type": "text",
+          "text": "SEO & Marketing Tools",
+          "x": 60, "y": 470,
+          "size": 11,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.3, "g": 0.75, "b": 0.55 }
+        },
+        {
+          "type": "text",
+          "text": "• SEO Head Component with meta tags, keywords, Open Graph\n• Schema Markup: LocalBusiness, Breadcrumb, Service, FAQ, Corporate Contact\n• Dynamic page titles and descriptions per route\n• Semantic HTML structure\n• robots.txt and sitemap.xml generation\n• Service Worker for PWA capabilities\n• Vite plugin for dynamic meta images",
+          "x": 60, "y": 395,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 11,
+          "maxWidth": 475
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 250,
+          "width": 495, "height": 110,
+          "color": { "r": 0.06, "g": 0.09, "b": 0.14 },
+          "borderColor": { "r": 0.9, "g": 0.6, "b": 0.2 },
+          "borderWidth": 2
+        },
+        {
+          "type": "text",
+          "text": "Widgets & Features",
+          "x": 60, "y": 340,
+          "size": 11,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.9, "g": 0.65, "b": 0.25 }
+        },
+        {
+          "type": "text",
+          "text": "• WhatsApp Float Button - Click-to-chat widget\n• Live Chat Widget - Real-time customer chat\n• Social Proof Widget - Testimonials and reviews\n• Certification Badges - Trust indicators\n• Dynamic CTAs - Call-to-action sections\n• FAQ Section - Accordion-style questions\n• Stats Section - Animated counters\n• Testimonials Carousel - Client reviews",
+          "x": 60, "y": 260,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 11,
+          "maxWidth": 475
+        }
+      ]
+    },
+    {
+      "width": 595,
+      "height": 842,
+      "elements": [
+        {
+          "type": "rect",
+          "x": 0, "y": 0,
+          "width": 595, "height": 842,
+          "color": { "r": 0.02, "g": 0.04, "b": 0.08 }
+        },
+        {
+          "type": "rect",
+          "x": 30, "y": 750,
+          "width": 535, "height": 40,
+          "color": { "r": 0.06, "g": 0.09, "b": 0.16 }
+        },
+        {
+          "type": "text",
+          "text": "LOCATION-BASED PAGES",
+          "x": 50, "y": 775,
+          "size": 16,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 620,
+          "width": 495, "height": 110,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "borderWidth": 2
+        },
+        {
+          "type": "text",
+          "text": "India Cities (25+ Locations)",
+          "x": 60, "y": 710,
+          "size": 12,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "Tier 1: Mumbai, Delhi, Bangalore, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad\nTier 2: Lucknow, Jaipur, Indore, Bhopal, Surat, Vadodara, Kanpur, Chandigarh, Agra, Varanasi, Kochi, Noida, Gurgaon, Ghaziabad, Nagpur, Patna, Raipur, Ranchi",
+          "x": 60, "y": 630,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 12,
+          "maxWidth": 475
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 490,
+          "width": 495, "height": 110,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.2, "g": 0.7, "b": 0.5 },
+          "borderWidth": 2
+        },
+        {
+          "type": "text",
+          "text": "Kuwait Cities (15+ Locations)",
+          "x": 60, "y": 580,
+          "size": 12,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.3, "g": 0.75, "b": 0.55 }
+        },
+        {
+          "type": "text",
+          "text": "Kuwait City, Al-Ahmadi, Farwaniya, Hawally, Jahra, Fahaheel, Salmiya, Bayan, Jabriya, Mangaf, Mahboula, Fintas, Mirqab, Mubarak Al-Kabeer, Sabah Al-Salem, Salwa",
+          "x": 60, "y": 500,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 12,
+          "maxWidth": 475
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 360,
+          "width": 495, "height": 110,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.9, "g": 0.6, "b": 0.2 },
+          "borderWidth": 2
+        },
+        {
+          "type": "text",
+          "text": "Lucknow Areas (19 Locations)",
+          "x": 60, "y": 450,
+          "size": 12,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.9, "g": 0.65, "b": 0.25 }
+        },
+        {
+          "type": "text",
+          "text": "Gomti Nagar, Gomti Nagar Extension, Hazratganj, Indira Nagar, Aliganj, Alambagh, Jankipuram, Rajajipuram, Mahanagar, Ashiyana, Vrindavan Yojna, Aminabad, Chowk, Charbagh, Lalbagh, Faizabad Road, Sultanpur Road, Shaheed Path, Sushant Golf City",
+          "x": 60, "y": 370,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 12,
+          "maxWidth": 475
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 230,
+          "width": 495, "height": 110,
+          "color": { "r": 0.06, "g": 0.09, "b": 0.14 },
+          "borderColor": { "r": 0.5, "g": 0.3, "b": 0.7 },
+          "borderWidth": 2
+        },
+        {
+          "type": "text",
+          "text": "Specialized Industry Pages",
+          "x": 60, "y": 320,
+          "size": 12,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.6, "g": 0.4, "b": 0.8 }
+        },
+        {
+          "type": "text",
+          "text": "• Kuwait E-commerce App Development\n• Kuwait Logistics App Development\n• Kuwait Real Estate App Development\n• Kuwait Restaurant App Development\n\nEach page includes: Local SEO optimization, city-specific content, service details, pricing, FAQs, testimonials, and CTAs",
+          "x": 60, "y": 240,
+          "size": 8,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 11,
+          "maxWidth": 475
+        }
+      ]
+    },
+    {
+      "width": 595,
+      "height": 842,
+      "elements": [
+        {
+          "type": "rect",
+          "x": 0, "y": 0,
+          "width": 595, "height": 842,
+          "color": { "r": 0.02, "g": 0.04, "b": 0.08 }
+        },
+        {
+          "type": "rect",
+          "x": 30, "y": 750,
+          "width": 535, "height": 40,
+          "color": { "r": 0.06, "g": 0.09, "b": 0.16 }
+        },
+        {
+          "type": "text",
+          "text": "PROJECT POTENTIAL & BUSINESS VALUE",
+          "x": 50, "y": 775,
+          "size": 16,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 620,
+          "width": 495, "height": 110,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "borderWidth": 2
+        },
+        {
+          "type": "text",
+          "text": "Market Reach & Expansion Potential",
+          "x": 60, "y": 710,
+          "size": 12,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "• Dual-market presence: India (1.4B+ population) & Kuwait (4.5M+ population)\n• 60+ location-specific landing pages for hyper-local SEO\n• Multi-language support (English, Hindi, Arabic)\n• Currency-aware pricing (INR and KWD)\n• Arabic RTL support for Kuwait market\n• Growing digital adoption post-pandemic in GCC region",
+          "x": 60, "y": 630,
+          "size": 9,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 13,
+          "maxWidth": 475
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 490,
+          "width": 495, "height": 110,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.2, "g": 0.7, "b": 0.5 },
+          "borderWidth": 2
+        },
+        {
+          "type": "text",
+          "text": "AI & Automation Revenue Streams",
+          "x": 60, "y": 580,
+          "size": 12,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.3, "g": 0.75, "b": 0.55 }
+        },
+        {
+          "type": "text",
+          "text": "• AI chatbot development services (₹50K - ₹3L+ per project)\n• Subscription-based SaaS products potential\n• AI agent development for enterprises\n• Predictive analytics integration services\n• Voice AI and multilingual chatbot solutions\n• Automated customer service platforms",
+          "x": 60, "y": 500,
+          "size": 9,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 13,
+          "maxWidth": 475
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 360,
+          "width": 495, "height": 110,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.9, "g": 0.6, "b": 0.2 },
+          "borderWidth": 2
+        },
+        {
+          "type": "text",
+          "text": "Competitive Advantages",
+          "x": 60, "y": 450,
+          "size": 12,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.9, "g": 0.65, "b": 0.25 }
+        },
+        {
+          "type": "text",
+          "text": "• 7+ years industry experience with 250+ apps delivered\n• 40% lower development costs vs competitors\n• 100% on-time delivery guarantee\n• 60 days free post-launch support\n• Complete AI integration capabilities (GPT-4, Claude, TensorFlow)\n• One-stop solution: Mobile, Web, AI, ERP, E-commerce",
+          "x": 60, "y": 370,
+          "size": 9,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 13,
+          "maxWidth": 475
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 230,
+          "width": 495, "height": 110,
+          "color": { "r": 0.06, "g": 0.09, "b": 0.14 },
+          "borderColor": { "r": 0.5, "g": 0.3, "b": 0.7 },
+          "borderWidth": 2
+        },
+        {
+          "type": "text",
+          "text": "Technical Excellence",
+          "x": 60, "y": 320,
+          "size": 12,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.6, "g": 0.4, "b": 0.8 }
+        },
+        {
+          "type": "text",
+          "text": "• Modern tech stack: React 19, TypeScript, Vite for fast performance\n• Scalable architecture with lazy loading and code splitting\n• SEO-optimized with schema markup and semantic HTML\n• PWA-ready with service workers for offline capabilities\n• Database: PostgreSQL with Drizzle ORM for type-safe queries\n• Authentication: Passport.js with session management",
+          "x": 60, "y": 240,
+          "size": 9,
+          "font": "Helvetica",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 13,
+          "maxWidth": 475
+        }
+      ]
+    },
+    {
+      "width": 595,
+      "height": 842,
+      "elements": [
+        {
+          "type": "rect",
+          "x": 0, "y": 0,
+          "width": 595, "height": 842,
+          "color": { "r": 0.02, "g": 0.04, "b": 0.08 }
+        },
+        {
+          "type": "rect",
+          "x": 0, "y": 750,
+          "width": 595, "height": 92,
+          "color": { "r": 0.06, "g": 0.09, "b": 0.16 }
+        },
+        {
+          "type": "text",
+          "text": "DIAGRAM OUTLINE: Directory Structure",
+          "x": 50, "y": 780,
+          "size": 16,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 620,
+          "width": 495, "height": 110,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "borderWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "Root Structure",
+          "x": 60, "y": 710,
+          "size": 11,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "XcFlownWeb/\n├── client/              (React Frontend)\n├── server/              (Express Backend)\n├── shared/              (Shared Types/Schemas)\n├── script/              (Build Scripts)\n├── package.json         (Root Dependencies)\n├── vite.config.ts       (Vite Configuration)\n└── tsconfig.json        (TypeScript Config)",
+          "x": 60, "y": 630,
+          "size": 8,
+          "font": "Courier",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 12,
+          "maxWidth": 475
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 490,
+          "width": 495, "height": 110,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "borderWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "client/src Structure",
+          "x": 60, "y": 580,
+          "size": 11,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "client/src/\n├── components/    (UI & Layout Components)\n│   ├── layout/    (Navbar, Footer)\n│   ├── sections/   (CTA, FAQ, Testimonials, Stats)\n│   ├── seo/        (Head, SchemaMarkup)\n│   ├── templates/  (CityPage Templates)\n│   ├── ui/         (45+ Radix-based Components)\n│   └── widgets/    (WhatsApp, LiveChat, Badges)\n├── pages/          (Route Pages)\n│   ├── locations/  (India, Kuwait, Lucknow Pages)\n│   └── services/   (14 Service Pages)\n├── data/           (Static Data Files)\n├── hooks/          (Custom React Hooks)\n├── lib/            (Utils, QueryClient)\n└── App.tsx         (Main Router Config)",
+          "x": 60, "y": 500,
+          "size": 7,
+          "font": "Courier",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 11,
+          "maxWidth": 475
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 360,
+          "width": 495, "height": 110,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "borderWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "server/ Structure",
+          "x": 60, "y": 450,
+          "size": 11,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "server/\n├── index.ts         (Express Server Entry)\n├── routes.ts        (API Routes)\n├── storage.ts       (Session/Storage)\n├── contact-email.ts (Nodemailer Config)\n├── vite.ts          (Vite Dev Server)\n└── load-env.ts      (Environment Variables)",
+          "x": 60, "y": 370,
+          "size": 8,
+          "font": "Courier",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 12,
+          "maxWidth": 475
+        },
+        {
+          "type": "rect",
+          "x": 50, "y": 230,
+          "width": 495, "height": 110,
+          "color": { "r": 0.08, "g": 0.12, "b": 0.18 },
+          "borderColor": { "r": 0.23, "g": 0.51, "b": 0.96 },
+          "borderWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "Key Configuration Files",
+          "x": 60, "y": 320,
+          "size": 11,
+          "font": "Helvetica-Bold",
+          "color": { "r": 0.23, "g": 0.51, "b": 0.96 }
+        },
+        {
+          "type": "text",
+          "text": "• package.json      → Dependencies & npm scripts\n• vite.config.ts     → Vite bundler configuration\n• tsconfig.json      → TypeScript compiler options\n• tailwind.config    → TailwindCSS theming\n• drizzle.config.ts  → Database ORM configuration\n• components.json    → Shadcn/ui component registry\n• postcss.config.js  → CSS post-processing",
+          "x": 60, "y": 240,
+          "size": 8,
+          "font": "Courier",
+          "color": { "r": 0.8, "g": 0.85, "b": 0.95 },
+          "lineHeight": 12,
+          "maxWidth": 475
+        }
+      ]
+    }
+  ]
+}

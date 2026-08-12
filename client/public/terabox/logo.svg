@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="TeraBox Play">
+  <rect width="64" height="64" rx="14" fill="url(#brand-gradient)"/>
+  <path d="M18 36c0-7.2 5.8-13 13-13 .6-8.8 8.2-15.2 16.8-13.2 7.2 1.8 11.6 9.2 10.2 16.8 5.2 1.4 8.8 6.2 8.8 11.6 0 6.6-5.4 12-12 12H27c-6.6 0-12-5.4-12-12z" fill="#fff" fill-opacity="0.92"/>
+  <path d="M27 40V24l14 8-14 8z" fill="#2563eb"/>
+  <defs>
+    <linearGradient id="brand-gradient" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+</svg>

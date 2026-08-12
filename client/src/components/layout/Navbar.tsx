@@ -1,0 +1,103 @@
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "wouter";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
+import { Logo } from "@/components/ui/Logo";
+
+export function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [location] = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Blog", href: "/blog" },
+    { name: "Careers", href: "/careers" },
+    { name: "Contact", href: "/contact" },
+  ];
+
+  return (
+    <>
+      <header 
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled || isMobileMenuOpen ? "bg-violet-900 shadow-md py-3" : "bg-violet-900/95 backdrop-blur-sm py-4"
+        }`}
+      >
+        <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between text-white">
+          <Link href="/">
+            <a className="flex items-center gap-1 group">
+               <Logo variant="header" className="h-10 sm:h-12" />
+            </a>
+          </Link>
+
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 font-medium text-sm">
+            {navLinks.map((link) => (
+              <Link key={link.name} href={link.href}>
+                <a className={`transition-colors relative group ${location === link.href ? "text-orange-400" : "hover:text-orange-300"}`}>
+                  {link.name}
+                  {location === link.href && (
+                    <motion.span layoutId="underline" className="absolute -bottom-1 left-0 w-full h-0.5 bg-orange-400" />
+                  )}
+                </a>
+              </Link>
+            ))}
+            <Link href="/contact">
+              <Button className="bg-orange-500 text-violet-900 hover:bg-orange-400 font-bold rounded-full px-4 xl:px-6 text-sm">
+                Get a Quote
+              </Button>
+            </Link>
+          </nav>
+
+          {/* Mobile Menu Toggle */}
+          <button 
+            className="lg:hidden p-2 text-white hover:text-orange-400 transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "100vh" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="fixed inset-0 z-40 bg-violet-900 pt-20 px-4 lg:hidden overflow-hidden"
+          >
+            <nav className="flex flex-col gap-6 text-white text-xl font-semibold">
+              {navLinks.map((link) => (
+                <Link key={link.name} href={link.href}>
+                  <a onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-between border-b border-violet-800 pb-4 hover:text-orange-400 transition-colors">
+                    {link.name}
+                    <ChevronDown className="w-5 h-5 -rotate-90 text-violet-500" />
+                  </a>
+                </Link>
+              ))}
+              <Link href="/contact">
+                <Button className="bg-orange-500 text-violet-900 hover:bg-orange-400 w-full mt-4 font-bold py-6 text-lg">
+                  Get Started Now
+                </Button>
+              </Link>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}

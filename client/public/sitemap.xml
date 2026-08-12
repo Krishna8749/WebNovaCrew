@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Home Page -->
+  <url>
+    <loc>https://xcflown.com/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://xcflown.com/" />
+    <xhtml:link rel="alternate" hreflang="en-kw" href="https://xcflown.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xcflown.com/" />
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://xcflown.com/about</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/about" />
+  </url>
+
+  <!-- Services Page -->
+  <url>
+    <loc>https://xcflown.com/services</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/services" />
+  </url>
+
+  <!-- Portfolio Page -->
+  <url>
+    <loc>https://xcflown.com/portfolio</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/portfolio" />
+  </url>
+
+  <!-- Blog Page -->
+  <url>
+    <loc>https://xcflown.com/blog</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/blog" />
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://xcflown.com/contact</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/contact" />
+  </url>
+
+  <!-- Pricing Page -->
+  <url>
+    <loc>https://xcflown.com/pricing</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/pricing" />
+  </url>
+
+  <!-- Team Page -->
+  <url>
+    <loc>https://xcflown.com/team</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/team" />
+  </url>
+
+  <!-- Founder Page -->
+  <url>
+    <loc>https://xcflown.com/founder</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/founder" />
+  </url>
+
+  <!-- Careers Page -->
+  <url>
+    <loc>https://xcflown.com/careers</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/careers" />
+  </url>
+
+  <!-- Service Pages -->
+  <url>
+    <loc>https://xcflown.com/services/ai-app-development</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://xcflown.com/services/app-development-india</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://xcflown.com/services/real-estate-app-development</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://xcflown.com/services/ecommerce-app-development</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://xcflown.com/services/on-demand-app-development</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://xcflown.com/services/ai-chatbot-development</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://xcflown.com/services/erp-crm-development</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://xcflown.com/services/web-app-development</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://xcflown.com/services/mobile-app-development</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://xcflown.com/services/flutter-app-development</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://xcflown.com/services/react-native-development</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://xcflown.com/privacy-policy</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://xcflown.com/terms-of-service</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

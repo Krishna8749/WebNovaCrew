@@ -1,0 +1,34 @@
+# Blueprint: https://render.com/docs/infrastructure-as-code
+# After push, open Render → New → Blueprint → connect this repo, or link an existing service.
+
+services:
+  - type: web
+    name: xcflown
+    runtime: node
+    region: oregon
+    plan: free
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: node dist/index.cjs
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Render sets PORT automatically — do not hardcode.
+      # Zoho / contact form (set in Dashboard if not prompted at deploy):
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_SECURE
+        sync: false
+      - key: CONTACT_FROM
+        sync: false
+      # Neutral share-link domain (optional) — e.g. https://play.yourdomain.com
+      - key: SHARE_LINK_BASE
+        sync: false
+      # Optional alternative to SMTP:
+      - key: RESEND_API_KEY
+        sync: false

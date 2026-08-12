@@ -1,0 +1,285 @@
+export interface Job {
+  id: string;
+  slug: string;
+  title: string;
+  department: string;
+  location: string;
+  type: "Full-time" | "Part-time" | "Contract" | "Internship";
+  experience: string;
+  salary: string;
+  description: string;
+  responsibilities: string[];
+  requirements: string[];
+  niceToHave: string[];
+  benefits: string[];
+  postedAt: string;
+  active: boolean;
+}
+
+export const jobs: Job[] = [
+  {
+    id: "1",
+    slug: "senior-react-developer",
+    title: "Senior React Developer",
+    department: "Engineering",
+    location: "Lucknow, UP, India (Hybrid)",
+    type: "Full-time",
+    experience: "4-7 years",
+    salary: "₹15-25 LPA",
+    description: "We're looking for a Senior React Developer to join our growing team. You'll work on exciting projects for clients across industries, building modern web applications with React, Next.js, and TypeScript.",
+    responsibilities: [
+      "Develop and maintain high-quality React applications",
+      "Collaborate with designers to implement pixel-perfect UIs",
+      "Write clean, maintainable, and well-tested code",
+      "Mentor junior developers and conduct code reviews",
+      "Participate in architectural decisions and technical planning",
+      "Work directly with clients to understand requirements",
+    ],
+    requirements: [
+      "4+ years of experience with React.js",
+      "Strong proficiency in TypeScript",
+      "Experience with Next.js and server-side rendering",
+      "Familiarity with state management (Redux, Zustand, or similar)",
+      "Understanding of RESTful APIs and GraphQL",
+      "Experience with testing frameworks (Jest, React Testing Library)",
+      "Strong communication skills in English",
+    ],
+    niceToHave: [
+      "Experience with Node.js backend development",
+      "Knowledge of AWS or Google Cloud",
+      "Contributions to open-source projects",
+      "Experience with CI/CD pipelines",
+    ],
+    benefits: [
+      "Competitive salary with annual reviews",
+      "Health insurance for you and family",
+      "Flexible work hours and hybrid model",
+      "Learning budget for courses and conferences",
+      "Latest MacBook Pro and equipment",
+      "Team outings and celebrations",
+    ],
+    postedAt: "2024-12-01",
+    active: true,
+  },
+  {
+    id: "2",
+    slug: "flutter-developer",
+    title: "Flutter Developer",
+    department: "Engineering",
+    location: "Lucknow, UP, India (Hybrid)",
+    type: "Full-time",
+    experience: "2-5 years",
+    salary: "₹10-18 LPA",
+    description: "Join our mobile team to build beautiful, high-performance apps with Flutter. You'll work on iOS and Android apps for startups and enterprises across healthcare, fintech, and e-commerce.",
+    responsibilities: [
+      "Develop cross-platform mobile applications using Flutter",
+      "Implement complex UI designs with smooth animations",
+      "Integrate REST APIs and third-party services",
+      "Optimize app performance and reduce load times",
+      "Publish and maintain apps on App Store and Play Store",
+      "Collaborate with backend team for API design",
+    ],
+    requirements: [
+      "2+ years of experience with Flutter/Dart",
+      "Published apps on App Store or Play Store",
+      "Understanding of mobile app architecture patterns",
+      "Experience with state management (Bloc, Provider, Riverpod)",
+      "Knowledge of native iOS/Android development is a plus",
+      "Familiarity with Firebase services",
+    ],
+    niceToHave: [
+      "Experience with React Native",
+      "Knowledge of CI/CD for mobile apps",
+      "UI/UX design sensibility",
+      "Experience with app analytics and crash reporting",
+    ],
+    benefits: [
+      "Competitive salary with annual reviews",
+      "Health insurance for you and family",
+      "Flexible work hours and hybrid model",
+      "Learning budget for courses and conferences",
+      "Latest MacBook Pro and equipment",
+      "Team outings and celebrations",
+    ],
+    postedAt: "2024-11-28",
+    active: true,
+  },
+  {
+    id: "3",
+    slug: "ui-ux-designer",
+    title: "UI/UX Designer",
+    department: "Design",
+    location: "Lucknow, UP, India (Hybrid)",
+    type: "Full-time",
+    experience: "3-6 years",
+    salary: "₹12-20 LPA",
+    description: "We're seeking a talented UI/UX Designer to create beautiful, user-centered designs for web and mobile applications. You'll work closely with clients and developers to bring ideas to life.",
+    responsibilities: [
+      "Create wireframes, prototypes, and high-fidelity designs",
+      "Conduct user research and usability testing",
+      "Develop and maintain design systems",
+      "Collaborate with developers for design implementation",
+      "Present designs to clients and incorporate feedback",
+      "Stay updated with design trends and best practices",
+    ],
+    requirements: [
+      "3+ years of UI/UX design experience",
+      "Expert proficiency in Figma",
+      "Strong portfolio showcasing web and mobile designs",
+      "Understanding of design principles and accessibility",
+      "Experience with user research methodologies",
+      "Excellent communication and presentation skills",
+    ],
+    niceToHave: [
+      "Experience with motion design and prototyping",
+      "Knowledge of HTML/CSS",
+      "Illustration skills",
+      "Experience with design tokens and handoff tools",
+    ],
+    benefits: [
+      "Competitive salary with annual reviews",
+      "Health insurance for you and family",
+      "Flexible work hours and hybrid model",
+      "Learning budget for courses and conferences",
+      "Latest MacBook Pro and equipment",
+      "Team outings and celebrations",
+    ],
+    postedAt: "2024-11-25",
+    active: true,
+  },
+  {
+    id: "4",
+    slug: "node-js-backend-developer",
+    title: "Node.js Backend Developer",
+    department: "Engineering",
+    location: "Lucknow, UP, India (Hybrid)",
+    type: "Full-time",
+    experience: "3-6 years",
+    salary: "₹12-22 LPA",
+    description: "We need a skilled Backend Developer to build robust APIs and services. You'll work on scalable architectures serving thousands of users across our client projects.",
+    responsibilities: [
+      "Design and develop RESTful and GraphQL APIs",
+      "Build scalable microservices architecture",
+      "Optimize database queries and performance",
+      "Implement authentication and authorization systems",
+      "Write comprehensive tests and documentation",
+      "Deploy and maintain applications on AWS",
+    ],
+    requirements: [
+      "3+ years of Node.js/Express experience",
+      "Strong knowledge of PostgreSQL and MongoDB",
+      "Experience with API design and documentation",
+      "Understanding of security best practices",
+      "Familiarity with Docker and containerization",
+      "Experience with message queues (Redis, RabbitMQ)",
+    ],
+    niceToHave: [
+      "Experience with Python/Django",
+      "Knowledge of Kubernetes",
+      "Experience with serverless architecture",
+      "GraphQL expertise",
+    ],
+    benefits: [
+      "Competitive salary with annual reviews",
+      "Health insurance for you and family",
+      "Flexible work hours and hybrid model",
+      "Learning budget for courses and conferences",
+      "Latest MacBook Pro and equipment",
+      "Team outings and celebrations",
+    ],
+    postedAt: "2024-11-20",
+    active: true,
+  },
+  {
+    id: "5",
+    slug: "seo-specialist",
+    title: "SEO Specialist",
+    department: "Marketing",
+    location: "Lucknow, UP, India (Hybrid)",
+    type: "Full-time",
+    experience: "2-4 years",
+    salary: "₹6-12 LPA",
+    description: "Join our marketing team to help clients dominate search rankings. You'll develop and execute SEO strategies that drive organic traffic and conversions.",
+    responsibilities: [
+      "Conduct keyword research and competitive analysis",
+      "Perform technical SEO audits and implementations",
+      "Develop content strategies for organic growth",
+      "Build high-quality backlinks through outreach",
+      "Track and report on SEO performance metrics",
+      "Stay updated with algorithm changes and trends",
+    ],
+    requirements: [
+      "2+ years of SEO experience with proven results",
+      "Proficiency with SEO tools (Ahrefs, SEMrush, Screaming Frog)",
+      "Understanding of technical SEO factors",
+      "Experience with Google Analytics and Search Console",
+      "Strong analytical and reporting skills",
+      "Excellent written communication",
+    ],
+    niceToHave: [
+      "Experience with local SEO",
+      "Knowledge of HTML/CSS",
+      "Content writing skills",
+      "PPC campaign management experience",
+    ],
+    benefits: [
+      "Competitive salary with annual reviews",
+      "Health insurance for you and family",
+      "Flexible work hours and hybrid model",
+      "Learning budget for courses and conferences",
+      "Latest MacBook Pro and equipment",
+      "Team outings and celebrations",
+    ],
+    postedAt: "2024-11-15",
+    active: true,
+  },
+  {
+    id: "6",
+    slug: "devops-engineer",
+    title: "DevOps Engineer",
+    department: "Engineering",
+    location: "Lucknow, UP, India (Remote)",
+    type: "Full-time",
+    experience: "3-5 years",
+    salary: "₹15-25 LPA",
+    description: "We're looking for a DevOps Engineer to build and maintain our cloud infrastructure. You'll ensure our applications are scalable, secure, and highly available.",
+    responsibilities: [
+      "Design and implement CI/CD pipelines",
+      "Manage AWS/GCP cloud infrastructure",
+      "Implement monitoring and alerting systems",
+      "Automate deployment and scaling processes",
+      "Ensure security compliance and best practices",
+      "Troubleshoot production issues and optimize performance",
+    ],
+    requirements: [
+      "3+ years of DevOps/SRE experience",
+      "Strong knowledge of AWS services",
+      "Experience with Docker and Kubernetes",
+      "Proficiency in Infrastructure as Code (Terraform)",
+      "Experience with CI/CD tools (GitHub Actions, Jenkins)",
+      "Strong scripting skills (Bash, Python)",
+    ],
+    niceToHave: [
+      "AWS/GCP certifications",
+      "Experience with service mesh (Istio)",
+      "Knowledge of security tools and practices",
+      "Experience with cost optimization",
+    ],
+    benefits: [
+      "Competitive salary with annual reviews",
+      "Health insurance for you and family",
+      "Fully remote position",
+      "Learning budget for courses and certifications",
+      "Latest MacBook Pro and equipment",
+      "Team outings and celebrations",
+    ],
+    postedAt: "2024-11-10",
+    active: true,
+  },
+];
+
+export const departments = ["All", "Engineering", "Design", "Marketing", "Operations"];
+export const getActiveJobs = () => jobs.filter(job => job.active);
+export const getJobBySlug = (slug: string) => jobs.find(job => job.slug === slug);
+export const getJobsByDepartment = (dept: string) => 
+  dept === "All" ? getActiveJobs() : getActiveJobs().filter(job => job.department === dept);
