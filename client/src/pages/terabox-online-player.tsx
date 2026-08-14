@@ -292,6 +292,11 @@ const SUPPORTED_DOMAINS = [
   "momerybox.com",
   "teraboxlink.com",
   "terasharefile.com",
+  // DiskWala (same video infrastructure)
+  "diskwala.com",
+  "disk-wala.com",
+  "diskwala.app",
+  "diskwala.me",
 ];
 
 const GUIDES = [
@@ -349,7 +354,11 @@ const FAQS = [
   },
   {
     q: "Which TeraBox domains are supported?",
-    a: `Our player supports public links from ${SUPPORTED_DOMAINS.slice(0, 4).join(", ")} and related TeraBox mirror domains.`,
+    a: `Our player supports public links from terabox.com, 1024terabox.com, teraboxapp.com, and related TeraBox mirror domains. DiskWala links (diskwala.com, diskwala.app, diskwala.me) are also fully supported.`,
+  },
+  {
+    q: "Can I play DiskWala (diskwala.com) videos?",
+    a: "Yes! DiskWala is fully supported. Paste your DiskWala share link exactly as you would a TeraBox link — the player detects it automatically and streams the video.",
   },
   {
     q: "Can I use this as a TeraBox link opener?",
