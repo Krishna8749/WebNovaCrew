@@ -42,7 +42,7 @@ export default defineConfig({
     holdUntilCrawlEnd: true,
   },
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,
   },
   server: {
