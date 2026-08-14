@@ -2,6 +2,14 @@
   "version": 2,
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/index.ts" },
-    { "source": "/(.*)", "destination": "/$1" }
+    { "source": "/assets/(.*)", "destination": "/public/assets/$1" },
+    { "source": "/favicon.png", "destination": "/public/favicon.png" },
+    { "source": "/logo.png", "destination": "/public/logo.png" },
+    { "source": "/webnova-logo.png", "destination": "/public/webnova-logo.png" },
+    { "source": "/manifest.json", "destination": "/public/manifest.json" },
+    { "source": "/robots.txt", "destination": "/public/robots.txt" },
+    { "source": "/sitemap.xml", "destination": "/public/sitemap.xml" },
+    { "source": "/service-worker.js", "destination": "/public/service-worker.js" },
+    { "source": "/(.*)", "destination": "/public/index.html" }
   ]
 }
