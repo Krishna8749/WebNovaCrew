@@ -75,6 +75,12 @@ async function proxyBinary(target: URL, request: Request): Promise<Response> {
   const cr = upstream.headers.get("Content-Range");
   if (cr) out.set("Content-Range", cr);
 
+  const reqUrl = new URL(request.url);
+  const filename = reqUrl.searchParams.get("filename");
+  if (filename) {
+    out.set("Content-Disposition", `attachment; filename="${encodeURIComponent(filename)}"`);
+  }
+
   return new Response(upstream.body, {
     status: upstream.status,
     headers: out,

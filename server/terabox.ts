@@ -23,7 +23,7 @@ function resolveFfmpegPath(): string | null {
 }
 
 const HMAC_KEY = "iuuPc64E4Fhn0rTXEzrnbLph0o5qyEEa";
-const WORKER_BASE = "https://terabox-proxy.teraboxhigh.workers.dev";
+const WORKER_BASE = "https://novacrew-terabox-proxy.teraboxhigh.workers.dev";
 
 /** Same backend the Flutter app uses (`F:\Latest Video\video-backend`). */
 function getVideoBackendBase(): string {
@@ -894,14 +894,17 @@ function buildStreamingUrl(
  * (UTF-8 replacement characters) and breaks playback.
  */
 function rewritePlaylistForBrowser(m3u8: string, segmentProxyBase: string): string {
-  const base = segmentProxyBase.replace(/\/$/, "");
+  const workerBase = process.env.CLOUDFLARE_WORKER_URL?.trim().replace(/\/$/, "");
+  const base = workerBase || segmentProxyBase.replace(/\/$/, "");
   return m3u8
     .split("\n")
     .map((line) => {
       const trimmed = line.trim();
       if (!trimmed.startsWith("http")) return line;
-      // Already proxied
       if (trimmed.includes("/api/terabox/ts?") || trimmed.includes("/proxy?url=")) return line;
+      if (workerBase) {
+        return `${base}/proxy?url=${encodeURIComponent(trimmed)}`;
+      }
       return `${base}/api/terabox/ts?url=${encodeURIComponent(trimmed)}`;
     })
     .join("\n");
@@ -1241,6 +1244,12 @@ export async function handleTeraboxFile(req: Request, res: Response): Promise<vo
   const wantPlay = String(req.query.play ?? "1") !== "0";
   const remux = wantPlay && needsBrowserRemux(session);
 
+  if (!remux && process.env.CLOUDFLARE_WORKER_URL) {
+    const workerUrl = `${process.env.CLOUDFLARE_WORKER_URL.replace(/\/$/, "")}/proxy?url=${encodeURIComponent(dlink)}&filename=${encodeURIComponent(session.fileName || "video")}`;
+    res.redirect(workerUrl);
+    return;
+  }
+
   // HEAD: advertise playable type without starting ffmpeg/upstream body.
   if (req.method === "HEAD") {
     res.status(200);
@@ -1529,6 +1538,11 @@ export async function handleTeraboxDownload(req: Request, res: Response): Promis
   }
   if (dlink) {
     session.dlink = dlink;
+    if (process.env.CLOUDFLARE_WORKER_URL) {
+      const workerUrl = `${process.env.CLOUDFLARE_WORKER_URL.replace(/\/$/, "")}/proxy?url=${encodeURIComponent(dlink)}&filename=${encodeURIComponent(session.fileName || "video")}`;
+      res.redirect(workerUrl);
+      return;
+    }
     try {
       const headers: Record<string, string> = {
         "User-Agent": BROWSER_HEADERS["User-Agent"],
