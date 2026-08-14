@@ -1,6 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { handleContactPost } from "./contact-email";
+import { handleJobApply } from "./careers-email";
 import {
   handleTeraboxResolve,
   handleTeraboxPlay,
@@ -24,6 +25,10 @@ export async function registerRoutes(
 ): Promise<Server> {
   app.post("/api/contact", (req, res, next) => {
     void handleContactPost(req, res).catch(next);
+  });
+
+  app.post("/api/careers/apply", (req, res, next) => {
+    void handleJobApply(req, res).catch(next);
   });
 
   app.post("/api/terabox/resolve", teraboxGuard, (req, res, next) => {

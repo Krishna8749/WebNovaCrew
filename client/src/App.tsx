@@ -9,6 +9,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { WhatsAppFloat } from "@/components/widgets/WhatsAppFloat";
 import { TelegramFloat } from "@/components/widgets/TelegramFloat";
+import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
 
 // Loading component
 const PageLoader = () => (
@@ -284,8 +285,10 @@ function AppShell() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Toaster />
-      <AppShell />
+      <SmoothScrollProvider>
+        <Toaster />
+        <AppShell />
+      </SmoothScrollProvider>
     </QueryClientProvider>
   );
 }
