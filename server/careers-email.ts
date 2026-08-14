@@ -1,4 +1,4 @@
-﻿import type { Request, Response } from "express";
+import type { Request, Response } from "express";
 import { z } from "zod";
 
 const applySchema = z.object({
@@ -14,9 +14,8 @@ const applySchema = z.object({
 
 const CAREERS_TO = [
   "info@webnovacrew.com",
-  "webnovacrewtechnologies@gmail.com",
 ] as const;
-const CAREERS_CC = "careers@webnovacrew.com";
+const CAREERS_CC = "webnovacrewtechnologies@gmail.com";
 
 function esc(s: string): string {
   return s
@@ -56,20 +55,20 @@ function notifyHtml(d: z.infer<typeof applySchema>): string {
     </table>
     ${cl}
   </div>
-  <div style="text-align:center;font-size:12px;color:#94a3b8;margin-top:24px"><p>Â© 2026 Web Nova Crew</p></div>
+  <div style="text-align:center;font-size:12px;color:#94a3b8;margin-top:24px"><p>© 2026 Web Nova Crew</p></div>
   </body></html>`;
 }
 
 function replyHtml(name: string, jobTitle: string): string {
   return `<!DOCTYPE html><html><body style="font-family:system-ui,sans-serif;max-width:600px;margin:0 auto;padding:20px">
   <div style="background:linear-gradient(135deg,#2983DB,#1A6BB5);color:white;padding:32px;border-radius:12px 12px 0 0;text-align:center">
-    <h1 style="margin:0;font-size:24px">Application Received! ðŸŽ‰</h1>
+    <h1 style="margin:0;font-size:24px">Application Received! 🎉</h1>
     <p style="margin:8px 0 0;opacity:.8">Web Nova Crew</p>
   </div>
   <div style="background:#fff;border:1px solid #e2e8f0;border-top:none;border-radius:0 0 12px 12px;padding:32px">
     <p>Hi <strong>${esc(name)}</strong>,</p>
     <p>Thank you for applying for <strong>${esc(jobTitle)}</strong> at Web Nova Crew!</p>
-    <p>Our team will review your profile carefully and respond within <strong>3&ndash;5 business days</strong>.</p>
+    <p>Our HR team will review your profile carefully and respond within <strong>3&ndash;5 business days</strong>.</p>
     <p>In the meantime, explore more about us:</p>
     <ul>
       <li><a href="https://webnovacrew.com/portfolio" style="color:#2983DB">Our Portfolio</a></li>
@@ -82,7 +81,7 @@ function replyHtml(name: string, jobTitle: string): string {
     </a>
   </div>
   <div style="text-align:center;font-size:12px;color:#94a3b8;margin-top:24px">
-    <p>Â© 2026 Web Nova Crew &bull; <a href="https://webnovacrew.com" style="color:#94a3b8">webnovacrew.com</a></p>
+    <p>© 2026 Web Nova Crew &bull; <a href="https://webnovacrew.com" style="color:#94a3b8">webnovacrew.com</a></p>
   </div>
   </body></html>`;
 }
@@ -94,18 +93,20 @@ async function smtpSend(
   html: string,
   replyTo: string,
 ): Promise<void> {
-  const user = process.env.SMTP_USER?.trim();
+  const user = process.env.SMTP_USER?.trim() || "info@webnovacrew.com";
   const pass = process.env.SMTP_PASS?.trim();
   if (!user || !pass) throw new Error("SMTP credentials missing");
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const nm: any = await import("nodemailer").then((m: any) => m.default || m);
-  const from = process.env.CONTACT_FROM?.trim() ?? user;
+  const from = process.env.CONTACT_FROM?.trim() ?? `Web Nova Crew <${user}>`;
+  const primaryHost = process.env.SMTP_HOST?.trim() || "smtp.zoho.in";
 
   const attempts = [
-    { host: "smtp.zoho.com", port: 587, secure: false },
+    { host: primaryHost, port: 587, secure: false },
     { host: "smtp.zoho.in", port: 587, secure: false },
-    { host: "smtp.zoho.com", port: 465, secure: true },
+    { host: "smtp.zoho.in", port: 465, secure: true },
+    { host: "smtp.zoho.com", port: 587, secure: false },
   ];
 
   let lastErr: unknown;
