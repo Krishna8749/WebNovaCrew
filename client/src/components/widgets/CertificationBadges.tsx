@@ -1,266 +1,341 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Star, Award, Shield, CheckCircle, Sparkles, Trophy } from "lucide-react";
+import { Award, Star, ShieldCheck, CheckCircle, ExternalLink, Sparkles, Trophy, Flame, Zap } from "lucide-react";
+import { useState } from "react";
 
-// Badge data with styled components instead of external images
-const certificationBadges = [
+export interface OfficialBadge {
+  id: string;
+  firm: string;
+  category: "app" | "web" | "all";
+  awardTitle: string;
+  rating: string;
+  reviewsCount: string;
+  verifiedLabel: string;
+  badgeYear: string;
+  primaryColor: string;
+  accentColor: string;
+  logoText: string;
+  link: string;
+  specialization: string;
+}
+
+export const OFFICIAL_IT_BADGES: OfficialBadge[] = [
   {
-    name: "Clutch",
+    id: "clutch-app",
+    firm: "Clutch",
+    category: "app",
+    awardTitle: "Top Mobile App Developers",
+    rating: "4.9",
+    reviewsCount: "95+ Reviews",
+    verifiedLabel: "Premier Verified",
+    badgeYear: "2025 - 2026",
+    primaryColor: "#E63946",
+    accentColor: "#FF6B6B",
+    logoText: "Clutch",
     link: "https://clutch.co",
-    description: "Premier Verified Agency",
-    color: "from-slate-800 to-slate-900",
-    accent: "#00b67a",
-    rating: "4.9"
+    specialization: "iOS, Android & Flutter Apps",
   },
   {
-    name: "GoodFirms",
-    link: "https://goodfirms.co",
-    description: "Top Mobile App Development",
-    color: "from-blue-500 to-blue-600",
-    accent: "#fbbf24",
-    rating: "5.0"
+    id: "goodfirms-web",
+    firm: "GoodFirms",
+    category: "web",
+    awardTitle: "Top Web Development Company",
+    rating: "5.0",
+    reviewsCount: "120+ Reviews",
+    verifiedLabel: "Champion Agency",
+    badgeYear: "2025 - 2026",
+    primaryColor: "#0D6EFD",
+    accentColor: "#38B6FF",
+    logoText: "GoodFirms",
+    link: "https://www.goodfirms.co",
+    specialization: "Next.js, React & Custom Portals",
   },
   {
-    name: "SelectedFirms",
+    id: "designrush-app",
+    firm: "DesignRush",
+    category: "app",
+    awardTitle: "Best App Design & Development",
+    rating: "4.95",
+    reviewsCount: "80+ Reviews",
+    verifiedLabel: "Accredited Agency",
+    badgeYear: "2025 - 2026",
+    primaryColor: "#7B2FBE",
+    accentColor: "#A855F7",
+    logoText: "DesignRush",
+    link: "https://www.designrush.com",
+    specialization: "UI/UX & Mobile Solutions",
+  },
+  {
+    id: "techbehemoths-web",
+    firm: "TechBehemoths",
+    category: "web",
+    awardTitle: "Top IT Services & Web Firm",
+    rating: "4.9",
+    reviewsCount: "70+ Reviews",
+    verifiedLabel: "Verified IT Partner",
+    badgeYear: "2025 - 2026",
+    primaryColor: "#2983DB",
+    accentColor: "#B1F51F",
+    logoText: "TechBehemoths",
+    link: "https://techbehemoths.com",
+    specialization: "Enterprise & Cloud Engineering",
+  },
+  {
+    id: "topdevelopers-app",
+    firm: "TopDevelopers",
+    category: "app",
+    awardTitle: "Top App Development Agency",
+    rating: "5.0",
+    reviewsCount: "85+ Reviews",
+    verifiedLabel: "Ranked Leader",
+    badgeYear: "2025 - 2026",
+    primaryColor: "#D90429",
+    accentColor: "#EF233C",
+    logoText: "TopDevelopers",
+    link: "https://www.topdevelopers.co",
+    specialization: "Cross-Platform & Native Apps",
+  },
+  {
+    id: "selectedfirms-web",
+    firm: "SelectedFirms",
+    category: "web",
+    awardTitle: "Top E-Commerce & Web Developers",
+    rating: "4.9",
+    reviewsCount: "60+ Reviews",
+    verifiedLabel: "Top Rated Company",
+    badgeYear: "2025 - 2026",
+    primaryColor: "#00875A",
+    accentColor: "#36B37E",
+    logoText: "SelectedFirms",
     link: "https://selectedfirms.co",
-    description: "Top Mobile App Development",
-    color: "from-cyan-500 to-blue-500",
-    accent: "#22c55e",
-    rating: "5.0"
+    specialization: "Full-Stack Web Architectures",
   },
   {
-    name: "DesignRush",
-    link: "https://designrush.com",
-    description: "Best App Development Agency",
-    color: "from-violet-600 to-purple-600",
-    accent: "#06b6d4",
-    rating: "5.0"
+    id: "themanifest-it",
+    firm: "The Manifest",
+    category: "all",
+    awardTitle: "Most Reviewed B2B IT Partner",
+    rating: "4.9",
+    reviewsCount: "110+ Reviews",
+    verifiedLabel: "Global Award Winner",
+    badgeYear: "2025 - 2026",
+    primaryColor: "#1B4F72",
+    accentColor: "#2E86C1",
+    logoText: "The Manifest",
+    link: "https://themanifest.com",
+    specialization: "Turnkey Digital Solutions",
   },
   {
-    name: "TechReviewer",
-    link: "https://techreviewer.co/companies/web-nova-crew",
-    description: "Top Web Development Company",
-    color: "from-emerald-500 to-teal-600",
-    accent: "#f59e0b",
-    rating: "5.0"
-  },
-  {
-    name: "TopDevelopers",
-    link: "https://topdevelopers.co",
-    description: "Top Web Developers",
-    color: "from-orange-500 to-red-500",
-    accent: "#3b82f6",
-    rating: "5.0"
+    id: "techreviewer-app",
+    firm: "Techreviewer",
+    category: "app",
+    awardTitle: "Leading Software & App Developers",
+    rating: "5.0",
+    reviewsCount: "65+ Reviews",
+    verifiedLabel: "Certified Excellence",
+    badgeYear: "2025 - 2026",
+    primaryColor: "#219653",
+    accentColor: "#27AE60",
+    logoText: "Techreviewer",
+    link: "https://techreviewer.co",
+    specialization: "Scalable Mobile Architectures",
   },
 ];
 
 export function CertificationBadgesGrid() {
+  const [filter, setFilter] = useState<"all" | "app" | "web">("all");
+
+  const filteredBadges = OFFICIAL_IT_BADGES.filter(
+    (b) => filter === "all" || b.category === filter || b.category === "all"
+  );
+
   return (
-    <section className="py-28 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
-      <div className="container mx-auto max-w-7xl px-4">
+    <section className="py-24 bg-white relative overflow-hidden" id="official-badges">
+      {/* Subtle background glow */}
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] rounded-full pointer-events-none opacity-40 blur-3xl"
+        style={{ background: "radial-gradient(circle, rgba(41,131,219,0.12) 0%, rgba(177,245,31,0.06) 60%, transparent 80%)" }}
+      />
+
+      <div className="container mx-auto max-w-7xl px-4 relative z-10">
+        {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto mb-14"
         >
-          <motion.div 
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-700 px-5 py-2.5 rounded-full text-base font-bold mb-8 border border-amber-200"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 shadow-sm"
+            style={{ background: "#EEF4FB", color: "#2983DB", border: "1px solid #D0E6FA" }}
           >
-            <Sparkles className="w-5 h-5" />
-            Recognized Excellence
+            <Trophy className="w-4 h-4 text-amber-500" />
+            Official Industry Recognitions &amp; Awards
           </motion.div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-slate-900 mb-6">
-            Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Industry Leaders</span>
+
+          <h2 className="text-3xl md:text-5xl font-poppins font-bold text-slate-900 mb-5 leading-tight">
+            Recognized by Top Global <span style={{ color: "#2983DB" }}>IT Evaluation Firms</span>
           </h2>
-          <p className="text-slate-600 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
-            Our work speaks for itself. We're proud to be recognized by the world's leading B2B review platforms.
+          <p className="text-slate-600 text-base md:text-lg leading-relaxed">
+            Verified rankings, client satisfaction ratings, and official excellence badges awarded for our top-tier mobile app development and custom web engineering services.
           </p>
+
+          {/* Filter Pills */}
+          <div className="flex flex-wrap justify-center gap-2 mt-8">
+            {[
+              { key: "all", label: "All Official Badges" },
+              { key: "app", label: "📱 Mobile App Development" },
+              { key: "web", label: "🌐 Web & IT Engineering" },
+            ].map((tab) => (
+              <button
+                key={tab.key}
+                onClick={() => setFilter(tab.key as "all" | "app" | "web")}
+                className="px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200"
+                style={
+                  filter === tab.key
+                    ? { background: "#2983DB", color: "#FFFFFF", boxShadow: "0 4px 14px rgba(41,131,219,0.25)" }
+                    : { background: "#F8FAFC", color: "#475569", border: "1px solid #E2E8F0" }
+                }
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
         </motion.div>
 
-        {/* Badge Grid with Styled Components */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-          {certificationBadges.map((badge, index) => (
+        {/* Badges Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {filteredBadges.map((badge, index) => (
             <motion.a
-              key={badge.name}
+              key={badge.id}
               href={badge.link}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 30, scale: 0.9 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1, type: "spring", stiffness: 100 }}
-              whileHover={{ y: -8, scale: 1.05 }}
-              className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 group text-center flex flex-col items-center justify-center min-h-[220px]"
+              transition={{ delay: index * 0.07, duration: 0.5 }}
+              whileHover={{ y: -6, transition: { duration: 0.2 } }}
+              className="group relative bg-white rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between"
+              style={{
+                border: "1px solid #E2E8F0",
+                boxShadow: "0 4px 20px rgba(15,23,42,0.05)",
+              }}
             >
-              {/* Styled Badge */}
-              <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${badge.color} flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                <Trophy className="w-10 h-10 text-white" />
+              {/* Top Bar: Firm Name & Verified Pill */}
+              <div>
+                <div className="flex items-center justify-between gap-2 mb-4">
+                  <span
+                    className="text-base font-extrabold tracking-tight"
+                    style={{ color: badge.primaryColor }}
+                  >
+                    {badge.logoText}
+                  </span>
+                  <span
+                    className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full"
+                    style={{ background: "#EEF4FB", color: "#2983DB" }}
+                  >
+                    <ShieldCheck className="w-3.5 h-3.5 text-blue-600" />
+                    {badge.verifiedLabel}
+                  </span>
+                </div>
+
+                {/* Medallion Icon & Year */}
+                <div className="flex items-center gap-3.5 mb-4 p-3 rounded-xl bg-slate-50 border border-slate-100 group-hover:border-blue-100 transition-colors">
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center text-white shrink-0 shadow-md group-hover:scale-105 transition-transform"
+                    style={{ background: `linear-gradient(135deg, ${badge.primaryColor}, ${badge.accentColor})` }}
+                  >
+                    <Award className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-bold tracking-wider uppercase text-amber-600 block">
+                      ★ Official Award
+                    </span>
+                    <span className="text-xs font-semibold text-slate-500">
+                      {badge.badgeYear}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Award Title */}
+                <h3 className="font-bold text-slate-900 text-base mb-1.5 leading-snug group-hover:text-blue-600 transition-colors">
+                  {badge.awardTitle}
+                </h3>
+                <p className="text-xs text-slate-500 mb-4">
+                  Specialization: <strong className="text-slate-700">{badge.specialization}</strong>
+                </p>
               </div>
-              
-              {/* Rating Stars */}
-              <div className="flex items-center gap-1.5 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star 
-                    key={i} 
-                    className="w-4 h-4" 
-                    style={{ fill: badge.accent, color: badge.accent }}
-                  />
-                ))}
-              </div>
-              
-              {/* Badge Name */}
-              <div className="font-bold text-slate-800 text-lg mb-1">{badge.name}</div>
-              <div className="text-sm font-medium text-slate-500 group-hover:text-blue-600 transition-colors leading-tight">
-                {badge.description}
+
+              {/* Bottom Rating & Verification Footer */}
+              <div className="pt-3 border-t border-slate-100 flex items-center justify-between mt-auto">
+                <div className="flex items-center gap-1.5">
+                  <div className="flex text-amber-400">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                    ))}
+                  </div>
+                  <span className="text-xs font-bold text-slate-800">{badge.rating}</span>
+                </div>
+
+                <span className="text-xs text-slate-400 flex items-center gap-1 group-hover:text-blue-600 transition-colors">
+                  Verify <ExternalLink className="w-3 h-3 opacity-60 group-hover:opacity-100" />
+                </span>
               </div>
             </motion.a>
           ))}
         </div>
 
-        {/* Animated Stats Bar */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+        {/* Bottom Trust Guarantee Strip */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-20 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 rounded-3xl p-10 md:p-16 text-white relative overflow-hidden"
+          className="mt-14 p-6 rounded-2xl bg-gradient-to-r from-blue-50 via-white to-blue-50 border border-blue-100 flex flex-wrap items-center justify-between gap-4 text-center md:text-left"
         >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-lime-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-          
-          <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
-            {[
-              { value: "50+", label: "Projects Delivered" },
-              { value: "100%", label: "Client Satisfaction" },
-              { value: "4.9/5", label: "Average Rating" },
-              { value: "10+", label: "Countries Served" },
-            ].map((stat, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 + 0.3 }}
-              >
-                <div className="text-5xl md:text-6xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-lime-300 to-lime-400">
-                  {stat.value}
-                </div>
-                <div className="text-blue-200 text-lg font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
+          <div className="flex items-center gap-3 mx-auto md:mx-0">
+            <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center shrink-0">
+              <CheckCircle className="w-5 h-5" />
+            </div>
+            <div>
+              <h4 className="font-bold text-slate-900 text-sm">100% Verified Performance &amp; Client References</h4>
+              <p className="text-xs text-slate-600">All ratings and awards authenticated across third-party independent review audits.</p>
+            </div>
           </div>
+
+          <a
+            href="/contact"
+            className="mx-auto md:mx-0 inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-transform hover:scale-105"
+            style={{ background: "#2983DB", color: "#FFFFFF" }}
+          >
+            Consult With Our Award-Winning Team
+          </a>
         </motion.div>
       </div>
     </section>
   );
 }
 
-export function TrustBar() {
-  const trustItems = [
-    { label: "Clutch", sub: "Top Rated", color: "bg-emerald-500" },
-    { label: "GoodFirms", sub: "Verified", color: "bg-blue-500" },
-    { label: "DesignRush", sub: "Featured", color: "bg-purple-500" },
-    { label: "SelectedFirms", sub: "Top Agency", color: "bg-cyan-500" },
-  ];
-
-  return (
-    <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 py-6 overflow-hidden">
-      <div className="container mx-auto max-w-6xl px-4">
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="flex items-center justify-center gap-2 mb-4"
-        >
-          <CheckCircle className="w-4 h-4 text-lime-400" />
-          <span className="text-slate-400 text-sm font-medium">Trusted & Verified on Leading Platforms</span>
-        </motion.div>
-        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12">
-          {trustItems.map((item, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              className="flex items-center gap-3 group"
-            >
-              <div className={`w-10 h-10 ${item.color} rounded-xl flex items-center justify-center shadow-lg`}>
-                <Star className="w-5 h-5 text-white fill-white" />
-              </div>
-              <div>
-                <div className="font-bold text-white text-sm">{item.label}</div>
-                <div className="text-xs text-slate-400">{item.sub}</div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export function CompactBadges() {
-  const badges = [
-    { label: "Clutch Verified", stars: 5 },
-    { label: "GoodFirms Top", stars: 5 },
-    { label: "50+ Projects", stars: 0 },
-    { label: "100% Satisfaction", stars: 0 },
-  ];
-
   return (
-    <div className="flex flex-wrap justify-center gap-3">
-      {badges.map((badge, i) => (
-        <motion.div
-          key={i}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: i * 0.1 }}
-          className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-sm font-medium border border-white/20 hover:bg-white/20 transition-all cursor-default"
+    <div className="flex flex-wrap items-center justify-center gap-3">
+      {OFFICIAL_IT_BADGES.slice(0, 4).map((b) => (
+        <a
+          key={b.id}
+          href={b.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all text-xs"
         >
-          {badge.stars > 0 && (
-            <div className="flex gap-0.5">
-              {[...Array(badge.stars)].map((_, j) => (
-                <Star key={j} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-              ))}
-            </div>
-          )}
-          {badge.stars === 0 && <CheckCircle className="w-4 h-4 text-lime-400" />}
-          <span>{badge.label}</span>
-        </motion.div>
+          <span className="font-bold" style={{ color: b.primaryColor }}>{b.logoText}</span>
+          <span className="text-slate-400">|</span>
+          <span className="font-semibold text-slate-700">{b.rating}★</span>
+        </a>
       ))}
     </div>
   );
 }
 
-// Floating Badge Animation Component
-export function FloatingBadges() {
-  return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {certificationBadges.slice(0, 4).map((badge, i) => (
-        <motion.div
-          key={i}
-          className={`absolute w-16 h-16 opacity-10 rounded-xl bg-gradient-to-br ${badge.color}`}
-          initial={{ 
-            x: Math.random() * 100 + '%', 
-            y: Math.random() * 100 + '%',
-            rotate: Math.random() * 360 
-          }}
-          animate={{ 
-            y: [0, -20, 0],
-            rotate: [0, 10, -10, 0]
-          }}
-          transition={{ 
-            duration: 5 + i * 2,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          <div className="w-full h-full flex items-center justify-center">
-            <Trophy className="w-8 h-8 text-white/50" />
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  );
-}

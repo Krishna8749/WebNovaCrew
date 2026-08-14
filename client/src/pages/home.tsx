@@ -1296,6 +1296,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Official IT Badges & Industry Recognitions */}
+      <CertificationBadgesGrid />
+
       {/* Testimonials */}
       <TestimonialsSection />
 

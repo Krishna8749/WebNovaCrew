@@ -220,13 +220,42 @@ export function Footer() {
           </motion.div>
         </div>
 
+        {/* Official Directory Recognition Badges Strip */}
+        <div className="py-6 my-6 border-t border-b border-slate-800/80 flex flex-wrap items-center justify-between gap-4">
+          <span className="text-xs font-semibold text-slate-400">
+            🏆 Official IT Reviews &amp; Recognitions:
+          </span>
+          <div className="flex flex-wrap items-center gap-3">
+            {[
+              { name: "Clutch", rating: "4.9★", url: "https://clutch.co", color: "#E63946" },
+              { name: "GoodFirms", rating: "5.0★", url: "https://www.goodfirms.co", color: "#38B6FF" },
+              { name: "DesignRush", rating: "4.95★", url: "https://www.designrush.com", color: "#A855F7" },
+              { name: "TechBehemoths", rating: "4.9★", url: "https://techbehemoths.com", color: "#2983DB" },
+              { name: "TopDevelopers", rating: "5.0★", url: "https://www.topdevelopers.co", color: "#EF233C" },
+              { name: "SelectedFirms", rating: "4.9★", url: "https://selectedfirms.co", color: "#36B37E" },
+            ].map((b) => (
+              <a
+                key={b.name}
+                href={b.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-slate-900 border border-slate-800 hover:border-slate-600 transition-colors"
+              >
+                <span className="font-bold" style={{ color: b.color }}>{b.name}</span>
+                <span className="text-slate-500">|</span>
+                <span className="text-amber-400 font-semibold">{b.rating}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+
         {/* Bottom bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="pt-6 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-600"
+          className="pt-2 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-600"
         >
           <p>© {new Date().getFullYear()} Web Nova Crew. All rights reserved.</p>
           
