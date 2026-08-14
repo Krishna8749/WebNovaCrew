@@ -11,6 +11,8 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { LeadForm } from "@/components/forms/LeadForm";
+import { FloatingContact } from "@/components/layout/FloatingContact";
 import { SEO } from "@/components/seo/Head";
 import { LocalBusinessSchema, BreadcrumbSchema } from "@/components/seo/SchemaMarkup";
 import { TestimonialsSection } from "@/components/sections/Testimonials";
@@ -1164,17 +1166,27 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+      {/* Lead Enquiry Section */}
+      <section className="py-20 bg-slate-950 border-t border-slate-900 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-lime-500/5 rounded-full blur-3xl"></div>
+        <div className="container mx-auto max-w-4xl px-4 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-poppins font-bold text-white mb-4">
+              Get an Instant <span className="text-lime-400">Quote</span>
+            </h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              Fill out the form below. Our consultants will evaluate your project scope and provide a free estimation report.
+            </p>
+          </div>
+          <LeadForm />
+        </div>
+      </section>
 
       <Footer />
 
-      {/* Floating WhatsApp Button */}
-      <a 
-        href="https://wa.me/919872364476" 
-        target="_blank"
-        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-white p-4 rounded-full shadow-2xl shadow-green-500/30 transition-all hover:scale-110"
-      >
-        <MessageSquare className="w-7 h-7" />
-      </a>
+      {/* Floating Quick Action Widget */}
+      <FloatingContact />
     </div>
   );
 }

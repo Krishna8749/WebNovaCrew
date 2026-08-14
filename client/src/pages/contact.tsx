@@ -1,66 +1,17 @@
-import { useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEO } from "@/components/seo/Head";
 import { LocalBusinessSchema, BreadcrumbSchema } from "@/components/seo/SchemaMarkup";
 import { FAQSection, homeFAQs } from "@/components/sections/FAQ";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Send, Clock, MessageCircle, Globe, CheckCircle2, ArrowRight, Calendar } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Phone, Mail, MapPin, Clock, MessageCircle, Globe, CheckCircle2, Calendar } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
-import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
+import { LeadForm } from "@/components/forms/LeadForm";
 
 export default function Contact() {
-  const { toast } = useToast();
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  async function onSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setIsSubmitting(true);
-    try {
-      await apiRequest("POST", "/api/contact", {
-        name,
-        email,
-        subject,
-        message,
-      });
-      toast({
-        title: "Message sent",
-        description: "Thank you — we'll get back to you shortly.",
-      });
-      setName("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
-    } catch (err) {
-      const raw = err instanceof Error ? err.message : "";
-      let desc = raw.replace(/^\d+:\s*/, "");
-      const jsonMatch = raw.match(/^\d+:\s*(\{[\s\S]*\})\s*$/);
-      if (jsonMatch) {
-        try {
-          const j = JSON.parse(jsonMatch[1]) as { message?: string };
-          if (j.message) desc = j.message;
-        } catch {
-          /* keep desc */
-        }
-      }
-      toast({
-        title: "Could not send",
-        description: desc || "Something went wrong. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  }
+  // Lead submission is handled internally by LeadForm component
 
   return (
     <div className="min-h-screen bg-white font-sans pt-20">
@@ -172,35 +123,9 @@ export default function Contact() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white rounded-2xl shadow-xl p-8 border border-slate-100"
+              className="w-full"
             >
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">Send us a Message</h2>
-              <form className="space-y-6" onSubmit={onSubmit}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium text-slate-700">Full Name</label>
-                    <Input id="name" name="name" autoComplete="name" required value={name} onChange={(e) => setName(e.target.value)} placeholder="Your Name" className="bg-slate-50 border-slate-200 focus-visible:ring-blue-500" />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium text-slate-700">Email Address</label>
-                    <Input id="email" name="email" type="email" autoComplete="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="your@email.com" className="bg-slate-50 border-slate-200 focus-visible:ring-blue-500" />
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium text-slate-700">Subject</label>
-                  <Input id="subject" name="subject" required value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="Project Inquiry" className="bg-slate-50 border-slate-200 focus-visible:ring-blue-500" />
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium text-slate-700">Message</label>
-                  <Textarea id="message" name="message" required value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Tell us about your project..." className="min-h-[150px] bg-slate-50 border-slate-200 focus-visible:ring-blue-500" />
-                </div>
-
-                <Button type="submit" disabled={isSubmitting} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-6 text-lg disabled:opacity-70">
-                  <Send className="w-5 h-5 mr-2" /> {isSubmitting ? "Sending…" : "Send Message"}
-                </Button>
-              </form>
+              <LeadForm />
             </motion.div>
 
           </div>

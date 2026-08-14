@@ -1,11 +1,15 @@
 import type { Request, Response } from "express";
 import { z } from "zod";
+import { storage } from "./storage";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1).max(200),
   email: z.string().trim().email().max(320),
-  subject: z.string().trim().min(1).max(300),
+  phone: z.string().trim().max(50).optional().nullable(),
+  service: z.string().trim().min(1).max(100),
+  budget: z.string().trim().max(100).optional().nullable(),
   message: z.string().trim().min(1).max(10000),
+  subject: z.string().trim().max(300).optional().nullable(),
 });
 
 const CONTACT_TO = [
@@ -22,16 +26,64 @@ function escapeHtml(s: string): string {
 }
 
 function buildHtml(data: z.infer<typeof contactSchema>): string {
-  const { name, email, subject, message } = data;
+  const { name, email, phone, service, budget, message, subject } = data;
   return `<!DOCTYPE html>
-<html><body style="font-family:system-ui,sans-serif;line-height:1.5;">
-  <p><strong>New contact form message</strong> (webnovacrew.com)</p>
-  <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-  <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-  <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
-  <p><strong>Message:</strong></p>
-  <pre style="white-space:pre-wrap;font-family:inherit;">${escapeHtml(message)}</pre>
-</body></html>`;
+<html>
+<head>
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: #334155; max-width: 600px; margin: 0 auto; padding: 20px; }
+    .header { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); color: #ffffff; padding: 24px; border-radius: 12px 12px 0 0; text-align: center; }
+    .header h1 { margin: 0; font-size: 22px; font-weight: 700; color: #a3e635; }
+    .header p { margin: 8px 0 0; font-size: 14px; color: #93c5fd; }
+    .content { background-color: #ffffff; border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 12px 12px; padding: 24px; }
+    .table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+    .table td { padding: 12px; border-bottom: 1px solid #f1f5f9; }
+    .table td.label { font-weight: 600; color: #475569; width: 140px; }
+    .table td.value { color: #0f172a; }
+    .message-box { background-color: #f8fafc; border-left: 4px solid #3b82f6; padding: 16px; border-radius: 4px; font-family: inherit; white-space: pre-wrap; color: #334155; margin-top: 8px; }
+    .footer { text-align: center; font-size: 12px; color: #94a3b8; margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>New Lead Enquiry</h1>
+    <p>Received from Web Nova Crew website</p>
+  </div>
+  <div class="content">
+    <table class="table">
+      <tr>
+        <td class="label">Name</td>
+        <td class="value">${escapeHtml(name)}</td>
+      </tr>
+      <tr>
+        <td class="label">Email</td>
+        <td class="value"><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></td>
+      </tr>
+      <tr>
+        <td class="label">Phone</td>
+        <td class="value">${phone ? `<a href="tel:${escapeHtml(phone)}">${escapeHtml(phone)}</a>` : "Not provided"}</td>
+      </tr>
+      <tr>
+        <td class="label">Service</td>
+        <td class="value"><strong>${escapeHtml(service)}</strong></td>
+      </tr>
+      <tr>
+        <td class="label">Budget</td>
+        <td class="value">${budget ? escapeHtml(budget) : "Not provided"}</td>
+      </tr>
+      <tr>
+        <td class="label">Subject</td>
+        <td class="value">${subject ? escapeHtml(subject) : "Lead Enquiry"}</td>
+      </tr>
+    </table>
+    <h3 style="margin: 0 0 8px; color: #1e293b; font-size: 16px;">Project Description:</h3>
+    <div class="message-box">${escapeHtml(message)}</div>
+  </div>
+  <div class="footer">
+    <p>© 2026 Web Nova Crew. All rights reserved.</p>
+  </div>
+</body>
+</html>`;
 }
 
 type SmtpAuthMethod = "LOGIN" | "PLAIN";
@@ -68,13 +120,16 @@ async function sendViaSmtp(data: z.infer<typeof contactSchema>): Promise<void> {
   }
 
   const from = process.env.CONTACT_FROM?.trim() ?? user;
+  const mailSubject = data.subject || `New Lead: ${data.service}`;
+  const mailText = `Name: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone || "N/A"}\nService: ${data.service}\nBudget: ${data.budget || "N/A"}\n\n${data.message}`;
+
   const mail: MailPayload = {
     from,
     to: [...CONTACT_TO],
     replyTo: data.email,
-    subject: `Contact: ${data.subject}`,
+    subject: mailSubject,
     html: buildHtml(data),
-    text: `Name: ${data.name}\nEmail: ${data.email}\nSubject: ${data.subject}\n\n${data.message}`,
+    text: mailText,
   };
 
   const primaryAuth = smtpAuthMethodFromEnv();
@@ -190,7 +245,7 @@ async function sendViaResend(data: z.infer<typeof contactSchema>): Promise<void>
       from,
       to: [...CONTACT_TO],
       reply_to: data.email,
-      subject: `Contact: ${data.subject}`,
+      subject: data.subject || `New Lead: ${data.service}`,
       html: buildHtml(data),
     }),
   });
@@ -207,6 +262,20 @@ export async function handleContactPost(req: Request, res: Response): Promise<vo
     return;
   }
   const data = parsed.data;
+
+  // 1. Save lead to storage (database/file fallback) first
+  try {
+    await storage.createLead({
+      name: data.name,
+      email: data.email,
+      phone: data.phone || null,
+      service: data.service,
+      budget: data.budget || null,
+      message: data.message,
+    });
+  } catch (err) {
+    console.error("[contact-email] Error saving lead to storage:", err);
+  }
 
   const hasSmtp = Boolean(process.env.SMTP_USER && process.env.SMTP_PASS);
   const hasResend = Boolean(process.env.RESEND_API_KEY);
