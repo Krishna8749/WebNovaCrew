@@ -26,38 +26,38 @@ export default function Careers() {
   return (
     <div className="min-h-screen bg-white font-sans pt-20">
       <SEO 
-        title="Careers - Join XcFlown" 
+        title="Careers - Join Web Nova Crew" 
         description="Join India's fastest-growing web development company. We're hiring React developers, Flutter developers, UI/UX designers, and more. Great salary, benefits, and growth opportunities."
         keywords="web development jobs india, react developer jobs mohali, flutter developer careers, UI/UX designer jobs, tech jobs punjab, software engineer openings"
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Careers", url: "https://xcflown.com/careers" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Careers", url: "https://webnovacrew.com/careers" }
       ]} />
       
       <Navbar />
       
       {/* Hero */}
       <section className="py-20 bg-gradient-to-b from-blue-900 to-blue-800 text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500 rounded-full blur-3xl opacity-10"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-lime-500 rounded-full blur-3xl opacity-10"></div>
         <div className="container mx-auto max-w-6xl px-4 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <span className="inline-block py-1.5 px-4 rounded-full bg-white/10 text-orange-400 text-sm font-bold mb-6 border border-white/20">
+            <span className="inline-block py-1.5 px-4 rounded-full bg-white/10 text-lime-400 text-sm font-bold mb-6 border border-white/20">
               We're Hiring!
             </span>
             <h1 className="text-4xl md:text-6xl font-poppins font-bold mb-6">
-              Build Your Career at <span className="text-orange-400">XcFlown</span>
+              Build Your Career at <span className="text-lime-400">Web Nova Crew</span>
             </h1>
-            <p className="text-xl text-violet-100 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
               Join India's fastest-growing web development company. Work on exciting projects, learn from the best, and grow your career with us.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="#openings">
-                <Button size="lg" className="bg-orange-500 text-violet-900 hover:bg-orange-400 font-bold rounded-full px-8">
+                <Button size="lg" className="bg-lime-500 text-blue-900 hover:bg-lime-400 font-bold rounded-full px-8">
                   View Open Positions
                 </Button>
               </a>
@@ -99,7 +99,7 @@ export default function Careers() {
                 transition={{ delay: index * 0.1 }}
                 className="flex gap-4 p-6 bg-slate-50 rounded-xl"
               >
-                <div className="w-12 h-12 rounded-xl bg-violet-100 text-violet-600 flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
                   {benefit.icon}
                 </div>
                 <div>
@@ -127,7 +127,7 @@ export default function Careers() {
               </h2>
               <div className="space-y-4 text-slate-600">
                 <p>
-                  At XcFlown, we've built a culture that values innovation, collaboration, and continuous learning. We believe the best ideas come from diverse perspectives and open communication.
+                  At Web Nova Crew, we've built a culture that values innovation, collaboration, and continuous learning. We believe the best ideas come from diverse perspectives and open communication.
                 </p>
                 <p>
                   Our hybrid work model gives you flexibility while maintaining strong team connections. We trust our team to manage their time and deliver exceptional results.
@@ -145,7 +145,7 @@ export default function Careers() {
                   { value: "25+", label: "Team Size" },
                 ].map((stat, i) => (
                   <div key={i} className="text-center p-4 bg-white rounded-xl">
-                    <div className="text-2xl font-bold text-violet-600">{stat.value}</div>
+                    <div className="text-2xl font-bold text-blue-600">{stat.value}</div>
                     <div className="text-sm text-slate-500">{stat.label}</div>
                   </div>
                 ))}
@@ -209,7 +209,7 @@ export default function Careers() {
                 onClick={() => setActiveDepartment(dept)}
                 className={`px-5 py-2 rounded-full font-medium text-sm transition-all ${
                   activeDepartment === dept
-                    ? "bg-violet-600 text-white"
+                    ? "bg-blue-600 text-white"
                     : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                 }`}
               >
@@ -229,13 +229,13 @@ export default function Careers() {
                 transition={{ delay: index * 0.05 }}
               >
                 <Link href={`/careers/${job.slug}`}>
-                  <Card className="border-slate-200 hover:border-violet-300 hover:shadow-lg transition-all cursor-pointer">
+                  <Card className="border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all cursor-pointer">
                     <CardContent className="p-6">
                       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                         <div>
                           <div className="flex items-center gap-3 mb-2">
                             <h3 className="text-xl font-bold text-slate-900">{job.title}</h3>
-                            <span className="text-xs bg-orange-100 text-lime-700 px-2 py-1 rounded-full font-medium">
+                            <span className="text-xs bg-lime-100 text-lime-700 px-2 py-1 rounded-full font-medium">
                               {job.type}
                             </span>
                           </div>
@@ -254,7 +254,7 @@ export default function Careers() {
                             </span>
                           </div>
                         </div>
-                        <Button className="bg-violet-600 hover:bg-violet-700 shrink-0">
+                        <Button className="bg-blue-600 hover:bg-blue-700 shrink-0">
                           View Details <ArrowRight className="w-4 h-4 ml-2" />
                         </Button>
                       </div>
@@ -274,14 +274,14 @@ export default function Careers() {
       </section>
 
       {/* Don't See Your Role */}
-      <section className="py-20 bg-violet-900 text-white">
+      <section className="py-20 bg-blue-900 text-white">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 font-poppins">Don't See Your Role?</h2>
-          <p className="text-violet-100 text-lg mb-8 max-w-2xl mx-auto">
-            We're always looking for exceptional talent. Send us your resume and tell us how you can contribute to XcFlown.
+          <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+            We're always looking for exceptional talent. Send us your resume and tell us how you can contribute to Web Nova Crew.
           </p>
-          <a href="mailto:careers@xcflown.com">
-            <Button size="lg" className="bg-orange-500 text-violet-900 hover:bg-orange-400 font-bold rounded-full px-8">
+          <a href="mailto:careers@webnovacrew.com">
+            <Button size="lg" className="bg-lime-500 text-blue-900 hover:bg-lime-400 font-bold rounded-full px-8">
               Send Your Resume
             </Button>
           </a>

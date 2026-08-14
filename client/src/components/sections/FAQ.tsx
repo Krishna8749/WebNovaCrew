@@ -56,7 +56,7 @@ export function FAQSection({
                 value={`item-${index}`}
                 className="bg-white rounded-xl border border-slate-200 px-6 shadow-sm hover:shadow-md transition-shadow"
               >
-                <AccordionTrigger className="text-left font-semibold text-slate-900 hover:text-violet-600 py-5">
+                <AccordionTrigger className="text-left font-semibold text-slate-900 hover:text-blue-600 py-5">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-slate-600 pb-5 leading-relaxed">
@@ -74,7 +74,7 @@ export function FAQSection({
 // Pre-built FAQ data for different pages
 export const homeFAQs: FAQItem[] = [
   {
-    question: "Why should I choose XcFlown over other web development companies in India?",
+    question: "Why should I choose Web Nova Crew over other web development companies in India?",
     answer: "Three reasons: Results, Speed, and Transparency. Unlike agencies that just build websites, we build revenue machines. Our clients see an average 300% increase in conversions. We deliver 40% faster than industry average (3-4 months vs 6+ months). And we're 100% transparent—no hidden costs, weekly updates, and you own everything we build. Plus, we're rated 4.9/5 on Clutch with 97% client retention. We don't just promise; we prove it."
   },
   {
@@ -128,11 +128,11 @@ export const servicesFAQs: FAQItem[] = [
 
 export const aboutFAQs: FAQItem[] = [
   {
-    question: "When was XcFlown founded?",
-    answer: "XcFlown was founded in 2023 in Mohali, India. In just a short time, we've grown to a team of 20+ specialists and have successfully delivered 40+ projects, generating over $3M in revenue for our clients. Our rapid growth is a testament to our commitment to excellence and client satisfaction."
+    question: "When was Web Nova Crew founded?",
+    answer: "Web Nova Crew was founded in 2023 in Mohali, India. In just a short time, we've grown to a team of 20+ specialists and have successfully delivered 40+ projects, generating over $3M in revenue for our clients. Our rapid growth is a testament to our commitment to excellence and client satisfaction."
   },
   {
-    question: "Where is XcFlown located?",
+    question: "Where is Web Nova Crew located?",
     answer: "Our headquarters is located at 2nd Floor, Shree Plaza Complex, Vikas Nagar, Ring Road, Lucknow 226022, Uttar Pradesh, India. While we're based in India, we serve clients globally including the USA, UK, Australia, Canada, and the Middle East. We offer both in-person and remote collaboration options."
   },
   {

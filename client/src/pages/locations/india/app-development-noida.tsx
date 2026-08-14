@@ -263,10 +263,10 @@ export default function AppDevelopmentNoida() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
-      <SEO title="App Development Company in Noida | Mobile App Developers NCR | XcFlown" description="Top app development company in Noida. Android, iOS, Flutter apps for IT companies, startups in Sector 62, 63. ₹40,000 onwards." keywords="app development Noida, mobile app developers Noida, Sector 62 app development, NCR app developers" />
-      <LocalBusinessSchema /><BreadcrumbSchema items={[{ name: "Home", url: "https://xcflown.com" }, { name: "Locations", url: "https://xcflown.com/locations" }, { name: "Noida", url: "https://xcflown.com/locations/app-development-noida" }]} />
-      <ServiceSchema serviceName="App Development in Noida" serviceDescription="Professional mobile app development for Noida businesses." serviceUrl="https://xcflown.com/locations/app-development-noida" />
+    <div className="min-h-screen bg-slate-950 font-sans">
+      <SEO title="App Development Company in Noida | Mobile App Developers NCR | Web Nova Crew" description="Top app development company in Noida. Android, iOS, Flutter apps for IT companies, startups in Sector 62, 63. ₹40,000 onwards." keywords="app development Noida, mobile app developers Noida, Sector 62 app development, NCR app developers" />
+      <LocalBusinessSchema /><BreadcrumbSchema items={[{ name: "Home", url: "https://webnovacrew.com" }, { name: "Locations", url: "https://webnovacrew.com/locations" }, { name: "Noida", url: "https://webnovacrew.com/locations/app-development-noida" }]} />
+      <ServiceSchema serviceName="App Development in Noida" serviceDescription="Professional mobile app development for Noida businesses." serviceUrl="https://webnovacrew.com/locations/app-development-noida" />
       <Navbar />
 
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -278,8 +278,8 @@ export default function AppDevelopmentNoida() {
             <p className="text-xl text-slate-300 mb-4"><span className="text-violet-400 font-semibold">Noida's</span> trusted app partner for IT companies & startups.</p>
             <p className="text-lg text-slate-400 mb-8">Serving Sector 62, 63, Greater Noida & across NCR.</p>
             <div className="flex flex-wrap gap-4 justify-center mb-12">
-              <Button size="lg" className="bg-gradient-to-r from-violet-600 to-orange-500 text-white px-8"><Link href="/contact" className="flex items-center gap-2">Get Free Quote <ArrowRight className="w-5 h-5" /></Link></Button>
-              <a href="https://wa.me/918360723410"><Button size="lg" variant="outline" className="border-green-500/50 text-green-400"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp</Button></a>
+              <Button size="lg" className="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-8"><Link href="/contact" className="flex items-center gap-2">Get Free Quote <ArrowRight className="w-5 h-5" /></Link></Button>
+              <a href="https://wa.me/919872364476"><Button size="lg" variant="outline" className="border-green-500/50 text-green-400"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp</Button></a>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
               <div className="text-center bg-white/5 rounded-xl p-4 border border-violet-500/20"><div className="text-3xl font-bold text-violet-400">60+</div><div className="text-sm text-slate-400">Noida Apps</div></div>
@@ -292,7 +292,7 @@ export default function AppDevelopmentNoida() {
       </section>
 
       {/* Services - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">App Development Services in Noida</h2>
@@ -301,7 +301,7 @@ export default function AppDevelopmentNoida() {
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-8 hover:border-violet-500/50 transition-all">
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-violet-500/50 transition-all">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-14 h-14 bg-violet-500/10 rounded-xl flex items-center justify-center text-violet-400 flex-shrink-0">{service.icon}</div>
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
@@ -336,13 +336,13 @@ export default function AppDevelopmentNoida() {
       </section>
 
       {/* Industries - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Industries We Serve in Noida</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
               <motion.div key={index} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: index * 0.05 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-violet-500/50 transition-all">
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-violet-500/50 transition-all">
                 <div className="w-12 h-12 bg-violet-500/10 rounded-xl flex items-center justify-center text-violet-400 mb-4">{industry.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{industry.name}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{industry.desc}</p>
@@ -359,7 +359,7 @@ export default function AppDevelopmentNoida() {
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-violet-500/50 transition-all">
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-violet-500/50 transition-all">
                 <div className="text-violet-400 text-sm font-medium mb-2">{study.client}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
                 <p className="text-slate-400 mb-6 leading-relaxed">{study.description}</p>
@@ -374,13 +374,13 @@ export default function AppDevelopmentNoida() {
       </section>
 
       {/* Areas - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Serving All Noida Areas</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {areas.map((area, index) => (
               <motion.div key={index} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: index * 0.03 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-5 hover:border-violet-500/50 transition-all">
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-5 hover:border-violet-500/50 transition-all">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-violet-400 mt-1 flex-shrink-0" />
                   <div><h3 className="text-white font-semibold">{area.name}</h3><span className="text-violet-400 text-sm">{area.type}</span><p className="text-slate-400 text-sm mt-1">{area.desc}</p></div>
@@ -398,7 +398,7 @@ export default function AppDevelopmentNoida() {
           <div className="grid md:grid-cols-5 gap-6">
             {developmentProcess.map((phase, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="relative">
-                <div className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-violet-500/50 transition-all h-full">
+                <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-violet-500/50 transition-all h-full">
                   <div className="w-10 h-10 bg-violet-500 rounded-full flex items-center justify-center text-white font-bold mb-4">{phase.step}</div>
                   <h3 className="text-lg font-semibold text-white mb-1">{phase.title}</h3>
                   <div className="text-violet-400 text-sm mb-3">{phase.duration}</div>
@@ -411,12 +411,12 @@ export default function AppDevelopmentNoida() {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Technology Stack</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {techStack.map((stack, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-violet-400 mb-4">{stack.category}</h3>
                 <div className="flex flex-wrap gap-2">{stack.technologies.map((tech, i) => (<span key={i} className="text-sm bg-slate-700 text-slate-300 px-3 py-1 rounded-full">{tech}</span>))}</div>
               </motion.div>
@@ -432,7 +432,7 @@ export default function AppDevelopmentNoida() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((item, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-violet-500/50 transition-all">
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-violet-500/50 transition-all">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-14 h-14 bg-violet-500/10 rounded-xl flex items-center justify-center text-violet-400">{item.icon}</div>
                   <div className="text-sm font-bold text-violet-400 bg-violet-500/10 px-3 py-1 rounded-full">{item.stats}</div>
@@ -446,19 +446,19 @@ export default function AppDevelopmentNoida() {
       </section>
 
       {/* Pricing - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Noida App Development Pricing</h2><p className="text-xl text-slate-400 max-w-3xl mx-auto">30% savings compared to Sector 62 agencies with same quality.</p></div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((plan, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className={`bg-violet-800/50 border rounded-xl p-8 transition-all ${plan.popular ? 'border-violet-500 ring-2 ring-violet-500/20' : 'border-violet-700 hover:border-violet-500/50'}`}>
+                className={`bg-slate-800/50 border rounded-xl p-8 transition-all ${plan.popular ? 'border-violet-500 ring-2 ring-violet-500/20' : 'border-slate-700 hover:border-violet-500/50'}`}>
                 {plan.popular && (<div className="text-center mb-4"><span className="bg-violet-500 text-white text-sm font-medium px-4 py-1 rounded-full">Most Popular</span></div>)}
                 <h3 className="text-2xl font-semibold text-white mb-2">{plan.tier}</h3>
                 <div className="text-3xl font-bold text-violet-400 mb-2">{plan.price}</div>
                 <p className="text-slate-400 text-sm mb-6">{plan.ideal}</p>
                 <ul className="space-y-3 mb-8">{plan.features.map((feature, i) => (<li key={i} className="flex items-start gap-3 text-slate-300"><CheckCircle2 className="w-5 h-5 text-violet-400 mt-0.5 flex-shrink-0" /><span>{feature}</span></li>))}</ul>
-                <Button className={`w-full ${plan.popular ? 'bg-gradient-to-r from-violet-600 to-orange-500' : 'bg-slate-700 hover:bg-slate-600'}`}><Link href="/contact">Get Started</Link></Button>
+                <Button className={`w-full ${plan.popular ? 'bg-gradient-to-r from-violet-600 to-purple-600' : 'bg-slate-700 hover:bg-slate-600'}`}><Link href="/contact">Get Started</Link></Button>
               </motion.div>
             ))}
           </div>
@@ -468,13 +468,13 @@ export default function AppDevelopmentNoida() {
       <TestimonialsSection />
 
       {/* FAQs */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Noida App Development FAQs</h2></div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6">
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
               </motion.div>
@@ -484,13 +484,13 @@ export default function AppDevelopmentNoida() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-violet-950/50 to-purple-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-violet-950/50 to-purple-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl font-bold mb-6 text-white">Ready to Build Your Noida App?</h2>
           <p className="text-xl text-slate-300 mb-8">Let's discuss your IT, startup, or enterprise app project</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-violet-600 to-orange-500 text-white px-8"><Link href="/contact" className="flex items-center gap-2"><Phone className="w-5 h-5" />Contact Us</Link></Button>
-            <a href="https://wa.me/918360723410" target="_blank"><Button size="lg" variant="outline" className="border-violet-500/50 text-violet-400 hover:bg-violet-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button></a>
+            <Button size="lg" className="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-8"><Link href="/contact" className="flex items-center gap-2"><Phone className="w-5 h-5" />Contact Us</Link></Button>
+            <a href="https://wa.me/919872364476" target="_blank"><Button size="lg" variant="outline" className="border-violet-500/50 text-violet-400 hover:bg-violet-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button></a>
           </div>
         </div>
       </section>

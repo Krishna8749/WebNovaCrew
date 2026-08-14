@@ -230,23 +230,23 @@ export default function AppDevelopmentAgra() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
-        title="App Development Company in Agra | Tourism App Developers | ₹25,000 Onwards | XcFlown"
-        description="Top app development company in Agra. Specialized in tourism, handicraft, hotel apps. AR tours, multi-language support. 40% cheaper than Delhi. Free consultation. Call +91 83607 23410."
+        title="App Development Company in Agra | Tourism App Developers | ₹25,000 Onwards | Web Nova Crew"
+        description="Top app development company in Agra. Specialized in tourism, handicraft, hotel apps. AR tours, multi-language support. 40% cheaper than Delhi. Free consultation. Call +91 98723 64476."
         keywords="app development company Agra, mobile app developers Agra, tourism app Agra, Taj Mahal app, AR tour app, handicraft app Agra, hotel app Agra, Flutter developers Agra"
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Locations", url: "https://xcflown.com/locations" },
-        { name: "India", url: "https://xcflown.com/locations" },
-        { name: "Agra", url: "https://xcflown.com/locations/app-development-agra" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Locations", url: "https://webnovacrew.com/locations" },
+        { name: "India", url: "https://webnovacrew.com/locations" },
+        { name: "Agra", url: "https://webnovacrew.com/locations/app-development-agra" }
       ]} />
       <ServiceSchema 
         serviceName="App Development in Agra"
         serviceDescription="Professional mobile app development in Agra. Tourism apps, AR heritage tours, handicraft e-commerce, hotel booking apps. Multi-language support for international tourists."
-        serviceUrl="https://xcflown.com/locations/app-development-agra"
+        serviceUrl="https://webnovacrew.com/locations/app-development-agra"
       />
       
       <Navbar />
@@ -281,9 +281,9 @@ export default function AppDevelopmentAgra() {
               <Button size="lg" className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-8 py-6 text-lg">
                 <Link href="/contact" className="flex items-center gap-2">Get Free Consultation <ArrowRight className="w-5 h-5" /></Link>
               </Button>
-              <a href="https://wa.me/918360723410" target="_blank">
+              <a href="https://wa.me/919872364476" target="_blank">
                 <Button size="lg" variant="outline" className="border-green-500/50 text-green-400 hover:bg-green-500/10 px-8 py-6 text-lg">
-                  <MessageSquare className="w-5 h-5 mr-2" />WhatsApp: +91 83607 23410
+                  <MessageSquare className="w-5 h-5 mr-2" />WhatsApp: +91 98723 64476
                 </Button>
               </a>
             </div>
@@ -311,7 +311,7 @@ export default function AppDevelopmentAgra() {
       </section>
 
       {/* Services */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">App Development Services in Agra</h2>
@@ -320,7 +320,7 @@ export default function AppDevelopmentAgra() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} viewport={{ once: true }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-amber-500/50 transition-all group">
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-amber-500/50 transition-all group">
                 <div className="w-14 h-14 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-400 mb-4 group-hover:bg-amber-500/20 transition-all">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
                 <p className="text-slate-400 text-sm mb-4">{service.desc}</p>
@@ -343,7 +343,7 @@ export default function AppDevelopmentAgra() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
               <motion.div key={index} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: index * 0.05 }} viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-amber-500/50 transition-all">
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-amber-500/50 transition-all">
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-amber-400 flex-shrink-0 mt-1" />
                   <div><h3 className="text-lg font-semibold text-white mb-1">{industry.name}</h3><p className="text-sm text-slate-400">{industry.desc}</p></div>
@@ -355,7 +355,7 @@ export default function AppDevelopmentAgra() {
       </section>
 
       {/* Areas */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Serving All Areas of Agra</h2>
@@ -364,7 +364,7 @@ export default function AppDevelopmentAgra() {
           <div className="flex flex-wrap gap-4 justify-center max-w-5xl mx-auto">
             {areas.map((area, index) => (
               <motion.div key={index} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: index * 0.03 }} viewport={{ once: true }}
-                className="px-5 py-3 bg-violet-800/50 border border-violet-700 rounded-full text-slate-300 hover:border-amber-500/50 transition-all flex items-center gap-2">
+                className="px-5 py-3 bg-slate-800/50 border border-slate-700 rounded-full text-slate-300 hover:border-amber-500/50 transition-all flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-amber-400" /><span>{area.name}</span><span className="text-xs text-slate-500">({area.type})</span>
               </motion.div>
             ))}
@@ -382,7 +382,7 @@ export default function AppDevelopmentAgra() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyChooseUs.map((item, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-amber-500/50 transition-all">
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-amber-500/50 transition-all">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-14 h-14 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-400">{item.icon}</div>
                   <div className="text-sm font-bold text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full">{item.stats}</div>
@@ -396,7 +396,7 @@ export default function AppDevelopmentAgra() {
       </section>
 
       {/* Process */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Our Development Process</h2>
@@ -405,7 +405,7 @@ export default function AppDevelopmentAgra() {
           <div className="grid md:grid-cols-5 gap-4">
             {process.map((step, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} viewport={{ once: true }} className="relative">
-                <div className="bg-violet-800/50 border border-violet-700 rounded-xl p-5 h-full">
+                <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-5 h-full">
                   <div className="w-10 h-10 bg-gradient-to-br from-amber-600 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-lg mb-4">{step.step}</div>
                   <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
                   <p className="text-slate-400 text-sm mb-3">{step.desc}</p>
@@ -427,7 +427,7 @@ export default function AppDevelopmentAgra() {
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {pricing.map((plan, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} viewport={{ once: true }}
-                className={`bg-violet-800/50 border rounded-xl p-6 relative ${plan.popular ? 'border-amber-500 ring-2 ring-amber-500/20' : 'border-violet-700'}`}>
+                className={`bg-slate-800/50 border rounded-xl p-6 relative ${plan.popular ? 'border-amber-500 ring-2 ring-amber-500/20' : 'border-slate-700'}`}>
                 {plan.popular && (<div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-600 to-orange-600 text-white text-xs font-bold px-4 py-1 rounded-full">MOST POPULAR</div>)}
                 <h3 className="text-xl font-semibold text-white mb-1">{plan.tier}</h3>
                 <p className="text-sm text-slate-400 mb-4">{plan.ideal}</p>
@@ -443,7 +443,7 @@ export default function AppDevelopmentAgra() {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Technologies We Use</h2>
@@ -451,7 +451,7 @@ export default function AppDevelopmentAgra() {
           </div>
           <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {techStack.map((stack, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} viewport={{ once: true }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-5">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} viewport={{ once: true }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-5">
                 <h3 className="text-lg font-semibold text-white mb-3">{stack.category}</h3>
                 <div className="flex flex-wrap gap-2">{stack.techs.map((tech, i) => (<span key={i} className="text-sm bg-amber-500/10 text-amber-300 px-3 py-1 rounded-full">{tech}</span>))}</div>
               </motion.div>
@@ -463,7 +463,7 @@ export default function AppDevelopmentAgra() {
       <TestimonialsSection />
 
       {/* FAQs */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Frequently Asked Questions - Agra</h2>
@@ -471,7 +471,7 @@ export default function AppDevelopmentAgra() {
           </div>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} viewport={{ once: true }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} viewport={{ once: true }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
               </motion.div>
@@ -481,7 +481,7 @@ export default function AppDevelopmentAgra() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-br from-amber-950/50 to-orange-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-amber-950/50 to-orange-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Build Your Agra App?</h2>
           <p className="text-xl text-slate-300 mb-8">Get a free consultation and detailed proposal for your tourism or business app.</p>
@@ -489,7 +489,7 @@ export default function AppDevelopmentAgra() {
             <Button size="lg" className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-8 py-6 text-lg">
               <Link href="/contact" className="flex items-center gap-2"><Phone className="w-5 h-5" />Schedule Free Consultation</Link>
             </Button>
-            <a href="tel:+918360723410"><Button size="lg" variant="outline" className="border-violet-700/50 hover:bg-violet-800 text-white px-8 py-6 text-lg"><Phone className="w-5 h-5 mr-2" />Call: +91 83607 23410</Button></a>
+            <a href="tel:+919872364476"><Button size="lg" variant="outline" className="border-slate-600 hover:bg-slate-800 text-white px-8 py-6 text-lg"><Phone className="w-5 h-5 mr-2" />Call: +91 98723 64476</Button></a>
           </div>
           <p className="text-slate-400 mt-6">📍 Just 4 hours from Agra • Regular on-site visits available</p>
         </div>

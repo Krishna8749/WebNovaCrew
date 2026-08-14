@@ -62,7 +62,7 @@ export default function OnDemandAppDevelopment() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
         title="On-Demand Delivery App Development | Food, Grocery, Logistics Apps | India & Kuwait" 
         description="Leading on-demand delivery app development company. We build food delivery, grocery, medicine, logistics apps with real-time tracking & AI dispatch. Zomato, Swiggy, Talabat clone development in India & Kuwait."
@@ -70,14 +70,14 @@ export default function OnDemandAppDevelopment() {
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Services", url: "https://xcflown.com/services" },
-        { name: "On-Demand Delivery App Development", url: "https://xcflown.com/services/on-demand-app-development" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Services", url: "https://webnovacrew.com/services" },
+        { name: "On-Demand Delivery App Development", url: "https://webnovacrew.com/services/on-demand-app-development" }
       ]} />
       <ServiceSchema 
         serviceName="On-Demand Delivery App Development"
         serviceDescription="Professional on-demand delivery app development. We build food, grocery, medicine, logistics apps with real-time tracking and AI dispatch."
-        serviceUrl="https://xcflown.com/services/on-demand-app-development"
+        serviceUrl="https://webnovacrew.com/services/on-demand-app-development"
       />
       
       <Navbar />
@@ -103,7 +103,7 @@ export default function OnDemandAppDevelopment() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-yellow-400">On-Demand Delivery</span> App Development
             </h1>
             
-            <p className="text-xl text-violet-200/80 mb-8 leading-relaxed">
+            <p className="text-xl text-blue-200/80 mb-8 leading-relaxed">
               Build powerful <strong className="text-white">food, grocery, medicine, parcel delivery apps</strong> with 
               <strong className="text-red-400"> real-time tracking, AI dispatch & multi-vendor support</strong>. We've delivered 80+ delivery platforms.
             </p>
@@ -114,7 +114,7 @@ export default function OnDemandAppDevelopment() {
                   Get Free Quote <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-              <a href="https://wa.me/918360723410" target="_blank">
+              <a href="https://wa.me/919872364476" target="_blank">
                 <Button size="lg" variant="outline" className="border-2 border-green-500/50 text-green-400 hover:bg-green-500/10 font-bold text-lg px-8 py-7 rounded-full">
                   <MessageSquare className="w-5 h-5 mr-2" /> WhatsApp Us
                 </Button>
@@ -137,7 +137,7 @@ export default function OnDemandAppDevelopment() {
                   className="bg-white/5 backdrop-blur-sm border border-red-500/20 rounded-2xl p-6"
                 >
                   <div className="text-3xl md:text-4xl font-bold text-red-400">{stat.value}</div>
-                  <div className="text-violet-200/70">{stat.label}</div>
+                  <div className="text-blue-200/70">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -146,7 +146,7 @@ export default function OnDemandAppDevelopment() {
       </section>
 
       {/* Features */}
-      <section className="py-24 bg-violet-950">
+      <section className="py-24 bg-slate-950">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -168,7 +168,7 @@ export default function OnDemandAppDevelopment() {
                   {feature.icon}
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-violet-200/60 text-sm">{feature.desc}</p>
+                <p className="text-blue-200/60 text-sm">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -196,7 +196,7 @@ export default function OnDemandAppDevelopment() {
               >
                 <div className="text-red-400 mb-4">{type.icon}</div>
                 <h3 className="text-xl font-bold text-white mb-3">{type.title}</h3>
-                <p className="text-violet-200/70">{type.desc}</p>
+                <p className="text-blue-200/70">{type.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -204,7 +204,7 @@ export default function OnDemandAppDevelopment() {
       </section>
 
       {/* Pricing */}
-      <section className="py-24 bg-violet-950">
+      <section className="py-24 bg-slate-950">
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -232,15 +232,15 @@ export default function OnDemandAppDevelopment() {
                 <h3 className="text-2xl font-bold text-white mb-4">{tier.name}</h3>
                 <div className="mb-2">
                   <span className="text-2xl font-bold text-red-400">{tier.price}</span>
-                  <span className="text-violet-200/60 ml-2">🇮🇳</span>
+                  <span className="text-blue-200/60 ml-2">🇮🇳</span>
                 </div>
                 <div className="mb-6">
-                  <span className="text-lg font-bold text-orange-400">{tier.priceKWD}</span>
-                  <span className="text-violet-200/60 ml-2">🇰🇼</span>
+                  <span className="text-lg font-bold text-cyan-400">{tier.priceKWD}</span>
+                  <span className="text-blue-200/60 ml-2">🇰🇼</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, j) => (
-                    <li key={j} className="flex items-center gap-3 text-violet-200/80">
+                    <li key={j} className="flex items-center gap-3 text-blue-200/80">
                       <CheckCircle2 className="w-5 h-5 text-red-400 shrink-0" />
                       {feature}
                     </li>
@@ -280,7 +280,7 @@ export default function OnDemandAppDevelopment() {
                 className="bg-white/5 border border-red-500/20 rounded-2xl p-6"
               >
                 <h3 className="text-lg font-bold text-white mb-3">{faq.question}</h3>
-                <p className="text-violet-200/70">{faq.answer}</p>
+                <p className="text-blue-200/70">{faq.answer}</p>
               </motion.div>
             ))}
           </div>
@@ -302,7 +302,7 @@ export default function OnDemandAppDevelopment() {
                 Start Your Project <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
-            <a href="tel:+918360723410">
+            <a href="tel:+919872364476">
               <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-10 py-7 rounded-full">
                 <Phone className="w-5 h-5 mr-2" /> Call Now
               </Button>

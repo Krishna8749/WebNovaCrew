@@ -37,22 +37,22 @@ export default function AppDevelopmentDelhi() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
-        title="App Development Company in Delhi NCR | Mobile App Developers | XcFlown" 
-        description="Top app development company in Delhi NCR. We build Android, iOS, Flutter apps for startups & enterprises in Delhi, Gurgaon, Noida. Competitive pricing. 100+ apps delivered. Call +91 83607 23410."
+        title="App Development Company in Delhi NCR | Mobile App Developers | Web Nova Crew" 
+        description="Top app development company in Delhi NCR. We build Android, iOS, Flutter apps for startups & enterprises in Delhi, Gurgaon, Noida. Competitive pricing. 100+ apps delivered. Call +91 98723 64476."
         keywords="app development Delhi, mobile app developer Delhi NCR, Android app Delhi, iOS app Gurgaon, Flutter developer Noida, app development company Delhi, startup app development Delhi"
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Locations", url: "https://xcflown.com/locations" },
-        { name: "App Development Delhi", url: "https://xcflown.com/locations/app-development-delhi" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Locations", url: "https://webnovacrew.com/locations" },
+        { name: "App Development Delhi", url: "https://webnovacrew.com/locations/app-development-delhi" }
       ]} />
       <ServiceSchema 
         serviceName="App Development in Delhi NCR"
         serviceDescription="Professional app development services in Delhi NCR. Android, iOS, Flutter apps for startups and enterprises."
-        serviceUrl="https://xcflown.com/locations/app-development-delhi"
+        serviceUrl="https://webnovacrew.com/locations/app-development-delhi"
       />
       
       <Navbar />
@@ -73,7 +73,7 @@ export default function AppDevelopmentDelhi() {
               App Development Company in <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Delhi NCR</span>
             </h1>
             
-            <p className="text-xl text-violet-200/80 mb-8 leading-relaxed">
+            <p className="text-xl text-blue-200/80 mb-8 leading-relaxed">
               Delhi's trusted <strong className="text-white">mobile app development partner</strong>. We build 
               <strong className="text-red-400"> Android, iOS, Flutter apps</strong> for startups & enterprises across Delhi, Gurgaon, Noida. 100+ apps delivered.
             </p>
@@ -84,7 +84,7 @@ export default function AppDevelopmentDelhi() {
                   Get Free Quote <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-              <a href="https://wa.me/918360723410" target="_blank">
+              <a href="https://wa.me/919872364476" target="_blank">
                 <Button size="lg" variant="outline" className="border-2 border-green-500/50 text-green-400 hover:bg-green-500/10 font-bold text-lg px-8 py-7 rounded-full">
                   <MessageSquare className="w-5 h-5 mr-2" /> WhatsApp Us
                 </Button>
@@ -101,7 +101,7 @@ export default function AppDevelopmentDelhi() {
                 <motion.div key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 + i * 0.1 }}
                   className="bg-white/5 backdrop-blur-sm border border-red-500/20 rounded-2xl p-6">
                   <div className="text-3xl font-bold text-red-400">{stat.value}</div>
-                  <div className="text-violet-200/70">{stat.label}</div>
+                  <div className="text-blue-200/70">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -110,7 +110,7 @@ export default function AppDevelopmentDelhi() {
       </section>
 
       {/* Services */}
-      <section className="py-20 bg-violet-950">
+      <section className="py-20 bg-slate-950">
         <div className="container mx-auto max-w-7xl px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
             App Development Services in <span className="text-red-400">Delhi NCR</span>
@@ -144,7 +144,7 @@ export default function AppDevelopmentDelhi() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-violet-950">
+      <section className="py-20 bg-slate-950">
         <div className="container mx-auto max-w-4xl px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
           <div className="space-y-4">
@@ -152,7 +152,7 @@ export default function AppDevelopmentDelhi() {
               <motion.div key={i} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 className="bg-white/5 border border-red-500/20 rounded-2xl p-6">
                 <h3 className="text-lg font-bold text-white mb-3">{faq.question}</h3>
-                <p className="text-violet-200/70">{faq.answer}</p>
+                <p className="text-blue-200/70">{faq.answer}</p>
               </motion.div>
             ))}
           </div>
@@ -166,7 +166,7 @@ export default function AppDevelopmentDelhi() {
           <p className="text-xl text-white/90 mb-8">Let's discuss your project. Schedule a call or meeting today!</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact"><Button size="lg" className="bg-white text-red-600 hover:bg-red-50 font-bold text-lg px-10 py-7 rounded-full">Get Free Quote <ArrowRight className="w-5 h-5 ml-2" /></Button></Link>
-            <a href="tel:+918360723410"><Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-10 py-7 rounded-full"><Phone className="w-5 h-5 mr-2" /> +91 83607 23410</Button></a>
+            <a href="tel:+919872364476"><Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-10 py-7 rounded-full"><Phone className="w-5 h-5 mr-2" /> +91 98723 64476</Button></a>
           </div>
         </div>
       </section>

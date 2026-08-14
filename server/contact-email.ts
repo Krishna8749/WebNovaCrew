@@ -9,8 +9,8 @@ const contactSchema = z.object({
 });
 
 const CONTACT_TO = [
-  "info@xcflown.com",
-  "xcflowntechnologies@gmail.com",
+  "info@webnovacrew.com",
+  "webnovacrewtechnologies@gmail.com",
 ] as const;
 
 function escapeHtml(s: string): string {
@@ -25,7 +25,7 @@ function buildHtml(data: z.infer<typeof contactSchema>): string {
   const { name, email, subject, message } = data;
   return `<!DOCTYPE html>
 <html><body style="font-family:system-ui,sans-serif;line-height:1.5;">
-  <p><strong>New contact form message</strong> (xcflown.com)</p>
+  <p><strong>New contact form message</strong> (webnovacrew.com)</p>
   <p><strong>Name:</strong> ${escapeHtml(name)}</p>
   <p><strong>Email:</strong> ${escapeHtml(email)}</p>
   <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
@@ -179,7 +179,7 @@ async function sendViaResend(data: z.infer<typeof contactSchema>): Promise<void>
   const key = process.env.RESEND_API_KEY;
   if (!key) throw new Error("RESEND_API_KEY missing");
   const from =
-    process.env.CONTACT_FROM ?? "XcFlown <onboarding@resend.dev>";
+    process.env.CONTACT_FROM ?? "Web Nova Crew <onboarding@resend.dev>";
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {

@@ -14,7 +14,7 @@ export default function Services() {
   const services = [
     {
       id: "web-development",
-      icon: <Globe className="w-12 h-12 text-violet-600" />,
+      icon: <Globe className="w-12 h-12 text-blue-600" />,
       title: "Custom Web Development",
       shortTitle: "Web Development",
       description: "We build high-performance, SEO-optimized websites using React.js, Next.js, and modern web technologies. From corporate websites to complex web applications, our custom web development services help businesses establish a powerful online presence that converts visitors into customers.",
@@ -31,7 +31,7 @@ export default function Services() {
     },
     {
       id: "mobile-app-development",
-      icon: <Smartphone className="w-12 h-12 text-violet-600" />,
+      icon: <Smartphone className="w-12 h-12 text-blue-600" />,
       title: "Mobile App Development",
       shortTitle: "App Development",
       description: "Create powerful iOS and Android mobile applications with our expert Flutter and React Native development team. We deliver cross-platform apps that provide native-like performance at 40% lower cost, helping you reach users on any device.",
@@ -48,7 +48,7 @@ export default function Services() {
     },
     {
       id: "ecommerce-development",
-      icon: <ShoppingCart className="w-12 h-12 text-violet-600" />,
+      icon: <ShoppingCart className="w-12 h-12 text-blue-600" />,
       title: "E-Commerce Development",
       shortTitle: "E-Commerce",
       description: "Build profitable online stores with our e-commerce development expertise. From Shopify and WooCommerce to custom headless commerce solutions, we create conversion-optimized shopping experiences that drive sales and customer loyalty.",
@@ -65,7 +65,7 @@ export default function Services() {
     },
     {
       id: "seo-services",
-      icon: <Search className="w-12 h-12 text-violet-600" />,
+      icon: <Search className="w-12 h-12 text-blue-600" />,
       title: "SEO & Digital Marketing",
       shortTitle: "SEO Services",
       description: "Dominate Google search results with our data-driven SEO strategies. We combine technical SEO, content optimization, and link building to help your business rank #1 for competitive keywords and drive qualified organic traffic.",
@@ -82,7 +82,7 @@ export default function Services() {
     },
     {
       id: "ui-ux-design",
-      icon: <Layout className="w-12 h-12 text-violet-600" />,
+      icon: <Layout className="w-12 h-12 text-blue-600" />,
       title: "UI/UX Design Services",
       shortTitle: "UI/UX Design",
       description: "Create exceptional user experiences with our UI/UX design services. We blend aesthetics with functionality to design intuitive interfaces that delight users and drive engagement. Our user-centered approach ensures your product stands out.",
@@ -99,7 +99,7 @@ export default function Services() {
     },
     {
       id: "backend-development",
-      icon: <Database className="w-12 h-12 text-violet-600" />,
+      icon: <Database className="w-12 h-12 text-blue-600" />,
       title: "Backend & API Development",
       shortTitle: "Backend Development",
       description: "Power your applications with robust backend infrastructure. Our backend development services include API design, database architecture, cloud deployment, and server management to ensure your application scales seamlessly.",
@@ -148,34 +148,34 @@ export default function Services() {
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Services", url: "https://xcflown.com/services" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Services", url: "https://webnovacrew.com/services" }
       ]} />
       <ServiceSchema 
         serviceName="Web & App Development Services"
         serviceDescription="Professional web development, mobile app development, e-commerce, and SEO services"
-        serviceUrl="https://xcflown.com/services"
+        serviceUrl="https://webnovacrew.com/services"
       />
       
       <Navbar />
       
       {/* Hero Section */}
-      <section className="py-20 bg-violet-900 text-white relative overflow-hidden">
+      <section className="py-20 bg-blue-900 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-800 to-transparent opacity-50"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-500 rounded-full blur-3xl opacity-10"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-lime-500 rounded-full blur-3xl opacity-10"></div>
         <div className="container mx-auto max-w-6xl px-4 relative z-10 text-center">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-white/10 text-orange-400 text-sm font-bold mb-6 border border-white/20">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-white/10 text-lime-400 text-sm font-bold mb-6 border border-white/20">
             Complete Digital Solutions
           </span>
           <h1 className="text-4xl md:text-6xl font-poppins font-bold mb-6">
-            Professional <span className="text-orange-400">Web Development</span> & <span className="text-orange-400">App Development</span> Services
+            Professional <span className="text-lime-400">Web Development</span> & <span className="text-lime-400">App Development</span> Services
           </h1>
-          <p className="text-xl text-violet-100 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed mb-8">
             From custom website development to mobile app creation, e-commerce solutions to SEO optimization — we deliver end-to-end digital services that help businesses grow and succeed online.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
-              <Button size="lg" className="bg-orange-500 text-violet-900 hover:bg-orange-400 font-bold rounded-full px-8">
+              <Button size="lg" className="bg-lime-500 text-blue-900 hover:bg-lime-400 font-bold rounded-full px-8">
                 Get Free Quote <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
@@ -221,7 +221,7 @@ export default function Services() {
                   {/* Service Info */}
                   <div className="lg:col-span-2">
                     <div className="flex items-start gap-4 mb-6">
-                      <div className="p-4 bg-violet-50 rounded-xl">
+                      <div className="p-4 bg-blue-50 rounded-xl">
                         {service.icon}
                       </div>
                       <div>
@@ -243,7 +243,7 @@ export default function Services() {
                     </div>
                     
                     <Link href="/contact">
-                      <Button className="bg-violet-600 hover:bg-violet-700 text-white font-bold rounded-full px-6">
+                      <Button className="bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full px-6">
                         Get Quote for {service.shortTitle} <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
                     </Link>
@@ -255,7 +255,7 @@ export default function Services() {
                     <ul className="space-y-3">
                       {service.features.map((feature, i) => (
                         <li key={i} className="flex items-center gap-3 text-sm text-slate-700">
-                          <Check className="w-4 h-4 text-orange-500 shrink-0" />
+                          <Check className="w-4 h-4 text-lime-500 shrink-0" />
                           {feature}
                         </li>
                       ))}
@@ -296,11 +296,11 @@ export default function Services() {
                 transition={{ delay: index * 0.1 }}
                 className="relative"
               >
-                <div className="text-6xl font-bold text-violet-100 mb-4">{step.step}</div>
+                <div className="text-6xl font-bold text-blue-100 mb-4">{step.step}</div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
                 <p className="text-slate-600 text-sm">{step.description}</p>
                 {index < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 right-0 w-1/2 h-0.5 bg-violet-100"></div>
+                  <div className="hidden lg:block absolute top-8 right-0 w-1/2 h-0.5 bg-blue-100"></div>
                 )}
               </motion.div>
             ))}
@@ -318,7 +318,7 @@ export default function Services() {
           
           <div className="flex flex-wrap justify-center gap-4">
             {["React.js", "Next.js", "TypeScript", "Node.js", "Python", "Flutter", "AWS", "Google Cloud", "MongoDB", "PostgreSQL", "Shopify", "WordPress", "Firebase", "Docker"].map((tech) => (
-              <span key={tech} className="px-6 py-3 bg-white rounded-full text-slate-700 font-semibold text-lg border border-slate-200 hover:border-violet-300 hover:bg-violet-50 transition-colors">
+              <span key={tech} className="px-6 py-3 bg-white rounded-full text-slate-700 font-semibold text-lg border border-slate-200 hover:border-blue-300 hover:bg-blue-50 transition-colors">
                 {tech}
               </span>
             ))}

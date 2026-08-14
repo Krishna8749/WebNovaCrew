@@ -1,4 +1,4 @@
-const PDFDocument = require('C:/Users/XcFlown/AppData/Roaming/npm/node_modules/pdfkit');
+const PDFDocument = require('C:/Users/Web Nova Crew/AppData/Roaming/npm/node_modules/pdfkit');
 const path = require('path');
 const fs = require('fs');
 
@@ -9,7 +9,7 @@ if (!fs.existsSync(docsDir)) {
 }
 
 const doc = new PDFDocument({ size: 'A4', layout: 'landscape', margin: 40 });
-const output = fs.createWriteStream(path.join(docsDir, 'XcFlownWeb_Codebase_Documentation.pdf'));
+const output = fs.createWriteStream(path.join(docsDir, 'NovaCrewWeb_Codebase_Documentation.pdf'));
 doc.pipe(output);
 
 // Colors
@@ -37,7 +37,7 @@ function drawHeader(title) {
 
 function drawFooter() {
   doc.rect(0, doc.page.height - 25, doc.page.width, 25).fill(headerBg);
-  doc.fontSize(8).fillColor(textMuted).text(`XcFlownWeb Documentation | Page ${pageNum}`, 40, doc.page.height - 15);
+  doc.fontSize(8).fillColor(textMuted).text(`NovaCrewWeb Documentation | Page ${pageNum}`, 40, doc.page.height - 15);
 }
 
 function drawBox(x, y, w, h, borderColor, borderWidth = 1) {
@@ -56,7 +56,7 @@ function newPage(title) {
 drawBackground();
 doc.rect(0, doc.page.height - 140, doc.page.width, 140).fill(headerBg);
 
-doc.fontSize(42).fillColor([1, 1, 1]).text('XcFlownWeb', 40, doc.page.height - 80);
+doc.fontSize(42).fillColor([1, 1, 1]).text('NovaCrewWeb', 40, doc.page.height - 80);
 doc.fontSize(16).fillColor([0.6, 0.7, 0.9]).text('Complete Codebase Documentation', 40, doc.page.height - 50);
 doc.fontSize(12).fillColor([0.4, 0.5, 0.7]).text('Website App | AI Automation | Tools | Services', 40, doc.page.height - 32);
 
@@ -65,7 +65,7 @@ doc.moveTo(40, doc.page.height - 160).lineTo(doc.page.width - 40, doc.page.heigh
 // Purpose Section
 doc.fontSize(14).fillColor(accentBlue).text('Purpose & Vision', 40, doc.page.height - 190);
 doc.fontSize(10).fillColor(textLight).text(
-  'A full-stack web application for XcFlown - a professional app development company serving India & Kuwait markets. ' +
+  'A full-stack web application for NovaCrew - a professional app development company serving India & Kuwait markets. ' +
   'The platform showcases services, generates leads, displays portfolio, and automates business operations through AI-powered tools.',
   40, doc.page.height - 215, { width: 750, lineGap: 3 }
 );
@@ -110,7 +110,7 @@ let pos = newPage('MIND MAP: Project Architecture');
 
 // Main root
 drawBox(300, pos.y - 30, 200, 50, accentBlue, 2);
-doc.fontSize(14).fillColor([1, 1, 1]).text('XcFlownWeb', 330, pos.y - 18, { width: 140, align: 'center' });
+doc.fontSize(14).fillColor([1, 1, 1]).text('NovaCrewWeb', 330, pos.y - 18, { width: 140, align: 'center' });
 doc.fontSize(8).fillColor(textLight).text('Full-Stack Application', 330, pos.y - 5, { width: 140, align: 'center' });
 
 // Three pillars
@@ -456,7 +456,7 @@ pos = newPage('DIAGRAM OUTLINE: Directory Structure');
 drawBox(40, pos.y - 95, 700, 75, accentBlue);
 doc.fontSize(10).fillColor(accentBlue).text('Root Structure', 55, pos.y - 70);
 doc.fontSize(7).fillColor(textLight).font('Courier').text(
-  'XcFlownWeb/\n' +
+  'NovaCrewWeb/\n' +
   '├── client/               (React Frontend - Vite + React 19)\n' +
   '├── server/               (Express Backend - API Routes)\n' +
   '├── shared/               (Shared Types/Schemas - Drizzle ORM)\n' +
@@ -523,7 +523,7 @@ doc.fontSize(7).fillColor(textLight).font('Courier').text(
   'package.json       Dependencies & npm scripts (dev, build, start, check, db:push)\n' +
   'vite.config.ts     Vite bundler with plugins (react, tailwind), SSR settings\n' +
   'tsconfig.json      TypeScript paths (@/ alias), strict mode enabled\n' +
-  'tailwind.config    Custom colors, fonts, animations for XcFlown branding\n' +
+  'tailwind.config    Custom colors, fonts, animations for NovaCrew branding\n' +
   'drizzle.config.ts  Database ORM configuration for PostgreSQL\n' +
   'components.json    Shadcn/ui component registry paths\n' +
   'postcss.config.js  CSS post-processing with autoprefixer',
@@ -532,5 +532,5 @@ doc.fontSize(7).fillColor(textLight).font('Courier').text(
 
 // Finalize
 doc.end();
-console.log('PDF generated successfully: docs/XcFlownWeb_Codebase_Documentation.pdf');
+console.log('PDF generated successfully: docs/NovaCrewWeb_Codebase_Documentation.pdf');
 console.log('Total pages: ' + pageNum);

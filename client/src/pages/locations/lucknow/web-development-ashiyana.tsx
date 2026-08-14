@@ -25,7 +25,7 @@ export default function WebDevelopmentAshiyana() {
   ];
 
   const faqs = [
-    { question: "Which is the best web development company in Ashiyana?", answer: "XcFlown is the top web development company in Ashiyana, Lucknow. We specialize in real estate websites, society management apps, and local business solutions for this residential area. Starting at ₹15,000 with 1-week delivery." },
+    { question: "Which is the best web development company in Ashiyana?", answer: "Web Nova Crew is the top web development company in Ashiyana, Lucknow. We specialize in real estate websites, society management apps, and local business solutions for this residential area. Starting at ₹15,000 with 1-week delivery." },
     { question: "Can you build a society management app for my Ashiyana housing society?", answer: "We build society management apps with maintenance collection, complaint tracking, visitor management, and notice boards. Starting at ₹60,000 with 4-6 week delivery. Our apps serve 500+ residents per society." },
     { question: "How much does a real estate website cost in Ashiyana?", answer: "Real estate websites for Ashiyana agents start at ₹35,000 with property listings and lead forms. Premium platforms with virtual tours and CRM cost ₹80,000-₹2,00,000. We help generate 200+ leads monthly." },
     { question: "Do you create websites for local Ashiyana shops?", answer: "We create affordable websites for Ashiyana shops and service providers starting at ₹15,000. Includes Google Maps optimization, WhatsApp integration, and local SEO to attract nearby customers." },
@@ -41,11 +41,11 @@ export default function WebDevelopmentAshiyana() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
-      <SEO title="Web Development Company in Ashiyana, Lucknow | Housing & Society | XcFlown" description="Top web development company in Ashiyana, Lucknow. Real estate platforms, society management apps, local business websites. ₹15,000 onwards. Residential area specialist." keywords="web development company in Ashiyana, app developer in Ashiyana Lucknow, digital marketing agency Ashiyana, society management app Ashiyana, real estate website Ashiyana, housing website Lucknow" />
+    <div className="min-h-screen bg-slate-950 font-sans">
+      <SEO title="Web Development Company in Ashiyana, Lucknow | Housing & Society | Web Nova Crew" description="Top web development company in Ashiyana, Lucknow. Real estate platforms, society management apps, local business websites. ₹15,000 onwards. Residential area specialist." keywords="web development company in Ashiyana, app developer in Ashiyana Lucknow, digital marketing agency Ashiyana, society management app Ashiyana, real estate website Ashiyana, housing website Lucknow" />
       <LocalBusinessSchema />
-      <BreadcrumbSchema items={[{ name: "Home", url: "https://xcflown.com" }, { name: "Lucknow Areas", url: "https://xcflown.com/locations/app-development-lucknow" }, { name: "Ashiyana", url: "https://xcflown.com/locations/web-development-ashiyana" }]} />
-      <ServiceSchema serviceName="Web Development in Ashiyana" serviceDescription="Professional web and app development services in Ashiyana, Lucknow. Real estate platforms, society management apps, local business websites, and healthcare solutions." serviceUrl="https://xcflown.com/locations/web-development-ashiyana" />
+      <BreadcrumbSchema items={[{ name: "Home", url: "https://webnovacrew.com" }, { name: "Lucknow Areas", url: "https://webnovacrew.com/locations/app-development-lucknow" }, { name: "Ashiyana", url: "https://webnovacrew.com/locations/web-development-ashiyana" }]} />
+      <ServiceSchema serviceName="Web Development in Ashiyana" serviceDescription="Professional web and app development services in Ashiyana, Lucknow. Real estate platforms, society management apps, local business websites, and healthcare solutions." serviceUrl="https://webnovacrew.com/locations/web-development-ashiyana" />
       <FAQSchema faqs={faqs} />
       <Navbar />
 
@@ -65,7 +65,7 @@ export default function WebDevelopmentAshiyana() {
             <p className="text-lg text-slate-400 mb-8">Serving housing societies, real estate agents, local shops & clinics in Ashiyana.</p>
             <div className="flex flex-wrap gap-4 justify-center mb-12">
               <Button size="lg" className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8"><Link href="/contact" className="flex items-center gap-2">Get Free Quote <ArrowRight className="w-5 h-5" /></Link></Button>
-              <a href="https://wa.me/918360723410" target="_blank"><Button size="lg" variant="outline" className="border-green-500/50 text-green-400 hover:bg-green-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button></a>
+              <a href="https://wa.me/919872364476" target="_blank"><Button size="lg" variant="outline" className="border-green-500/50 text-green-400 hover:bg-green-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button></a>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 max-w-3xl mx-auto">
               <div className="text-center bg-white/5 rounded-xl p-4 border border-green-500/20"><div className="text-3xl font-bold text-green-400 mb-1">35+</div><div className="text-sm text-slate-400">Ashiyana Clients</div></div>
@@ -77,12 +77,12 @@ export default function WebDevelopmentAshiyana() {
         </div>
       </section>
 
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Our Services in Ashiyana</h2><p className="text-xl text-slate-400 max-w-3xl mx-auto">Digital solutions for residential communities and local businesses</p></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-8 hover:border-green-500/50 transition-all">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-green-500/50 transition-all">
                 <div className="w-14 h-14 bg-green-500/10 rounded-xl flex items-center justify-center text-green-400 mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-slate-400 mb-4 leading-relaxed">{service.desc}</p>
@@ -98,7 +98,7 @@ export default function WebDevelopmentAshiyana() {
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Ashiyana Success Stories</h2></div>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {caseStudies.map((study, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-green-500/50 transition-all">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-green-500/50 transition-all">
                 <div className="text-green-400 text-sm font-medium mb-2">{study.client}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
                 <p className="text-slate-400 mb-6 leading-relaxed">{study.description}</p>
@@ -113,12 +113,12 @@ export default function WebDevelopmentAshiyana() {
       <FounderBio />
       <TestimonialsSection />
 
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Ashiyana Web Development FAQs</h2></div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
               </motion.div>
@@ -127,22 +127,22 @@ export default function WebDevelopmentAshiyana() {
         </div>
       </section>
 
-      <section className="py-16 bg-violet-900/50 border-t border-violet-800">
+      <section className="py-16 bg-slate-900/50 border-t border-slate-800">
         <div className="container mx-auto max-w-7xl px-4">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Also Serving Nearby Areas</h3>
           <div className="flex flex-wrap gap-3 justify-center">
-            {nearbyAreas.map((area, index) => (<Link key={index} href={`/locations/${area.slug}`}><a className="px-5 py-2.5 bg-violet-800/50 border border-violet-700 rounded-full text-slate-300 hover:border-green-500/50 hover:text-green-400 transition-all"><MapPin className="w-4 h-4 inline mr-2" />{area.name}</a></Link>))}
+            {nearbyAreas.map((area, index) => (<Link key={index} href={`/locations/${area.slug}`}><a className="px-5 py-2.5 bg-slate-800/50 border border-slate-700 rounded-full text-slate-300 hover:border-green-500/50 hover:text-green-400 transition-all"><MapPin className="w-4 h-4 inline mr-2" />{area.name}</a></Link>))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-green-950/50 to-emerald-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-green-950/50 to-emerald-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Digitize Your Ashiyana Community?</h2>
           <p className="text-xl text-slate-300 mb-8">Society apps, real estate platforms & local business solutions</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8"><Link href="/contact" className="flex items-center gap-2"><Phone className="w-5 h-5" />Get Free Quote</Link></Button>
-            <a href="tel:+918360723410"><Button size="lg" variant="outline" className="border-violet-700/50 hover:bg-violet-800 text-white"><Phone className="w-5 h-5 mr-2" />+91 83607 23410</Button></a>
+            <a href="tel:+919872364476"><Button size="lg" variant="outline" className="border-slate-600 hover:bg-slate-800 text-white"><Phone className="w-5 h-5 mr-2" />+91 98723 64476</Button></a>
           </div>
         </div>
       </section>

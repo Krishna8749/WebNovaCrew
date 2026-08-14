@@ -263,36 +263,36 @@ export default function AppDevelopmentSurat() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
-      <SEO title="App Development Company in Surat | Mobile App Developers Gujarat | XcFlown" description="Top app development company in Surat. Android, iOS, Flutter apps for diamond, textile industries. ₹30,000 onwards." keywords="app development Surat, mobile app developers Surat, diamond app Surat, textile app Gujarat" />
-      <LocalBusinessSchema /><BreadcrumbSchema items={[{ name: "Home", url: "https://xcflown.com" }, { name: "Locations", url: "https://xcflown.com/locations" }, { name: "Surat", url: "https://xcflown.com/locations/app-development-surat" }]} />
-      <ServiceSchema serviceName="App Development in Surat" serviceDescription="Professional mobile app development for Surat businesses." serviceUrl="https://xcflown.com/locations/app-development-surat" />
+    <div className="min-h-screen bg-slate-950 font-sans">
+      <SEO title="App Development Company in Surat | Mobile App Developers Gujarat | Web Nova Crew" description="Top app development company in Surat. Android, iOS, Flutter apps for diamond, textile industries. ₹30,000 onwards." keywords="app development Surat, mobile app developers Surat, diamond app Surat, textile app Gujarat" />
+      <LocalBusinessSchema /><BreadcrumbSchema items={[{ name: "Home", url: "https://webnovacrew.com" }, { name: "Locations", url: "https://webnovacrew.com/locations" }, { name: "Surat", url: "https://webnovacrew.com/locations/app-development-surat" }]} />
+      <ServiceSchema serviceName="App Development in Surat" serviceDescription="Professional mobile app development for Surat businesses." serviceUrl="https://webnovacrew.com/locations/app-development-surat" />
       <Navbar />
 
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/30 to-slate-950"><div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-violet-500/20 rounded-full blur-[100px]"></div></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/30 to-slate-950"><div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[100px]"></div></div>
         <div className="container mx-auto max-w-7xl px-4 relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-violet-500/10 border border-violet-500/20 rounded-full mb-6"><MapPin className="w-4 h-4 text-violet-400" /><span className="text-sm text-violet-300">Surat, Gujarat • Diamond City • 7M+ Population</span></div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-6"><MapPin className="w-4 h-4 text-blue-400" /><span className="text-sm text-blue-300">Surat, Gujarat • Diamond City • 7M+ Population</span></div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">App Development Company in Surat</h1>
-            <p className="text-xl text-slate-300 mb-4"><span className="text-violet-400 font-semibold">Surat's</span> trusted app partner for diamond, textile & business apps.</p>
+            <p className="text-xl text-slate-300 mb-4"><span className="text-blue-400 font-semibold">Surat's</span> trusted app partner for diamond, textile & business apps.</p>
             <p className="text-lg text-slate-400 mb-8">Serving Vesu, Adajan, Ring Road & across Surat.</p>
             <div className="flex flex-wrap gap-4 justify-center mb-12">
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8"><Link href="/contact" className="flex items-center gap-2">Get Free Quote <ArrowRight className="w-5 h-5" /></Link></Button>
-              <a href="https://wa.me/918360723410"><Button size="lg" variant="outline" className="border-green-500/50 text-green-400"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp</Button></a>
+              <a href="https://wa.me/919872364476"><Button size="lg" variant="outline" className="border-green-500/50 text-green-400"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp</Button></a>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
-              <div className="text-center bg-white/5 rounded-xl p-4 border border-violet-500/20"><div className="text-3xl font-bold text-violet-400">30+</div><div className="text-sm text-slate-400">Surat Apps</div></div>
-              <div className="text-center bg-white/5 rounded-xl p-4 border border-violet-500/20"><div className="text-3xl font-bold text-orange-400">₹30K</div><div className="text-sm text-slate-400">Starting</div></div>
-              <div className="text-center bg-white/5 rounded-xl p-4 border border-violet-500/20"><div className="text-3xl font-bold text-violet-400">3-10</div><div className="text-sm text-slate-400">Weeks</div></div>
-              <div className="text-center bg-white/5 rounded-xl p-4 border border-violet-500/20"><div className="text-3xl font-bold text-orange-400">45%</div><div className="text-sm text-slate-400">Savings</div></div>
+              <div className="text-center bg-white/5 rounded-xl p-4 border border-blue-500/20"><div className="text-3xl font-bold text-blue-400">30+</div><div className="text-sm text-slate-400">Surat Apps</div></div>
+              <div className="text-center bg-white/5 rounded-xl p-4 border border-blue-500/20"><div className="text-3xl font-bold text-cyan-400">₹30K</div><div className="text-sm text-slate-400">Starting</div></div>
+              <div className="text-center bg-white/5 rounded-xl p-4 border border-blue-500/20"><div className="text-3xl font-bold text-blue-400">3-10</div><div className="text-sm text-slate-400">Weeks</div></div>
+              <div className="text-center bg-white/5 rounded-xl p-4 border border-blue-500/20"><div className="text-3xl font-bold text-cyan-400">45%</div><div className="text-sm text-slate-400">Savings</div></div>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Services - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">App Development Services in Surat</h2>
@@ -301,14 +301,14 @@ export default function AppDevelopmentSurat() {
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-8 hover:border-violet-500/50 transition-all">
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-blue-500/50 transition-all">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-14 h-14 bg-violet-500/10 rounded-xl flex items-center justify-center text-violet-400 flex-shrink-0">{service.icon}</div>
+                  <div className="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 flex-shrink-0">{service.icon}</div>
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                 </div>
                 <p className="text-slate-400 mb-4 leading-relaxed">{service.desc}</p>
                 <div className="flex flex-wrap gap-2">
-                  {service.features.map((feature, i) => (<span key={i} className="text-xs bg-violet-500/10 text-violet-300 px-3 py-1 rounded-full">{feature}</span>))}
+                  {service.features.map((feature, i) => (<span key={i} className="text-xs bg-blue-500/10 text-blue-300 px-3 py-1 rounded-full">{feature}</span>))}
                 </div>
               </motion.div>
             ))}
@@ -321,12 +321,12 @@ export default function AppDevelopmentSurat() {
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Understanding Surat's Business Ecosystem</h2></div>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-blue-950/30 to-slate-900/50 border border-violet-500/20 rounded-xl p-8">
+            <div className="bg-gradient-to-br from-blue-950/30 to-slate-900/50 border border-blue-500/20 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-white mb-4">World's Diamond Capital</h3>
               <p className="text-slate-300 mb-4 leading-relaxed">Surat cuts and polishes 90% of the world's diamonds. We've built B2B trading platforms, inventory management systems, and certification verification apps that connect Surat's diamond traders with international buyers in Dubai, Antwerp, and New York.</p>
               <p className="text-slate-300 leading-relaxed">Our diamond industry apps handle complex workflows including stone grading, certification, pricing, and global logistics.</p>
             </div>
-            <div className="bg-gradient-to-br from-cyan-950/30 to-slate-900/50 border border-orange-500/20 rounded-xl p-8">
+            <div className="bg-gradient-to-br from-cyan-950/30 to-slate-900/50 border border-cyan-500/20 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-white mb-4">India's Textile Hub</h3>
               <p className="text-slate-300 mb-4 leading-relaxed">Surat is India's largest man-made fabric producer and a major saree manufacturing center. We've built B2B marketplaces, fabric inventory systems, and order management apps for textile manufacturers and traders.</p>
               <p className="text-slate-300 leading-relaxed">Our textile apps connect manufacturers with buyers across India and handle complex fabric specifications, sampling, and bulk ordering.</p>
@@ -336,14 +336,14 @@ export default function AppDevelopmentSurat() {
       </section>
 
       {/* Industries - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Industries We Serve in Surat</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
               <motion.div key={index} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: index * 0.05 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-violet-500/50 transition-all">
-                <div className="w-12 h-12 bg-violet-500/10 rounded-xl flex items-center justify-center text-violet-400 mb-4">{industry.icon}</div>
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+                <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mb-4">{industry.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{industry.name}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{industry.desc}</p>
               </motion.div>
@@ -359,12 +359,12 @@ export default function AppDevelopmentSurat() {
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-violet-500/50 transition-all">
-                <div className="text-violet-400 text-sm font-medium mb-2">{study.client}</div>
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-blue-500/50 transition-all">
+                <div className="text-blue-400 text-sm font-medium mb-2">{study.client}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
                 <p className="text-slate-400 mb-6 leading-relaxed">{study.description}</p>
                 <div className="grid grid-cols-2 gap-3 mb-6">
-                  {study.results.map((result, i) => (<div key={i} className="bg-violet-500/10 rounded-lg px-3 py-2 text-center"><span className="text-violet-300 text-sm font-medium">{result}</span></div>))}
+                  {study.results.map((result, i) => (<div key={i} className="bg-blue-500/10 rounded-lg px-3 py-2 text-center"><span className="text-blue-300 text-sm font-medium">{result}</span></div>))}
                 </div>
                 <div className="flex flex-wrap gap-2">{study.tech.map((tech, i) => (<span key={i} className="text-xs bg-slate-700 text-slate-300 px-2 py-1 rounded">{tech}</span>))}</div>
               </motion.div>
@@ -374,16 +374,16 @@ export default function AppDevelopmentSurat() {
       </section>
 
       {/* Areas - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Serving All Surat Areas</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {areas.map((area, index) => (
               <motion.div key={index} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: index * 0.03 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-5 hover:border-violet-500/50 transition-all">
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-5 hover:border-blue-500/50 transition-all">
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-violet-400 mt-1 flex-shrink-0" />
-                  <div><h3 className="text-white font-semibold">{area.name}</h3><span className="text-violet-400 text-sm">{area.type}</span><p className="text-slate-400 text-sm mt-1">{area.desc}</p></div>
+                  <MapPin className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                  <div><h3 className="text-white font-semibold">{area.name}</h3><span className="text-blue-400 text-sm">{area.type}</span><p className="text-slate-400 text-sm mt-1">{area.desc}</p></div>
                 </div>
               </motion.div>
             ))}
@@ -398,10 +398,10 @@ export default function AppDevelopmentSurat() {
           <div className="grid md:grid-cols-5 gap-6">
             {developmentProcess.map((phase, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="relative">
-                <div className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-violet-500/50 transition-all h-full">
-                  <div className="w-10 h-10 bg-violet-500 rounded-full flex items-center justify-center text-white font-bold mb-4">{phase.step}</div>
+                <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all h-full">
+                  <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mb-4">{phase.step}</div>
                   <h3 className="text-lg font-semibold text-white mb-1">{phase.title}</h3>
-                  <div className="text-violet-400 text-sm mb-3">{phase.duration}</div>
+                  <div className="text-blue-400 text-sm mb-3">{phase.duration}</div>
                   <p className="text-slate-400 text-sm leading-relaxed">{phase.desc}</p>
                 </div>
               </motion.div>
@@ -411,13 +411,13 @@ export default function AppDevelopmentSurat() {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Technology Stack</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {techStack.map((stack, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-violet-400 mb-4">{stack.category}</h3>
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+                <h3 className="text-lg font-semibold text-blue-400 mb-4">{stack.category}</h3>
                 <div className="flex flex-wrap gap-2">{stack.technologies.map((tech, i) => (<span key={i} className="text-sm bg-slate-700 text-slate-300 px-3 py-1 rounded-full">{tech}</span>))}</div>
               </motion.div>
             ))}
@@ -432,10 +432,10 @@ export default function AppDevelopmentSurat() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((item, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-violet-500/50 transition-all">
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-blue-500/50 transition-all">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 bg-violet-500/10 rounded-xl flex items-center justify-center text-violet-400">{item.icon}</div>
-                  <div className="text-sm font-bold text-violet-400 bg-violet-500/10 px-3 py-1 rounded-full">{item.stats}</div>
+                  <div className="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400">{item.icon}</div>
+                  <div className="text-sm font-bold text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full">{item.stats}</div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{item.title}</h3>
                 <p className="text-slate-400 leading-relaxed">{item.desc}</p>
@@ -446,18 +446,18 @@ export default function AppDevelopmentSurat() {
       </section>
 
       {/* Pricing - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Surat App Development Pricing</h2><p className="text-xl text-slate-400 max-w-3xl mx-auto">Most affordable pricing in Gujarat with premium quality.</p></div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((plan, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className={`bg-violet-800/50 border rounded-xl p-8 transition-all ${plan.popular ? 'border-violet-500 ring-2 ring-violet-500/20' : 'border-violet-700 hover:border-violet-500/50'}`}>
-                {plan.popular && (<div className="text-center mb-4"><span className="bg-violet-500 text-white text-sm font-medium px-4 py-1 rounded-full">Most Popular</span></div>)}
+                className={`bg-slate-800/50 border rounded-xl p-8 transition-all ${plan.popular ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-slate-700 hover:border-blue-500/50'}`}>
+                {plan.popular && (<div className="text-center mb-4"><span className="bg-blue-500 text-white text-sm font-medium px-4 py-1 rounded-full">Most Popular</span></div>)}
                 <h3 className="text-2xl font-semibold text-white mb-2">{plan.tier}</h3>
-                <div className="text-3xl font-bold text-violet-400 mb-2">{plan.price}</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">{plan.price}</div>
                 <p className="text-slate-400 text-sm mb-6">{plan.ideal}</p>
-                <ul className="space-y-3 mb-8">{plan.features.map((feature, i) => (<li key={i} className="flex items-start gap-3 text-slate-300"><CheckCircle2 className="w-5 h-5 text-violet-400 mt-0.5 flex-shrink-0" /><span>{feature}</span></li>))}</ul>
+                <ul className="space-y-3 mb-8">{plan.features.map((feature, i) => (<li key={i} className="flex items-start gap-3 text-slate-300"><CheckCircle2 className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" /><span>{feature}</span></li>))}</ul>
                 <Button className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-600 to-cyan-600' : 'bg-slate-700 hover:bg-slate-600'}`}><Link href="/contact">Get Started</Link></Button>
               </motion.div>
             ))}
@@ -468,13 +468,13 @@ export default function AppDevelopmentSurat() {
       <TestimonialsSection />
 
       {/* FAQs */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Surat App Development FAQs</h2></div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6">
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
               </motion.div>
@@ -484,13 +484,13 @@ export default function AppDevelopmentSurat() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-950/50 to-cyan-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-blue-950/50 to-cyan-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl font-bold mb-6 text-white">Ready to Build Your Surat App?</h2>
           <p className="text-xl text-slate-300 mb-8">Join 35+ Surat businesses who trusted us with their digital transformation</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8"><Link href="/contact" className="flex items-center gap-2"><Phone className="w-5 h-5" />Schedule Surat Meeting</Link></Button>
-            <a href="https://wa.me/918360723410" target="_blank"><Button size="lg" variant="outline" className="border-violet-500/50 text-violet-400 hover:bg-violet-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button></a>
+            <a href="https://wa.me/919872364476" target="_blank"><Button size="lg" variant="outline" className="border-blue-500/50 text-blue-400 hover:bg-blue-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button></a>
           </div>
         </div>
       </section>

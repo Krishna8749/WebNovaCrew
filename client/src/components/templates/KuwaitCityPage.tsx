@@ -71,7 +71,7 @@ export function KuwaitCityPage({ city }: KuwaitCityPageProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
         title={`App Development Company in ${city.name}, Kuwait | Mobile App Developers`}
         description={`Leading app development company in ${city.name}, Kuwait. We build Arabic + English apps with KNET integration for ${city.governorate}. ${city.industries.slice(0, 3).join(', ')}. 200 KWD onwards.`}
@@ -79,14 +79,14 @@ export function KuwaitCityPage({ city }: KuwaitCityPageProps) {
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Kuwait Locations", url: "https://xcflown.com/locations/kuwait" },
-        { name: `${city.name}`, url: `https://xcflown.com/locations/app-development-${city.slug}` }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Kuwait Locations", url: "https://webnovacrew.com/locations/kuwait" },
+        { name: `${city.name}`, url: `https://webnovacrew.com/locations/app-development-${city.slug}` }
       ]} />
       <ServiceSchema 
         serviceName={`App Development in ${city.name}, Kuwait`}
         serviceDescription={`Professional mobile app development services in ${city.name}, ${city.governorate}. Arabic + English apps with KNET integration for Kuwait businesses.`}
-        serviceUrl={`https://xcflown.com/locations/app-development-${city.slug}`}
+        serviceUrl={`https://webnovacrew.com/locations/app-development-${city.slug}`}
       />
       
       <Navbar />
@@ -128,7 +128,7 @@ export function KuwaitCityPage({ city }: KuwaitCityPageProps) {
                   Get Free Quote <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-violet-700 hover:bg-violet-800">
+              <Button size="lg" variant="outline" className="border-slate-700 hover:bg-slate-800">
                 <Link href="/portfolio" className="flex items-center gap-2">
                   View Kuwait Apps
                 </Link>
@@ -158,7 +158,7 @@ export function KuwaitCityPage({ city }: KuwaitCityPageProps) {
       </section>
 
       {/* Industries We Serve */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -176,7 +176,7 @@ export function KuwaitCityPage({ city }: KuwaitCityPageProps) {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-emerald-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-emerald-500/50 transition-all"
               >
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0" />
@@ -207,7 +207,7 @@ export function KuwaitCityPage({ city }: KuwaitCityPageProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-emerald-500/50 transition-all"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-emerald-500/50 transition-all"
               >
                 <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 mb-4">
                   {service.icon}
@@ -221,7 +221,7 @@ export function KuwaitCityPage({ city }: KuwaitCityPageProps) {
       </section>
 
       {/* Kuwait-Specific Features */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -239,7 +239,7 @@ export function KuwaitCityPage({ city }: KuwaitCityPageProps) {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.03 }}
-                className="flex items-center gap-3 bg-violet-800/30 border border-violet-700/50 rounded-lg p-4"
+                className="flex items-center gap-3 bg-slate-800/30 border border-slate-700/50 rounded-lg p-4"
               >
                 <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0" />
                 <span className="text-slate-200">{feature}</span>
@@ -268,7 +268,7 @@ export function KuwaitCityPage({ city }: KuwaitCityPageProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-emerald-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-emerald-500/50 transition-all"
               >
                 <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 mb-4">
                   {item.icon}
@@ -282,7 +282,7 @@ export function KuwaitCityPage({ city }: KuwaitCityPageProps) {
       </section>
 
       {/* Landmarks */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -300,7 +300,7 @@ export function KuwaitCityPage({ city }: KuwaitCityPageProps) {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05 }}
-                className="px-6 py-3 bg-violet-800/50 border border-violet-700 rounded-full text-slate-300 hover:border-emerald-500/50 transition-all"
+                className="px-6 py-3 bg-slate-800/50 border border-slate-700 rounded-full text-slate-300 hover:border-emerald-500/50 transition-all"
               >
                 <MapPin className="w-4 h-4 inline mr-2 text-emerald-400" />
                 {landmark}
@@ -335,7 +335,7 @@ export function KuwaitCityPage({ city }: KuwaitCityPageProps) {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
@@ -346,7 +346,7 @@ export function KuwaitCityPage({ city }: KuwaitCityPageProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-emerald-950/50 to-teal-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-emerald-950/50 to-teal-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Ready to Build Your App in {city.name}?
@@ -361,7 +361,7 @@ export function KuwaitCityPage({ city }: KuwaitCityPageProps) {
                 Contact {city.name} Team
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-violet-700/50 hover:bg-violet-800 text-white">
+            <Button size="lg" variant="outline" className="border-slate-600 hover:bg-slate-800 text-white">
               <Link href="/pricing">
                 View Kuwait Pricing
               </Link>

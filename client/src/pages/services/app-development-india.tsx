@@ -65,7 +65,7 @@ export default function AppDevelopmentIndia() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
         title="Best App Development Company in India | Mobile App Developers | AI Apps" 
         description="India's #1 app development company. We build AI-powered mobile apps using Flutter, React Native for startups & enterprises. 200+ apps delivered. Get free consultation. ₹25,000 onwards."
@@ -73,14 +73,14 @@ export default function AppDevelopmentIndia() {
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Services", url: "https://xcflown.com/services" },
-        { name: "App Development India", url: "https://xcflown.com/services/app-development-india" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Services", url: "https://webnovacrew.com/services" },
+        { name: "App Development India", url: "https://webnovacrew.com/services/app-development-india" }
       ]} />
       <ServiceSchema 
         serviceName="App Development Company in India"
         serviceDescription="Professional mobile app development services in India. We build AI-powered iOS, Android & cross-platform apps using Flutter, React Native for businesses worldwide."
-        serviceUrl="https://xcflown.com/services/app-development-india"
+        serviceUrl="https://webnovacrew.com/services/app-development-india"
       />
       
       <Navbar />
@@ -89,7 +89,7 @@ export default function AppDevelopmentIndia() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950">
           <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-orange-500/20 rounded-full blur-[100px]"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-violet-500/20 rounded-full blur-[80px]"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-500/20 rounded-full blur-[80px]"></div>
         </div>
 
         <div className="container mx-auto max-w-7xl px-4 relative z-10">
@@ -106,7 +106,7 @@ export default function AppDevelopmentIndia() {
               Best <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">App Development</span> Company in India
             </h1>
             
-            <p className="text-xl text-violet-200/80 mb-8 leading-relaxed">
+            <p className="text-xl text-blue-200/80 mb-8 leading-relaxed">
               We build <strong className="text-white">AI-powered mobile applications</strong> for startups, enterprises, and government organizations. 
               From concept to launch, our expert team delivers world-class apps using <strong className="text-orange-400">Flutter, React Native, and cutting-edge AI technologies</strong>.
             </p>
@@ -117,7 +117,7 @@ export default function AppDevelopmentIndia() {
                   Get Free Consultation <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-              <a href="https://wa.me/918360723410" target="_blank">
+              <a href="https://wa.me/919872364476" target="_blank">
                 <Button size="lg" variant="outline" className="border-2 border-green-500/50 text-green-400 hover:bg-green-500/10 font-bold text-lg px-8 py-7 rounded-full">
                   <MessageSquare className="w-5 h-5 mr-2" /> WhatsApp Us
                 </Button>
@@ -135,7 +135,7 @@ export default function AppDevelopmentIndia() {
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"
                 >
                   <div className="text-3xl md:text-4xl font-bold text-orange-400">{stat.value}</div>
-                  <div className="text-violet-200/70">{stat.label}</div>
+                  <div className="text-blue-200/70">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -144,13 +144,13 @@ export default function AppDevelopmentIndia() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-24 bg-violet-950">
+      <section className="py-24 bg-slate-950">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our App Development <span className="text-orange-400">Services in India</span>
             </h2>
-            <p className="text-xl text-violet-200/70 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-200/70 max-w-3xl mx-auto">
               From AI-powered applications to enterprise solutions, we deliver cutting-edge mobile apps for every industry.
             </p>
           </div>
@@ -169,7 +169,7 @@ export default function AppDevelopmentIndia() {
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-violet-200/60">{service.desc}</p>
+                <p className="text-blue-200/60">{service.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -197,7 +197,7 @@ export default function AppDevelopmentIndia() {
                     <CheckCircle2 className="w-6 h-6 text-orange-400 shrink-0 mt-1" />
                     <div>
                       <h3 className="text-lg font-bold text-white">{item.title}</h3>
-                      <p className="text-violet-200/70">{item.desc}</p>
+                      <p className="text-blue-200/70">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -206,16 +206,16 @@ export default function AppDevelopmentIndia() {
 
             <div className="bg-gradient-to-br from-orange-500/20 to-yellow-500/20 border border-orange-500/30 rounded-3xl p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Get a Free Quote</h3>
-              <p className="text-violet-200/70 mb-6">Tell us about your project and get a detailed proposal within 24 hours.</p>
+              <p className="text-blue-200/70 mb-6">Tell us about your project and get a detailed proposal within 24 hours.</p>
               
               <div className="space-y-4 mb-6">
                 <div className="flex items-center gap-3 text-white">
                   <Phone className="w-5 h-5 text-orange-400" />
-                  <a href="tel:+918360723410" className="hover:text-orange-400">+91 83607 23410</a>
+                  <a href="tel:+919872364476" className="hover:text-orange-400">+91 98723 64476</a>
                 </div>
                 <div className="flex items-center gap-3 text-white">
                   <MessageSquare className="w-5 h-5 text-green-400" />
-                  <a href="https://wa.me/918360723410" target="_blank" className="hover:text-green-400">WhatsApp Us</a>
+                  <a href="https://wa.me/919872364476" target="_blank" className="hover:text-green-400">WhatsApp Us</a>
                 </div>
                 <div className="flex items-center gap-3 text-white">
                   <MapPin className="w-5 h-5 text-orange-400" />
@@ -234,13 +234,13 @@ export default function AppDevelopmentIndia() {
       </section>
 
       {/* City Pages */}
-      <section className="py-24 bg-violet-950">
+      <section className="py-24 bg-slate-950">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               App Development Services Across <span className="text-orange-400">India</span>
             </h2>
-            <p className="text-violet-200/70">We serve clients in all major Indian cities</p>
+            <p className="text-blue-200/70">We serve clients in all major Indian cities</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -260,13 +260,13 @@ export default function AppDevelopmentIndia() {
       <TestimonialsSection />
 
       {/* FAQ Section */}
-      <section className="py-24 bg-violet-950">
+      <section className="py-24 bg-slate-950">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-violet-200/70">Everything you need to know about app development in India</p>
+            <p className="text-blue-200/70">Everything you need to know about app development in India</p>
           </div>
           
           <div className="space-y-4">
@@ -279,7 +279,7 @@ export default function AppDevelopmentIndia() {
                 className="bg-white/5 border border-white/10 rounded-2xl p-6"
               >
                 <h3 className="text-lg font-bold text-white mb-3">{faq.question}</h3>
-                <p className="text-violet-200/70">{faq.answer}</p>
+                <p className="text-blue-200/70">{faq.answer}</p>
               </motion.div>
             ))}
           </div>
@@ -301,7 +301,7 @@ export default function AppDevelopmentIndia() {
                 Start Your Project <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
-            <a href="tel:+918360723410">
+            <a href="tel:+919872364476">
               <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-10 py-7 rounded-full">
                 <Phone className="w-5 h-5 mr-2" /> Call Now
               </Button>

@@ -6,7 +6,7 @@ interface SEOProps {
   keywords?: string;
   canonicalUrl?: string;
   hreflangUrls?: { lang: string; url: string }[];
-  /** No XcFlown suffix, org schema, or site branding in meta */
+  /** No Web Nova Crew suffix, org schema, or site branding in meta */
   brandless?: boolean;
   ogImage?: string | null;
   extraMeta?: { name: string; content: string }[];
@@ -28,7 +28,7 @@ export function SEO({
   robots,
   stripImages = false,
 }: SEOProps) {
-  const siteTitle = brandless ? title : `${title} | XcFlown - India's No.1 Web & App Development Agency`;
+  const siteTitle = brandless ? title : `${title} | Web Nova Crew - India's No.1 Web & App Development Agency`;
   const currentUrl = canonicalUrl || (typeof window !== "undefined" ? window.location.href : "");
 
   useEffect(() => {
@@ -52,7 +52,7 @@ export function SEO({
     updateMeta("og:title", siteTitle, "property");
     updateMeta("og:description", description, "property");
     updateMeta("og:url", currentUrl, "property");
-    updateMeta("og:site_name", brandless ? "Video Player" : "XcFlown", "property");
+    updateMeta("og:site_name", brandless ? "Video Player" : "Web Nova Crew", "property");
     if (ogImage) updateMeta("og:image", ogImage, "property");
     else if (stripImages) {
       document.querySelector('meta[property="og:image"]')?.remove();
@@ -91,21 +91,21 @@ export function SEO({
     const schemaData = {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "XcFlown",
-      "url": "https://xcflown.com",
-      "logo": "https://xcflown.com/logo.png",
+      "name": "Web Nova Crew",
+      "url": "https://webnovacrew.com",
+      "logo": "https://webnovacrew.com/logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+91-83607-23410",
+        "telephone": "+91-98765-43210",
         "contactType": "customer service",
         "areaServed": "IN",
         "availableLanguage": ["en", "hi"]
       },
       "sameAs": [
-        "https://www.facebook.com/xcflown",
-        "https://twitter.com/xcflown",
-        "https://www.linkedin.com/company/xcflown",
-        "https://www.instagram.com/xcflown"
+        "https://www.facebook.com/webnovacrew",
+        "https://twitter.com/webnovacrew",
+        "https://www.linkedin.com/company/webnovacrew",
+        "https://www.instagram.com/webnovacrew"
       ]
     };
 

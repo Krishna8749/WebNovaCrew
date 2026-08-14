@@ -268,22 +268,22 @@ export default function AppDevelopmentHyderabad() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
-        title="App Development Company in Hyderabad | Mobile App Developers HITEC City | XcFlown"
+        title="App Development Company in Hyderabad | Mobile App Developers HITEC City | Web Nova Crew"
         description="Top app development company in Hyderabad. Android, iOS, Flutter apps for IT companies, pharma, startups in HITEC City, Gachibowli, Madhapur. ₹40,000 onwards. Enterprise solutions."
         keywords="app development company Hyderabad, mobile app developers Hyderabad, HITEC City app development, Gachibowli app developers, Flutter developers Hyderabad, pharma app development Hyderabad"
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Locations", url: "https://xcflown.com/locations" },
-        { name: "Hyderabad", url: "https://xcflown.com/locations/app-development-hyderabad" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Locations", url: "https://webnovacrew.com/locations" },
+        { name: "Hyderabad", url: "https://webnovacrew.com/locations/app-development-hyderabad" }
       ]} />
       <ServiceSchema 
         serviceName="App Development in Hyderabad"
         serviceDescription="Professional mobile app development for Hyderabad businesses. Android, iOS, Flutter apps for IT, pharma, fintech, and enterprise sectors."
-        serviceUrl="https://xcflown.com/locations/app-development-hyderabad"
+        serviceUrl="https://webnovacrew.com/locations/app-development-hyderabad"
       />
       
       <Navbar />
@@ -291,7 +291,7 @@ export default function AppDevelopmentHyderabad() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-cyan-950/30 to-slate-950">
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-orange-500/20 rounded-full blur-[100px]"></div>
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-[100px]"></div>
           <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-teal-500/20 rounded-full blur-[80px]"></div>
         </div>
 
@@ -302,9 +302,9 @@ export default function AppDevelopmentHyderabad() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full mb-6">
-              <MapPin className="w-4 h-4 text-orange-400" />
-              <span className="text-sm text-orange-300">Hyderabad, Telangana • Cyberabad • 10M+ Population</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full mb-6">
+              <MapPin className="w-4 h-4 text-cyan-400" />
+              <span className="text-sm text-cyan-300">Hyderabad, Telangana • Cyberabad • 10M+ Population</span>
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-100 to-teal-100 bg-clip-text text-transparent">
@@ -312,7 +312,7 @@ export default function AppDevelopmentHyderabad() {
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-300 mb-4 leading-relaxed">
-              <span className="text-orange-400 font-semibold">Cyberabad's</span> trusted app development partner. We build <span className="text-teal-400 font-semibold">enterprise-grade apps</span> for IT companies, pharma, fintech & startups in Hyderabad.
+              <span className="text-cyan-400 font-semibold">Cyberabad's</span> trusted app development partner. We build <span className="text-teal-400 font-semibold">enterprise-grade apps</span> for IT companies, pharma, fintech & startups in Hyderabad.
             </p>
 
             <p className="text-lg text-slate-400 mb-8">
@@ -325,7 +325,7 @@ export default function AppDevelopmentHyderabad() {
                   Get Free Consultation <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
-              <a href="https://wa.me/918360723410" target="_blank">
+              <a href="https://wa.me/919872364476" target="_blank">
                 <Button size="lg" variant="outline" className="border-green-500/50 text-green-400 hover:bg-green-500/10">
                   <MessageSquare className="w-5 h-5 mr-2" />
                   WhatsApp Us
@@ -334,19 +334,19 @@ export default function AppDevelopmentHyderabad() {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
-              <div className="text-center bg-white/5 rounded-xl p-4 border border-orange-500/20">
-                <div className="text-3xl font-bold text-orange-400 mb-1">75+</div>
+              <div className="text-center bg-white/5 rounded-xl p-4 border border-cyan-500/20">
+                <div className="text-3xl font-bold text-cyan-400 mb-1">75+</div>
                 <div className="text-sm text-slate-400">Hyderabad Apps</div>
               </div>
-              <div className="text-center bg-white/5 rounded-xl p-4 border border-orange-500/20">
+              <div className="text-center bg-white/5 rounded-xl p-4 border border-cyan-500/20">
                 <div className="text-3xl font-bold text-teal-400 mb-1">₹40K</div>
                 <div className="text-sm text-slate-400">Starting Price</div>
               </div>
-              <div className="text-center bg-white/5 rounded-xl p-4 border border-orange-500/20">
-                <div className="text-3xl font-bold text-orange-400 mb-1">3-10</div>
+              <div className="text-center bg-white/5 rounded-xl p-4 border border-cyan-500/20">
+                <div className="text-3xl font-bold text-cyan-400 mb-1">3-10</div>
                 <div className="text-sm text-slate-400">Weeks Delivery</div>
               </div>
-              <div className="text-center bg-white/5 rounded-xl p-4 border border-orange-500/20">
+              <div className="text-center bg-white/5 rounded-xl p-4 border border-cyan-500/20">
                 <div className="text-3xl font-bold text-teal-400 mb-1">35%</div>
                 <div className="text-sm text-slate-400">Cost Savings</div>
               </div>
@@ -356,7 +356,7 @@ export default function AppDevelopmentHyderabad() {
       </section>
 
       {/* Services - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">App Development Services in Hyderabad</h2>
@@ -365,14 +365,14 @@ export default function AppDevelopmentHyderabad() {
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-8 hover:border-orange-500/50 transition-all">
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50 transition-all">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-400 flex-shrink-0">{service.icon}</div>
+                  <div className="w-14 h-14 bg-cyan-500/10 rounded-xl flex items-center justify-center text-cyan-400 flex-shrink-0">{service.icon}</div>
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                 </div>
                 <p className="text-slate-400 mb-4 leading-relaxed">{service.desc}</p>
                 <div className="flex flex-wrap gap-2">
-                  {service.features.map((feature, i) => (<span key={i} className="text-xs bg-orange-500/10 text-orange-300 px-3 py-1 rounded-full">{feature}</span>))}
+                  {service.features.map((feature, i) => (<span key={i} className="text-xs bg-cyan-500/10 text-cyan-300 px-3 py-1 rounded-full">{feature}</span>))}
                 </div>
               </motion.div>
             ))}
@@ -385,7 +385,7 @@ export default function AppDevelopmentHyderabad() {
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Understanding Hyderabad's Tech Ecosystem</h2></div>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-cyan-950/30 to-slate-900/50 border border-orange-500/20 rounded-xl p-8">
+            <div className="bg-gradient-to-br from-cyan-950/30 to-slate-900/50 border border-cyan-500/20 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-white mb-4">Cyberabad IT Corridor</h3>
               <p className="text-slate-300 mb-4 leading-relaxed">Hyderabad's IT corridor spanning HITEC City, Gachibowli, and Financial District is home to 1,500+ IT companies including Microsoft, Google, Amazon, and major Indian IT firms. We understand the enterprise culture, compliance requirements, and technical standards expected by these organizations.</p>
               <p className="text-slate-300 leading-relaxed">Our apps integrate seamlessly with enterprise systems like SAP, Oracle, and Salesforce, and meet the security and audit requirements of large corporations.</p>
@@ -400,14 +400,14 @@ export default function AppDevelopmentHyderabad() {
       </section>
 
       {/* Industries - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Industries We Serve in Hyderabad</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
               <motion.div key={index} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: index * 0.05 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-orange-500/50 transition-all">
-                <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-400 mb-4">{industry.icon}</div>
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all">
+                <div className="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center text-cyan-400 mb-4">{industry.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{industry.name}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{industry.desc}</p>
               </motion.div>
@@ -423,12 +423,12 @@ export default function AppDevelopmentHyderabad() {
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-orange-500/50 transition-all">
-                <div className="text-orange-400 text-sm font-medium mb-2">{study.client}</div>
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50 transition-all">
+                <div className="text-cyan-400 text-sm font-medium mb-2">{study.client}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
                 <p className="text-slate-400 mb-6 leading-relaxed">{study.description}</p>
                 <div className="grid grid-cols-2 gap-3 mb-6">
-                  {study.results.map((result, i) => (<div key={i} className="bg-orange-500/10 rounded-lg px-3 py-2 text-center"><span className="text-orange-300 text-sm font-medium">{result}</span></div>))}
+                  {study.results.map((result, i) => (<div key={i} className="bg-cyan-500/10 rounded-lg px-3 py-2 text-center"><span className="text-cyan-300 text-sm font-medium">{result}</span></div>))}
                 </div>
                 <div className="flex flex-wrap gap-2">{study.tech.map((tech, i) => (<span key={i} className="text-xs bg-slate-700 text-slate-300 px-2 py-1 rounded">{tech}</span>))}</div>
               </motion.div>
@@ -438,16 +438,16 @@ export default function AppDevelopmentHyderabad() {
       </section>
 
       {/* Areas - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Serving All Hyderabad IT Hubs</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {areas.map((area, index) => (
               <motion.div key={index} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: index * 0.03 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-5 hover:border-orange-500/50 transition-all">
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-5 hover:border-cyan-500/50 transition-all">
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
-                  <div><h3 className="text-white font-semibold">{area.name}</h3><span className="text-orange-400 text-sm">{area.type}</span><p className="text-slate-400 text-sm mt-1">{area.desc}</p></div>
+                  <MapPin className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div><h3 className="text-white font-semibold">{area.name}</h3><span className="text-cyan-400 text-sm">{area.type}</span><p className="text-slate-400 text-sm mt-1">{area.desc}</p></div>
                 </div>
               </motion.div>
             ))}
@@ -462,10 +462,10 @@ export default function AppDevelopmentHyderabad() {
           <div className="grid md:grid-cols-5 gap-6">
             {developmentProcess.map((phase, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="relative">
-                <div className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-orange-500/50 transition-all h-full">
-                  <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mb-4">{phase.step}</div>
+                <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all h-full">
+                  <div className="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold mb-4">{phase.step}</div>
                   <h3 className="text-lg font-semibold text-white mb-1">{phase.title}</h3>
-                  <div className="text-orange-400 text-sm mb-3">{phase.duration}</div>
+                  <div className="text-cyan-400 text-sm mb-3">{phase.duration}</div>
                   <p className="text-slate-400 text-sm leading-relaxed">{phase.desc}</p>
                 </div>
               </motion.div>
@@ -475,13 +475,13 @@ export default function AppDevelopmentHyderabad() {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Technology Stack</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {techStack.map((stack, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-orange-400 mb-4">{stack.category}</h3>
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+                <h3 className="text-lg font-semibold text-cyan-400 mb-4">{stack.category}</h3>
                 <div className="flex flex-wrap gap-2">{stack.technologies.map((tech, i) => (<span key={i} className="text-sm bg-slate-700 text-slate-300 px-3 py-1 rounded-full">{tech}</span>))}</div>
               </motion.div>
             ))}
@@ -496,10 +496,10 @@ export default function AppDevelopmentHyderabad() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((item, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-orange-500/50 transition-all">
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50 transition-all">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-400">{item.icon}</div>
-                  <div className="text-sm font-bold text-orange-400 bg-orange-500/10 px-3 py-1 rounded-full">{item.stats}</div>
+                  <div className="w-14 h-14 bg-cyan-500/10 rounded-xl flex items-center justify-center text-cyan-400">{item.icon}</div>
+                  <div className="text-sm font-bold text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full">{item.stats}</div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{item.title}</h3>
                 <p className="text-slate-400 leading-relaxed">{item.desc}</p>
@@ -510,18 +510,18 @@ export default function AppDevelopmentHyderabad() {
       </section>
 
       {/* Pricing - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Hyderabad App Development Pricing</h2><p className="text-xl text-slate-400 max-w-3xl mx-auto">Transparent pricing. 30-40% lower than typical HITEC City agencies.</p></div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((plan, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className={`bg-violet-800/50 border rounded-xl p-8 transition-all ${plan.popular ? 'border-orange-500 ring-2 ring-cyan-500/20' : 'border-violet-700 hover:border-orange-500/50'}`}>
-                {plan.popular && (<div className="text-center mb-4"><span className="bg-orange-500 text-white text-sm font-medium px-4 py-1 rounded-full">Most Popular</span></div>)}
+                className={`bg-slate-800/50 border rounded-xl p-8 transition-all ${plan.popular ? 'border-cyan-500 ring-2 ring-cyan-500/20' : 'border-slate-700 hover:border-cyan-500/50'}`}>
+                {plan.popular && (<div className="text-center mb-4"><span className="bg-cyan-500 text-white text-sm font-medium px-4 py-1 rounded-full">Most Popular</span></div>)}
                 <h3 className="text-2xl font-semibold text-white mb-2">{plan.tier}</h3>
-                <div className="text-3xl font-bold text-orange-400 mb-2">{plan.price}</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">{plan.price}</div>
                 <p className="text-slate-400 text-sm mb-6">{plan.ideal}</p>
-                <ul className="space-y-3 mb-8">{plan.features.map((feature, i) => (<li key={i} className="flex items-start gap-3 text-slate-300"><CheckCircle2 className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" /><span>{feature}</span></li>))}</ul>
+                <ul className="space-y-3 mb-8">{plan.features.map((feature, i) => (<li key={i} className="flex items-start gap-3 text-slate-300"><CheckCircle2 className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" /><span>{feature}</span></li>))}</ul>
                 <Button className={`w-full ${plan.popular ? 'bg-gradient-to-r from-cyan-600 to-teal-600' : 'bg-slate-700 hover:bg-slate-600'}`}><Link href="/contact">Get Started</Link></Button>
               </motion.div>
             ))}
@@ -532,7 +532,7 @@ export default function AppDevelopmentHyderabad() {
       <TestimonialsSection />
 
       {/* FAQs */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Hyderabad App Development FAQs</h2>
@@ -540,7 +540,7 @@ export default function AppDevelopmentHyderabad() {
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6">
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
               </motion.div>
@@ -550,7 +550,7 @@ export default function AppDevelopmentHyderabad() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-br from-cyan-950/50 to-teal-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-cyan-950/50 to-teal-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Build Your Hyderabad App?</h2>
           <p className="text-xl text-slate-300 mb-8">Join 75+ Hyderabad businesses who trusted us</p>
@@ -558,9 +558,9 @@ export default function AppDevelopmentHyderabad() {
             <Button size="lg" className="bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 text-white px-8">
               <Link href="/contact" className="flex items-center gap-2"><Phone className="w-5 h-5" />Schedule Hyderabad Meeting</Link>
             </Button>
-            <a href="tel:+918360723410">
-              <Button size="lg" variant="outline" className="border-violet-700/50 hover:bg-violet-800 text-white">
-                <Phone className="w-5 h-5 mr-2" />+91 83607 23410
+            <a href="tel:+919872364476">
+              <Button size="lg" variant="outline" className="border-slate-600 hover:bg-slate-800 text-white">
+                <Phone className="w-5 h-5 mr-2" />+91 98723 64476
               </Button>
             </a>
           </div>

@@ -1,11 +1,11 @@
-# robots.txt for XcFlown
-# https://xcflown.com
+# robots.txt for Web Nova Crew
+# https://webnovacrew.com
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://xcflown.com/sitemap.xml
+Sitemap: https://webnovacrew.com/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

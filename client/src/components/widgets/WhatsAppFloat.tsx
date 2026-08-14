@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
-/** India mobile 8360723410 → wa.me E.164 */
-const WHATSAPP_HREF = "https://wa.me/918360723410";
+/** India mobile 9872364476 → wa.me E.164 */
+const WHATSAPP_HREF = "https://wa.me/919872364476";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (

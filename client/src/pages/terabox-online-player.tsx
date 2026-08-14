@@ -204,7 +204,7 @@ const STEPS = [
 const WHY_CHOOSE = [
   {
     icon: Film,
-    color: "text-violet-400 bg-violet-400/10",
+    color: "text-blue-400 bg-blue-400/10",
     title: "TeraBox Online Player",
     desc: "Stream any public TeraBox link directly in your browser — no app install required.",
   },
@@ -231,13 +231,13 @@ const WHY_CHOOSE = [
 const TECH_FEATURES = [
   {
     icon: Link2,
-    color: "text-orange-400 bg-orange-400/10",
+    color: "text-cyan-400 bg-cyan-400/10",
     title: "Smart Link Processing",
     desc: "Automatically detects and resolves TeraBox share URLs from multiple domains.",
   },
   {
     icon: Server,
-    color: "text-violet-400 bg-violet-400/10",
+    color: "text-blue-400 bg-blue-400/10",
     title: "Multi-Server Tech",
     desc: "Fallback routing helps keep streams stable even when one path is slow.",
   },
@@ -503,7 +503,7 @@ export default function TeraboxOnlinePlayer() {
         await navigator.clipboard.writeText(main);
         toast({
           title: "Share link copied",
-          description: "Send this link — it opens your video directly on XcFlown.",
+          description: "Send this link — it opens your video directly on Web Nova Crew.",
         });
       } catch {
         toast({
@@ -769,7 +769,7 @@ export default function TeraboxOnlinePlayer() {
         brandless={isShareView || hideVideoMetadata}
         stripImages={hideVideoMetadata}
         robots={isShareView ? SHARE_PREVIEW_ROBOTS : hideVideoMetadata ? VIDEO_PROTECTED_ROBOTS : undefined}
-        ogImage={result?.thumbnail || (isShareView ? "https://xcflown.com/og-image.jpg" : undefined)}
+        ogImage={result?.thumbnail || (isShareView ? "https://webnovacrew.com/og-image.jpg" : undefined)}
         title={
           isShareView
             ? sharePreviewTitle
@@ -790,26 +790,26 @@ export default function TeraboxOnlinePlayer() {
           {
             name: isShareView ? "Watch Video" : "TeraBox Player",
             url: isShareView
-              ? shareUrl || "https://xcflown.com/terabox-online-player"
-              : "https://xcflown.com/terabox-online-player",
+              ? shareUrl || "https://webnovacrew.com/terabox-online-player"
+              : "https://webnovacrew.com/terabox-online-player",
           },
         ]}
       />
       {!isShareView && <FAQSchema faqs={FAQS.map((f) => ({ question: f.q, answer: f.a }))} />}
 
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-violet-800/80 bg-[#0a0e17]/95 backdrop-blur-md">
+      <header className="sticky top-0 z-50 border-b border-slate-800/80 bg-[#0a0e17]/95 backdrop-blur-md">
         <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
           <div className="flex min-w-0 items-center gap-2.5" aria-label="TeraBox video player">
             <BrandMark />
             <span className="font-bold text-base sm:text-lg">
-              TeraBox<span className="text-violet-400">Play</span>
+              TeraBox<span className="text-blue-400">Play</span>
             </span>
           </div>
 
           <button
             type="button"
-            className="lg:hidden flex h-11 w-11 items-center justify-center rounded-lg border border-violet-700"
+            className="lg:hidden flex h-11 w-11 items-center justify-center rounded-lg border border-slate-700"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             onClick={() => setMenuOpen((o) => !o)}
           >
@@ -821,7 +821,7 @@ export default function TeraboxOnlinePlayer() {
               <a
                 key={href}
                 href={href}
-                className="rounded-full px-4 py-2.5 text-slate-400 hover:text-white hover:bg-violet-800/80 transition-colors min-h-[44px] flex items-center gap-1.5"
+                className="rounded-full px-4 py-2.5 text-slate-400 hover:text-white hover:bg-slate-800/80 transition-colors min-h-[44px] flex items-center gap-1.5"
               >
                 <Icon className="h-4 w-4" />
                 {label}
@@ -831,15 +831,15 @@ export default function TeraboxOnlinePlayer() {
         </div>
 
         {menuOpen && (
-          <nav className="lg:hidden border-t border-violet-800 px-4 py-3 space-y-1">
+          <nav className="lg:hidden border-t border-slate-800 px-4 py-3 space-y-1">
             {navLinks.map(({ href, label, icon: Icon }) => (
               <a
                 key={href}
                 href={href}
-                className="flex items-center gap-2 rounded-lg px-4 py-3.5 text-sm min-h-[48px] hover:bg-violet-800"
+                className="flex items-center gap-2 rounded-lg px-4 py-3.5 text-sm min-h-[48px] hover:bg-slate-800"
                 onClick={() => setMenuOpen(false)}
               >
-                <Icon className="h-4 w-4 text-violet-400" />
+                <Icon className="h-4 w-4 text-blue-400" />
                 {label}
               </a>
             ))}
@@ -849,11 +849,11 @@ export default function TeraboxOnlinePlayer() {
 
       <main>
         {/* Hero + Player — iteraplay-style, player first */}
-        <section className="relative border-b border-violet-800/60 bg-gradient-to-b from-blue-950/30 via-[#0a0e17] to-transparent">
+        <section className="relative border-b border-slate-800/60 bg-gradient-to-b from-blue-950/30 via-[#0a0e17] to-transparent">
           <div className="relative mx-auto max-w-3xl px-4 py-8 sm:py-12 sm:px-6 text-center">
 
             {!isShareView && (
-            <p className="inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-3 py-1 text-xs sm:text-sm text-violet-300 mb-4">
+            <p className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-xs sm:text-sm text-blue-300 mb-4">
               <CheckCircle2 className="h-3.5 w-3.5" />
               Free · No registration · Unlimited plays
             </p>
@@ -883,9 +883,9 @@ export default function TeraboxOnlinePlayer() {
             <>
             <div
               id="paste-box"
-              className="scroll-mt-24 rounded-2xl border border-violet-700/80 bg-violet-900/90 backdrop-blur p-4 sm:p-6 shadow-2xl shadow-black/40 text-left"
+              className="scroll-mt-24 rounded-2xl border border-slate-700/80 bg-slate-900/90 backdrop-blur p-4 sm:p-6 shadow-2xl shadow-black/40 text-left"
             >
-              <div className="flex items-center gap-3 mb-4 pb-4 border-b border-violet-800/80">
+              <div className="flex items-center gap-3 mb-4 pb-4 border-b border-slate-800/80">
                 <img
                   src={ASSETS.playCircle}
                   alt=""
@@ -909,7 +909,7 @@ export default function TeraboxOnlinePlayer() {
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
                   placeholder="Paste TeraBox link here — https://www.terabox.com/s/..."
-                  className="pl-11 h-12 sm:h-14 text-base bg-violet-950 border-violet-700/50 text-white placeholder:text-slate-500"
+                  className="pl-11 h-12 sm:h-14 text-base bg-slate-950 border-slate-600 text-white placeholder:text-slate-500"
                   onKeyDown={(e) => e.key === "Enter" && void resolveLink()}
                   autoComplete="off"
                   inputMode="url"
@@ -920,7 +920,7 @@ export default function TeraboxOnlinePlayer() {
                 <Button
                   type="button"
                   variant="outline"
-                  className="h-12 sm:h-14 border-violet-700/50 bg-violet-800/50 hover:bg-violet-800 text-xs sm:text-sm font-medium"
+                  className="h-12 sm:h-14 border-slate-600 bg-slate-800/50 hover:bg-slate-800 text-xs sm:text-sm font-medium"
                   onClick={() => void pasteFromClipboard()}
                 >
                   <ClipboardPaste className="h-4 w-4 sm:mr-1.5 shrink-0" />
@@ -928,7 +928,7 @@ export default function TeraboxOnlinePlayer() {
                 </Button>
                 <Button
                   type="button"
-                  className="h-12 sm:h-14 bg-violet-600 hover:bg-violet-500 font-semibold text-xs sm:text-sm"
+                  className="h-12 sm:h-14 bg-blue-600 hover:bg-blue-500 font-semibold text-xs sm:text-sm"
                   disabled={loading}
                   onClick={() => void resolveLink(false)}
                 >
@@ -968,7 +968,7 @@ export default function TeraboxOnlinePlayer() {
                 </span>
                 <span className="hidden sm:inline text-slate-700">·</span>
                 <span className="inline-flex items-center gap-1.5">
-                  <Globe className="h-3.5 w-3.5 text-violet-400" />
+                  <Globe className="h-3.5 w-3.5 text-blue-400" />
                   Works in all browsers
                 </span>
               </p>
@@ -980,7 +980,7 @@ export default function TeraboxOnlinePlayer() {
               {BROWSERS.map((browser) => (
                 <span
                   key={browser.name}
-                  className="inline-flex items-center gap-2 rounded-full border border-violet-800 bg-violet-900/60 px-3 py-1.5 text-xs text-slate-300"
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300"
                 >
                   <img
                     src={browser.icon}
@@ -1000,7 +1000,7 @@ export default function TeraboxOnlinePlayer() {
 
             {loadingShare && (
               <div className="flex flex-col items-center justify-center gap-3 py-10">
-                <Loader2 className="h-10 w-10 animate-spin text-violet-400" />
+                <Loader2 className="h-10 w-10 animate-spin text-blue-400" />
                 <p className="text-slate-400 text-sm">Loading shared video...</p>
               </div>
             )}
@@ -1012,7 +1012,7 @@ export default function TeraboxOnlinePlayer() {
 
           {result ? (
             <div
-              className="rounded-2xl border border-violet-800 bg-violet-900/60 overflow-hidden shadow-xl"
+              className="rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden shadow-xl"
               data-nosnippet
               translate="no"
             >
@@ -1061,7 +1061,7 @@ export default function TeraboxOnlinePlayer() {
 
               {/* Quality selector — directly below the video */}
               {result.qualityOptions && result.qualityOptions.length > 0 && (
-                <div className="flex flex-wrap items-center gap-2 px-4 py-3 sm:px-5 border-t border-violet-800 bg-violet-900/80">
+                <div className="flex flex-wrap items-center gap-2 px-4 py-3 sm:px-5 border-t border-slate-800 bg-slate-900/80">
                   <span className="text-xs font-semibold text-slate-400 mr-1 flex items-center gap-1.5">
                     <Settings2 className="h-3.5 w-3.5" />
                     Quality:
@@ -1073,8 +1073,8 @@ export default function TeraboxOnlinePlayer() {
                       onClick={() => setQuality(q)}
                       className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
                         quality === q
-                          ? "bg-violet-600 text-white shadow"
-                          : "bg-violet-800 text-slate-400 hover:text-white hover:bg-slate-700"
+                          ? "bg-blue-600 text-white shadow"
+                          : "bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700"
                       }`}
                     >
                       {qualityLabel(q)}
@@ -1086,7 +1086,7 @@ export default function TeraboxOnlinePlayer() {
                 </div>
               )}
 
-              <div className="p-4 sm:p-5 border-t border-violet-800" data-nosnippet translate="no">
+              <div className="p-4 sm:p-5 border-t border-slate-800" data-nosnippet translate="no">
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-4">
                   <div className="min-w-0 flex items-start gap-3">
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-500/10">
@@ -1106,7 +1106,7 @@ export default function TeraboxOnlinePlayer() {
                     <Button
                       type="button"
                       variant="outline"
-                      className="h-10 px-4 border-violet-700/50 bg-violet-800/50 hover:bg-violet-800 font-semibold text-sm"
+                      className="h-10 px-4 border-slate-600 bg-slate-800/50 hover:bg-slate-800 font-semibold text-sm"
                       disabled={shareLoading}
                       onClick={() => void createShareLink()}
                     >
@@ -1128,9 +1128,9 @@ export default function TeraboxOnlinePlayer() {
                 </div>
 
                 {shareUrl && (
-                  <div className="mb-4 rounded-xl border border-violet-500/30 bg-violet-950/20 p-3 sm:p-4 space-y-3">
+                  <div className="mb-4 rounded-xl border border-blue-500/30 bg-blue-950/20 p-3 sm:p-4 space-y-3">
                     <div>
-                      <p className="text-xs text-violet-300 font-medium mb-2 flex items-center gap-1.5">
+                      <p className="text-xs text-blue-300 font-medium mb-2 flex items-center gap-1.5">
                         <Share2 className="h-3.5 w-3.5" />
                         {mainShareUrl && shareUrl !== mainShareUrl
                           ? "Short redirect link (send this)"
@@ -1140,13 +1140,13 @@ export default function TeraboxOnlinePlayer() {
                         <Input
                           readOnly
                           value={shareUrl}
-                          className="h-10 bg-violet-950 border-violet-700 text-slate-200 text-sm font-mono"
+                          className="h-10 bg-slate-950 border-slate-700 text-slate-200 text-sm font-mono"
                           aria-label="Share link"
                         />
                         <Button
                           type="button"
                           variant="outline"
-                          className="h-10 shrink-0 border-violet-700/50"
+                          className="h-10 shrink-0 border-slate-600"
                           onClick={() => void copyShareLink()}
                         >
                           <Copy className="h-4 w-4 mr-1.5" />
@@ -1168,7 +1168,7 @@ export default function TeraboxOnlinePlayer() {
               {/*googleon: all*/}
             </div>
           ) : (
-            <div className="rounded-2xl border border-dashed border-violet-700 bg-violet-900/30 overflow-hidden">
+            <div className="rounded-2xl border border-dashed border-slate-700 bg-slate-900/30 overflow-hidden">
               <div className="relative aspect-video max-h-[320px] sm:max-h-[400px]">
                 <VectorCardIllustration
                   type="preview"
@@ -1203,7 +1203,7 @@ export default function TeraboxOnlinePlayer() {
         {/* How to use */}
         <section
           id="how-to"
-          className="scroll-mt-24 border-y border-violet-800/60 bg-violet-900/20 py-12 sm:py-16"
+          className="scroll-mt-24 border-y border-slate-800/60 bg-slate-900/20 py-12 sm:py-16"
         >
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
             <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4">
@@ -1218,14 +1218,14 @@ export default function TeraboxOnlinePlayer() {
               browser. Our TeraBox link opener handles the rest.
             </p>
 
-            <h3 className="text-lg font-semibold text-center mb-6 text-violet-300">
+            <h3 className="text-lg font-semibold text-center mb-6 text-blue-300">
               Here&apos;s How It Works
             </h3>
             <div className="grid gap-4 sm:grid-cols-3">
               {STEPS.map(({ step, icon: Icon, title, desc, illustration }) => (
                 <article
                   key={step}
-                  className="rounded-2xl border border-violet-800 bg-violet-950/60 overflow-hidden hover:border-violet-500/30 transition-colors"
+                  className="rounded-2xl border border-slate-800 bg-slate-950/60 overflow-hidden hover:border-blue-500/30 transition-colors"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden">
                     <VectorCardIllustration
@@ -1233,11 +1233,11 @@ export default function TeraboxOnlinePlayer() {
                       className="w-full h-full"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
-                    <span className="absolute top-3 left-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-violet-600 text-white text-xs font-bold shadow-lg">
+                    <span className="absolute top-3 left-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-white text-xs font-bold shadow-lg">
                       {step}
                     </span>
-                    <span className="absolute bottom-3 right-3 flex h-10 w-10 items-center justify-center rounded-xl bg-violet-900/80 backdrop-blur border border-violet-700">
-                      <Icon className="h-5 w-5 text-violet-400" strokeWidth={2} />
+                    <span className="absolute bottom-3 right-3 flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900/80 backdrop-blur border border-slate-700">
+                      <Icon className="h-5 w-5 text-blue-400" strokeWidth={2} />
                     </span>
                   </div>
                   <div className="p-5 sm:p-6 text-center sm:text-left">
@@ -1263,7 +1263,7 @@ export default function TeraboxOnlinePlayer() {
               {WHY_CHOOSE.map((item) => (
                 <article
                   key={item.title}
-                  className="flex gap-4 rounded-2xl border border-violet-800 bg-violet-900/40 p-5 sm:p-6 hover:bg-violet-900/60 transition-colors"
+                  className="flex gap-4 rounded-2xl border border-slate-800 bg-slate-900/40 p-5 sm:p-6 hover:bg-slate-900/60 transition-colors"
                 >
                   <IconBadge icon={item.icon} color={item.color} size="lg" />
                   <div>
@@ -1277,7 +1277,7 @@ export default function TeraboxOnlinePlayer() {
         </section>
 
         {/* Why built + love it */}
-        <section className="border-y border-violet-800/60 bg-gradient-to-br from-slate-900/80 to-blue-950/20 py-12 sm:py-16">
+        <section className="border-y border-slate-800/60 bg-gradient-to-br from-slate-900/80 to-blue-950/20 py-12 sm:py-16">
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
               <div>
@@ -1294,25 +1294,25 @@ export default function TeraboxOnlinePlayer() {
                   link downloader to save files for offline viewing. Simple, fast,
                   and built for real users.
                 </p>
-                <h3 className="font-semibold text-violet-300 mb-4">Why You&apos;ll Love It</h3>
+                <h3 className="font-semibold text-blue-300 mb-4">Why You&apos;ll Love It</h3>
                 <ul className="space-y-3">
                   {LOVE_IT.map(({ icon: Icon, text }) => (
                     <li key={text} className="flex items-start gap-3 text-sm sm:text-base">
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-violet-600/20">
-                        <Icon className="h-4 w-4 text-violet-400" />
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-600/20">
+                        <Icon className="h-4 w-4 text-blue-400" />
                       </span>
                       <span className="text-slate-300 pt-1">{text}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="relative rounded-2xl overflow-hidden border border-violet-700 shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
                 <VectorCardIllustration
                   type="streaming"
                   className="w-full aspect-[4/3]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e17] via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 rounded-xl bg-violet-900/90 backdrop-blur border border-violet-700 p-3">
+                <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 rounded-xl bg-slate-900/90 backdrop-blur border border-slate-700 p-3">
                   <BrandMark size="sm" />
                   <div className="min-w-0">
                     <p className="text-sm font-medium truncate">Now playing</p>
@@ -1346,7 +1346,7 @@ export default function TeraboxOnlinePlayer() {
               {DEVICES.map(({ icon: Icon, title, desc, image }) => (
                 <article
                   key={title}
-                  className="rounded-2xl border border-violet-800 overflow-hidden bg-violet-900/30 hover:border-violet-700 transition-colors"
+                  className="rounded-2xl border border-slate-800 overflow-hidden bg-slate-900/30 hover:border-slate-700 transition-colors"
                 >
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
@@ -1357,8 +1357,8 @@ export default function TeraboxOnlinePlayer() {
                     />
                   </div>
                   <div className="p-5">
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-violet-600/15 mb-3">
-                      <Icon className="h-5 w-5 text-violet-400" strokeWidth={2} />
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600/15 mb-3">
+                      <Icon className="h-5 w-5 text-blue-400" strokeWidth={2} />
                     </span>
                     <h3 className="font-semibold text-lg mb-2">{title}</h3>
                     <p className="text-slate-400 text-sm leading-relaxed">{desc}</p>
@@ -1370,7 +1370,7 @@ export default function TeraboxOnlinePlayer() {
         </section>
 
         {/* Advanced tech + stats */}
-        <section className="border-y border-violet-800/60 bg-violet-900/20 py-12 sm:py-16">
+        <section className="border-y border-slate-800/60 bg-slate-900/20 py-12 sm:py-16">
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
             <h2 className="text-2xl sm:text-3xl font-bold text-center mb-2">
               Advanced Player Technology
@@ -1384,7 +1384,7 @@ export default function TeraboxOnlinePlayer() {
               {TECH_FEATURES.map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-xl border border-violet-800 bg-violet-950/50 p-5 text-center sm:text-left"
+                  className="rounded-xl border border-slate-800 bg-slate-950/50 p-5 text-center sm:text-left"
                 >
                   <div className="flex justify-center sm:justify-start mb-3">
                     <IconBadge icon={item.icon} color={item.color} />
@@ -1402,16 +1402,16 @@ export default function TeraboxOnlinePlayer() {
               {STATS.map((stat) => (
                 <div
                   key={stat.label}
-                  className="rounded-2xl border border-violet-500/20 bg-violet-950/30 p-6 text-center"
+                  className="rounded-2xl border border-blue-500/20 bg-blue-950/30 p-6 text-center"
                 >
                   <div className="flex justify-center mb-3">
                     <IconBadge
                       icon={stat.icon}
-                      color="text-violet-400 bg-violet-400/10"
+                      color="text-blue-400 bg-blue-400/10"
                       size="md"
                     />
                   </div>
-                  <p className="text-3xl sm:text-4xl font-bold text-violet-400 mb-1">
+                  <p className="text-3xl sm:text-4xl font-bold text-blue-400 mb-1">
                     {stat.value}
                   </p>
                   <p className="font-medium text-sm sm:text-base">{stat.label}</p>
@@ -1426,16 +1426,16 @@ export default function TeraboxOnlinePlayer() {
         <section className="py-10 sm:py-12">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 text-center">
             <h2 className="text-xl sm:text-2xl font-bold mb-4 flex items-center justify-center gap-2">
-              <Cloud className="h-6 w-6 text-violet-400" />
+              <Cloud className="h-6 w-6 text-blue-400" />
               Supported TeraBox Domains
             </h2>
             <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
               {SUPPORTED_DOMAINS.map((domain) => (
                 <span
                   key={domain}
-                  className="inline-flex items-center gap-2 rounded-full border border-violet-700 bg-violet-900/60 px-3 py-1.5 text-xs sm:text-sm text-slate-400 font-mono"
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1.5 text-xs sm:text-sm text-slate-400 font-mono"
                 >
-                  <Globe className="h-3.5 w-3.5 text-violet-400 shrink-0" />
+                  <Globe className="h-3.5 w-3.5 text-blue-400 shrink-0" />
                   {domain}
                 </span>
               ))}
@@ -1444,7 +1444,7 @@ export default function TeraboxOnlinePlayer() {
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="scroll-mt-24 border-t border-violet-800/60 bg-violet-900/20 py-12 sm:py-16">
+        <section id="faq" className="scroll-mt-24 border-t border-slate-800/60 bg-slate-900/20 py-12 sm:py-16">
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <h2 className="text-2xl sm:text-3xl font-bold text-center mb-2">
               Common Questions
@@ -1456,11 +1456,11 @@ export default function TeraboxOnlinePlayer() {
               {FAQS.map((item) => (
                 <details
                   key={item.q}
-                  className="group rounded-xl border border-violet-800 bg-violet-950/50 open:border-violet-500/40 open:bg-violet-900/60"
+                  className="group rounded-xl border border-slate-800 bg-slate-950/50 open:border-blue-500/40 open:bg-slate-900/60"
                 >
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-3 p-4 sm:p-5 font-medium text-sm sm:text-base">
                     <span className="flex items-start gap-2.5 text-left">
-                      <HelpCircle className="h-4 w-4 text-violet-400 shrink-0 mt-0.5" />
+                      <HelpCircle className="h-4 w-4 text-blue-400 shrink-0 mt-0.5" />
                       {item.q}
                     </span>
                     <ChevronRight className="h-5 w-5 text-slate-500 shrink-0 group-open:rotate-90 transition-transform" />
@@ -1479,7 +1479,7 @@ export default function TeraboxOnlinePlayer() {
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-2">
-                <BookOpen className="h-7 w-7 text-violet-400" />
+                <BookOpen className="h-7 w-7 text-blue-400" />
                 Helpful Guides
               </h2>
             </div>
@@ -1487,7 +1487,7 @@ export default function TeraboxOnlinePlayer() {
               {GUIDES.map((guide) => (
                 <article
                   key={guide.title}
-                  className="rounded-2xl border border-violet-800 bg-violet-900/40 overflow-hidden hover:border-violet-700 transition-colors"
+                  className="rounded-2xl border border-slate-800 bg-slate-900/40 overflow-hidden hover:border-slate-700 transition-colors"
                 >
                   <div className="relative aspect-[16/9] overflow-hidden">
                     <VectorCardIllustration
@@ -1495,12 +1495,12 @@ export default function TeraboxOnlinePlayer() {
                       className="w-full h-full"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
-                    <span className="absolute bottom-3 left-3 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-violet-900/90 border border-violet-700">
-                      <guide.icon className="h-4 w-4 text-violet-400" strokeWidth={2} />
+                    <span className="absolute bottom-3 left-3 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900/90 border border-slate-700">
+                      <guide.icon className="h-4 w-4 text-blue-400" strokeWidth={2} />
                     </span>
                   </div>
                   <div className="p-5 sm:p-6">
-                    <p className="text-xs text-violet-400 font-medium mb-2 flex items-center gap-1">
+                    <p className="text-xs text-blue-400 font-medium mb-2 flex items-center gap-1">
                       <Clock className="h-3 w-3" />
                       {guide.readTime}
                     </p>
@@ -1514,14 +1514,14 @@ export default function TeraboxOnlinePlayer() {
         </section>
 
         {/* Bottom CTA back to player */}
-        <section className="border-t border-violet-800 bg-gradient-to-r from-blue-950/40 to-cyan-950/20 py-10 sm:py-12">
+        <section className="border-t border-slate-800 bg-gradient-to-r from-blue-950/40 to-cyan-950/20 py-10 sm:py-12">
           <div className="mx-auto max-w-2xl px-4 sm:px-6 text-center">
             <h2 className="text-xl sm:text-2xl font-bold mb-3">Ready to watch?</h2>
             <p className="text-slate-400 text-sm sm:text-base mb-6">
               Paste your TeraBox link and start streaming in seconds.
             </p>
             <a href="#player">
-              <Button className="h-12 px-8 bg-violet-600 hover:bg-violet-500 font-semibold text-base">
+              <Button className="h-12 px-8 bg-blue-600 hover:bg-blue-500 font-semibold text-base">
                 <Play className="h-5 w-5 mr-2 fill-current" />
                 Go to Player
               </Button>
@@ -1531,14 +1531,14 @@ export default function TeraboxOnlinePlayer() {
         </>
         ) : (
           <>
-            <section className="border-t border-violet-800 bg-violet-900/20 py-10 sm:py-12">
+            <section className="border-t border-slate-800 bg-slate-900/20 py-10 sm:py-12">
               <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center">
                 <h2 className="text-xl sm:text-2xl font-bold mb-3">More free tools</h2>
                 <p className="text-slate-400 text-sm sm:text-base mb-6">
                   Paste any TeraBox link on our player page to stream or download instantly.
                 </p>
                 <a href="/terabox-online-player">
-                  <Button className="h-12 px-8 bg-violet-600 hover:bg-violet-500 font-semibold text-base">
+                  <Button className="h-12 px-8 bg-blue-600 hover:bg-blue-500 font-semibold text-base">
                     <Play className="h-5 w-5 mr-2 fill-current" />
                     Open TeraBox Player
                   </Button>
@@ -1549,7 +1549,7 @@ export default function TeraboxOnlinePlayer() {
         )}
       </main>
 
-      <footer className="border-t border-violet-800 py-8 px-4 sm:py-10">
+      <footer className="border-t border-slate-800 py-8 px-4 sm:py-10">
         <div className="mx-auto max-w-5xl">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
             <div className="flex items-center gap-3">

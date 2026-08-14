@@ -220,7 +220,7 @@ export default function AppDevelopmentBangalore() {
   // Extended FAQs (15 questions)
   const faqs = [
     {
-      question: "Why should Bangalore startups choose XcFlown for app development?",
+      question: "Why should Bangalore startups choose Web Nova Crew for app development?",
       answer: "We understand Bangalore's startup culture deeply - the pressure of runway, the importance of quick iterations, and what VCs look for in technical due diligence. We've worked with 50+ startups from pre-seed to Series C, helping them build MVPs that secured funding from top VCs like Sequoia, Accel, and Matrix. Our pricing is 30-40% lower than typical Koramangala and Indiranagar agencies while maintaining Silicon Valley quality. We speak startup language and can support you through fundraising, pivots, and scale-up phases."
     },
     {
@@ -301,22 +301,22 @@ export default function AppDevelopmentBangalore() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
-        title="App Development Company in Bangalore | Startup App Developers | XcFlown"
+        title="App Development Company in Bangalore | Startup App Developers | Web Nova Crew"
         description="Top app development company in Bangalore for startups & enterprises. Android, iOS, Flutter apps in Koramangala, Whitefield, Electronic City. 50+ startups served. ₹50,000 onwards. Investor-ready MVPs."
         keywords="app development company Bangalore, mobile app developers Bangalore, startup app development Bangalore, Koramangala app developers, Whitefield app development, Flutter developers Bangalore, MVP development Bangalore"
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Locations", url: "https://xcflown.com/locations" },
-        { name: "Bangalore", url: "https://xcflown.com/locations/app-development-bangalore" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Locations", url: "https://webnovacrew.com/locations" },
+        { name: "Bangalore", url: "https://webnovacrew.com/locations/app-development-bangalore" }
       ]} />
       <ServiceSchema 
         serviceName="App Development in Bangalore"
         serviceDescription="Professional mobile app development for Bangalore startups and enterprises. Android, iOS, Flutter, React Native apps with AI integration."
-        serviceUrl="https://xcflown.com/locations/app-development-bangalore"
+        serviceUrl="https://webnovacrew.com/locations/app-development-bangalore"
       />
       
       <Navbar />
@@ -358,7 +358,7 @@ export default function AppDevelopmentBangalore() {
                   Get Free Consultation <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
-              <a href="https://wa.me/918360723410" target="_blank">
+              <a href="https://wa.me/919872364476" target="_blank">
                 <Button size="lg" variant="outline" className="border-green-500/50 text-green-400 hover:bg-green-500/10">
                   <MessageSquare className="w-5 h-5 mr-2" />
                   WhatsApp Us
@@ -389,7 +389,7 @@ export default function AppDevelopmentBangalore() {
       </section>
 
       {/* Services - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -407,7 +407,7 @@ export default function AppDevelopmentBangalore() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-8 hover:border-purple-500/50 transition-all"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-purple-500/50 transition-all"
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 flex-shrink-0">
@@ -463,7 +463,7 @@ export default function AppDevelopmentBangalore() {
       </section>
 
       {/* Industries - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -481,7 +481,7 @@ export default function AppDevelopmentBangalore() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-purple-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-purple-500/50 transition-all"
               >
                 <div className="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 mb-4">
                   {industry.icon}
@@ -513,7 +513,7 @@ export default function AppDevelopmentBangalore() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-purple-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-purple-500/50 transition-all"
               >
                 <div className="text-purple-400 text-sm font-medium mb-2">{study.client}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
@@ -537,7 +537,7 @@ export default function AppDevelopmentBangalore() {
       </section>
 
       {/* Areas - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -555,7 +555,7 @@ export default function AppDevelopmentBangalore() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.03 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-5 hover:border-purple-500/50 transition-all"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-5 hover:border-purple-500/50 transition-all"
               >
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
@@ -592,7 +592,7 @@ export default function AppDevelopmentBangalore() {
                 transition={{ delay: index * 0.1 }}
                 className="relative"
               >
-                <div className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-purple-500/50 transition-all h-full">
+                <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-purple-500/50 transition-all h-full">
                   <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold mb-4">
                     {phase.step}
                   </div>
@@ -607,7 +607,7 @@ export default function AppDevelopmentBangalore() {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -625,7 +625,7 @@ export default function AppDevelopmentBangalore() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6"
               >
                 <h3 className="text-lg font-semibold text-purple-400 mb-4">{stack.category}</h3>
                 <div className="flex flex-wrap gap-2">
@@ -658,7 +658,7 @@ export default function AppDevelopmentBangalore() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-purple-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-purple-500/50 transition-all"
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400">
@@ -677,7 +677,7 @@ export default function AppDevelopmentBangalore() {
       </section>
 
       {/* Pricing - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -695,7 +695,7 @@ export default function AppDevelopmentBangalore() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className={`bg-violet-800/50 border rounded-xl p-8 transition-all ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-violet-700 hover:border-purple-500/50'}`}
+                className={`bg-slate-800/50 border rounded-xl p-8 transition-all ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-slate-700 hover:border-purple-500/50'}`}
               >
                 {plan.popular && (
                   <div className="text-center mb-4">
@@ -735,7 +735,7 @@ export default function AppDevelopmentBangalore() {
       <TestimonialsSection />
 
       {/* FAQs */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -750,7 +750,7 @@ export default function AppDevelopmentBangalore() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
@@ -761,7 +761,7 @@ export default function AppDevelopmentBangalore() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-950/50 to-pink-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-purple-950/50 to-pink-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Ready to Build Your Bangalore Startup App?
@@ -776,10 +776,10 @@ export default function AppDevelopmentBangalore() {
                 Schedule Bangalore Meeting
               </Link>
             </Button>
-            <a href="tel:+918360723410">
-              <Button size="lg" variant="outline" className="border-violet-700/50 hover:bg-violet-800 text-white">
+            <a href="tel:+919872364476">
+              <Button size="lg" variant="outline" className="border-slate-600 hover:bg-slate-800 text-white">
                 <Phone className="w-5 h-5 mr-2" />
-                +91 83607 23410
+                +91 98723 64476
               </Button>
             </a>
           </div>

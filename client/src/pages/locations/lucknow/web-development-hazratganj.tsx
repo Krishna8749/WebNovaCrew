@@ -44,13 +44,13 @@ export default function WebDevelopmentHazratganj() {
   ];
 
   const faqs = [
-    { question: "Which is the best web development company in Hazratganj?", answer: "XcFlown is the #1 web development company in Hazratganj, Lucknow. We create premium websites for the Ganj's elite businesses including heritage jewelry brands, luxury fashion boutiques, iconic restaurants, and banking institutions. Our designs match the prestige that Hazratganj represents." },
+    { question: "Which is the best web development company in Hazratganj?", answer: "Web Nova Crew is the #1 web development company in Hazratganj, Lucknow. We create premium websites for the Ganj's elite businesses including heritage jewelry brands, luxury fashion boutiques, iconic restaurants, and banking institutions. Our designs match the prestige that Hazratganj represents." },
     { question: "How much does a website cost for a Hazratganj business?", answer: "Website costs for Hazratganj businesses range from ₹25,000 for basic professional sites to ₹3,00,000 for premium e-commerce platforms with 3D product showcase and AR features. We offer custom designs that match the premium positioning of Hazratganj brands. Most businesses invest ₹50,000-₹1,50,000 for a world-class website." },
     { question: "Can you build a food delivery app for my Hazratganj restaurant?", answer: "Yes! We build food ordering and delivery apps for Hazratganj restaurants with real-time order tracking, table reservation, loyalty programs, and integration with Swiggy/Zomato. Starting at ₹80,000 with 4-6 week delivery. Our apps help reduce commission paid to food platforms by 40-60%." },
     { question: "Do you offer SEO services for Hazratganj businesses?", answer: "We provide specialized local SEO for Hazratganj businesses to rank #1 on Google for 'best [service] in Hazratganj' searches. Our SEO packages include Google Business Profile optimization, premium keyword targeting, review management, and content strategy. Starting at ₹10,000/month with results in 90 days." },
     { question: "Can you create a digital marketing strategy for my Hazratganj showroom?", answer: "We create result-driven digital marketing strategies for Hazratganj showrooms including Instagram marketing for fashion brands, Google Ads for jewelry stores, influencer collaborations, and local SEO to drive both foot traffic and online sales. Starting at ₹12,000/month." },
     { question: "How do you preserve heritage brand identity in digital design?", answer: "We work closely with heritage brand owners to understand their legacy, values, and visual identity. We incorporate heritage timelines, traditional design elements, brand stories, and generational narratives into the digital experience. The result is a website that honors tradition while embracing modern functionality." },
-    { question: "What makes XcFlown different for Hazratganj businesses?", answer: "Three things: 1) We understand the premium positioning that Hazratganj demands — our designs reflect sophistication, not just functionality. 2) We have deep local knowledge of the Ganj's business ecosystem. 3) We offer heritage brand expertise that generic agencies lack. Our clients' websites look and feel as premium as their physical stores." },
+    { question: "What makes Web Nova Crew different for Hazratganj businesses?", answer: "Three things: 1) We understand the premium positioning that Hazratganj demands — our designs reflect sophistication, not just functionality. 2) We have deep local knowledge of the Ganj's business ecosystem. 3) We offer heritage brand expertise that generic agencies lack. Our clients' websites look and feel as premium as their physical stores." },
     { question: "Can you build an e-commerce site for my jewelry business?", answer: "We specialize in jewelry e-commerce with 3D product showcase, AR try-on features, custom ordering for bespoke pieces, and international shipping integration. Starting at ₹80,000. Our jewelry websites have generated ₹25L+ monthly revenue for Hazratganj brands." },
   ];
 
@@ -62,19 +62,19 @@ export default function WebDevelopmentHazratganj() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
-        title="Best Web Development Company in Hazratganj, Lucknow | XcFlown"
+        title="Best Web Development Company in Hazratganj, Lucknow | Web Nova Crew"
         description="Premium web development company in Hazratganj, Lucknow. Luxury websites, e-commerce for jewelry & fashion brands, restaurant apps. ₹25,000 onwards. 60+ Hazratganj clients."
         keywords="web development company in Hazratganj, app developer in Hazratganj Lucknow, digital marketing agency Hazratganj, best IT company Hazratganj, e-commerce developer Hazratganj Lucknow, luxury website developer Hazratganj"
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Lucknow Areas", url: "https://xcflown.com/locations/app-development-lucknow" },
-        { name: "Hazratganj", url: "https://xcflown.com/locations/web-development-hazratganj" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Lucknow Areas", url: "https://webnovacrew.com/locations/app-development-lucknow" },
+        { name: "Hazratganj", url: "https://webnovacrew.com/locations/web-development-hazratganj" }
       ]} />
-      <ServiceSchema serviceName="Web Development in Hazratganj" serviceDescription="Premium web and app development services in Hazratganj, Lucknow. Luxury websites, e-commerce for jewelry and fashion, restaurant apps, and digital marketing." serviceUrl="https://xcflown.com/locations/web-development-hazratganj" />
+      <ServiceSchema serviceName="Web Development in Hazratganj" serviceDescription="Premium web and app development services in Hazratganj, Lucknow. Luxury websites, e-commerce for jewelry and fashion, restaurant apps, and digital marketing." serviceUrl="https://webnovacrew.com/locations/web-development-hazratganj" />
       <FAQSchema faqs={faqs} />
       <Navbar />
 
@@ -101,7 +101,7 @@ export default function WebDevelopmentHazratganj() {
               <Button size="lg" className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-8">
                 <Link href="/contact" className="flex items-center gap-2">Get Premium Consultation <ArrowRight className="w-5 h-5" /></Link>
               </Button>
-              <a href="https://wa.me/918360723410" target="_blank">
+              <a href="https://wa.me/919872364476" target="_blank">
                 <Button size="lg" variant="outline" className="border-green-500/50 text-green-400 hover:bg-green-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button>
               </a>
             </div>
@@ -135,7 +135,7 @@ export default function WebDevelopmentHazratganj() {
       </section>
 
       {/* Services */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Premium Digital Services in Hazratganj</h2>
@@ -143,7 +143,7 @@ export default function WebDevelopmentHazratganj() {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-8 hover:border-amber-500/50 transition-all">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-amber-500/50 transition-all">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-14 h-14 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-400 flex-shrink-0">{service.icon}</div>
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
@@ -164,7 +164,7 @@ export default function WebDevelopmentHazratganj() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry, index) => (
-              <motion.div key={index} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: index * 0.05 }} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-amber-500/50 transition-all">
+              <motion.div key={index} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: index * 0.05 }} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-amber-500/50 transition-all">
                 <div className="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-400 mb-4">{industry.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{industry.name}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{industry.desc}</p>
@@ -175,12 +175,12 @@ export default function WebDevelopmentHazratganj() {
       </section>
 
       {/* Case Studies */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Hazratganj Success Stories</h2></div>
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-amber-500/50 transition-all">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-amber-500/50 transition-all">
                 <div className="text-amber-400 text-sm font-medium mb-2">{study.client}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
                 <p className="text-slate-400 mb-6 leading-relaxed">{study.description}</p>
@@ -198,7 +198,7 @@ export default function WebDevelopmentHazratganj() {
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Why Hazratganj Businesses Choose Us</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((item, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-amber-500/50 transition-all">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-amber-500/50 transition-all">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-14 h-14 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-400">{item.icon}</div>
                   <div className="text-sm font-bold text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full">{item.stats}</div>
@@ -215,12 +215,12 @@ export default function WebDevelopmentHazratganj() {
       <TestimonialsSection />
 
       {/* FAQs */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Hazratganj Web Development FAQs</h2></div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
               </motion.div>
@@ -230,23 +230,23 @@ export default function WebDevelopmentHazratganj() {
       </section>
 
       {/* Nearby Areas */}
-      <section className="py-16 bg-violet-900/50 border-t border-violet-800">
+      <section className="py-16 bg-slate-900/50 border-t border-slate-800">
         <div className="container mx-auto max-w-7xl px-4">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Also Serving Nearby Areas</h3>
           <div className="flex flex-wrap gap-3 justify-center">
-            {nearbyAreas.map((area, index) => (<Link key={index} href={`/locations/${area.slug}`}><a className="px-5 py-2.5 bg-violet-800/50 border border-violet-700 rounded-full text-slate-300 hover:border-amber-500/50 hover:text-amber-400 transition-all"><MapPin className="w-4 h-4 inline mr-2" />{area.name}</a></Link>))}
+            {nearbyAreas.map((area, index) => (<Link key={index} href={`/locations/${area.slug}`}><a className="px-5 py-2.5 bg-slate-800/50 border border-slate-700 rounded-full text-slate-300 hover:border-amber-500/50 hover:text-amber-400 transition-all"><MapPin className="w-4 h-4 inline mr-2" />{area.name}</a></Link>))}
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-br from-amber-950/50 to-orange-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-amber-950/50 to-orange-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Elevate Your Hazratganj Business Online?</h2>
           <p className="text-xl text-slate-300 mb-8">Join 60+ Hazratganj brands who trusted us with their digital transformation</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-8"><Link href="/contact" className="flex items-center gap-2"><Phone className="w-5 h-5" />Schedule Ganj Meeting</Link></Button>
-            <a href="tel:+918360723410"><Button size="lg" variant="outline" className="border-violet-700/50 hover:bg-violet-800 text-white"><Phone className="w-5 h-5 mr-2" />+91 83607 23410</Button></a>
+            <a href="tel:+919872364476"><Button size="lg" variant="outline" className="border-slate-600 hover:bg-slate-800 text-white"><Phone className="w-5 h-5 mr-2" />+91 98723 64476</Button></a>
           </div>
         </div>
       </section>

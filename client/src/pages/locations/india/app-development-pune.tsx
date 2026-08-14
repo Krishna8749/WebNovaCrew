@@ -267,22 +267,22 @@ export default function AppDevelopmentPune() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
-        title="App Development Company in Pune | Mobile App Developers Hinjewadi | XcFlown"
+        title="App Development Company in Pune | Mobile App Developers Hinjewadi | Web Nova Crew"
         description="Top app development company in Pune. Android, iOS, Flutter apps for IT companies, EdTech, startups in Hinjewadi, Kharadi, Baner. ₹40,000 onwards."
         keywords="app development company Pune, mobile app developers Pune, Hinjewadi app development, Kharadi app developers, Flutter developers Pune, EdTech app development Pune"
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Locations", url: "https://xcflown.com/locations" },
-        { name: "Pune", url: "https://xcflown.com/locations/app-development-pune" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Locations", url: "https://webnovacrew.com/locations" },
+        { name: "Pune", url: "https://webnovacrew.com/locations/app-development-pune" }
       ]} />
       <ServiceSchema 
         serviceName="App Development in Pune"
         serviceDescription="Professional mobile app development for Pune businesses. Android, iOS, Flutter apps for IT, EdTech, startup sectors."
-        serviceUrl="https://xcflown.com/locations/app-development-pune"
+        serviceUrl="https://webnovacrew.com/locations/app-development-pune"
       />
       
       <Navbar />
@@ -317,7 +317,7 @@ export default function AppDevelopmentPune() {
               <Button size="lg" className="bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white px-8">
                 <Link href="/contact" className="flex items-center gap-2">Get Free Consultation <ArrowRight className="w-5 h-5" /></Link>
               </Button>
-              <a href="https://wa.me/918360723410" target="_blank">
+              <a href="https://wa.me/919872364476" target="_blank">
                 <Button size="lg" variant="outline" className="border-green-500/50 text-green-400 hover:bg-green-500/10">
                   <MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us
                 </Button>
@@ -347,7 +347,7 @@ export default function AppDevelopmentPune() {
       </section>
 
       {/* Services - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">App Development Services in Pune</h2>
@@ -356,7 +356,7 @@ export default function AppDevelopmentPune() {
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-8 hover:border-indigo-500/50 transition-all">
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-indigo-500/50 transition-all">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-14 h-14 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 flex-shrink-0">{service.icon}</div>
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
@@ -391,13 +391,13 @@ export default function AppDevelopmentPune() {
       </section>
 
       {/* Industries - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Industries We Serve in Pune</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
               <motion.div key={index} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: index * 0.05 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all">
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all">
                 <div className="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 mb-4">{industry.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{industry.name}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{industry.desc}</p>
@@ -414,7 +414,7 @@ export default function AppDevelopmentPune() {
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-indigo-500/50 transition-all">
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-indigo-500/50 transition-all">
                 <div className="text-indigo-400 text-sm font-medium mb-2">{study.client}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
                 <p className="text-slate-400 mb-6 leading-relaxed">{study.description}</p>
@@ -429,13 +429,13 @@ export default function AppDevelopmentPune() {
       </section>
 
       {/* Areas - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Serving All Pune IT Hubs</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {areas.map((area, index) => (
               <motion.div key={index} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: index * 0.03 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-5 hover:border-indigo-500/50 transition-all">
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-5 hover:border-indigo-500/50 transition-all">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-indigo-400 mt-1 flex-shrink-0" />
                   <div><h3 className="text-white font-semibold">{area.name}</h3><span className="text-indigo-400 text-sm">{area.type}</span><p className="text-slate-400 text-sm mt-1">{area.desc}</p></div>
@@ -453,7 +453,7 @@ export default function AppDevelopmentPune() {
           <div className="grid md:grid-cols-5 gap-6">
             {developmentProcess.map((phase, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="relative">
-                <div className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all h-full">
+                <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all h-full">
                   <div className="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold mb-4">{phase.step}</div>
                   <h3 className="text-lg font-semibold text-white mb-1">{phase.title}</h3>
                   <div className="text-indigo-400 text-sm mb-3">{phase.duration}</div>
@@ -466,12 +466,12 @@ export default function AppDevelopmentPune() {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Technology Stack</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {techStack.map((stack, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-indigo-400 mb-4">{stack.category}</h3>
                 <div className="flex flex-wrap gap-2">{stack.technologies.map((tech, i) => (<span key={i} className="text-sm bg-slate-700 text-slate-300 px-3 py-1 rounded-full">{tech}</span>))}</div>
               </motion.div>
@@ -487,7 +487,7 @@ export default function AppDevelopmentPune() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((item, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-indigo-500/50 transition-all">
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-indigo-500/50 transition-all">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-14 h-14 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400">{item.icon}</div>
                   <div className="text-sm font-bold text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full">{item.stats}</div>
@@ -501,13 +501,13 @@ export default function AppDevelopmentPune() {
       </section>
 
       {/* Pricing - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Pune App Development Pricing</h2><p className="text-xl text-slate-400 max-w-3xl mx-auto">Startup-friendly pricing. 30-40% lower than typical Hinjewadi agencies.</p></div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((plan, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className={`bg-violet-800/50 border rounded-xl p-8 transition-all ${plan.popular ? 'border-indigo-500 ring-2 ring-indigo-500/20' : 'border-violet-700 hover:border-indigo-500/50'}`}>
+                className={`bg-slate-800/50 border rounded-xl p-8 transition-all ${plan.popular ? 'border-indigo-500 ring-2 ring-indigo-500/20' : 'border-slate-700 hover:border-indigo-500/50'}`}>
                 {plan.popular && (<div className="text-center mb-4"><span className="bg-indigo-500 text-white text-sm font-medium px-4 py-1 rounded-full">Most Popular</span></div>)}
                 <h3 className="text-2xl font-semibold text-white mb-2">{plan.tier}</h3>
                 <div className="text-3xl font-bold text-indigo-400 mb-2">{plan.price}</div>
@@ -523,13 +523,13 @@ export default function AppDevelopmentPune() {
       <TestimonialsSection />
 
       {/* FAQs */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Pune App Development FAQs</h2></div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6">
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
               </motion.div>
@@ -539,7 +539,7 @@ export default function AppDevelopmentPune() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-br from-indigo-950/50 to-violet-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-indigo-950/50 to-violet-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Build Your Pune App?</h2>
           <p className="text-xl text-slate-300 mb-8">Join 55+ Pune businesses who trusted us</p>
@@ -547,7 +547,7 @@ export default function AppDevelopmentPune() {
             <Button size="lg" className="bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white px-8">
               <Link href="/contact" className="flex items-center gap-2"><Phone className="w-5 h-5" />Schedule Pune Meeting</Link>
             </Button>
-            <a href="tel:+918360723410"><Button size="lg" variant="outline" className="border-violet-700/50 hover:bg-violet-800 text-white"><Phone className="w-5 h-5 mr-2" />+91 83607 23410</Button></a>
+            <a href="tel:+919872364476"><Button size="lg" variant="outline" className="border-slate-600 hover:bg-slate-800 text-white"><Phone className="w-5 h-5 mr-2" />+91 98723 64476</Button></a>
           </div>
         </div>
       </section>

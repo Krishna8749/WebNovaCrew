@@ -88,7 +88,7 @@ export default function KuwaitEcommerceAppDevelopment() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
         title="E-commerce App Development Kuwait | Online Store Apps | KNET Integration"
         description="Leading e-commerce app development company in Kuwait. Build Arabic + English online store apps with KNET, TAP payment integration. Grocery, fashion, retail apps. 400 KWD onwards."
@@ -96,14 +96,14 @@ export default function KuwaitEcommerceAppDevelopment() {
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Kuwait Locations", url: "https://xcflown.com/locations" },
-        { name: "E-commerce App Development", url: "https://xcflown.com/locations/kuwait-ecommerce-app-development" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Kuwait Locations", url: "https://webnovacrew.com/locations" },
+        { name: "E-commerce App Development", url: "https://webnovacrew.com/locations/kuwait-ecommerce-app-development" }
       ]} />
       <ServiceSchema 
         serviceName="E-commerce App Development Kuwait"
         serviceDescription="Professional e-commerce and online store app development in Kuwait with KNET payment integration, Arabic support, and local delivery integration."
-        serviceUrl="https://xcflown.com/locations/kuwait-ecommerce-app-development"
+        serviceUrl="https://webnovacrew.com/locations/kuwait-ecommerce-app-development"
       />
       
       <Navbar />
@@ -141,7 +141,7 @@ export default function KuwaitEcommerceAppDevelopment() {
                   Get Free Quote <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-violet-700 hover:bg-violet-800">
+              <Button size="lg" variant="outline" className="border-slate-700 hover:bg-slate-800">
                 <Link href="/portfolio" className="flex items-center gap-2">
                   View E-commerce Apps
                 </Link>
@@ -171,7 +171,7 @@ export default function KuwaitEcommerceAppDevelopment() {
       </section>
 
       {/* Features */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -189,7 +189,7 @@ export default function KuwaitEcommerceAppDevelopment() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-emerald-500/50 transition-all"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-emerald-500/50 transition-all"
               >
                 <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 mb-4">
                   {feature.icon}
@@ -207,7 +207,7 @@ export default function KuwaitEcommerceAppDevelopment() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.02 }}
-                className="flex items-center gap-3 bg-violet-800/30 border border-violet-700/50 rounded-lg p-3"
+                className="flex items-center gap-3 bg-slate-800/30 border border-slate-700/50 rounded-lg p-3"
               >
                 <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
                 <span className="text-sm text-slate-200">{feature}</span>
@@ -236,7 +236,7 @@ export default function KuwaitEcommerceAppDevelopment() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-5 hover:border-emerald-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-5 hover:border-emerald-500/50 transition-all"
               >
                 <div className="flex items-center gap-3">
                   <ShoppingCart className="w-5 h-5 text-emerald-400" />
@@ -249,7 +249,7 @@ export default function KuwaitEcommerceAppDevelopment() {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -267,7 +267,7 @@ export default function KuwaitEcommerceAppDevelopment() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-emerald-500/50 transition-all"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-emerald-500/50 transition-all"
               >
                 <h3 className="text-xl font-semibold text-white mb-2">{plan.tier}</h3>
                 <div className="text-3xl font-bold text-emerald-400 mb-4">{plan.price}</div>
@@ -301,7 +301,7 @@ export default function KuwaitEcommerceAppDevelopment() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-emerald-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-emerald-500/50 transition-all"
               >
                 <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 mb-4">
                   {item.icon}
@@ -318,7 +318,7 @@ export default function KuwaitEcommerceAppDevelopment() {
       <TestimonialsSection />
 
       {/* FAQs */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -333,7 +333,7 @@ export default function KuwaitEcommerceAppDevelopment() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
@@ -344,7 +344,7 @@ export default function KuwaitEcommerceAppDevelopment() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-emerald-950/50 to-teal-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-emerald-950/50 to-teal-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Ready to Launch Your Kuwait Online Store?
@@ -359,7 +359,7 @@ export default function KuwaitEcommerceAppDevelopment() {
                 Contact Kuwait Team
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-violet-700/50 hover:bg-violet-800 text-white">
+            <Button size="lg" variant="outline" className="border-slate-600 hover:bg-slate-800 text-white">
               <Link href="/pricing">
                 View Full Pricing
               </Link>

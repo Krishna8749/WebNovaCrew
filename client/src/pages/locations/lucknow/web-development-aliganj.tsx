@@ -25,7 +25,7 @@ export default function WebDevelopmentAliganj() {
   ];
 
   const faqs = [
-    { question: "Which is the best web development company in Aliganj?", answer: "XcFlown is the most trusted web development company in Aliganj, Lucknow. We offer affordable website solutions starting at ₹12,000 for small businesses and educational institutions. Our local expertise and budget-friendly pricing make us the top choice for Aliganj businesses." },
+    { question: "Which is the best web development company in Aliganj?", answer: "Web Nova Crew is the most trusted web development company in Aliganj, Lucknow. We offer affordable website solutions starting at ₹12,000 for small businesses and educational institutions. Our local expertise and budget-friendly pricing make us the top choice for Aliganj businesses." },
     { question: "How much does a website cost in Aliganj?", answer: "Website development in Aliganj starts at ₹12,000 for basic business sites with free hosting for the first year. Professional websites with SEO cost ₹25,000-₹80,000, and e-commerce sites start at ₹50,000. We offer EMI options for businesses with budget constraints." },
     { question: "Can you build an app for my Aliganj coaching center?", answer: "We build education apps for Aliganj coaching centers with live class streaming, test series, student management, and payment integration. Starting at ₹40,000 with 15-day delivery. Our coaching apps have enrolled 8,000+ students for Aliganj institutes." },
     { question: "Do you offer affordable digital marketing in Aliganj?", answer: "We offer budget-friendly digital marketing packages for Aliganj businesses starting at ₹5,000/month including social media management, local SEO, Google Ads, and WhatsApp marketing. Our clients see 2x more enquiries within 60 days." },
@@ -41,15 +41,15 @@ export default function WebDevelopmentAliganj() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
-        title="Best Web Development Company in Aliganj, Lucknow | Affordable | XcFlown"
+        title="Best Web Development Company in Aliganj, Lucknow | Affordable | Web Nova Crew"
         description="Affordable web development company in Aliganj, Lucknow. Websites from ₹12,000. Coaching apps, clinic websites, government portals. Free hosting 1st year. 50+ Aliganj clients."
         keywords="web development company in Aliganj, app developer in Aliganj Lucknow, digital marketing agency Aliganj, affordable website developer Aliganj, IT company Aliganj Lucknow, coaching app developer Aliganj"
       />
       <LocalBusinessSchema />
-      <BreadcrumbSchema items={[{ name: "Home", url: "https://xcflown.com" }, { name: "Lucknow Areas", url: "https://xcflown.com/locations/app-development-lucknow" }, { name: "Aliganj", url: "https://xcflown.com/locations/web-development-aliganj" }]} />
-      <ServiceSchema serviceName="Web Development in Aliganj" serviceDescription="Affordable web and app development services in Aliganj, Lucknow. Education apps, clinic websites, government portals, and budget-friendly digital marketing." serviceUrl="https://xcflown.com/locations/web-development-aliganj" />
+      <BreadcrumbSchema items={[{ name: "Home", url: "https://webnovacrew.com" }, { name: "Lucknow Areas", url: "https://webnovacrew.com/locations/app-development-lucknow" }, { name: "Aliganj", url: "https://webnovacrew.com/locations/web-development-aliganj" }]} />
+      <ServiceSchema serviceName="Web Development in Aliganj" serviceDescription="Affordable web and app development services in Aliganj, Lucknow. Education apps, clinic websites, government portals, and budget-friendly digital marketing." serviceUrl="https://webnovacrew.com/locations/web-development-aliganj" />
       <FAQSchema faqs={faqs} />
       <Navbar />
 
@@ -72,8 +72,8 @@ export default function WebDevelopmentAliganj() {
             </p>
             <p className="text-lg text-slate-400 mb-8">Serving educational institutions, government offices & local businesses in Aliganj.</p>
             <div className="flex flex-wrap gap-4 justify-center mb-12">
-              <Button size="lg" className="bg-gradient-to-r from-violet-600 to-orange-500 hover:from-violet-700 hover:to-purple-700 text-white px-8"><Link href="/contact" className="flex items-center gap-2">Get Free Quote <ArrowRight className="w-5 h-5" /></Link></Button>
-              <a href="https://wa.me/918360723410" target="_blank"><Button size="lg" variant="outline" className="border-green-500/50 text-green-400 hover:bg-green-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button></a>
+              <Button size="lg" className="bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white px-8"><Link href="/contact" className="flex items-center gap-2">Get Free Quote <ArrowRight className="w-5 h-5" /></Link></Button>
+              <a href="https://wa.me/919872364476" target="_blank"><Button size="lg" variant="outline" className="border-green-500/50 text-green-400 hover:bg-green-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button></a>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 max-w-3xl mx-auto">
               <div className="text-center bg-white/5 rounded-xl p-4 border border-violet-500/20"><div className="text-3xl font-bold text-violet-400 mb-1">50+</div><div className="text-sm text-slate-400">Aliganj Clients</div></div>
@@ -85,12 +85,12 @@ export default function WebDevelopmentAliganj() {
         </div>
       </section>
 
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Our Services in Aliganj</h2><p className="text-xl text-slate-400 max-w-3xl mx-auto">Affordable, quality digital solutions for Aliganj's community</p></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-8 hover:border-violet-500/50 transition-all">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-violet-500/50 transition-all">
                 <div className="w-14 h-14 bg-violet-500/10 rounded-xl flex items-center justify-center text-violet-400 mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-slate-400 mb-4 leading-relaxed">{service.desc}</p>
@@ -106,7 +106,7 @@ export default function WebDevelopmentAliganj() {
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Aliganj Success Stories</h2></div>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {caseStudies.map((study, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-violet-500/50 transition-all">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-violet-500/50 transition-all">
                 <div className="text-violet-400 text-sm font-medium mb-2">{study.client}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
                 <p className="text-slate-400 mb-6 leading-relaxed">{study.description}</p>
@@ -121,12 +121,12 @@ export default function WebDevelopmentAliganj() {
       <FounderBio />
       <TestimonialsSection />
 
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Aliganj Web Development FAQs</h2></div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
               </motion.div>
@@ -135,22 +135,22 @@ export default function WebDevelopmentAliganj() {
         </div>
       </section>
 
-      <section className="py-16 bg-violet-900/50 border-t border-violet-800">
+      <section className="py-16 bg-slate-900/50 border-t border-slate-800">
         <div className="container mx-auto max-w-7xl px-4">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Also Serving Nearby Areas</h3>
           <div className="flex flex-wrap gap-3 justify-center">
-            {nearbyAreas.map((area, index) => (<Link key={index} href={`/locations/${area.slug}`}><a className="px-5 py-2.5 bg-violet-800/50 border border-violet-700 rounded-full text-slate-300 hover:border-violet-500/50 hover:text-violet-400 transition-all"><MapPin className="w-4 h-4 inline mr-2" />{area.name}</a></Link>))}
+            {nearbyAreas.map((area, index) => (<Link key={index} href={`/locations/${area.slug}`}><a className="px-5 py-2.5 bg-slate-800/50 border border-slate-700 rounded-full text-slate-300 hover:border-violet-500/50 hover:text-violet-400 transition-all"><MapPin className="w-4 h-4 inline mr-2" />{area.name}</a></Link>))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-violet-950/50 to-purple-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-violet-950/50 to-purple-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Go Digital? Affordable Solutions for Aliganj</h2>
           <p className="text-xl text-slate-300 mb-8">Websites from ₹12,000 • Free hosting • 5-7 day delivery</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-violet-600 to-orange-500 hover:from-violet-700 hover:to-purple-700 text-white px-8"><Link href="/contact" className="flex items-center gap-2"><Phone className="w-5 h-5" />Get Free Quote</Link></Button>
-            <a href="tel:+918360723410"><Button size="lg" variant="outline" className="border-violet-700/50 hover:bg-violet-800 text-white"><Phone className="w-5 h-5 mr-2" />+91 83607 23410</Button></a>
+            <Button size="lg" className="bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white px-8"><Link href="/contact" className="flex items-center gap-2"><Phone className="w-5 h-5" />Get Free Quote</Link></Button>
+            <a href="tel:+919872364476"><Button size="lg" variant="outline" className="border-slate-600 hover:bg-slate-800 text-white"><Phone className="w-5 h-5 mr-2" />+91 98723 64476</Button></a>
           </div>
         </div>
       </section>

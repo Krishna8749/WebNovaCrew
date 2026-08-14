@@ -20,7 +20,7 @@ export const teamMembers: TeamMember[] = [
     name: "Arjun Kapoor",
     role: "Founder & CEO",
     department: "Leadership",
-    bio: "Arjun founded XcFlown with a vision to make world-class web development accessible to businesses of all sizes. With 12+ years of experience in tech leadership at companies like Infosys and Wipro, he leads our strategic direction and client relationships.",
+    bio: "Arjun founded Web Nova Crew with a vision to make world-class web development accessible to businesses of all sizes. With 12+ years of experience in tech leadership at companies like Infosys and Wipro, he leads our strategic direction and client relationships.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
     skills: ["Strategic Planning", "Business Development", "Tech Leadership", "Client Relations"],
     social: {

@@ -41,7 +41,7 @@ In the ever-evolving landscape of web development, choosing the right framework 
 
 Developed and maintained by Vercel, Next.js has transformed from a simple server-side rendering solution into a comprehensive full-stack framework that powers some of the world's most visited websites, including TikTok, Twitch, Nike, Notion, and the Washington Post.
 
-At XcFlown, we've built over 50 production applications using Next.js, and we've witnessed firsthand how this framework delivers exceptional results for businesses across India, Kuwait, and globally. In this comprehensive guide, we'll explore every aspect of Next.js that makes it the best choice for web development in 2024.
+At Web Nova Crew, we've built over 50 production applications using Next.js, and we've witnessed firsthand how this framework delivers exceptional results for businesses across India, Kuwait, and globally. In this comprehensive guide, we'll explore every aspect of Next.js that makes it the best choice for web development in 2024.
 
 ![Next.js Framework Architecture](https://images.unsplash.com/photo-1627398242454-45a1465c2479?auto=format&fit=crop&q=80&w=1200)
 
@@ -280,7 +280,7 @@ export async function POST(request: Request) {
   
   // Send email
   await sendEmail({
-    to: 'contact@xcflown.com',
+    to: 'contact@webnovacrew.com',
     subject: \`New inquiry from \${name}\`,
     body: message
   });
@@ -355,17 +355,17 @@ Next.js provides comprehensive SEO support through its Metadata API:
 \`\`\`javascript
 // app/services/web-development/page.tsx
 export const metadata = {
-  title: 'Web Development Services in India | XcFlown',
+  title: 'Web Development Services in India | Web Nova Crew',
   description: 'Professional web development services in India. We build fast, scalable, and SEO-optimized websites using Next.js, React, and modern technologies.',
   keywords: ['web development', 'India', 'Next.js', 'React', 'website design'],
   openGraph: {
-    title: 'Web Development Services | XcFlown',
+    title: 'Web Development Services | Web Nova Crew',
     description: 'Transform your business with our expert web development services.',
     images: ['/images/web-development-og.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Development Services | XcFlown',
+    title: 'Web Development Services | Web Nova Crew',
     description: 'Transform your business with our expert web development services.',
   },
 };
@@ -383,8 +383,8 @@ export default function ServicePage() {
     name: 'Web Development',
     provider: {
       '@type': 'Organization',
-      name: 'XcFlown',
-      url: 'https://xcflown.com'
+      name: 'Web Nova Crew',
+      url: 'https://webnovacrew.com'
     },
     areaServed: ['India', 'Kuwait', 'UAE'],
     description: 'Professional web development services'
@@ -551,24 +551,24 @@ As we've explored throughout this comprehensive guide, Next.js offers an unparal
 ✅ **Full-Stack Capabilities**: API routes and Server Components
 ✅ **Production-Ready**: Used by Fortune 500 companies worldwide
 
-At XcFlown, we've seen these benefits translate into real business results for our clients across India, Kuwait, and beyond. Whether you're building a startup MVP, an enterprise application, or an e-commerce platform, Next.js provides the foundation for success.
+At Web Nova Crew, we've seen these benefits translate into real business results for our clients across India, Kuwait, and beyond. Whether you're building a startup MVP, an enterprise application, or an e-commerce platform, Next.js provides the foundation for success.
 
 ---
 
 ## Ready to Build with Next.js?
 
-If you're planning a web development project in 2024, Next.js should be at the top of your technology choices. Our team at XcFlown has extensive experience building high-performance Next.js applications for businesses of all sizes.
+If you're planning a web development project in 2024, Next.js should be at the top of your technology choices. Our team at Web Nova Crew has extensive experience building high-performance Next.js applications for businesses of all sizes.
 
 **Contact us today for a free consultation:**
-- 📧 Email: contact@xcflown.com
-- 📱 WhatsApp: +91 8360723410
-- 🌐 Website: xcflown.com
+- 📧 Email: contact@webnovacrew.com
+- 📱 WhatsApp: +91 9872364476
+- 🌐 Website: webnovacrew.com
 
 Let's build something amazing together!
 
 ---
 
-*This article was written by our development team at XcFlown, based on our experience building 50+ production Next.js applications. Last updated: December 2025.*
+*This article was written by our development team at Web Nova Crew, based on our experience building 50+ production Next.js applications. Last updated: December 2025.*
     `,
     category: "Web Development",
     tags: ["Next.js", "React", "Web Development", "JavaScript", "SEO", "Server Components", "SSR", "SSG", "Performance", "Full-Stack"],
@@ -618,7 +618,7 @@ Choosing between Flutter and React Native is one of the most common questions we
 
 ## Our Recommendation
 
-At XcFlown, we primarily use **Flutter** for new projects because:
+At Web Nova Crew, we primarily use **Flutter** for new projects because:
 1. Better performance for complex UIs
 2. Consistent look across platforms
 3. Growing ecosystem and Google's backing
@@ -718,7 +718,7 @@ Keep content fresh by:
 
 ## Need Help with SEO?
 
-XcFlown has helped 50+ businesses achieve page 1 rankings. Contact us for a free SEO audit.
+Web Nova Crew has helped 50+ businesses achieve page 1 rankings. Contact us for a free SEO audit.
     `,
     category: "SEO & Marketing",
     tags: ["SEO", "Google", "Digital Marketing", "Content Strategy", "Rankings"],
@@ -784,7 +784,7 @@ Planning to launch an online store? Here's what you can expect to pay in India.
 - Marketing: ₹25,000 - ₹2,00,000/month
 - Payment gateway fees: 2-3% per transaction
 
-## Why Choose XcFlown?
+## Why Choose Web Nova Crew?
 
 We've built 20+ successful e-commerce stores with:
 - Average 250% increase in conversions
@@ -851,7 +851,7 @@ Beautiful, interactive charts and graphs that tell stories.
 
 ## How We Apply These Trends
 
-At XcFlown, our design team stays current with industry trends while focusing on what matters most: user experience that drives conversions.
+At Web Nova Crew, our design team stays current with industry trends while focusing on what matters most: user experience that drives conversions.
 
 Contact us for a UI/UX audit of your existing product.
     `,
@@ -928,7 +928,7 @@ Beware of:
 4. What happens after launch?
 5. Can I speak with past clients?
 
-## Why Companies Choose XcFlown
+## Why Companies Choose Web Nova Crew
 
 ✅ 50+ successful projects
 ✅ 100% client satisfaction
@@ -1017,7 +1017,7 @@ For our clients, we've improved:
 - Bounce rate: -40%
 - Conversions: +25%
 
-Need help optimizing your website? Contact XcFlown for a free performance audit.
+Need help optimizing your website? Contact Web Nova Crew for a free performance audit.
     `,
     category: "Technology",
     tags: ["Performance", "Speed", "Optimization", "Core Web Vitals", "SEO"],

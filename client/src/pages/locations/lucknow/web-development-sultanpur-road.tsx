@@ -25,7 +25,7 @@ export default function WebDevelopmentSultanpurRoad() {
   ];
 
   const faqs = [
-    { question: "Which is the best web development company on Sultanpur Road?", answer: "XcFlown is the leading web development company for Sultanpur Road, Lucknow. We specialize in industrial solutions, real estate platforms, and logistics apps. Starting at ₹15,000 with 1-2 week delivery." },
+    { question: "Which is the best web development company on Sultanpur Road?", answer: "Web Nova Crew is the leading web development company for Sultanpur Road, Lucknow. We specialize in industrial solutions, real estate platforms, and logistics apps. Starting at ₹15,000 with 1-2 week delivery." },
     { question: "Can you build a warehouse management system for my Sultanpur Road facility?", answer: "We build warehouse management systems with inventory tracking, order management, and logistics integration. Starting at ₹80,000. Our systems increase efficiency by 200%." },
     { question: "How much does a real estate website cost on Sultanpur Road?", answer: "Real estate websites for Sultanpur Road developments start at ₹50,000 with virtual tours and booking systems. Premium platforms cost ₹1,00,000-₹2,50,000." },
     { question: "Do you offer SEO for Sultanpur Road businesses?", answer: "We provide specialized SEO for Sultanpur Road targeting industrial and logistics searches. Packages start at ₹8,000/month." },
@@ -41,11 +41,11 @@ export default function WebDevelopmentSultanpurRoad() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
-      <SEO title="Web Development Company on Sultanpur Road, Lucknow | XcFlown" description="Top web development company on Sultanpur Road, Lucknow. Warehouse systems, real estate websites, logistics apps. ₹15,000 onwards. Industrial corridor specialist." keywords="web development company Sultanpur Road, app developer Sultanpur Road Lucknow, digital marketing agency Sultanpur Road, warehouse system developer Sultanpur Road, logistics app Sultanpur Road" />
+    <div className="min-h-screen bg-slate-950 font-sans">
+      <SEO title="Web Development Company on Sultanpur Road, Lucknow | Web Nova Crew" description="Top web development company on Sultanpur Road, Lucknow. Warehouse systems, real estate websites, logistics apps. ₹15,000 onwards. Industrial corridor specialist." keywords="web development company Sultanpur Road, app developer Sultanpur Road Lucknow, digital marketing agency Sultanpur Road, warehouse system developer Sultanpur Road, logistics app Sultanpur Road" />
       <LocalBusinessSchema />
-      <BreadcrumbSchema items={[{ name: "Home", url: "https://xcflown.com" }, { name: "Lucknow Areas", url: "https://xcflown.com/locations/app-development-lucknow" }, { name: "Sultanpur Road", url: "https://xcflown.com/locations/web-development-sultanpur-road" }]} />
-      <ServiceSchema serviceName="Web Development on Sultanpur Road" serviceDescription="Professional web and app development services on Sultanpur Road, Lucknow. Warehouse management systems, real estate platforms, logistics apps, and industrial solutions." serviceUrl="https://xcflown.com/locations/web-development-sultanpur-road" />
+      <BreadcrumbSchema items={[{ name: "Home", url: "https://webnovacrew.com" }, { name: "Lucknow Areas", url: "https://webnovacrew.com/locations/app-development-lucknow" }, { name: "Sultanpur Road", url: "https://webnovacrew.com/locations/web-development-sultanpur-road" }]} />
+      <ServiceSchema serviceName="Web Development on Sultanpur Road" serviceDescription="Professional web and app development services on Sultanpur Road, Lucknow. Warehouse management systems, real estate platforms, logistics apps, and industrial solutions." serviceUrl="https://webnovacrew.com/locations/web-development-sultanpur-road" />
       <FAQSchema faqs={faqs} />
       <Navbar />
 
@@ -65,7 +65,7 @@ export default function WebDevelopmentSultanpurRoad() {
             <p className="text-lg text-slate-400 mb-8">Serving warehouses, factories, real estate developers & transport businesses on Sultanpur Road.</p>
             <div className="flex flex-wrap gap-4 justify-center mb-12">
               <Button size="lg" className="bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white px-8"><Link href="/contact" className="flex items-center gap-2">Get Free Quote <ArrowRight className="w-5 h-5" /></Link></Button>
-              <a href="https://wa.me/918360723410" target="_blank"><Button size="lg" variant="outline" className="border-green-500/50 text-green-400 hover:bg-green-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button></a>
+              <a href="https://wa.me/919872364476" target="_blank"><Button size="lg" variant="outline" className="border-green-500/50 text-green-400 hover:bg-green-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button></a>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 max-w-3xl mx-auto">
               <div className="text-center bg-white/5 rounded-xl p-4 border border-orange-500/20"><div className="text-3xl font-bold text-orange-400 mb-1">25+</div><div className="text-sm text-slate-400">Road Clients</div></div>
@@ -77,12 +77,12 @@ export default function WebDevelopmentSultanpurRoad() {
         </div>
       </section>
 
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Our Services on Sultanpur Road</h2><p className="text-xl text-slate-400 max-w-3xl mx-auto">Industrial and logistics digital solutions</p></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-8 hover:border-orange-500/50 transition-all">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-orange-500/50 transition-all">
                 <div className="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-400 mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-slate-400 mb-4 leading-relaxed">{service.desc}</p>
@@ -98,7 +98,7 @@ export default function WebDevelopmentSultanpurRoad() {
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Sultanpur Road Success Stories</h2></div>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {caseStudies.map((study, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-orange-500/50 transition-all">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-orange-500/50 transition-all">
                 <div className="text-orange-400 text-sm font-medium mb-2">{study.client}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
                 <p className="text-slate-400 mb-6 leading-relaxed">{study.description}</p>
@@ -113,12 +113,12 @@ export default function WebDevelopmentSultanpurRoad() {
       <FounderBio />
       <TestimonialsSection />
 
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Sultanpur Road Web Development FAQs</h2></div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
               </motion.div>
@@ -127,22 +127,22 @@ export default function WebDevelopmentSultanpurRoad() {
         </div>
       </section>
 
-      <section className="py-16 bg-violet-900/50 border-t border-violet-800">
+      <section className="py-16 bg-slate-900/50 border-t border-slate-800">
         <div className="container mx-auto max-w-7xl px-4">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Also Serving Nearby Areas</h3>
           <div className="flex flex-wrap gap-3 justify-center">
-            {nearbyAreas.map((area, index) => (<Link key={index} href={`/locations/${area.slug}`}><a className="px-5 py-2.5 bg-violet-800/50 border border-violet-700 rounded-full text-slate-300 hover:border-orange-500/50 hover:text-orange-400 transition-all"><MapPin className="w-4 h-4 inline mr-2" />{area.name}</a></Link>))}
+            {nearbyAreas.map((area, index) => (<Link key={index} href={`/locations/${area.slug}`}><a className="px-5 py-2.5 bg-slate-800/50 border border-slate-700 rounded-full text-slate-300 hover:border-orange-500/50 hover:text-orange-400 transition-all"><MapPin className="w-4 h-4 inline mr-2" />{area.name}</a></Link>))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-orange-950/50 to-amber-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-orange-950/50 to-amber-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Digitize Your Sultanpur Road Operations</h2>
           <p className="text-xl text-slate-300 mb-8">Warehouse systems, logistics apps & real estate platforms</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white px-8"><Link href="/contact" className="flex items-center gap-2"><Phone className="w-5 h-5" />Get Free Quote</Link></Button>
-            <a href="tel:+918360723410"><Button size="lg" variant="outline" className="border-violet-700/50 hover:bg-violet-800 text-white"><Phone className="w-5 h-5 mr-2" />+91 83607 23410</Button></a>
+            <a href="tel:+919872364476"><Button size="lg" variant="outline" className="border-slate-600 hover:bg-slate-800 text-white"><Phone className="w-5 h-5 mr-2" />+91 98723 64476</Button></a>
           </div>
         </div>
       </section>

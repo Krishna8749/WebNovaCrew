@@ -62,7 +62,7 @@ Our approach included:
       { metric: "Data Processing", value: "1M+", description: "Events processed per minute in real-time" },
     ],
     testimonial: {
-      quote: "XcFlown delivered beyond our expectations. The platform handles our massive data volumes effortlessly, and our users love the intuitive interface. This has become a competitive advantage for us.",
+      quote: "Web Nova Crew delivered beyond our expectations. The platform handles our massive data volumes effortlessly, and our users love the intuitive interface. This has become a competitive advantage for us.",
       author: "Michael Chen",
       role: "CTO",
       company: "FinanceHub Technologies",
@@ -187,7 +187,7 @@ Key implementations:
       { metric: "Subscription Revenue", value: "₹15L/month", description: "Recurring revenue from eco-boxes" },
     ],
     testimonial: {
-      quote: "Our new store perfectly represents our brand values. The subscription feature alone has added ₹15 lakhs in monthly recurring revenue. XcFlown understood our vision completely.",
+      quote: "Our new store perfectly represents our brand values. The subscription feature alone has added ₹15 lakhs in monthly recurring revenue. Web Nova Crew understood our vision completely.",
       author: "Priya Sharma",
       role: "Founder",
       company: "EcoShop India",
@@ -267,7 +267,7 @@ Key features:
       { metric: "B2B Partners", value: "500+", description: "Travel agents using the platform" },
     ],
     testimonial: {
-      quote: "XcFlown built us a platform that rivals the big players. Our search is faster than competitors, and the B2B portal has become a significant revenue stream.",
+      quote: "Web Nova Crew built us a platform that rivals the big players. Our search is faster than competitors, and the B2B portal has become a significant revenue stream.",
       author: "Ankit Mehta",
       role: "Founder",
       company: "TravelGo India",

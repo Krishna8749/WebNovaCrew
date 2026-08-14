@@ -129,11 +129,11 @@ export default function AppDevelopmentRaipur() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
-      <SEO title="App Development Company in Raipur | Mobile App Developers Chhattisgarh | ₹20,000 Onwards | XcFlown" description="Top app development company in Raipur. Steel, mining, government apps for Shankar Nagar, Pandri, Naya Raipur. Most affordable in CG. Call +91 83607 23410." keywords="app development Raipur, mobile app developers Raipur, Chhattisgarh app development, steel app Raipur, mining app Raipur, government app Raipur" />
+    <div className="min-h-screen bg-slate-950 font-sans">
+      <SEO title="App Development Company in Raipur | Mobile App Developers Chhattisgarh | ₹20,000 Onwards | Web Nova Crew" description="Top app development company in Raipur. Steel, mining, government apps for Shankar Nagar, Pandri, Naya Raipur. Most affordable in CG. Call +91 98723 64476." keywords="app development Raipur, mobile app developers Raipur, Chhattisgarh app development, steel app Raipur, mining app Raipur, government app Raipur" />
       <LocalBusinessSchema />
-      <BreadcrumbSchema items={[{ name: "Home", url: "https://xcflown.com" }, { name: "Locations", url: "https://xcflown.com/locations" }, { name: "Raipur", url: "https://xcflown.com/locations/app-development-raipur" }]} />
-      <ServiceSchema serviceName="App Development in Raipur" serviceDescription="Professional mobile app development in Raipur, Chhattisgarh. Steel, mining, government apps with IoT integration." serviceUrl="https://xcflown.com/locations/app-development-raipur" />
+      <BreadcrumbSchema items={[{ name: "Home", url: "https://webnovacrew.com" }, { name: "Locations", url: "https://webnovacrew.com/locations" }, { name: "Raipur", url: "https://webnovacrew.com/locations/app-development-raipur" }]} />
+      <ServiceSchema serviceName="App Development in Raipur" serviceDescription="Professional mobile app development in Raipur, Chhattisgarh. Steel, mining, government apps with IoT integration." serviceUrl="https://webnovacrew.com/locations/app-development-raipur" />
       
       <Navbar />
 
@@ -153,7 +153,7 @@ export default function AppDevelopmentRaipur() {
             <p className="text-lg text-slate-400 mb-8">🏭 20+ CG Apps Built • 🏛️ Government Experience • 💰 40-50% Savings</p>
             <div className="flex flex-wrap gap-4 justify-center mb-12">
               <Button size="lg" className="bg-gradient-to-r from-slate-600 to-zinc-600 text-white px-8 py-6 text-lg"><Link href="/contact" className="flex items-center gap-2">Get Free Consultation <ArrowRight className="w-5 h-5" /></Link></Button>
-              <a href="https://wa.me/918360723410"><Button size="lg" variant="outline" className="border-green-500/50 text-green-400 px-8 py-6 text-lg"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp: +91 83607 23410</Button></a>
+              <a href="https://wa.me/919872364476"><Button size="lg" variant="outline" className="border-green-500/50 text-green-400 px-8 py-6 text-lg"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp: +91 98723 64476</Button></a>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
               <div className="text-center bg-white/5 rounded-2xl p-6 border border-slate-500/20"><div className="text-3xl font-bold text-slate-400">20+</div><div className="text-sm text-slate-400">CG Apps</div></div>
@@ -166,11 +166,11 @@ export default function AppDevelopmentRaipur() {
       </section>
 
       {/* Services */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">App Development Services in Raipur</h2><p className="text-xl text-slate-400">Specialized solutions for Chhattisgarh's steel, mining, and government sectors</p></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((s, i) => (<motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-slate-500/50"><div className="w-14 h-14 bg-slate-500/10 rounded-xl flex items-center justify-center text-slate-400 mb-4">{s.icon}</div><h3 className="text-xl font-semibold text-white mb-2">{s.title}</h3><p className="text-slate-400 text-sm mb-4">{s.desc}</p><div className="flex flex-wrap gap-2">{s.features.map((f, j) => (<span key={j} className="text-xs bg-slate-500/10 text-slate-300 px-2 py-1 rounded">{f}</span>))}</div></motion.div>))}
+            {services.map((s, i) => (<motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-slate-500/50"><div className="w-14 h-14 bg-slate-500/10 rounded-xl flex items-center justify-center text-slate-400 mb-4">{s.icon}</div><h3 className="text-xl font-semibold text-white mb-2">{s.title}</h3><p className="text-slate-400 text-sm mb-4">{s.desc}</p><div className="flex flex-wrap gap-2">{s.features.map((f, j) => (<span key={j} className="text-xs bg-slate-500/10 text-slate-300 px-2 py-1 rounded">{f}</span>))}</div></motion.div>))}
           </div>
         </div>
       </section>
@@ -180,16 +180,16 @@ export default function AppDevelopmentRaipur() {
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Industries We Serve in Raipur</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {industries.map((ind, i) => (<motion.div key={i} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-slate-500/50"><div className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-slate-400 mt-1" /><div><h3 className="text-lg font-semibold text-white mb-1">{ind.name}</h3><p className="text-sm text-slate-400">{ind.desc}</p></div></div></motion.div>))}
+            {industries.map((ind, i) => (<motion.div key={i} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-slate-500/50"><div className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-slate-400 mt-1" /><div><h3 className="text-lg font-semibold text-white mb-1">{ind.name}</h3><p className="text-sm text-slate-400">{ind.desc}</p></div></div></motion.div>))}
           </div>
         </div>
       </section>
 
       {/* Areas */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Serving All Areas of Raipur</h2></div>
-          <div className="flex flex-wrap gap-4 justify-center">{areas.map((a, i) => (<div key={i} className="px-5 py-3 bg-violet-800/50 border border-violet-700 rounded-full text-slate-300 flex items-center gap-2"><MapPin className="w-4 h-4 text-slate-400" />{a.name}<span className="text-xs text-slate-500">({a.type})</span></div>))}</div>
+          <div className="flex flex-wrap gap-4 justify-center">{areas.map((a, i) => (<div key={i} className="px-5 py-3 bg-slate-800/50 border border-slate-700 rounded-full text-slate-300 flex items-center gap-2"><MapPin className="w-4 h-4 text-slate-400" />{a.name}<span className="text-xs text-slate-500">({a.type})</span></div>))}</div>
         </div>
       </section>
 
@@ -198,7 +198,7 @@ export default function AppDevelopmentRaipur() {
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Why Raipur Businesses Choose Us</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {whyChooseUs.map((item, i) => (<motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-slate-500/50"><div className="flex items-center gap-4 mb-4"><div className="w-14 h-14 bg-slate-500/10 rounded-xl flex items-center justify-center text-slate-400">{item.icon}</div><div className="text-sm font-bold text-slate-400 bg-slate-500/10 px-3 py-1 rounded-full">{item.stats}</div></div><h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3><p className="text-slate-400">{item.desc}</p></motion.div>))}
+            {whyChooseUs.map((item, i) => (<motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-slate-500/50"><div className="flex items-center gap-4 mb-4"><div className="w-14 h-14 bg-slate-500/10 rounded-xl flex items-center justify-center text-slate-400">{item.icon}</div><div className="text-sm font-bold text-slate-400 bg-slate-500/10 px-3 py-1 rounded-full">{item.stats}</div></div><h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3><p className="text-slate-400">{item.desc}</p></motion.div>))}
           </div>
         </div>
       </section>
@@ -210,7 +210,7 @@ export default function AppDevelopmentRaipur() {
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-slate-500/50 transition-all">
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-slate-500/50 transition-all">
                 <div className="text-slate-400 text-sm font-medium mb-2">{study.client}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
                 <p className="text-slate-400 mb-6 leading-relaxed">{study.description}</p>
@@ -225,13 +225,13 @@ export default function AppDevelopmentRaipur() {
       </section>
 
       {/* Development Process */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Our Development Process</h2></div>
           <div className="grid md:grid-cols-5 gap-6">
             {developmentProcess.map((phase, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="relative">
-                <div className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-slate-500/50 transition-all h-full">
+                <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-slate-500/50 transition-all h-full">
                   <div className="w-10 h-10 bg-slate-500 rounded-full flex items-center justify-center text-white font-bold mb-4">{phase.step}</div>
                   <h3 className="text-lg font-semibold text-white mb-1">{phase.title}</h3>
                   <div className="text-slate-400 text-sm mb-3">{phase.duration}</div>
@@ -249,7 +249,7 @@ export default function AppDevelopmentRaipur() {
           <div className="text-center mb-16"><h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Technology Stack</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {techStack.map((stack, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-slate-400 mb-4">{stack.category}</h3>
                 <div className="flex flex-wrap gap-2">{stack.technologies.map((tech, i) => (<span key={i} className="text-sm bg-slate-700 text-slate-300 px-3 py-1 rounded-full">{tech}</span>))}</div>
               </motion.div>
@@ -259,11 +259,11 @@ export default function AppDevelopmentRaipur() {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Raipur App Development Pricing</h2><p className="text-xl text-slate-400">40-50% savings compared to Delhi/Mumbai agencies with same quality.</p></div>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {pricing.map((p, i) => (<motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className={`bg-violet-800/50 border rounded-xl p-6 relative ${p.popular ? 'border-slate-500 ring-2 ring-slate-500/20' : 'border-violet-700'}`}>{p.popular && (<div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-slate-600 to-zinc-600 text-white text-xs font-bold px-4 py-1 rounded-full">MOST POPULAR</div>)}<h3 className="text-xl font-semibold text-white mb-1">{p.tier}</h3><p className="text-sm text-slate-400 mb-4">{p.ideal}</p><div className="text-3xl font-bold text-slate-400 mb-6">{p.price}</div><ul className="space-y-3 mb-6">{p.features.map((f, j) => (<li key={j} className="flex items-start gap-2 text-slate-300 text-sm"><CheckCircle2 className="w-4 h-4 text-slate-400 mt-0.5" />{f}</li>))}</ul><Button className={`w-full ${p.popular ? 'bg-gradient-to-r from-slate-600 to-zinc-600' : 'bg-slate-700'}`}><Link href="/contact">Get Started</Link></Button></motion.div>))}
+            {pricing.map((p, i) => (<motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className={`bg-slate-800/50 border rounded-xl p-6 relative ${p.popular ? 'border-slate-500 ring-2 ring-slate-500/20' : 'border-slate-700'}`}>{p.popular && (<div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-slate-600 to-zinc-600 text-white text-xs font-bold px-4 py-1 rounded-full">MOST POPULAR</div>)}<h3 className="text-xl font-semibold text-white mb-1">{p.tier}</h3><p className="text-sm text-slate-400 mb-4">{p.ideal}</p><div className="text-3xl font-bold text-slate-400 mb-6">{p.price}</div><ul className="space-y-3 mb-6">{p.features.map((f, j) => (<li key={j} className="flex items-start gap-2 text-slate-300 text-sm"><CheckCircle2 className="w-4 h-4 text-slate-400 mt-0.5" />{f}</li>))}</ul><Button className={`w-full ${p.popular ? 'bg-gradient-to-r from-slate-600 to-zinc-600' : 'bg-slate-700'}`}><Link href="/contact">Get Started</Link></Button></motion.div>))}
           </div>
         </div>
       </section>
@@ -271,21 +271,21 @@ export default function AppDevelopmentRaipur() {
       <TestimonialsSection />
 
       {/* FAQs */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-16"><h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Raipur App Development FAQs</h2></div>
-          <div className="space-y-4">{faqs.map((faq, i) => (<motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6"><h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3><p className="text-slate-400 leading-relaxed">{faq.answer}</p></motion.div>))}</div>
+          <div className="space-y-4">{faqs.map((faq, i) => (<motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6"><h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3><p className="text-slate-400 leading-relaxed">{faq.answer}</p></motion.div>))}</div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-br from-slate-800/50 to-zinc-800/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-slate-800/50 to-zinc-800/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Build Your Raipur App?</h2>
           <p className="text-xl text-slate-300 mb-8">Get a free consultation for your steel, mining, or government app.</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-slate-600 to-zinc-600 text-white px-8 py-6 text-lg"><Link href="/contact" className="flex items-center gap-2"><Phone className="w-5 h-5" />Schedule Free Consultation</Link></Button>
-            <a href="https://wa.me/918360723410" target="_blank"><Button size="lg" variant="outline" className="border-slate-500/50 text-slate-400 hover:bg-slate-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button></a>
+            <a href="https://wa.me/919872364476" target="_blank"><Button size="lg" variant="outline" className="border-slate-500/50 text-slate-400 hover:bg-slate-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button></a>
           </div>
           <p className="text-slate-400 mt-6">📍 Regular visits to Raipur • Naya Raipur smart city experience</p>
         </div>

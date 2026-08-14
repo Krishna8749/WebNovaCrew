@@ -34,14 +34,14 @@ export default function JobDetail() {
   return (
     <div className="min-h-screen bg-white font-sans pt-20">
       <SEO 
-        title={`${job.title} - Careers at XcFlown`}
+        title={`${job.title} - Careers at Web Nova Crew`}
         description={job.description}
         keywords={`${job.title} job, ${job.department} careers, web development jobs india, ${job.location}`}
       />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Careers", url: "https://xcflown.com/careers" },
-        { name: job.title, url: `https://xcflown.com/careers/${job.slug}` }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Careers", url: "https://webnovacrew.com/careers" },
+        { name: job.title, url: `https://webnovacrew.com/careers/${job.slug}` }
       ]} />
       
       <Navbar />
@@ -50,7 +50,7 @@ export default function JobDetail() {
       <section className="py-12 bg-gradient-to-b from-blue-50 to-white">
         <div className="container mx-auto max-w-6xl px-4">
           <Link href="/careers">
-            <Button variant="ghost" className="mb-6 text-slate-600 hover:text-violet-600">
+            <Button variant="ghost" className="mb-6 text-slate-600 hover:text-blue-600">
               <ArrowLeft className="w-4 h-4 mr-2" /> Back to Careers
             </Button>
           </Link>
@@ -60,10 +60,10 @@ export default function JobDetail() {
             animate={{ opacity: 1, y: 0 }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-xs bg-orange-100 text-lime-700 px-3 py-1 rounded-full font-bold">
+              <span className="text-xs bg-lime-100 text-lime-700 px-3 py-1 rounded-full font-bold">
                 {job.type}
               </span>
-              <span className="text-xs bg-violet-100 text-violet-700 px-3 py-1 rounded-full font-bold">
+              <span className="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-bold">
                 {job.department}
               </span>
             </div>
@@ -73,13 +73,13 @@ export default function JobDetail() {
             
             <div className="flex flex-wrap gap-6 text-slate-600">
               <span className="flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-violet-600" /> {job.location}
+                <MapPin className="w-5 h-5 text-blue-600" /> {job.location}
               </span>
               <span className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-violet-600" /> {job.experience}
+                <Clock className="w-5 h-5 text-blue-600" /> {job.experience}
               </span>
               <span className="flex items-center gap-2">
-                <IndianRupee className="w-5 h-5 text-violet-600" /> {job.salary}
+                <IndianRupee className="w-5 h-5 text-blue-600" /> {job.salary}
               </span>
             </div>
           </motion.div>
@@ -112,7 +112,7 @@ export default function JobDetail() {
                 <ul className="space-y-3">
                   {job.responsibilities.map((item, index) => (
                     <li key={index} className="flex items-start gap-3 text-slate-600">
-                      <CheckCircle2 className="w-5 h-5 text-orange-500 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-5 h-5 text-lime-500 shrink-0 mt-0.5" />
                       {item}
                     </li>
                   ))}
@@ -129,7 +129,7 @@ export default function JobDetail() {
                 <ul className="space-y-3">
                   {job.requirements.map((item, index) => (
                     <li key={index} className="flex items-start gap-3 text-slate-600">
-                      <CheckCircle2 className="w-5 h-5 text-violet-500 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
                       {item}
                     </li>
                   ))}
@@ -163,7 +163,7 @@ export default function JobDetail() {
                 <ul className="space-y-3">
                   {job.benefits.map((item, index) => (
                     <li key={index} className="flex items-start gap-3 text-slate-600">
-                      <CheckCircle2 className="w-5 h-5 text-orange-500 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-5 h-5 text-lime-500 shrink-0 mt-0.5" />
                       {item}
                     </li>
                   ))}
@@ -187,7 +187,7 @@ export default function JobDetail() {
                     </div>
                     <div>
                       <label className="text-sm font-medium text-slate-700 mb-1 block">Phone *</label>
-                      <Input placeholder="+91 83607 23410" className="bg-slate-50" />
+                      <Input placeholder="+91 98765 43210" className="bg-slate-50" />
                     </div>
                     <div>
                       <label className="text-sm font-medium text-slate-700 mb-1 block">LinkedIn Profile</label>
@@ -206,13 +206,13 @@ export default function JobDetail() {
                       <label className="text-sm font-medium text-slate-700 mb-1 block">Cover Letter</label>
                       <Textarea placeholder="Tell us why you're interested in this role..." className="bg-slate-50 min-h-[100px]" />
                     </div>
-                    <Button type="submit" className="w-full bg-violet-600 hover:bg-violet-700">
+                    <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
                       <Send className="w-4 h-4 mr-2" /> Submit Application
                     </Button>
                   </form>
                   
                   <p className="text-xs text-slate-400 mt-4 text-center">
-                    Or email your resume to <a href="mailto:careers@xcflown.com" className="text-violet-600 hover:underline">careers@xcflown.com</a>
+                    Or email your resume to <a href="mailto:careers@webnovacrew.com" className="text-blue-600 hover:underline">careers@webnovacrew.com</a>
                   </p>
                 </CardContent>
               </Card>

@@ -30,13 +30,13 @@ export default function Blog() {
     <div className="min-h-screen bg-white font-sans pt-20">
       <SEO 
         title="Blog - Web Development, SEO & Tech Insights" 
-        description="Read the latest articles on web development, mobile app development, SEO strategies, UI/UX design, and technology trends. Expert insights from XcFlown."
+        description="Read the latest articles on web development, mobile app development, SEO strategies, UI/UX design, and technology trends. Expert insights from Web Nova Crew."
         keywords="web development blog, mobile app development articles, SEO tips, UI/UX design trends, tech blog india, programming tutorials, react tutorials, flutter guides"
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Blog", url: "https://xcflown.com/blog" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Blog", url: "https://webnovacrew.com/blog" }
       ]} />
       
       <Navbar />
@@ -51,7 +51,7 @@ export default function Blog() {
           >
             <span className="text-lime-600 font-bold tracking-wider uppercase text-sm mb-4 block">Our Blog</span>
             <h1 className="text-4xl md:text-5xl font-poppins font-bold text-slate-900 mb-6">
-              Insights on <span className="text-violet-600">Web Development</span> & Technology
+              Insights on <span className="text-blue-600">Web Development</span> & Technology
             </h1>
             <p className="text-lg text-slate-600 mb-8">
               Expert articles, tutorials, and guides on web development, mobile apps, SEO, and digital transformation. Stay ahead with insights from India's top development team.
@@ -94,7 +94,7 @@ export default function Blog() {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute top-4 left-4">
-                        <span className="bg-violet-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                        <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                           Featured
                         </span>
                       </div>
@@ -109,7 +109,7 @@ export default function Blog() {
                         {post.readTime}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-slate-900 group-hover:text-violet-600 transition-colors mb-2">
+                    <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">
                       {post.title}
                     </h3>
                     <p className="text-slate-600 text-sm line-clamp-2">{post.excerpt}</p>
@@ -131,7 +131,7 @@ export default function Blog() {
                 onClick={() => setActiveCategory(cat.slug)}
                 className={`px-5 py-2 rounded-full font-medium text-sm transition-all ${
                   activeCategory === cat.slug
-                    ? "bg-violet-600 text-white"
+                    ? "bg-blue-600 text-white"
                     : "bg-white text-slate-600 hover:bg-slate-100 border border-slate-200"
                 }`}
               >
@@ -171,7 +171,7 @@ export default function Blog() {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute top-4 left-4">
-                        <span className="bg-white/90 backdrop-blur-sm text-violet-600 text-xs font-bold px-3 py-1 rounded-full">
+                        <span className="bg-white/90 backdrop-blur-sm text-blue-600 text-xs font-bold px-3 py-1 rounded-full">
                           {post.category}
                         </span>
                       </div>
@@ -187,11 +187,11 @@ export default function Blog() {
                           {post.readTime}
                         </span>
                       </div>
-                      <h3 className="text-lg font-bold text-slate-900 group-hover:text-violet-600 transition-colors mb-2 line-clamp-2">
+                      <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2 line-clamp-2">
                         {post.title}
                       </h3>
                       <p className="text-slate-600 text-sm line-clamp-2 mb-4">{post.excerpt}</p>
-                      <div className="flex items-center text-violet-600 font-semibold text-sm">
+                      <div className="flex items-center text-blue-600 font-semibold text-sm">
                         Read More <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>
@@ -208,16 +208,16 @@ export default function Blog() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-16 bg-violet-900 text-white">
+      <section className="py-16 bg-blue-900 text-white">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
-          <p className="text-violet-100 mb-8">Get the latest articles, tutorials, and industry insights delivered to your inbox weekly.</p>
+          <p className="text-blue-100 mb-8">Get the latest articles, tutorials, and industry insights delivered to your inbox weekly.</p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <Input 
               placeholder="Enter your email" 
-              className="bg-white/10 border-white/20 text-white placeholder:text-violet-200 flex-1"
+              className="bg-white/10 border-white/20 text-white placeholder:text-blue-200 flex-1"
             />
-            <Button className="bg-orange-500 text-violet-900 hover:bg-orange-400 font-bold px-8">
+            <Button className="bg-lime-500 text-blue-900 hover:bg-lime-400 font-bold px-8">
               Subscribe
             </Button>
           </div>

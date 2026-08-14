@@ -263,10 +263,10 @@ export default function AppDevelopmentGurgaon() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
-      <SEO title="App Development Company in Gurgaon | Mobile App Developers Gurugram | XcFlown" description="Top app development company in Gurgaon. Android, iOS, Flutter apps for MNCs, fintech in Cyber City, Golf Course Road. ₹50,000 onwards." keywords="app development Gurgaon, mobile app developers Gurugram, Cyber City app development, fintech app Gurgaon" />
-      <LocalBusinessSchema /><BreadcrumbSchema items={[{ name: "Home", url: "https://xcflown.com" }, { name: "Locations", url: "https://xcflown.com/locations" }, { name: "Gurgaon", url: "https://xcflown.com/locations/app-development-gurgaon" }]} />
-      <ServiceSchema serviceName="App Development in Gurgaon" serviceDescription="Professional mobile app development for Gurgaon businesses and MNCs." serviceUrl="https://xcflown.com/locations/app-development-gurgaon" />
+    <div className="min-h-screen bg-slate-950 font-sans">
+      <SEO title="App Development Company in Gurgaon | Mobile App Developers Gurugram | Web Nova Crew" description="Top app development company in Gurgaon. Android, iOS, Flutter apps for MNCs, fintech in Cyber City, Golf Course Road. ₹50,000 onwards." keywords="app development Gurgaon, mobile app developers Gurugram, Cyber City app development, fintech app Gurgaon" />
+      <LocalBusinessSchema /><BreadcrumbSchema items={[{ name: "Home", url: "https://webnovacrew.com" }, { name: "Locations", url: "https://webnovacrew.com/locations" }, { name: "Gurgaon", url: "https://webnovacrew.com/locations/app-development-gurgaon" }]} />
+      <ServiceSchema serviceName="App Development in Gurgaon" serviceDescription="Professional mobile app development for Gurgaon businesses and MNCs." serviceUrl="https://webnovacrew.com/locations/app-development-gurgaon" />
       <Navbar />
 
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -279,20 +279,20 @@ export default function AppDevelopmentGurgaon() {
             <p className="text-lg text-slate-400 mb-8">Serving Cyber City, Golf Course Road, DLF & across Gurugram.</p>
             <div className="flex flex-wrap gap-4 justify-center mb-12">
               <Button size="lg" className="bg-gradient-to-r from-sky-600 to-blue-600 text-white px-8"><Link href="/contact" className="flex items-center gap-2">Get Free Quote <ArrowRight className="w-5 h-5" /></Link></Button>
-              <a href="https://wa.me/918360723410"><Button size="lg" variant="outline" className="border-green-500/50 text-green-400"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp</Button></a>
+              <a href="https://wa.me/919872364476"><Button size="lg" variant="outline" className="border-green-500/50 text-green-400"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp</Button></a>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
               <div className="text-center bg-white/5 rounded-xl p-4 border border-sky-500/20"><div className="text-3xl font-bold text-sky-400">80+</div><div className="text-sm text-slate-400">Gurgaon Apps</div></div>
-              <div className="text-center bg-white/5 rounded-xl p-4 border border-sky-500/20"><div className="text-3xl font-bold text-violet-400">₹50K</div><div className="text-sm text-slate-400">Starting</div></div>
+              <div className="text-center bg-white/5 rounded-xl p-4 border border-sky-500/20"><div className="text-3xl font-bold text-blue-400">₹50K</div><div className="text-sm text-slate-400">Starting</div></div>
               <div className="text-center bg-white/5 rounded-xl p-4 border border-sky-500/20"><div className="text-3xl font-bold text-sky-400">3-10</div><div className="text-sm text-slate-400">Weeks</div></div>
-              <div className="text-center bg-white/5 rounded-xl p-4 border border-sky-500/20"><div className="text-3xl font-bold text-violet-400">35%</div><div className="text-sm text-slate-400">Savings</div></div>
+              <div className="text-center bg-white/5 rounded-xl p-4 border border-sky-500/20"><div className="text-3xl font-bold text-blue-400">35%</div><div className="text-sm text-slate-400">Savings</div></div>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Services - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">App Development Services in Gurgaon</h2>
@@ -301,7 +301,7 @@ export default function AppDevelopmentGurgaon() {
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-8 hover:border-sky-500/50 transition-all">
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-sky-500/50 transition-all">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-14 h-14 bg-sky-500/10 rounded-xl flex items-center justify-center text-sky-400 flex-shrink-0">{service.icon}</div>
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
@@ -326,7 +326,7 @@ export default function AppDevelopmentGurgaon() {
               <p className="text-slate-300 mb-4 leading-relaxed">Gurgaon is India's corporate capital with Cyber City and Golf Course Road hosting Fortune 500 companies and MNCs. The city has the highest concentration of corporate offices in India.</p>
               <p className="text-slate-300 leading-relaxed">We have deep experience building enterprise apps for large corporations. Our team understands corporate requirements, compliance needs, and enterprise security standards.</p>
             </div>
-            <div className="bg-gradient-to-br from-blue-950/30 to-slate-900/50 border border-violet-500/20 rounded-xl p-8">
+            <div className="bg-gradient-to-br from-blue-950/30 to-slate-900/50 border border-blue-500/20 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-white mb-4">Fintech Hub of India</h3>
               <p className="text-slate-300 mb-4 leading-relaxed">Gurgaon is India's fintech hub with major banks, NBFCs, and fintech startups. The city leads in digital payments, lending, and wealth management innovation.</p>
               <p className="text-slate-300 leading-relaxed">We specialize in RBI-compliant fintech apps. Our apps meet all regulatory requirements including PCI DSS, KYC/AML, and data localization.</p>
@@ -336,13 +336,13 @@ export default function AppDevelopmentGurgaon() {
       </section>
 
       {/* Industries - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Industries We Serve in Gurgaon</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
               <motion.div key={index} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: index * 0.05 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-sky-500/50 transition-all">
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-sky-500/50 transition-all">
                 <div className="w-12 h-12 bg-sky-500/10 rounded-xl flex items-center justify-center text-sky-400 mb-4">{industry.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{industry.name}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{industry.desc}</p>
@@ -359,7 +359,7 @@ export default function AppDevelopmentGurgaon() {
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-sky-500/50 transition-all">
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-sky-500/50 transition-all">
                 <div className="text-sky-400 text-sm font-medium mb-2">{study.client}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
                 <p className="text-slate-400 mb-6 leading-relaxed">{study.description}</p>
@@ -374,13 +374,13 @@ export default function AppDevelopmentGurgaon() {
       </section>
 
       {/* Areas - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Serving All Gurgaon Areas</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {areas.map((area, index) => (
               <motion.div key={index} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: index * 0.03 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-5 hover:border-sky-500/50 transition-all">
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-5 hover:border-sky-500/50 transition-all">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-sky-400 mt-1 flex-shrink-0" />
                   <div><h3 className="text-white font-semibold">{area.name}</h3><span className="text-sky-400 text-sm">{area.type}</span><p className="text-slate-400 text-sm mt-1">{area.desc}</p></div>
@@ -398,7 +398,7 @@ export default function AppDevelopmentGurgaon() {
           <div className="grid md:grid-cols-5 gap-6">
             {developmentProcess.map((phase, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="relative">
-                <div className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-sky-500/50 transition-all h-full">
+                <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-sky-500/50 transition-all h-full">
                   <div className="w-10 h-10 bg-sky-500 rounded-full flex items-center justify-center text-white font-bold mb-4">{phase.step}</div>
                   <h3 className="text-lg font-semibold text-white mb-1">{phase.title}</h3>
                   <div className="text-sky-400 text-sm mb-3">{phase.duration}</div>
@@ -411,12 +411,12 @@ export default function AppDevelopmentGurgaon() {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Technology Stack</h2></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {techStack.map((stack, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-sky-400 mb-4">{stack.category}</h3>
                 <div className="flex flex-wrap gap-2">{stack.technologies.map((tech, i) => (<span key={i} className="text-sm bg-slate-700 text-slate-300 px-3 py-1 rounded-full">{tech}</span>))}</div>
               </motion.div>
@@ -432,7 +432,7 @@ export default function AppDevelopmentGurgaon() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((item, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-sky-500/50 transition-all">
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-sky-500/50 transition-all">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-14 h-14 bg-sky-500/10 rounded-xl flex items-center justify-center text-sky-400">{item.icon}</div>
                   <div className="text-sm font-bold text-sky-400 bg-sky-500/10 px-3 py-1 rounded-full">{item.stats}</div>
@@ -446,13 +446,13 @@ export default function AppDevelopmentGurgaon() {
       </section>
 
       {/* Pricing - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Gurgaon App Development Pricing</h2><p className="text-xl text-slate-400 max-w-3xl mx-auto">35% savings compared to Cyber City agencies with same quality.</p></div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((plan, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className={`bg-violet-800/50 border rounded-xl p-8 transition-all ${plan.popular ? 'border-sky-500 ring-2 ring-sky-500/20' : 'border-violet-700 hover:border-sky-500/50'}`}>
+                className={`bg-slate-800/50 border rounded-xl p-8 transition-all ${plan.popular ? 'border-sky-500 ring-2 ring-sky-500/20' : 'border-slate-700 hover:border-sky-500/50'}`}>
                 {plan.popular && (<div className="text-center mb-4"><span className="bg-sky-500 text-white text-sm font-medium px-4 py-1 rounded-full">Most Popular</span></div>)}
                 <h3 className="text-2xl font-semibold text-white mb-2">{plan.tier}</h3>
                 <div className="text-3xl font-bold text-sky-400 mb-2">{plan.price}</div>
@@ -468,13 +468,13 @@ export default function AppDevelopmentGurgaon() {
       <TestimonialsSection />
 
       {/* FAQs */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Gurgaon App Development FAQs</h2></div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6">
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
               </motion.div>
@@ -484,13 +484,13 @@ export default function AppDevelopmentGurgaon() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-sky-950/50 to-blue-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-sky-950/50 to-blue-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl font-bold mb-6 text-white">Ready to Build Your Gurgaon App?</h2>
           <p className="text-xl text-slate-300 mb-8">Let's discuss your enterprise, fintech, or startup app project</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-sky-600 to-blue-600 text-white px-8"><Link href="/contact" className="flex items-center gap-2"><Phone className="w-5 h-5" />Contact Us</Link></Button>
-            <a href="https://wa.me/918360723410" target="_blank"><Button size="lg" variant="outline" className="border-sky-500/50 text-sky-400 hover:bg-sky-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button></a>
+            <a href="https://wa.me/919872364476" target="_blank"><Button size="lg" variant="outline" className="border-sky-500/50 text-sky-400 hover:bg-sky-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button></a>
           </div>
         </div>
       </section>

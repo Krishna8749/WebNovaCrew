@@ -163,8 +163,8 @@ export default function Portfolio() {
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Portfolio", url: "https://xcflown.com/portfolio" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Portfolio", url: "https://webnovacrew.com/portfolio" }
       ]} />
       
       <Navbar />
@@ -179,7 +179,7 @@ export default function Portfolio() {
           >
             <span className="text-lime-600 font-bold tracking-wider uppercase text-sm mb-4 block">Our Portfolio</span>
             <h1 className="text-4xl md:text-6xl font-poppins font-bold text-slate-900 mb-6">
-              Web & App Development <span className="text-violet-600">Case Studies</span>
+              Web & App Development <span className="text-blue-600">Case Studies</span>
             </h1>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
               Explore our portfolio of 50+ successful projects across web development, mobile apps, e-commerce, and SaaS platforms. Each project showcases our commitment to delivering measurable business results.
@@ -188,7 +188,7 @@ export default function Portfolio() {
             {/* Stats */}
             <div className="flex flex-wrap justify-center gap-8 mb-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-violet-600">50+</div>
+                <div className="text-3xl font-bold text-blue-600">50+</div>
                 <div className="text-sm text-slate-500">Projects Delivered</div>
               </div>
               <div className="text-center">
@@ -196,7 +196,7 @@ export default function Portfolio() {
                 <div className="text-sm text-slate-500">Client Satisfaction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-violet-600">10+</div>
+                <div className="text-3xl font-bold text-blue-600">10+</div>
                 <div className="text-sm text-slate-500">Industries Served</div>
               </div>
             </div>
@@ -214,7 +214,7 @@ export default function Portfolio() {
                 onClick={() => setActiveFilter(cat)}
                 className={`px-5 py-2 rounded-full font-medium text-sm transition-all ${
                   activeFilter === cat
-                    ? "bg-violet-600 text-white"
+                    ? "bg-blue-600 text-white"
                     : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                 }`}
               >
@@ -285,23 +285,23 @@ export default function Portfolio() {
                       </div>
                       <div className="space-y-3">
                         <div className="bg-white rounded-lg p-3 shadow-sm border">
-                          <div className="w-full h-20 bg-violet-200 rounded mb-2 flex items-center justify-center">
-                            <span className="text-violet-700 text-xs">3D Virtual Tour</span>
+                          <div className="w-full h-20 bg-blue-200 rounded mb-2 flex items-center justify-center">
+                            <span className="text-blue-700 text-xs">3D Virtual Tour</span>
                           </div>
                           <div className="text-gray-800 font-semibold text-sm mb-1">Luxury 3BHK Apartment</div>
                           <div className="text-gray-600 text-xs mb-2">Bandra West, Mumbai</div>
                           <div className="flex items-center justify-between">
-                            <div className="text-violet-600 font-bold">₹2.5 Cr</div>
-                            <div className="bg-violet-600 text-white px-2 py-1 rounded text-xs">View Details</div>
+                            <div className="text-blue-600 font-bold">₹2.5 Cr</div>
+                            <div className="bg-blue-600 text-white px-2 py-1 rounded text-xs">View Details</div>
                           </div>
                         </div>
                         <div className="grid grid-cols-2 gap-2">
                           <div className="bg-white rounded-lg p-2 text-center shadow-sm border">
-                            <div className="text-violet-600 font-bold">380%</div>
+                            <div className="text-blue-600 font-bold">380%</div>
                             <div className="text-gray-600 text-xs">More Leads</div>
                           </div>
                           <div className="bg-white rounded-lg p-2 text-center shadow-sm border">
-                            <div className="text-violet-600 font-bold">5K+</div>
+                            <div className="text-blue-600 font-bold">5K+</div>
                             <div className="text-gray-600 text-xs">Properties</div>
                           </div>
                         </div>
@@ -429,19 +429,19 @@ export default function Portfolio() {
                               <div className="text-gray-800 font-semibold text-sm">KWI → BOM</div>
                               <div className="text-gray-600 text-xs">Kuwait to Mumbai</div>
                             </div>
-                            <div className="text-violet-600 font-bold">KWD 180</div>
+                            <div className="text-blue-600 font-bold">KWD 180</div>
                           </div>
-                          <div className="bg-violet-600 text-white text-center py-2 rounded text-sm font-semibold">
+                          <div className="bg-blue-600 text-white text-center py-2 rounded text-sm font-semibold">
                             Book Flight
                           </div>
                         </div>
                         <div className="grid grid-cols-2 gap-2">
                           <div className="bg-white rounded-lg p-2 text-center shadow-sm border">
-                            <div className="text-violet-600 font-bold">KWD 2M+</div>
+                            <div className="text-blue-600 font-bold">KWD 2M+</div>
                             <div className="text-gray-600 text-xs">Monthly</div>
                           </div>
                           <div className="bg-white rounded-lg p-2 text-center shadow-sm border">
-                            <div className="text-violet-600 font-bold">Arabic</div>
+                            <div className="text-blue-600 font-bold">Arabic</div>
                             <div className="text-gray-600 text-xs">Support</div>
                           </div>
                         </div>
@@ -509,13 +509,13 @@ export default function Portfolio() {
 
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
                     <Link href="/contact">
-                      <Button className="rounded-full font-bold bg-orange-400 text-violet-900 hover:bg-white">
+                      <Button className="rounded-full font-bold bg-lime-400 text-blue-900 hover:bg-white">
                         View Full Case Study <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
                     </Link>
                   </div>
                   {/* Results Badge */}
-                  <div className="absolute top-4 right-4 bg-orange-400 text-violet-900 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                  <div className="absolute top-4 right-4 bg-lime-400 text-blue-900 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
                     <TrendingUp className="w-3 h-3" /> {project.results}
                   </div>
                 </div>
@@ -523,7 +523,7 @@ export default function Portfolio() {
                 {/* Content */}
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-bold text-violet-600 uppercase tracking-wider">{project.category}</span>
+                    <span className="text-xs font-bold text-blue-600 uppercase tracking-wider">{project.category}</span>
                     <span className="text-xs text-slate-400">{project.industry}</span>
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2 font-poppins">{project.title}</h3>
@@ -556,7 +556,7 @@ export default function Portfolio() {
       {/* Testimonials */}
       <TestimonialsSection 
         title="What Clients Say About Our Work"
-        subtitle="Don't just take our word for it. Here's what our clients have to say about working with XcFlown."
+        subtitle="Don't just take our word for it. Here's what our clients have to say about working with Web Nova Crew."
       />
       
       {/* CTA */}

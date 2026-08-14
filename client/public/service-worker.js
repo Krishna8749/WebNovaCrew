@@ -1,12 +1,12 @@
-const CACHE_NAME = 'xcflown-v3';
-const RUNTIME_CACHE = 'xcflown-runtime-v3';
+const CACHE_NAME = 'webnovacrew-v3';
+const RUNTIME_CACHE = 'webnovacrew-runtime-v3';
 
 // Assets to cache on install
 const PRECACHE_URLS = [
   '/',
   '/favicon.svg',
   '/logo.png',
-  '/xcflown-logo.png',
+  '/webnova-logo.png',
   '/manifest.json'
 ];
 
@@ -133,7 +133,7 @@ self.addEventListener('push', (event) => {
   };
 
   event.waitUntil(
-    self.registration.showNotification('XcFlown', options)
+    self.registration.showNotification('Web Nova Crew', options)
   );
 });
 

@@ -5,170 +5,170 @@
   
   <!-- Home Page -->
   <url>
-    <loc>https://xcflown.com/</loc>
+    <loc>https://webnovacrew.com/</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/" />
-    <xhtml:link rel="alternate" hreflang="en-in" href="https://xcflown.com/" />
-    <xhtml:link rel="alternate" hreflang="en-kw" href="https://xcflown.com/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://xcflown.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://webnovacrew.com/" />
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://webnovacrew.com/" />
+    <xhtml:link rel="alternate" hreflang="en-kw" href="https://webnovacrew.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://webnovacrew.com/" />
   </url>
 
   <!-- About Page -->
   <url>
-    <loc>https://xcflown.com/about</loc>
+    <loc>https://webnovacrew.com/about</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://webnovacrew.com/about" />
   </url>
 
   <!-- Services Page -->
   <url>
-    <loc>https://xcflown.com/services</loc>
+    <loc>https://webnovacrew.com/services</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://webnovacrew.com/services" />
   </url>
 
   <!-- Portfolio Page -->
   <url>
-    <loc>https://xcflown.com/portfolio</loc>
+    <loc>https://webnovacrew.com/portfolio</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/portfolio" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://webnovacrew.com/portfolio" />
   </url>
 
   <!-- Blog Page -->
   <url>
-    <loc>https://xcflown.com/blog</loc>
+    <loc>https://webnovacrew.com/blog</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://webnovacrew.com/blog" />
   </url>
 
   <!-- Contact Page -->
   <url>
-    <loc>https://xcflown.com/contact</loc>
+    <loc>https://webnovacrew.com/contact</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://webnovacrew.com/contact" />
   </url>
 
   <!-- Pricing Page -->
   <url>
-    <loc>https://xcflown.com/pricing</loc>
+    <loc>https://webnovacrew.com/pricing</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/pricing" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://webnovacrew.com/pricing" />
   </url>
 
   <!-- Team Page -->
   <url>
-    <loc>https://xcflown.com/team</loc>
+    <loc>https://webnovacrew.com/team</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/team" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://webnovacrew.com/team" />
   </url>
 
   <!-- Founder Page -->
   <url>
-    <loc>https://xcflown.com/founder</loc>
+    <loc>https://webnovacrew.com/founder</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/founder" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://webnovacrew.com/founder" />
   </url>
 
   <!-- Careers Page -->
   <url>
-    <loc>https://xcflown.com/careers</loc>
+    <loc>https://webnovacrew.com/careers</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://xcflown.com/careers" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://webnovacrew.com/careers" />
   </url>
 
   <!-- Service Pages -->
   <url>
-    <loc>https://xcflown.com/services/ai-app-development</loc>
+    <loc>https://webnovacrew.com/services/ai-app-development</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://xcflown.com/services/app-development-india</loc>
+    <loc>https://webnovacrew.com/services/app-development-india</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://xcflown.com/services/real-estate-app-development</loc>
+    <loc>https://webnovacrew.com/services/real-estate-app-development</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://xcflown.com/services/ecommerce-app-development</loc>
+    <loc>https://webnovacrew.com/services/ecommerce-app-development</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://xcflown.com/services/on-demand-app-development</loc>
+    <loc>https://webnovacrew.com/services/on-demand-app-development</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://xcflown.com/services/ai-chatbot-development</loc>
+    <loc>https://webnovacrew.com/services/ai-chatbot-development</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://xcflown.com/services/erp-crm-development</loc>
+    <loc>https://webnovacrew.com/services/erp-crm-development</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://xcflown.com/services/web-app-development</loc>
+    <loc>https://webnovacrew.com/services/web-app-development</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://xcflown.com/services/mobile-app-development</loc>
+    <loc>https://webnovacrew.com/services/mobile-app-development</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://xcflown.com/services/flutter-app-development</loc>
+    <loc>https://webnovacrew.com/services/flutter-app-development</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://xcflown.com/services/react-native-development</loc>
+    <loc>https://webnovacrew.com/services/react-native-development</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -176,14 +176,14 @@
 
   <!-- Legal Pages -->
   <url>
-    <loc>https://xcflown.com/privacy-policy</loc>
+    <loc>https://webnovacrew.com/privacy-policy</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://xcflown.com/terms-of-service</loc>
+    <loc>https://webnovacrew.com/terms-of-service</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

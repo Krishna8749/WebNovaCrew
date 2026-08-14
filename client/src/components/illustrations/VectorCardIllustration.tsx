@@ -21,14 +21,14 @@ export function VectorCardIllustration({ type, className = "" }: VectorCardIllus
       return (
         <div className={`${containerClass} from-slate-950 via-slate-900 to-blue-950/40`}>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(59,130,246,0.15),rgba(0,0,0,0))]" />
-          <svg className="w-2/3 h-2/3 text-violet-500/20 max-w-[200px]" viewBox="0 0 100 100" fill="none">
+          <svg className="w-2/3 h-2/3 text-blue-500/20 max-w-[200px]" viewBox="0 0 100 100" fill="none">
             <circle cx="50" cy="50" r="45" stroke="currentColor" strokeWidth="1.5" strokeDasharray="3 3" />
             <polygon points="43,35 63,50 43,65" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
             <path d="M15,50 H85 M50,15 V85" stroke="currentColor" strokeWidth="0.5" opacity="0.3" />
           </svg>
           {/* Glowing Play Overlay */}
-          <div className="absolute flex h-16 w-16 items-center justify-center rounded-full bg-violet-500/10 border border-violet-500/30 shadow-[0_0_20px_rgba(59,130,246,0.2)] animate-pulse">
-            <svg className="h-6 w-6 text-violet-400 fill-current ml-0.5" viewBox="0 0 24 24">
+          <div className="absolute flex h-16 w-16 items-center justify-center rounded-full bg-blue-500/10 border border-blue-500/30 shadow-[0_0_20px_rgba(59,130,246,0.2)] animate-pulse">
+            <svg className="h-6 w-6 text-blue-400 fill-current ml-0.5" viewBox="0 0 24 24">
               <path d="M8 5v14l11-7z" />
             </svg>
           </div>
@@ -80,7 +80,7 @@ export function VectorCardIllustration({ type, className = "" }: VectorCardIllus
     case "stepPaste":
       return (
         <div className={`${containerClass} from-slate-950 via-slate-900 to-blue-950/40`}>
-          <svg className="w-1/2 h-1/2 text-violet-400" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg className="w-1/2 h-1/2 text-blue-400" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2">
             {/* Input card mockup */}
             <rect x="15" y="30" width="70" height="40" rx="6" strokeWidth="1.5" />
             {/* Paste Button */}
@@ -129,7 +129,7 @@ export function VectorCardIllustration({ type, className = "" }: VectorCardIllus
     case "guideIphone":
       return (
         <div className={`${containerClass} from-slate-950 via-slate-900 to-blue-950/40`}>
-          <svg className="w-1/2 h-1/2 text-violet-400" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg className="w-1/2 h-1/2 text-blue-400" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2">
             {/* Mobile device frame */}
             <rect x="28" y="10" width="44" height="80" rx="8" strokeWidth="2" />
             <line x1="43" y1="14" x2="57" y2="14" strokeWidth="1.5" />

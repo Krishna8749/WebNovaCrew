@@ -22,7 +22,7 @@ function shareOriginFromUrl(shareUrl: string): string {
   try {
     return new URL(shareUrl).origin;
   } catch {
-    return "https://xcflown.com";
+    return "https://webnovacrew.com";
   }
 }
 

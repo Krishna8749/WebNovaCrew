@@ -25,8 +25,8 @@ export function CTASection({
   showPhone = true
 }: CTASectionProps) {
   const variants = {
-    primary: "bg-violet-900 text-white",
-    secondary: "bg-orange-400 text-violet-900",
+    primary: "bg-blue-900 text-white",
+    secondary: "bg-lime-400 text-blue-900",
     gradient: "bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white"
   };
 
@@ -35,8 +35,8 @@ export function CTASection({
       {/* Background Elements */}
       {variant !== "secondary" && (
         <>
-          <div className="absolute top-0 right-0 w-96 h-96 bg-violet-600 rounded-full blur-3xl opacity-20 translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-500 rounded-full blur-3xl opacity-10 -translate-x-1/2 translate-y-1/2"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full blur-3xl opacity-20 translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-lime-500 rounded-full blur-3xl opacity-10 -translate-x-1/2 translate-y-1/2"></div>
         </>
       )}
 
@@ -48,7 +48,7 @@ export function CTASection({
           className="text-center"
         >
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-            <Rocket className={`w-5 h-5 ${variant === "secondary" ? "text-violet-600" : "text-orange-400"}`} />
+            <Rocket className={`w-5 h-5 ${variant === "secondary" ? "text-blue-600" : "text-lime-400"}`} />
             <span className="text-sm font-semibold">Free Consultation Available</span>
           </div>
 
@@ -57,7 +57,7 @@ export function CTASection({
           </h2>
           
           <p className={`text-xl mb-10 max-w-2xl mx-auto leading-relaxed ${
-            variant === "secondary" ? "text-violet-800" : "text-violet-100"
+            variant === "secondary" ? "text-blue-800" : "text-blue-100"
           }`}>
             {subtitle}
           </p>
@@ -68,8 +68,8 @@ export function CTASection({
                 size="lg" 
                 className={`font-bold text-lg px-8 py-7 rounded-full shadow-xl transition-all hover:scale-105 ${
                   variant === "secondary" 
-                    ? "bg-violet-900 text-white hover:bg-violet-800" 
-                    : "bg-orange-500 text-violet-900 hover:bg-orange-400"
+                    ? "bg-blue-900 text-white hover:bg-blue-800" 
+                    : "bg-lime-500 text-blue-900 hover:bg-lime-400"
                 }`}
               >
                 {primaryButtonText}
@@ -83,7 +83,7 @@ export function CTASection({
                 variant="outline"
                 className={`font-bold text-lg px-8 py-7 rounded-full ${
                   variant === "secondary"
-                    ? "border-violet-900 text-violet-900 hover:bg-violet-900 hover:text-white"
+                    ? "border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white"
                     : "border-white/30 text-white hover:bg-white/10"
                 }`}
               >
@@ -94,11 +94,11 @@ export function CTASection({
 
           {showPhone && (
             <div className={`mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 ${
-              variant === "secondary" ? "text-violet-800" : "text-violet-200"
+              variant === "secondary" ? "text-blue-800" : "text-blue-200"
             }`}>
-              <a href="tel:+918360723410" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
+              <a href="tel:+919872364476" className="flex items-center gap-2 hover:text-lime-400 transition-colors">
                 <Phone className="w-5 h-5" />
-                <span className="font-semibold">+91 83607 23410</span>
+                <span className="font-semibold">+91 98723 64476</span>
               </a>
               <span className="hidden sm:block">•</span>
               <div className="flex items-center gap-2">
@@ -123,7 +123,7 @@ export function InlineCTA({
     <div className="bg-gradient-to-r from-blue-50 to-lime-50 rounded-2xl p-8 text-center border border-blue-100">
       <p className="text-slate-700 font-medium mb-4">{text}</p>
       <Link href={link}>
-        <Button className="bg-violet-600 hover:bg-violet-700 text-white font-bold rounded-full px-6">
+        <Button className="bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full px-6">
           {buttonText} <ArrowRight className="w-4 h-4 ml-2" />
         </Button>
       </Link>

@@ -1,6 +1,6 @@
 {
-  "name": "XcFlown - App Development Company",
-  "short_name": "xcflown",
+  "name": "Web Nova Crew - App Development Company",
+  "short_name": "WebNovaCrew",
   "description": "India's #1 Web & App Development Company. Custom mobile apps, AI solutions, and web development services.",
   "start_url": "/",
   "display": "standalone",
@@ -31,7 +31,7 @@
       "purpose": "any"
     },
     {
-      "src": "/xcflown-logo.png",
+      "src": "/webnova-logo.png",
       "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "any"

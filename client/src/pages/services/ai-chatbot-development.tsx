@@ -107,22 +107,22 @@ export default function AIChatbotDevelopment() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
-        title="AI Chatbot Development Company India | GPT-4 Chatbot, WhatsApp Bot | XcFlown" 
+        title="AI Chatbot Development Company India | GPT-4 Chatbot, WhatsApp Bot | Web Nova Crew" 
         description="Leading AI chatbot development company in India. We build GPT-4 powered chatbots for WhatsApp, websites & apps. Custom AI chatbots for customer support, lead generation & e-commerce. Get a free consultation!"
         keywords="AI chatbot development, GPT-4 chatbot, WhatsApp chatbot development, AI chatbot company India, custom chatbot development, conversational AI, chatbot for business, customer support chatbot, lead generation chatbot, e-commerce chatbot"
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Services", url: "https://xcflown.com/services" },
-        { name: "AI Chatbot Development", url: "https://xcflown.com/services/ai-chatbot-development" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Services", url: "https://webnovacrew.com/services" },
+        { name: "AI Chatbot Development", url: "https://webnovacrew.com/services/ai-chatbot-development" }
       ]} />
       <ServiceSchema 
         serviceName="AI Chatbot Development"
         serviceDescription="Professional AI chatbot development services. We build intelligent GPT-4 powered chatbots for WhatsApp, websites, and mobile apps for customer support, lead generation, and e-commerce."
-        serviceUrl="https://xcflown.com/services/ai-chatbot-development"
+        serviceUrl="https://webnovacrew.com/services/ai-chatbot-development"
       />
       <FAQSchema faqs={faqs} />
       
@@ -131,13 +131,13 @@ export default function AIChatbotDevelopment() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/30 to-slate-950">
-          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-violet-500/20 rounded-full blur-[120px]"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-orange-500/20 rounded-full blur-[100px]"></div>
+          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-blue-500/20 rounded-full blur-[120px]"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-cyan-500/20 rounded-full blur-[100px]"></div>
         </div>
 
         <div className="container mx-auto max-w-7xl px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-violet-500/20 text-violet-400 px-5 py-2 rounded-full text-sm font-bold mb-6 border border-violet-500/30">
+            <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-400 px-5 py-2 rounded-full text-sm font-bold mb-6 border border-blue-500/30">
               <Bot className="w-4 h-4" /> GPT-4 Powered Chatbots
             </div>
             
@@ -145,9 +145,9 @@ export default function AIChatbotDevelopment() {
               AI Chatbot Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Company India</span>
             </h1>
             
-            <p className="text-xl text-violet-200/80 mb-8 leading-relaxed">
+            <p className="text-xl text-blue-200/80 mb-8 leading-relaxed">
               Build intelligent <strong className="text-white">GPT-4 & Claude powered chatbots</strong> for WhatsApp, websites & apps. 
-              Automate customer support, generate leads & boost sales with <strong className="text-orange-400">24/7 AI assistants</strong>.
+              Automate customer support, generate leads & boost sales with <strong className="text-cyan-400">24/7 AI assistants</strong>.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -156,7 +156,7 @@ export default function AIChatbotDevelopment() {
                   Get Free Consultation <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-              <a href="https://wa.me/918360723410" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+              <a href="https://wa.me/919872364476" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                 <Button size="lg" variant="outline" className="border-2 border-green-500/50 text-green-400 hover:bg-green-500/10 font-bold text-lg px-8 py-7 rounded-full">
                   <MessageSquare className="w-5 h-5 mr-2" /> WhatsApp Us
                 </Button>
@@ -173,10 +173,10 @@ export default function AIChatbotDevelopment() {
               ].map((stat, i) => (
                 <div
                   key={i}
-                  className="bg-white/5 backdrop-blur-sm border border-violet-500/20 rounded-2xl p-6"
+                  className="bg-white/5 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-6"
                 >
-                  <div className="text-3xl md:text-4xl font-bold text-violet-400">{stat.value}</div>
-                  <div className="text-violet-200/70">{stat.label}</div>
+                  <div className="text-3xl md:text-4xl font-bold text-blue-400">{stat.value}</div>
+                  <div className="text-blue-200/70">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -189,9 +189,9 @@ export default function AIChatbotDevelopment() {
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Your Business Needs an <span className="text-violet-400">AI Chatbot</span>
+              Why Your Business Needs an <span className="text-blue-400">AI Chatbot</span>
             </h2>
-            <p className="text-xl text-violet-200/70 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-200/70 max-w-3xl mx-auto">
               Transform customer experience and reduce operational costs with intelligent automation
             </p>
           </div>
@@ -200,13 +200,13 @@ export default function AIChatbotDevelopment() {
             {benefits.map((benefit, i) => (
               <div
                 key={i}
-                className="bg-white/5 border border-violet-500/20 rounded-2xl p-6 hover:border-violet-500/50 transition-all"
+                className="bg-white/5 border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/50 transition-all"
               >
                 <div className="flex items-center gap-3 mb-3">
                   <CheckCircle2 className="w-6 h-6 text-green-400" />
                   <h3 className="text-xl font-bold text-white">{benefit.title}</h3>
                 </div>
-                <p className="text-violet-200/70">{benefit.desc}</p>
+                <p className="text-blue-200/70">{benefit.desc}</p>
               </div>
             ))}
           </div>
@@ -214,13 +214,13 @@ export default function AIChatbotDevelopment() {
       </section>
 
       {/* Chatbot Features */}
-      <section className="py-24 bg-violet-950">
+      <section className="py-24 bg-slate-950">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              AI Chatbot <span className="text-violet-400">Features We Build</span>
+              AI Chatbot <span className="text-blue-400">Features We Build</span>
             </h2>
-            <p className="text-xl text-violet-200/70 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-200/70 max-w-3xl mx-auto">
               Enterprise-grade chatbot capabilities powered by the latest AI technology
             </p>
           </div>
@@ -229,13 +229,13 @@ export default function AIChatbotDevelopment() {
             {chatbotFeatures.map((feature, i) => (
               <div
                 key={i}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-2xl p-6 hover:border-violet-500/50 transition-all group"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-2xl p-6 hover:border-blue-500/50 transition-all group"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-violet-200/60 text-sm">{feature.desc}</p>
+                <p className="text-blue-200/60 text-sm">{feature.desc}</p>
               </div>
             ))}
           </div>
@@ -247,9 +247,9 @@ export default function AIChatbotDevelopment() {
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Types of <span className="text-violet-400">AI Chatbots</span> We Build
+              Types of <span className="text-blue-400">AI Chatbots</span> We Build
             </h2>
-            <p className="text-xl text-violet-200/70 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-200/70 max-w-3xl mx-auto">
               Choose the right chatbot solution for your business needs
             </p>
           </div>
@@ -258,16 +258,16 @@ export default function AIChatbotDevelopment() {
             {chatbotTypes.map((type, i) => (
               <div
                 key={i}
-                className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-violet-500/50 transition-all"
+                className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-blue-500/50 transition-all"
               >
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-2xl font-bold text-white">{type.title}</h3>
-                  <span className="text-violet-400 font-bold text-lg">{type.price}</span>
+                  <span className="text-blue-400 font-bold text-lg">{type.price}</span>
                 </div>
-                <p className="text-violet-200/70 mb-6">{type.desc}</p>
+                <p className="text-blue-200/70 mb-6">{type.desc}</p>
                 <ul className="space-y-2">
                   {type.features.map((feature, j) => (
-                    <li key={j} className="flex items-center gap-2 text-violet-200/80">
+                    <li key={j} className="flex items-center gap-2 text-blue-200/80">
                       <CheckCircle2 className="w-4 h-4 text-green-400 shrink-0" />
                       {feature}
                     </li>
@@ -280,11 +280,11 @@ export default function AIChatbotDevelopment() {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-20 bg-violet-950">
+      <section className="py-20 bg-slate-950">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Technologies <span className="text-violet-400">We Use</span>
+              Technologies <span className="text-blue-400">We Use</span>
             </h2>
           </div>
 
@@ -292,7 +292,7 @@ export default function AIChatbotDevelopment() {
             {techStack.map((tech, i) => (
               <span
                 key={i}
-                className="bg-white/5 border border-violet-500/20 rounded-full px-5 py-2 text-white font-medium hover:border-violet-500/50 transition-all"
+                className="bg-white/5 border border-blue-500/20 rounded-full px-5 py-2 text-white font-medium hover:border-blue-500/50 transition-all"
               >
                 {tech}
               </span>
@@ -307,7 +307,7 @@ export default function AIChatbotDevelopment() {
             {integrations.map((integration, i) => (
               <span
                 key={i}
-                className="bg-violet-500/10 border border-violet-500/30 rounded-full px-5 py-2 text-violet-300 font-medium hover:bg-violet-500/20 transition-all"
+                className="bg-blue-500/10 border border-blue-500/30 rounded-full px-5 py-2 text-blue-300 font-medium hover:bg-blue-500/20 transition-all"
               >
                 {integration}
               </span>
@@ -321,7 +321,7 @@ export default function AIChatbotDevelopment() {
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Our Chatbot Development <span className="text-violet-400">Process</span>
+              Our Chatbot Development <span className="text-blue-400">Process</span>
             </h2>
           </div>
 
@@ -329,13 +329,13 @@ export default function AIChatbotDevelopment() {
             {processSteps.map((step, i) => (
               <div
                 key={i}
-                className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-violet-500/50 transition-all relative"
+                className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-blue-500/50 transition-all relative"
               >
                 <div className="absolute -top-4 -left-4 w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold">
                   {step.step}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3 mt-2">{step.title}</h3>
-                <p className="text-violet-200/70">{step.desc}</p>
+                <p className="text-blue-200/70">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -343,11 +343,11 @@ export default function AIChatbotDevelopment() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-violet-950">
+      <section className="py-24 bg-slate-950">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Frequently Asked <span className="text-violet-400">Questions</span>
+              Frequently Asked <span className="text-blue-400">Questions</span>
             </h2>
           </div>
           
@@ -355,10 +355,10 @@ export default function AIChatbotDevelopment() {
             {faqs.map((faq, i) => (
               <div
                 key={i}
-                className="bg-white/5 border border-violet-500/20 rounded-2xl p-6"
+                className="bg-white/5 border border-blue-500/20 rounded-2xl p-6"
               >
                 <h3 className="text-lg font-bold text-white mb-3">{faq.question}</h3>
-                <p className="text-violet-200/70">{faq.answer}</p>
+                <p className="text-blue-200/70">{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -376,11 +376,11 @@ export default function AIChatbotDevelopment() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
-              <Button size="lg" className="bg-white text-violet-600 hover:bg-violet-50 font-bold text-lg px-10 py-7 rounded-full">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 font-bold text-lg px-10 py-7 rounded-full">
                 Start Your Project <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
-            <a href="tel:+918360723410">
+            <a href="tel:+919872364476">
               <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-10 py-7 rounded-full">
                 <Phone className="w-5 h-5 mr-2" /> Call Now
               </Button>

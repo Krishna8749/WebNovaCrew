@@ -12,7 +12,7 @@ vite.config.ts.*
 node_modules/.vite/
 
 # Nested clone / accidental repo inside this project
-web-Xc-Flown-ai-company/
+web-nova-crew-ai-company/
 
 # Local editor settings (optional)
 .vscode/

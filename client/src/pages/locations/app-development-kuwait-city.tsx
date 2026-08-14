@@ -26,19 +26,19 @@ export default function AppDevelopmentKuwaitCity() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
-        title="App Development Company in Kuwait City | Mobile App Developers | XcFlown" 
-        description="Best app development company in Kuwait City. We build Arabic/English Android, iOS, Flutter apps with KNET integration. Serving Kuwait City, Salmiya, Hawalli. Call +91 83607 23410."
+        title="App Development Company in Kuwait City | Mobile App Developers | Web Nova Crew" 
+        description="Best app development company in Kuwait City. We build Arabic/English Android, iOS, Flutter apps with KNET integration. Serving Kuwait City, Salmiya, Hawalli. Call +91 98723 64476."
         keywords="app development Kuwait City, mobile app developer Kuwait, Android app Kuwait, iOS app Kuwait, Flutter developer Kuwait, Arabic app development, KNET integration, app development company Kuwait"
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Locations", url: "https://xcflown.com/locations" },
-        { name: "App Development Kuwait City", url: "https://xcflown.com/locations/app-development-kuwait-city" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Locations", url: "https://webnovacrew.com/locations" },
+        { name: "App Development Kuwait City", url: "https://webnovacrew.com/locations/app-development-kuwait-city" }
       ]} />
-      <ServiceSchema serviceName="App Development in Kuwait City" serviceDescription="Professional app development services in Kuwait City. Arabic/English apps with KNET integration." serviceUrl="https://xcflown.com/locations/app-development-kuwait-city" />
+      <ServiceSchema serviceName="App Development in Kuwait City" serviceDescription="Professional app development services in Kuwait City. Arabic/English apps with KNET integration." serviceUrl="https://webnovacrew.com/locations/app-development-kuwait-city" />
       
       <Navbar />
 
@@ -57,21 +57,21 @@ export default function AppDevelopmentKuwaitCity() {
               App Development Company in <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">Kuwait City</span>
             </h1>
             
-            <p className="text-xl text-violet-200/80 mb-8 leading-relaxed">
+            <p className="text-xl text-blue-200/80 mb-8 leading-relaxed">
               Kuwait's trusted <strong className="text-white">mobile app development partner</strong>. We build 
               <strong className="text-green-400"> Arabic/English apps with KNET integration</strong> for businesses across Kuwait. 40+ Kuwait apps delivered.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <Link href="/contact"><Button size="lg" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold text-lg px-8 py-7 rounded-full shadow-2xl">Get Free Quote <ArrowRight className="w-5 h-5 ml-2" /></Button></Link>
-              <a href="https://wa.me/918360723410" target="_blank"><Button size="lg" variant="outline" className="border-2 border-green-500/50 text-green-400 hover:bg-green-500/10 font-bold text-lg px-8 py-7 rounded-full"><MessageSquare className="w-5 h-5 mr-2" /> WhatsApp Us</Button></a>
+              <a href="https://wa.me/919872364476" target="_blank"><Button size="lg" variant="outline" className="border-2 border-green-500/50 text-green-400 hover:bg-green-500/10 font-bold text-lg px-8 py-7 rounded-full"><MessageSquare className="w-5 h-5 mr-2" /> WhatsApp Us</Button></a>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[{ value: "40+", label: "Kuwait Apps" }, { value: "🇰🇼", label: "KNET Ready" }, { value: "AR+EN", label: "Bilingual" }, { value: "4.9★", label: "Client Rating" }].map((stat, i) => (
                 <motion.div key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 + i * 0.1 }} className="bg-white/5 backdrop-blur-sm border border-green-500/20 rounded-2xl p-6">
                   <div className="text-3xl font-bold text-green-400">{stat.value}</div>
-                  <div className="text-violet-200/70">{stat.label}</div>
+                  <div className="text-blue-200/70">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -79,7 +79,7 @@ export default function AppDevelopmentKuwaitCity() {
         </div>
       </section>
 
-      <section className="py-20 bg-violet-950">
+      <section className="py-20 bg-slate-950">
         <div className="container mx-auto max-w-7xl px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Why Choose Us for <span className="text-green-400">Kuwait</span>?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -87,7 +87,7 @@ export default function AppDevelopmentKuwaitCity() {
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-white/5 border border-green-500/20 rounded-2xl p-6 text-center">
                 <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center text-white mx-auto mb-4">{item.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
-                <p className="text-violet-200/70 text-sm">{item.desc}</p>
+                <p className="text-blue-200/70 text-sm">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -105,14 +105,14 @@ export default function AppDevelopmentKuwaitCity() {
         </div>
       </section>
 
-      <section className="py-20 bg-violet-950">
+      <section className="py-20 bg-slate-950">
         <div className="container mx-auto max-w-4xl px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-white/5 border border-green-500/20 rounded-2xl p-6">
                 <h3 className="text-lg font-bold text-white mb-3">{faq.question}</h3>
-                <p className="text-violet-200/70">{faq.answer}</p>
+                <p className="text-blue-200/70">{faq.answer}</p>
               </motion.div>
             ))}
           </div>
@@ -125,7 +125,7 @@ export default function AppDevelopmentKuwaitCity() {
           <p className="text-xl text-white/90 mb-8">Get a free consultation for your Kuwait app project!</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact"><Button size="lg" className="bg-white text-green-600 hover:bg-green-50 font-bold text-lg px-10 py-7 rounded-full">Get Free Quote <ArrowRight className="w-5 h-5 ml-2" /></Button></Link>
-            <a href="tel:+918360723410"><Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-10 py-7 rounded-full"><Phone className="w-5 h-5 mr-2" /> +91 83607 23410</Button></a>
+            <a href="tel:+919872364476"><Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-10 py-7 rounded-full"><Phone className="w-5 h-5 mr-2" /> +91 98723 64476</Button></a>
           </div>
         </div>
       </section>

@@ -1,9 +1,9 @@
 {
-  "title": "XcFlownWeb - Complete Codebase Documentation",
-  "author": "XcFlown",
+  "title": "NovaCrewWeb - Complete Codebase Documentation",
+  "author": "NovaCrew",
   "subject": "Codebase Documentation with Mind Mapping",
-  "creator": "XcFlown",
-  "producer": "XcFlown PDF Generator",
+  "creator": "NovaCrew",
+  "producer": "NovaCrew PDF Generator",
   "pages": [
     {
       "width": 595,
@@ -23,7 +23,7 @@
         },
         {
           "type": "text",
-          "text": "XcFlownWeb",
+          "text": "NovaCrewWeb",
           "x": 50, "y": 780,
           "size": 42,
           "font": "Helvetica-Bold",
@@ -62,7 +62,7 @@
         },
         {
           "type": "text",
-          "text": "A full-stack web application for XcFlown - a professional app development company serving India & Kuwait markets. The platform showcases services, generates leads, displays portfolio, and automates business operations through AI-powered tools.",
+          "text": "A full-stack web application for NovaCrew - a professional app development company serving India & Kuwait markets. The platform showcases services, generates leads, displays portfolio, and automates business operations through AI-powered tools.",
           "x": 50, "y": 620,
           "size": 11,
           "font": "Helvetica",
@@ -135,7 +135,7 @@
         },
         {
           "type": "text",
-          "text": "XcFlownWeb",
+          "text": "NovaCrewWeb",
           "x": 70, "y": 680,
           "size": 14,
           "font": "Helvetica-Bold",
@@ -1084,7 +1084,7 @@
         },
         {
           "type": "text",
-          "text": "XcFlownWeb/\n├── client/              (React Frontend)\n├── server/              (Express Backend)\n├── shared/              (Shared Types/Schemas)\n├── script/              (Build Scripts)\n├── package.json         (Root Dependencies)\n├── vite.config.ts       (Vite Configuration)\n└── tsconfig.json        (TypeScript Config)",
+          "text": "NovaCrewWeb/\n├── client/              (React Frontend)\n├── server/              (Express Backend)\n├── shared/              (Shared Types/Schemas)\n├── script/              (Build Scripts)\n├── package.json         (Root Dependencies)\n├── vite.config.ts       (Vite Configuration)\n└── tsconfig.json        (TypeScript Config)",
           "x": 60, "y": 630,
           "size": 8,
           "font": "Courier",

@@ -72,16 +72,16 @@ export default function LocationsIndex() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
-        title="App Development Locations | India & Kuwait | XcFlown"
-        description="XcFlown provides app development services across 28 cities in India and 14 cities in Kuwait. Find local app developers near you with Arabic + English support."
+        title="App Development Locations | India & Kuwait | Web Nova Crew"
+        description="Web Nova Crew provides app development services across 28 cities in India and 14 cities in Kuwait. Find local app developers near you with Arabic + English support."
         keywords="app development locations, app developers India, app developers Kuwait, local app development, city app developers"
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Locations", url: "https://xcflown.com/locations" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Locations", url: "https://webnovacrew.com/locations" }
       ]} />
       
       <Navbar />
@@ -89,7 +89,7 @@ export default function LocationsIndex() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/30 to-slate-950">
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-violet-500/20 rounded-full blur-[100px]"></div>
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[100px]"></div>
           <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-emerald-500/20 rounded-full blur-[80px]"></div>
         </div>
 
@@ -100,9 +100,9 @@ export default function LocationsIndex() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-violet-500/10 border border-violet-500/20 rounded-full mb-6">
-              <Globe className="w-4 h-4 text-violet-400" />
-              <span className="text-sm text-violet-300">42 Cities • 2 Countries • Local Support</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-6">
+              <Globe className="w-4 h-4 text-blue-400" />
+              <span className="text-sm text-blue-300">42 Cities • 2 Countries • Local Support</span>
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-emerald-100 bg-clip-text text-transparent">
@@ -110,12 +110,12 @@ export default function LocationsIndex() {
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
-              Find <span className="text-violet-400 font-semibold">local app developers</span> in your city. We serve <span className="text-emerald-400 font-semibold">28 cities in India</span> and <span className="text-emerald-400 font-semibold">14 cities in Kuwait</span> with dedicated support.
+              Find <span className="text-blue-400 font-semibold">local app developers</span> in your city. We serve <span className="text-emerald-400 font-semibold">28 cities in India</span> and <span className="text-emerald-400 font-semibold">14 cities in Kuwait</span> with dedicated support.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-violet-400 mb-1">28</div>
+                <div className="text-3xl font-bold text-blue-400 mb-1">28</div>
                 <div className="text-sm text-slate-400">India Cities</div>
               </div>
               <div className="text-center">
@@ -123,7 +123,7 @@ export default function LocationsIndex() {
                 <div className="text-sm text-slate-400">Kuwait Cities</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-violet-400 mb-1">250+</div>
+                <div className="text-3xl font-bold text-blue-400 mb-1">250+</div>
                 <div className="text-sm text-slate-400">Apps Delivered</div>
               </div>
               <div className="text-center">
@@ -136,7 +136,7 @@ export default function LocationsIndex() {
       </section>
 
       {/* India Section */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="flex items-center gap-4 mb-12">
             <Flag className="w-10 h-10 text-orange-500" />
@@ -161,13 +161,13 @@ export default function LocationsIndex() {
                   transition={{ delay: index * 0.05 }}
                 >
                   <Link href={`/locations/app-development-${city.slug}`}>
-                    <div className="bg-violet-800/50 border border-violet-700 rounded-xl p-5 hover:border-violet-500/50 transition-all cursor-pointer group">
+                    <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-5 hover:border-blue-500/50 transition-all cursor-pointer group">
                       <div className="flex items-start justify-between mb-2">
-                        <h4 className="text-lg font-semibold text-white group-hover:text-violet-400 transition-colors">{city.name}</h4>
-                        <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-violet-400 transition-colors" />
+                        <h4 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">{city.name}</h4>
+                        <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-blue-400 transition-colors" />
                       </div>
                       <p className="text-sm text-slate-400 mb-1">{city.state}</p>
-                      <p className="text-xs text-violet-400">{city.highlight}</p>
+                      <p className="text-xs text-blue-400">{city.highlight}</p>
                     </div>
                   </Link>
                 </motion.div>
@@ -190,7 +190,7 @@ export default function LocationsIndex() {
                   transition={{ delay: index * 0.03 }}
                 >
                   <Link href={`/locations/app-development-${city.slug}`}>
-                    <div className="bg-violet-800/30 border border-violet-700/50 rounded-lg p-4 hover:border-green-500/50 transition-all cursor-pointer group">
+                    <div className="bg-slate-800/30 border border-slate-700/50 rounded-lg p-4 hover:border-green-500/50 transition-all cursor-pointer group">
                       <h4 className="text-base font-medium text-white group-hover:text-green-400 transition-colors">{city.name}</h4>
                       <p className="text-xs text-slate-500">{city.state}</p>
                     </div>
@@ -215,7 +215,7 @@ export default function LocationsIndex() {
                   transition={{ delay: index * 0.05 }}
                 >
                   <Link href={`/locations/app-development-${city.slug}`}>
-                    <div className="bg-violet-800/30 border border-violet-700/50 rounded-lg p-4 hover:border-purple-500/50 transition-all cursor-pointer group">
+                    <div className="bg-slate-800/30 border border-slate-700/50 rounded-lg p-4 hover:border-purple-500/50 transition-all cursor-pointer group">
                       <h4 className="text-base font-medium text-white group-hover:text-purple-400 transition-colors">{city.name}</h4>
                       <p className="text-xs text-slate-500">{city.state}</p>
                     </div>
@@ -250,7 +250,7 @@ export default function LocationsIndex() {
                   transition={{ delay: index * 0.05 }}
                 >
                   <Link href={`/locations/app-development-${city.slug}`}>
-                    <div className="bg-violet-800/50 border border-violet-700 rounded-xl p-5 hover:border-emerald-500/50 transition-all cursor-pointer group">
+                    <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-5 hover:border-emerald-500/50 transition-all cursor-pointer group">
                       <div className="flex items-start justify-between mb-2">
                         <div>
                           <h4 className="text-lg font-semibold text-white group-hover:text-emerald-400 transition-colors">{city.name}</h4>
@@ -291,7 +291,7 @@ export default function LocationsIndex() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-950/50 to-emerald-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-blue-950/50 to-emerald-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Can't Find Your City?

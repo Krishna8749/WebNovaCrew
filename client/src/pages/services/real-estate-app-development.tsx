@@ -63,7 +63,7 @@ export default function RealEstateAppDevelopment() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
         title="Real Estate App Development Company | Property Listing Apps | India & Kuwait" 
         description="Leading real estate app development company. We build property listing apps, real estate CRM, rental apps with virtual tours, AI valuation & map integration. 50+ real estate projects delivered in India & Kuwait."
@@ -71,14 +71,14 @@ export default function RealEstateAppDevelopment() {
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Services", url: "https://xcflown.com/services" },
-        { name: "Real Estate App Development", url: "https://xcflown.com/services/real-estate-app-development" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Services", url: "https://webnovacrew.com/services" },
+        { name: "Real Estate App Development", url: "https://webnovacrew.com/services/real-estate-app-development" }
       ]} />
       <ServiceSchema 
         serviceName="Real Estate App Development"
         serviceDescription="Professional real estate app development services. We build property listing apps, CRM systems, rental platforms with virtual tours and AI features."
-        serviceUrl="https://xcflown.com/services/real-estate-app-development"
+        serviceUrl="https://webnovacrew.com/services/real-estate-app-development"
       />
       
       <Navbar />
@@ -86,7 +86,7 @@ export default function RealEstateAppDevelopment() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/30 to-slate-950">
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-violet-500/20 rounded-full blur-[100px]"></div>
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[100px]"></div>
           <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-emerald-500/20 rounded-full blur-[80px]"></div>
         </div>
 
@@ -104,7 +104,7 @@ export default function RealEstateAppDevelopment() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">Real Estate App</span> Development Company
             </h1>
             
-            <p className="text-xl text-violet-200/80 mb-8 leading-relaxed">
+            <p className="text-xl text-blue-200/80 mb-8 leading-relaxed">
               Build powerful <strong className="text-white">property listing apps, real estate CRM, rental platforms</strong> with 
               <strong className="text-emerald-400"> virtual tours, AI valuation & advanced search</strong>. We've delivered 50+ real estate projects across India & Kuwait.
             </p>
@@ -115,7 +115,7 @@ export default function RealEstateAppDevelopment() {
                   Get Free Quote <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-              <a href="https://wa.me/918360723410" target="_blank">
+              <a href="https://wa.me/919872364476" target="_blank">
                 <Button size="lg" variant="outline" className="border-2 border-green-500/50 text-green-400 hover:bg-green-500/10 font-bold text-lg px-8 py-7 rounded-full">
                   <MessageSquare className="w-5 h-5 mr-2" /> WhatsApp Us
                 </Button>
@@ -138,7 +138,7 @@ export default function RealEstateAppDevelopment() {
                   className="bg-white/5 backdrop-blur-sm border border-emerald-500/20 rounded-2xl p-6"
                 >
                   <div className="text-3xl md:text-4xl font-bold text-emerald-400">{stat.value}</div>
-                  <div className="text-violet-200/70">{stat.label}</div>
+                  <div className="text-blue-200/70">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -147,13 +147,13 @@ export default function RealEstateAppDevelopment() {
       </section>
 
       {/* Features */}
-      <section className="py-24 bg-violet-950">
+      <section className="py-24 bg-slate-950">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Real Estate App <span className="text-emerald-400">Features</span>
             </h2>
-            <p className="text-xl text-violet-200/70 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-200/70 max-w-3xl mx-auto">
               Comprehensive features to build the perfect property platform
             </p>
           </div>
@@ -172,7 +172,7 @@ export default function RealEstateAppDevelopment() {
                   {feature.icon}
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-violet-200/60 text-sm">{feature.desc}</p>
+                <p className="text-blue-200/60 text-sm">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -200,7 +200,7 @@ export default function RealEstateAppDevelopment() {
               >
                 <Home className="w-10 h-10 text-emerald-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{type.title}</h3>
-                <p className="text-violet-200/70">{type.desc}</p>
+                <p className="text-blue-200/70">{type.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -208,7 +208,7 @@ export default function RealEstateAppDevelopment() {
       </section>
 
       {/* Pricing */}
-      <section className="py-24 bg-violet-950">
+      <section className="py-24 bg-slate-950">
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -236,15 +236,15 @@ export default function RealEstateAppDevelopment() {
                 <h3 className="text-2xl font-bold text-white mb-4">{tier.name}</h3>
                 <div className="mb-2">
                   <span className="text-2xl font-bold text-emerald-400">{tier.price}</span>
-                  <span className="text-violet-200/60 ml-2">🇮🇳</span>
+                  <span className="text-blue-200/60 ml-2">🇮🇳</span>
                 </div>
                 <div className="mb-6">
-                  <span className="text-lg font-bold text-orange-400">{tier.priceKWD}</span>
-                  <span className="text-violet-200/60 ml-2">🇰🇼</span>
+                  <span className="text-lg font-bold text-cyan-400">{tier.priceKWD}</span>
+                  <span className="text-blue-200/60 ml-2">🇰🇼</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, j) => (
-                    <li key={j} className="flex items-center gap-3 text-violet-200/80">
+                    <li key={j} className="flex items-center gap-3 text-blue-200/80">
                       <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
                       {feature}
                     </li>
@@ -284,7 +284,7 @@ export default function RealEstateAppDevelopment() {
                 className="bg-white/5 border border-emerald-500/20 rounded-2xl p-6"
               >
                 <h3 className="text-lg font-bold text-white mb-3">{faq.question}</h3>
-                <p className="text-violet-200/70">{faq.answer}</p>
+                <p className="text-blue-200/70">{faq.answer}</p>
               </motion.div>
             ))}
           </div>
@@ -306,7 +306,7 @@ export default function RealEstateAppDevelopment() {
                 Start Your Project <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
-            <a href="tel:+918360723410">
+            <a href="tel:+919872364476">
               <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-10 py-7 rounded-full">
                 <Phone className="w-5 h-5 mr-2" /> Call Now
               </Button>

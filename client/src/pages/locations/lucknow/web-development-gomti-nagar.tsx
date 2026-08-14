@@ -112,7 +112,7 @@ export default function WebDevelopmentGomtiNagar() {
   ];
 
   const faqs = [
-    { question: "Which is the best web development company in Gomti Nagar?", answer: "XcFlown is the leading web development company in Gomti Nagar, Lucknow. We've delivered 250+ projects with expertise in React, Next.js, and custom web applications for Gomti Nagar's IT and business community. Our clients include fintech startups in IT Park, real estate firms in Vibhuti Khand, and healthcare chains in Viraj Khand." },
+    { question: "Which is the best web development company in Gomti Nagar?", answer: "Web Nova Crew is the leading web development company in Gomti Nagar, Lucknow. We've delivered 250+ projects with expertise in React, Next.js, and custom web applications for Gomti Nagar's IT and business community. Our clients include fintech startups in IT Park, real estate firms in Vibhuti Khand, and healthcare chains in Viraj Khand." },
     { question: "How much does app development cost in Gomti Nagar?", answer: "App development cost in Gomti Nagar ranges from ₹25,000 for simple apps to ₹8,00,000 for enterprise solutions. Startup MVPs cost ₹25,000-₹1,00,000, business apps cost ₹1,00,000-₹3,00,000, and complex enterprise apps cost ₹3,00,000-₹8,00,000. We offer transparent pricing with no hidden charges and EMI options for startups." },
     { question: "Do you develop apps for startups in Gomti Nagar IT Park?", answer: "Yes! We specialize in MVP development for Gomti Nagar IT Park startups. Our startup packages start at ₹25,000 with rapid delivery in 2-4 weeks. We understand what VCs look for during technical due diligence and build investor-ready products with clean code and scalable architecture." },
     { question: "Can you build an e-commerce website for my Gomti Nagar business?", answer: "We build e-commerce websites and apps for Gomti Nagar businesses with Razorpay, Paytm, UPI payment integration, inventory management, delivery tracking, and WhatsApp commerce. Starting at ₹40,000 with 2-week delivery for basic stores." },
@@ -133,22 +133,22 @@ export default function WebDevelopmentGomtiNagar() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
-        title="Best Web Development Company in Gomti Nagar, Lucknow | XcFlown"
+        title="Best Web Development Company in Gomti Nagar, Lucknow | Web Nova Crew"
         description="Top web & app development company in Gomti Nagar, Lucknow. We build React, Next.js websites, Flutter apps, e-commerce platforms for businesses in Vibhuti Khand, Viraj Khand, IT Park. ₹25,000 onwards. 250+ projects delivered."
         keywords="web development company in Gomti Nagar, app developer in Gomti Nagar, digital marketing agency Gomti Nagar, IT company in Gomti Nagar Lucknow, software development Gomti Nagar, best website developer Gomti Nagar"
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Lucknow Areas", url: "https://xcflown.com/locations/app-development-lucknow" },
-        { name: "Gomti Nagar", url: "https://xcflown.com/locations/web-development-gomti-nagar" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Lucknow Areas", url: "https://webnovacrew.com/locations/app-development-lucknow" },
+        { name: "Gomti Nagar", url: "https://webnovacrew.com/locations/web-development-gomti-nagar" }
       ]} />
       <ServiceSchema 
         serviceName="Web Development in Gomti Nagar"
         serviceDescription="Professional web and app development services in Gomti Nagar, Lucknow. Custom React, Next.js websites, Flutter apps, e-commerce, and digital marketing for local businesses."
-        serviceUrl="https://xcflown.com/locations/web-development-gomti-nagar"
+        serviceUrl="https://webnovacrew.com/locations/web-development-gomti-nagar"
       />
       <FAQSchema faqs={faqs} />
       
@@ -157,8 +157,8 @@ export default function WebDevelopmentGomtiNagar() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/30 to-slate-950">
-          <div className="absolute top-1/4 left-1/4 w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] bg-violet-500/20 rounded-full blur-[60px] lg:blur-[100px]"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] bg-orange-500/20 rounded-full blur-[50px] lg:blur-[80px]"></div>
+          <div className="absolute top-1/4 left-1/4 w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] bg-blue-500/20 rounded-full blur-[60px] lg:blur-[100px]"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] bg-cyan-500/20 rounded-full blur-[50px] lg:blur-[80px]"></div>
         </div>
 
         <div className="container mx-auto max-w-7xl px-4 relative z-10">
@@ -168,9 +168,9 @@ export default function WebDevelopmentGomtiNagar() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-violet-500/10 border border-violet-500/20 rounded-full mb-6">
-              <MapPin className="w-4 h-4 text-violet-400" />
-              <span className="text-sm text-violet-300">Gomti Nagar, Lucknow • IT Hub • Premium Business District</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-6">
+              <MapPin className="w-4 h-4 text-blue-400" />
+              <span className="text-sm text-blue-300">Gomti Nagar, Lucknow • IT Hub • Premium Business District</span>
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
@@ -178,7 +178,7 @@ export default function WebDevelopmentGomtiNagar() {
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-300 mb-4 leading-relaxed">
-              Lucknow's <span className="text-violet-400 font-semibold">#1 IT hub</span> deserves world-class digital solutions. We build <span className="text-orange-400 font-semibold">websites, apps & e-commerce platforms</span> for Gomti Nagar's ambitious businesses.
+              Lucknow's <span className="text-blue-400 font-semibold">#1 IT hub</span> deserves world-class digital solutions. We build <span className="text-cyan-400 font-semibold">websites, apps & e-commerce platforms</span> for Gomti Nagar's ambitious businesses.
             </p>
 
             <p className="text-lg text-slate-400 mb-8">
@@ -191,7 +191,7 @@ export default function WebDevelopmentGomtiNagar() {
                   Get Free Consultation <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
-              <a href="https://wa.me/918360723410" target="_blank">
+              <a href="https://wa.me/919872364476" target="_blank">
                 <Button size="lg" variant="outline" className="border-green-500/50 text-green-400 hover:bg-green-500/10">
                   <MessageSquare className="w-5 h-5 mr-2" />
                   WhatsApp Us
@@ -200,20 +200,20 @@ export default function WebDevelopmentGomtiNagar() {
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 max-w-3xl mx-auto">
-              <div className="text-center bg-white/5 rounded-xl p-4 border border-violet-500/20">
-                <div className="text-3xl font-bold text-violet-400 mb-1">80+</div>
+              <div className="text-center bg-white/5 rounded-xl p-4 border border-blue-500/20">
+                <div className="text-3xl font-bold text-blue-400 mb-1">80+</div>
                 <div className="text-sm text-slate-400">Gomti Nagar Clients</div>
               </div>
-              <div className="text-center bg-white/5 rounded-xl p-4 border border-violet-500/20">
-                <div className="text-3xl font-bold text-orange-400 mb-1">₹25K</div>
+              <div className="text-center bg-white/5 rounded-xl p-4 border border-blue-500/20">
+                <div className="text-3xl font-bold text-cyan-400 mb-1">₹25K</div>
                 <div className="text-sm text-slate-400">Starting Price</div>
               </div>
-              <div className="text-center bg-white/5 rounded-xl p-4 border border-violet-500/20">
-                <div className="text-3xl font-bold text-violet-400 mb-1">2-4</div>
+              <div className="text-center bg-white/5 rounded-xl p-4 border border-blue-500/20">
+                <div className="text-3xl font-bold text-blue-400 mb-1">2-4</div>
                 <div className="text-sm text-slate-400">Weeks MVP</div>
               </div>
-              <div className="text-center bg-white/5 rounded-xl p-4 border border-violet-500/20">
-                <div className="text-3xl font-bold text-orange-400 mb-1">250+</div>
+              <div className="text-center bg-white/5 rounded-xl p-4 border border-blue-500/20">
+                <div className="text-3xl font-bold text-cyan-400 mb-1">250+</div>
                 <div className="text-sm text-slate-400">Projects Delivered</div>
               </div>
             </div>
@@ -230,7 +230,7 @@ export default function WebDevelopmentGomtiNagar() {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-blue-950/30 to-slate-900/50 border border-violet-500/20 rounded-xl p-8">
+            <div className="bg-gradient-to-br from-blue-950/30 to-slate-900/50 border border-blue-500/20 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-white mb-4">Lucknow's IT & Business Capital</h3>
               <p className="text-slate-300 mb-4 leading-relaxed">
                 Gomti Nagar is Lucknow's answer to Bangalore's Koramangala — a premium business district housing the city's IT Park, startup incubators, and corporate headquarters. With over 500 businesses operating from Vibhuti Khand and Viraj Khand alone, the competition for digital visibility is intense.
@@ -239,7 +239,7 @@ export default function WebDevelopmentGomtiNagar() {
                 From fintech startups building the next UPI-based payment solution to real estate developers showcasing luxury apartments, every Gomti Nagar business needs a strong digital presence to capture the area's tech-savvy, affluent customer base.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-cyan-950/30 to-slate-900/50 border border-orange-500/20 rounded-xl p-8">
+            <div className="bg-gradient-to-br from-cyan-950/30 to-slate-900/50 border border-cyan-500/20 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-white mb-4">Digital-First Customer Base</h3>
               <p className="text-slate-300 mb-4 leading-relaxed">
                 Gomti Nagar residents are among Lucknow's most digitally active consumers. They search Google for services, order via apps, and make purchasing decisions based on online reviews and website quality. A business without a professional website or app is invisible to this lucrative customer segment.
@@ -253,7 +253,7 @@ export default function WebDevelopmentGomtiNagar() {
       </section>
 
       {/* Services */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -270,10 +270,10 @@ export default function WebDevelopmentGomtiNagar() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-8 hover:border-violet-500/50 transition-all"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-blue-500/50 transition-all"
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-14 h-14 bg-violet-500/10 rounded-xl flex items-center justify-center text-violet-400 flex-shrink-0">
+                  <div className="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 flex-shrink-0">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
@@ -281,7 +281,7 @@ export default function WebDevelopmentGomtiNagar() {
                 <p className="text-slate-400 mb-4 leading-relaxed">{service.desc}</p>
                 <div className="flex flex-wrap gap-2">
                   {service.features.map((feature, i) => (
-                    <span key={i} className="text-xs bg-violet-500/10 text-violet-300 px-3 py-1 rounded-full">{feature}</span>
+                    <span key={i} className="text-xs bg-blue-500/10 text-blue-300 px-3 py-1 rounded-full">{feature}</span>
                   ))}
                 </div>
               </motion.div>
@@ -308,9 +308,9 @@ export default function WebDevelopmentGomtiNagar() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-violet-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all"
               >
-                <div className="w-12 h-12 bg-violet-500/10 rounded-xl flex items-center justify-center text-violet-400 mb-4">
+                <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mb-4">
                   {industry.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{industry.name}</h3>
@@ -322,7 +322,7 @@ export default function WebDevelopmentGomtiNagar() {
       </section>
 
       {/* Case Studies */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -339,15 +339,15 @@ export default function WebDevelopmentGomtiNagar() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-violet-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-blue-500/50 transition-all"
               >
-                <div className="text-violet-400 text-sm font-medium mb-2">{study.client}</div>
+                <div className="text-blue-400 text-sm font-medium mb-2">{study.client}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
                 <p className="text-slate-400 mb-6 leading-relaxed">{study.description}</p>
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   {study.results.map((result, i) => (
-                    <div key={i} className="bg-violet-500/10 rounded-lg px-3 py-2 text-center">
-                      <span className="text-violet-300 text-sm font-medium">{result}</span>
+                    <div key={i} className="bg-blue-500/10 rounded-lg px-3 py-2 text-center">
+                      <span className="text-blue-300 text-sm font-medium">{result}</span>
                     </div>
                   ))}
                 </div>
@@ -380,13 +380,13 @@ export default function WebDevelopmentGomtiNagar() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.03 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-5 hover:border-violet-500/50 transition-all"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-5 hover:border-blue-500/50 transition-all"
               >
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-violet-400 mt-1 flex-shrink-0" />
+                  <MapPin className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-white font-semibold">{area.name}</h3>
-                    <span className="text-violet-400 text-sm">{area.type}</span>
+                    <span className="text-blue-400 text-sm">{area.type}</span>
                     <p className="text-slate-400 text-sm mt-1">{area.desc}</p>
                   </div>
                 </div>
@@ -397,7 +397,7 @@ export default function WebDevelopmentGomtiNagar() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -414,13 +414,13 @@ export default function WebDevelopmentGomtiNagar() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-violet-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-blue-500/50 transition-all"
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 bg-violet-500/10 rounded-xl flex items-center justify-center text-violet-400">
+                  <div className="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400">
                     {item.icon}
                   </div>
-                  <div className="text-sm font-bold text-violet-400 bg-violet-500/10 px-3 py-1 rounded-full">
+                  <div className="text-sm font-bold text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full">
                     {item.stats}
                   </div>
                 </div>
@@ -450,20 +450,20 @@ export default function WebDevelopmentGomtiNagar() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className={`bg-violet-800/50 border rounded-xl p-8 transition-all ${plan.popular ? 'border-violet-500 ring-2 ring-violet-500/20' : 'border-violet-700 hover:border-violet-500/50'}`}
+                className={`bg-slate-800/50 border rounded-xl p-8 transition-all ${plan.popular ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-slate-700 hover:border-blue-500/50'}`}
               >
                 {plan.popular && (
                   <div className="text-center mb-4">
-                    <span className="bg-violet-500 text-white text-sm font-medium px-4 py-1 rounded-full">Most Popular</span>
+                    <span className="bg-blue-500 text-white text-sm font-medium px-4 py-1 rounded-full">Most Popular</span>
                   </div>
                 )}
                 <h3 className="text-2xl font-semibold text-white mb-2">{plan.tier}</h3>
-                <div className="text-3xl font-bold text-violet-400 mb-2">{plan.price}</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">{plan.price}</div>
                 <p className="text-slate-400 text-sm mb-6">{plan.ideal}</p>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3 text-slate-300">
-                      <CheckCircle2 className="w-5 h-5 text-violet-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -484,7 +484,7 @@ export default function WebDevelopmentGomtiNagar() {
       <TestimonialsSection />
 
       {/* Google Map */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -494,7 +494,7 @@ export default function WebDevelopmentGomtiNagar() {
               Serving Gomti Nagar businesses from our Lucknow headquarters
             </p>
           </div>
-          <div className="rounded-xl overflow-hidden border border-violet-700 h-[400px]">
+          <div className="rounded-xl overflow-hidden border border-slate-700 h-[400px]">
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.1984!2d80.9462!3d26.8467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd49a5b37e0d%3A0x8fba8e5c1e0f2e0a!2sGomti%20Nagar%2C%20Lucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000"
               width="100%"
@@ -503,7 +503,7 @@ export default function WebDevelopmentGomtiNagar() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="XcFlown - Gomti Nagar, Lucknow"
+              title="Web Nova Crew - Gomti Nagar, Lucknow"
               className="grayscale hover:grayscale-0 transition-all duration-500"
             ></iframe>
           </div>
@@ -525,7 +525,7 @@ export default function WebDevelopmentGomtiNagar() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
@@ -536,13 +536,13 @@ export default function WebDevelopmentGomtiNagar() {
       </section>
 
       {/* Internal Linking - Nearby Areas */}
-      <section className="py-16 bg-violet-900/50 border-t border-violet-800">
+      <section className="py-16 bg-slate-900/50 border-t border-slate-800">
         <div className="container mx-auto max-w-7xl px-4">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Also Serving Nearby Areas</h3>
           <div className="flex flex-wrap gap-3 justify-center">
             {nearbyAreas.map((area, index) => (
               <Link key={index} href={`/locations/${area.slug}`}>
-                <a className="px-5 py-2.5 bg-violet-800/50 border border-violet-700 rounded-full text-slate-300 hover:border-violet-500/50 hover:text-violet-400 transition-all">
+                <a className="px-5 py-2.5 bg-slate-800/50 border border-slate-700 rounded-full text-slate-300 hover:border-blue-500/50 hover:text-blue-400 transition-all">
                   <MapPin className="w-4 h-4 inline mr-2" />
                   {area.name}
                 </a>
@@ -553,7 +553,7 @@ export default function WebDevelopmentGomtiNagar() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-950/50 to-cyan-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-blue-950/50 to-cyan-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Ready to Build Your Digital Presence in Gomti Nagar?
@@ -568,10 +568,10 @@ export default function WebDevelopmentGomtiNagar() {
                 Schedule Gomti Nagar Meeting
               </Link>
             </Button>
-            <a href="tel:+918360723410">
-              <Button size="lg" variant="outline" className="border-violet-700/50 hover:bg-violet-800 text-white">
+            <a href="tel:+919872364476">
+              <Button size="lg" variant="outline" className="border-slate-600 hover:bg-slate-800 text-white">
                 <Phone className="w-5 h-5 mr-2" />
-                +91 83607 23410
+                +91 98723 64476
               </Button>
             </a>
           </div>

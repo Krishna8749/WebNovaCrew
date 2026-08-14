@@ -37,7 +37,7 @@ export default defineConfig({
     },
   },
   root: path.resolve(import.meta.dirname, "client"),
-  cacheDir: path.join(os.tmpdir(), "xcflownweb-vite"),
+  cacheDir: path.join(os.tmpdir(), "novacrewweb-vite"),
   optimizeDeps: {
     holdUntilCrawlEnd: true,
   },

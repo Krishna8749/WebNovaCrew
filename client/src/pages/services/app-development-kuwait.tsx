@@ -84,7 +84,7 @@ export default function AppDevelopmentKuwait() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
         title="App Development Company in Kuwait | Mobile Apps Kuwait | AI Apps Kuwait" 
         description="Kuwait's leading app development company. We build AI-powered mobile apps with Arabic support, KNET integration for Kuwait businesses. 50+ Kuwait projects delivered. Get free consultation."
@@ -92,14 +92,14 @@ export default function AppDevelopmentKuwait() {
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Services", url: "https://xcflown.com/services" },
-        { name: "App Development Kuwait", url: "https://xcflown.com/services/app-development-kuwait" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Services", url: "https://webnovacrew.com/services" },
+        { name: "App Development Kuwait", url: "https://webnovacrew.com/services/app-development-kuwait" }
       ]} />
       <ServiceSchema 
         serviceName="App Development Company in Kuwait"
         serviceDescription="Professional mobile app development services in Kuwait. We build AI-powered iOS, Android apps with Arabic support, KNET integration for Kuwait businesses."
-        serviceUrl="https://xcflown.com/services/app-development-kuwait"
+        serviceUrl="https://webnovacrew.com/services/app-development-kuwait"
       />
       
       <Navbar />
@@ -125,7 +125,7 @@ export default function AppDevelopmentKuwait() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-red-400">App Development</span> Company in Kuwait
             </h1>
             
-            <p className="text-xl text-violet-200/80 mb-8 leading-relaxed">
+            <p className="text-xl text-blue-200/80 mb-8 leading-relaxed">
               We build <strong className="text-white">AI-powered mobile applications</strong> for Kuwait businesses with 
               <strong className="text-green-400"> full Arabic support, KNET integration</strong>, and local compliance. 
               From delivery apps to enterprise solutions, we're your trusted technology partner in Kuwait.
@@ -137,7 +137,7 @@ export default function AppDevelopmentKuwait() {
                   Get Free Consultation <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-              <a href="https://wa.me/918360723410" target="_blank">
+              <a href="https://wa.me/919872364476" target="_blank">
                 <Button size="lg" variant="outline" className="border-2 border-green-500/50 text-green-400 hover:bg-green-500/10 font-bold text-lg px-8 py-7 rounded-full">
                   <MessageSquare className="w-5 h-5 mr-2" /> WhatsApp Kuwait Team
                 </Button>
@@ -155,7 +155,7 @@ export default function AppDevelopmentKuwait() {
                   className="bg-white/5 backdrop-blur-sm border border-green-500/20 rounded-2xl p-6"
                 >
                   <div className="text-3xl md:text-4xl font-bold text-green-400">{stat.value}</div>
-                  <div className="text-violet-200/70">{stat.label}</div>
+                  <div className="text-blue-200/70">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -170,7 +170,7 @@ export default function AppDevelopmentKuwait() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Built for <span className="text-green-400">Kuwait Market</span>
             </h2>
-            <p className="text-xl text-violet-200/70 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-200/70 max-w-3xl mx-auto">
               Our apps are specifically designed for Kuwait businesses with local features and compliance.
             </p>
           </div>
@@ -189,7 +189,7 @@ export default function AppDevelopmentKuwait() {
                   {feature.icon}
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-violet-200/60">{feature.desc}</p>
+                <p className="text-blue-200/60">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -197,13 +197,13 @@ export default function AppDevelopmentKuwait() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-24 bg-violet-950">
+      <section className="py-24 bg-slate-950">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               App Development <span className="text-green-400">Services in Kuwait</span>
             </h2>
-            <p className="text-xl text-violet-200/70 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-200/70 max-w-3xl mx-auto">
               From AI-powered applications to Kuwait-specific solutions, we deliver cutting-edge mobile apps.
             </p>
           </div>
@@ -222,7 +222,7 @@ export default function AppDevelopmentKuwait() {
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-violet-200/60">{service.desc}</p>
+                <p className="text-blue-200/60">{service.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -236,7 +236,7 @@ export default function AppDevelopmentKuwait() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               App Development <span className="text-green-400">Pricing in Kuwait</span>
             </h2>
-            <p className="text-xl text-violet-200/70">Transparent pricing in Kuwaiti Dinar (KWD)</p>
+            <p className="text-xl text-blue-200/70">Transparent pricing in Kuwaiti Dinar (KWD)</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -260,7 +260,7 @@ export default function AppDevelopmentKuwait() {
                 <div className="text-3xl font-bold text-green-400 mb-6">{tier.price}</div>
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, j) => (
-                    <li key={j} className="flex items-center gap-3 text-violet-200/80">
+                    <li key={j} className="flex items-center gap-3 text-blue-200/80">
                       <CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" />
                       {feature}
                     </li>
@@ -282,13 +282,13 @@ export default function AppDevelopmentKuwait() {
       </section>
 
       {/* Kuwait Cities */}
-      <section className="py-24 bg-violet-950">
+      <section className="py-24 bg-slate-950">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Serving All <span className="text-green-400">Kuwait Regions</span>
             </h2>
-            <p className="text-violet-200/70">App development services across Kuwait</p>
+            <p className="text-blue-200/70">App development services across Kuwait</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -311,7 +311,7 @@ export default function AppDevelopmentKuwait() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-violet-200/70">Everything about app development in Kuwait</p>
+            <p className="text-blue-200/70">Everything about app development in Kuwait</p>
           </div>
           
           <div className="space-y-4">
@@ -324,7 +324,7 @@ export default function AppDevelopmentKuwait() {
                 className="bg-white/5 border border-green-500/20 rounded-2xl p-6"
               >
                 <h3 className="text-lg font-bold text-white mb-3">{faq.question}</h3>
-                <p className="text-violet-200/70">{faq.answer}</p>
+                <p className="text-blue-200/70">{faq.answer}</p>
               </motion.div>
             ))}
           </div>
@@ -349,7 +349,7 @@ export default function AppDevelopmentKuwait() {
                 Contact Kuwait Team <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
-            <a href="https://wa.me/918360723410" target="_blank">
+            <a href="https://wa.me/919872364476" target="_blank">
               <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-10 py-7 rounded-full">
                 <MessageSquare className="w-5 h-5 mr-2" /> WhatsApp Us
               </Button>

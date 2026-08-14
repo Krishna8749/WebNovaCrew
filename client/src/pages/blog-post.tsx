@@ -42,9 +42,9 @@ export default function BlogPost() {
         keywords={post.tags.join(", ")}
       />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Blog", url: "https://xcflown.com/blog" },
-        { name: post.title, url: `https://xcflown.com/blog/${post.slug}` }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Blog", url: "https://webnovacrew.com/blog" },
+        { name: post.title, url: `https://webnovacrew.com/blog/${post.slug}` }
       ]} />
       
       <Navbar />
@@ -53,7 +53,7 @@ export default function BlogPost() {
       <section className="py-12 bg-gradient-to-b from-blue-50 to-white">
         <div className="container mx-auto max-w-4xl px-4">
           <Link href="/blog">
-            <Button variant="ghost" className="mb-6 text-slate-600 hover:text-violet-600">
+            <Button variant="ghost" className="mb-6 text-slate-600 hover:text-blue-600">
               <ArrowLeft className="w-4 h-4 mr-2" /> Back to Blog
             </Button>
           </Link>
@@ -62,7 +62,7 @@ export default function BlogPost() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <span className="inline-block bg-violet-100 text-violet-700 text-sm font-bold px-4 py-1 rounded-full mb-4">
+            <span className="inline-block bg-blue-100 text-blue-700 text-sm font-bold px-4 py-1 rounded-full mb-4">
               {post.category}
             </span>
             <h1 className="text-3xl md:text-5xl font-poppins font-bold text-slate-900 mb-6 leading-tight">
@@ -71,7 +71,7 @@ export default function BlogPost() {
             
             <div className="flex flex-wrap items-center gap-6 text-slate-600 mb-8">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-violet-600 flex items-center justify-center text-white font-bold">
+                <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold">
                   {post.author.name.charAt(0)}
                 </div>
                 <div>
@@ -121,8 +121,8 @@ export default function BlogPost() {
                            [&>p]:text-slate-600 [&>p]:leading-relaxed [&>p]:mb-4
                            [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:mb-4 [&>ul>li]:text-slate-600 [&>ul>li]:mb-2
                            [&>ol]:list-decimal [&>ol]:pl-6 [&>ol]:mb-4 [&>ol>li]:text-slate-600 [&>ol>li]:mb-2
-                           [&>blockquote]:border-l-4 [&>blockquote]:border-violet-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-slate-600
-                           [&>pre]:bg-violet-900 [&>pre]:text-slate-100 [&>pre]:p-4 [&>pre]:rounded-lg [&>pre]:overflow-x-auto
+                           [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-slate-600
+                           [&>pre]:bg-slate-900 [&>pre]:text-slate-100 [&>pre]:p-4 [&>pre]:rounded-lg [&>pre]:overflow-x-auto
                            [&>code]:bg-slate-100 [&>code]:px-1 [&>code]:rounded"
                 dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br/>').replace(/## /g, '<h2>').replace(/### /g, '<h3>').replace(/<br\/><h/g, '</p><h').replace(/<br\/><br\/>/g, '</p><p>') }}
               />
@@ -136,13 +136,13 @@ export default function BlogPost() {
                   <Share2 className="w-4 h-4" /> Share Article
                 </h3>
                 <div className="flex gap-3">
-                  <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://xcflown.com/blog/${post.slug}`)}`} target="_blank" className="w-10 h-10 rounded-full bg-[#1DA1F2] text-white flex items-center justify-center hover:opacity-80 transition-opacity">
+                  <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://webnovacrew.com/blog/${post.slug}`)}`} target="_blank" className="w-10 h-10 rounded-full bg-[#1DA1F2] text-white flex items-center justify-center hover:opacity-80 transition-opacity">
                     <Twitter className="w-5 h-5" />
                   </a>
-                  <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(`https://xcflown.com/blog/${post.slug}`)}&title=${encodeURIComponent(post.title)}`} target="_blank" className="w-10 h-10 rounded-full bg-[#0077B5] text-white flex items-center justify-center hover:opacity-80 transition-opacity">
+                  <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(`https://webnovacrew.com/blog/${post.slug}`)}&title=${encodeURIComponent(post.title)}`} target="_blank" className="w-10 h-10 rounded-full bg-[#0077B5] text-white flex items-center justify-center hover:opacity-80 transition-opacity">
                     <Linkedin className="w-5 h-5" />
                   </a>
-                  <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://xcflown.com/blog/${post.slug}`)}`} target="_blank" className="w-10 h-10 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:opacity-80 transition-opacity">
+                  <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://webnovacrew.com/blog/${post.slug}`)}`} target="_blank" className="w-10 h-10 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:opacity-80 transition-opacity">
                     <Facebook className="w-5 h-5" />
                   </a>
                 </div>
@@ -183,7 +183,7 @@ export default function BlogPost() {
                       />
                     </div>
                     <div className="p-5">
-                      <h3 className="font-bold text-slate-900 group-hover:text-violet-600 transition-colors line-clamp-2">
+                      <h3 className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-2">
                         {relatedPost.title}
                       </h3>
                       <p className="text-slate-500 text-sm mt-2">{relatedPost.readTime}</p>

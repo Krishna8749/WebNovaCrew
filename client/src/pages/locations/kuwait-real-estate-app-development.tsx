@@ -88,7 +88,7 @@ export default function KuwaitRealEstateAppDevelopment() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
         title="Real Estate App Development Kuwait | Property Listing Apps | Arabic Support"
         description="Leading real estate app development company in Kuwait. Build Arabic + English property listing, broker apps with map search, agent CRM, virtual tours. 500 KWD onwards."
@@ -96,14 +96,14 @@ export default function KuwaitRealEstateAppDevelopment() {
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Kuwait Locations", url: "https://xcflown.com/locations" },
-        { name: "Real Estate App Development", url: "https://xcflown.com/locations/kuwait-real-estate-app-development" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Kuwait Locations", url: "https://webnovacrew.com/locations" },
+        { name: "Real Estate App Development", url: "https://webnovacrew.com/locations/kuwait-real-estate-app-development" }
       ]} />
       <ServiceSchema 
         serviceName="Real Estate App Development Kuwait"
         serviceDescription="Professional real estate and property listing app development in Kuwait with Arabic support, map search, agent CRM, and virtual tours."
-        serviceUrl="https://xcflown.com/locations/kuwait-real-estate-app-development"
+        serviceUrl="https://webnovacrew.com/locations/kuwait-real-estate-app-development"
       />
       
       <Navbar />
@@ -111,7 +111,7 @@ export default function KuwaitRealEstateAppDevelopment() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/30 to-slate-950">
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-violet-500/20 rounded-full blur-[100px]"></div>
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[100px]"></div>
           <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-indigo-500/20 rounded-full blur-[80px]"></div>
         </div>
 
@@ -122,9 +122,9 @@ export default function KuwaitRealEstateAppDevelopment() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-violet-500/10 border border-violet-500/20 rounded-full mb-6">
-              <Building2 className="w-4 h-4 text-violet-400" />
-              <span className="text-sm text-violet-300">🇰🇼 Kuwait Real Estate App Experts • Arabic + English</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-6">
+              <Building2 className="w-4 h-4 text-blue-400" />
+              <span className="text-sm text-blue-300">🇰🇼 Kuwait Real Estate App Experts • Arabic + English</span>
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-indigo-100 bg-clip-text text-transparent">
@@ -132,7 +132,7 @@ export default function KuwaitRealEstateAppDevelopment() {
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
-              Build powerful <span className="text-violet-400 font-semibold">property listing and broker apps</span> for Kuwait with Arabic + English support, map search, agent CRM, and virtual tours.
+              Build powerful <span className="text-blue-400 font-semibold">property listing and broker apps</span> for Kuwait with Arabic + English support, map search, agent CRM, and virtual tours.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center mb-12">
@@ -141,7 +141,7 @@ export default function KuwaitRealEstateAppDevelopment() {
                   Get Free Quote <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-violet-700 hover:bg-violet-800">
+              <Button size="lg" variant="outline" className="border-slate-700 hover:bg-slate-800">
                 <Link href="/portfolio" className="flex items-center gap-2">
                   View Real Estate Apps
                 </Link>
@@ -150,7 +150,7 @@ export default function KuwaitRealEstateAppDevelopment() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-violet-400 mb-1">30+</div>
+                <div className="text-3xl font-bold text-blue-400 mb-1">30+</div>
                 <div className="text-sm text-slate-400">Property Apps</div>
               </div>
               <div className="text-center">
@@ -158,7 +158,7 @@ export default function KuwaitRealEstateAppDevelopment() {
                 <div className="text-sm text-slate-400">KWD Starting</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-violet-400 mb-1">30-60</div>
+                <div className="text-3xl font-bold text-blue-400 mb-1">30-60</div>
                 <div className="text-sm text-slate-400">Days Delivery</div>
               </div>
               <div className="text-center">
@@ -171,7 +171,7 @@ export default function KuwaitRealEstateAppDevelopment() {
       </section>
 
       {/* Features */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -189,9 +189,9 @@ export default function KuwaitRealEstateAppDevelopment() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-violet-500/50 transition-all"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all"
               >
-                <div className="w-12 h-12 bg-violet-500/10 rounded-lg flex items-center justify-center text-violet-400 mb-4">
+                <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 mb-4">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -207,9 +207,9 @@ export default function KuwaitRealEstateAppDevelopment() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.02 }}
-                className="flex items-center gap-3 bg-violet-800/30 border border-violet-700/50 rounded-lg p-3"
+                className="flex items-center gap-3 bg-slate-800/30 border border-slate-700/50 rounded-lg p-3"
               >
-                <CheckCircle2 className="w-4 h-4 text-violet-400 flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-blue-400 flex-shrink-0" />
                 <span className="text-sm text-slate-200">{feature}</span>
               </motion.div>
             ))}
@@ -236,10 +236,10 @@ export default function KuwaitRealEstateAppDevelopment() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-5 hover:border-violet-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-5 hover:border-blue-500/50 transition-all"
               >
                 <div className="flex items-center gap-3">
-                  <Home className="w-5 h-5 text-violet-400" />
+                  <Home className="w-5 h-5 text-blue-400" />
                   <span className="text-white font-medium">{type}</span>
                 </div>
               </motion.div>
@@ -249,7 +249,7 @@ export default function KuwaitRealEstateAppDevelopment() {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -267,14 +267,14 @@ export default function KuwaitRealEstateAppDevelopment() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-violet-500/50 transition-all"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all"
               >
                 <h3 className="text-xl font-semibold text-white mb-2">{plan.tier}</h3>
-                <div className="text-3xl font-bold text-violet-400 mb-4">{plan.price}</div>
+                <div className="text-3xl font-bold text-blue-400 mb-4">{plan.price}</div>
                 <ul className="space-y-2">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-2 text-slate-300">
-                      <CheckCircle2 className="w-4 h-4 text-violet-400" />
+                      <CheckCircle2 className="w-4 h-4 text-blue-400" />
                       {feature}
                     </li>
                   ))}
@@ -301,9 +301,9 @@ export default function KuwaitRealEstateAppDevelopment() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-violet-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all"
               >
-                <div className="w-12 h-12 bg-violet-500/10 rounded-lg flex items-center justify-center text-violet-400 mb-4">
+                <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 mb-4">
                   {item.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
@@ -318,7 +318,7 @@ export default function KuwaitRealEstateAppDevelopment() {
       <TestimonialsSection />
 
       {/* FAQs */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -333,7 +333,7 @@ export default function KuwaitRealEstateAppDevelopment() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
@@ -344,7 +344,7 @@ export default function KuwaitRealEstateAppDevelopment() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-950/50 to-indigo-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-blue-950/50 to-indigo-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Ready to Build Your Kuwait Property App?
@@ -359,7 +359,7 @@ export default function KuwaitRealEstateAppDevelopment() {
                 Contact Kuwait Team
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-violet-700/50 hover:bg-violet-800 text-white">
+            <Button size="lg" variant="outline" className="border-slate-600 hover:bg-slate-800 text-white">
               <Link href="/pricing">
                 View Full Pricing
               </Link>

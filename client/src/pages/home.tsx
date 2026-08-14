@@ -191,14 +191,14 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
         title="Top App Development Company in India & Kuwait – AI-Powered Mobile App Solutions" 
         description="India's & Kuwait's leading AI app development company. We build next-generation mobile apps using AI, Flutter, React Native for startups, enterprises & government. 200+ apps delivered. Get free consultation."
         keywords="app development company India, app development company Kuwait, AI app development, mobile app development India, Flutter app development, React Native development, real estate app development, e-commerce app development, Kuwait software company, best app developers India"
       />
       <LocalBusinessSchema />
-      <BreadcrumbSchema items={[{ name: "Home", url: "https://xcflown.com" }]} />
+      <BreadcrumbSchema items={[{ name: "Home", url: "https://webnovacrew.com" }]} />
       
       <Navbar />
 
@@ -206,9 +206,9 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] bg-violet-500/20 rounded-full blur-[80px] lg:blur-[120px] animate-pulse"></div>
+          <div className="absolute top-1/4 left-1/4 w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] bg-blue-500/20 rounded-full blur-[80px] lg:blur-[120px] animate-pulse"></div>
           <div className="absolute bottom-1/4 right-1/4 w-[150px] h-[150px] sm:w-[250px] sm:h-[250px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] bg-purple-500/20 rounded-full blur-[60px] lg:blur-[100px] animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 w-[120px] h-[120px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] bg-orange-500/10 rounded-full blur-[50px] lg:blur-[80px] animate-pulse delay-500"></div>
+          <div className="absolute top-1/2 left-1/2 w-[120px] h-[120px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] bg-cyan-500/10 rounded-full blur-[50px] lg:blur-[80px] animate-pulse delay-500"></div>
         </div>
         
         {/* Grid Pattern Overlay */}
@@ -222,9 +222,9 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               {/* Trust Badge */}
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-violet-500/30 px-4 py-2 rounded-full mb-6">
-                <Sparkles className="w-4 h-4 text-orange-400" />
-                <span className="text-orange-400 text-sm font-semibold">🇮🇳 India & 🇰🇼 Kuwait's #1 AI App Development Company</span>
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-blue-500/30 px-4 py-2 rounded-full mb-6">
+                <Sparkles className="w-4 h-4 text-cyan-400" />
+                <span className="text-cyan-400 text-sm font-semibold">🇮🇳 India & 🇰🇼 Kuwait's #1 AI App Development Company</span>
               </div>
 
               {/* H1 - Maximum SEO Power */}
@@ -232,19 +232,19 @@ export default function Home() {
                 Top <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">App Development</span> Company in India & Kuwait
               </h1>
               
-              <p className="text-xl md:text-2xl text-violet-100/80 mb-8 leading-relaxed">
-                We build <strong className="text-white">next-generation apps</strong> using <strong className="text-orange-400">AI, automation & advanced technologies</strong> for startups, enterprises, government, and global clients.
+              <p className="text-xl md:text-2xl text-blue-100/80 mb-8 leading-relaxed">
+                We build <strong className="text-white">next-generation apps</strong> using <strong className="text-cyan-400">AI, automation & advanced technologies</strong> for startups, enterprises, government, and global clients.
               </p>
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4 mb-10">
                 <Link href="/contact">
-                  <Button size="lg" className="bg-gradient-to-r from-violet-600 to-orange-500 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-lg px-8 py-7 rounded-full shadow-2xl shadow-orange-500/30 group">
+                  <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-lg px-8 py-7 rounded-full shadow-2xl shadow-cyan-500/30 group">
                     Get Free App Consultation
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
-                <a href="https://wa.me/918360723410" target="_blank">
+                <a href="https://wa.me/919872364476" target="_blank">
                   <Button size="lg" variant="outline" className="border-2 border-green-500/50 text-green-400 hover:bg-green-500/10 font-bold text-lg px-8 py-7 rounded-full">
                     <MessageSquare className="w-5 h-5 mr-2" /> WhatsApp Us
                   </Button>
@@ -271,9 +271,9 @@ export default function Home() {
                     transition={{ delay: 0.5 + i * 0.1 }}
                     className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 text-center"
                   >
-                    <div className="text-orange-400 mb-2 flex justify-center">{stat.icon}</div>
+                    <div className="text-cyan-400 mb-2 flex justify-center">{stat.icon}</div>
                     <div className="text-2xl md:text-3xl font-bold text-white">{stat.value}</div>
-                    <div className="text-sm text-violet-200/70">{stat.label}</div>
+                    <div className="text-sm text-blue-200/70">{stat.label}</div>
                   </motion.div>
                 ))}
               </div>
@@ -305,7 +305,7 @@ export default function Home() {
                         <div className="w-8 h-8 bg-purple-200 rounded"></div>
                       </div>
                       <div className="bg-gray-100 rounded-lg h-24 flex items-center justify-center">
-                        <div className="w-8 h-8 bg-violet-200 rounded"></div>
+                        <div className="w-8 h-8 bg-blue-200 rounded"></div>
                       </div>
                     </div>
                     <div className="space-y-2">
@@ -353,18 +353,18 @@ export default function Home() {
                 <div className="absolute top-20 right-0 md:top-40 w-44 h-80 bg-white rounded-3xl shadow-2xl transform rotate-12 overflow-hidden">
                   <div className="bg-gradient-to-r from-blue-700 to-blue-900 h-28 flex flex-col justify-end p-4">
                     <div className="text-white font-bold text-lg">PaySecure</div>
-                    <div className="text-violet-200 text-xs">Digital Wallet</div>
+                    <div className="text-blue-200 text-xs">Digital Wallet</div>
                   </div>
                   <div className="p-4 space-y-4">
                     <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-3">
-                      <div className="text-violet-800 text-xs font-semibold">Balance</div>
-                      <div className="text-violet-900 text-xl font-bold">₹12,450</div>
+                      <div className="text-blue-800 text-xs font-semibold">Balance</div>
+                      <div className="text-blue-900 text-xl font-bold">₹12,450</div>
                     </div>
                     <div className="space-y-2">
                       <div className="text-gray-600 text-xs font-semibold">Quick Actions</div>
                       <div className="grid grid-cols-2 gap-2">
                         <div className="bg-gray-100 rounded-lg p-2 text-center">
-                          <div className="w-6 h-6 bg-violet-200 rounded mx-auto mb-1"></div>
+                          <div className="w-6 h-6 bg-blue-200 rounded mx-auto mb-1"></div>
                           <div className="text-xs text-gray-600">Send</div>
                         </div>
                         <div className="bg-gray-100 rounded-lg p-2 text-center">
@@ -389,7 +389,7 @@ export default function Home() {
                 </div>
                 
                 {/* AI Badge */}
-                <div className="absolute bottom-0 md:bottom-10 left-0 bg-gradient-to-r from-violet-600 to-orange-500 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold shadow-xl z-20 flex items-center gap-2 text-sm md:text-base">
+                <div className="absolute bottom-0 md:bottom-10 left-0 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold shadow-xl z-20 flex items-center gap-2 text-sm md:text-base">
                   <Brain className="w-4 h-4 md:w-5 md:h-5" /> AI-Powered Apps
                 </div>
               </div>
@@ -399,20 +399,20 @@ export default function Home() {
       </section>
 
       {/* AUTHORITY LAYER - Trust Signals */}
-      <section className="py-8 bg-violet-900/50 border-y border-white/5">
+      <section className="py-8 bg-slate-900/50 border-y border-white/5">
         <div className="container mx-auto max-w-7xl px-4">
-          <div className="flex flex-wrap items-center justify-center gap-8 text-violet-200/60">
-            <span className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-orange-400" /> 200+ Apps Delivered</span>
-            <span className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-orange-400" /> 97% Client Satisfaction</span>
-            <span className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-orange-400" /> 7+ Years Experience</span>
-            <span className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-orange-400" /> AI, Flutter, Laravel, React, Next.js Experts</span>
-            <span className="flex items-center gap-2"><MapPin className="w-5 h-5 text-orange-400" /> Offices: Lucknow, Kuwait City</span>
+          <div className="flex flex-wrap items-center justify-center gap-8 text-blue-200/60">
+            <span className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-cyan-400" /> 200+ Apps Delivered</span>
+            <span className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-cyan-400" /> 97% Client Satisfaction</span>
+            <span className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-cyan-400" /> 7+ Years Experience</span>
+            <span className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-cyan-400" /> AI, Flutter, Laravel, React, Next.js Experts</span>
+            <span className="flex items-center gap-2"><MapPin className="w-5 h-5 text-cyan-400" /> Offices: Lucknow, Kuwait City</span>
           </div>
         </div>
       </section>
 
       {/* NICHE HIGHLIGHT - AI App Development Services */}
-      <section className="py-24 bg-violet-950">
+      <section className="py-24 bg-slate-950">
         <div className="container mx-auto max-w-7xl px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -420,13 +420,13 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-orange-400 px-5 py-2 rounded-full text-sm font-bold mb-6 border border-orange-500/30">
+            <span className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 px-5 py-2 rounded-full text-sm font-bold mb-6 border border-cyan-500/30">
               <Brain className="w-4 h-4" /> India's & Kuwait's Leading AI App Development Experts
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               AI-Powered <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">App Development</span> Services
             </h2>
-            <p className="text-xl text-violet-200/70 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-200/70 max-w-3xl mx-auto">
               From AI chatbots to enterprise solutions, we build cutting-edge applications that transform businesses across India and Kuwait.
             </p>
           </motion.div>
@@ -442,13 +442,13 @@ export default function Home() {
                 whileHover={{ y: -8, scale: 1.02 }}
               >
                 <Link href={service.link}>
-                  <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-white/10 rounded-3xl p-8 h-full hover:border-orange-500/50 transition-all duration-300 group cursor-pointer">
-                    <div className="w-16 h-16 bg-gradient-to-br from-violet-600 to-orange-500 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-orange-500/30">
+                  <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-white/10 rounded-3xl p-8 h-full hover:border-cyan-500/50 transition-all duration-300 group cursor-pointer">
+                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-cyan-500/30">
                       {service.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">{service.title}</h3>
-                    <p className="text-violet-200/60 mb-4">{service.desc}</p>
-                    <span className="text-orange-400 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{service.title}</h3>
+                    <p className="text-blue-200/60 mb-4">{service.desc}</p>
+                    <span className="text-cyan-400 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                       Learn More <ArrowRight className="w-4 h-4" />
                     </span>
                   </div>
@@ -472,7 +472,7 @@ export default function Home() {
                 <Award className="w-4 h-4" /> Why 300+ Businesses Trust Us
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-                Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">XcFlown</span>?
+                Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Web Nova Crew</span>?
               </h2>
               
               <div className="space-y-4">
@@ -488,7 +488,7 @@ export default function Home() {
                     <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center shrink-0">
                       <CheckCircle2 className="w-5 h-5 text-white" />
                     </div>
-                    <span className="text-lg text-violet-100">{point}</span>
+                    <span className="text-lg text-blue-100">{point}</span>
                   </motion.div>
                 ))}
               </div>
@@ -506,7 +506,7 @@ export default function Home() {
               </h3>
               <div className="space-y-4">
                 {guarantees.map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 text-violet-100">
+                  <div key={i} className="flex items-center gap-4 text-blue-100">
                     <div className="text-purple-400">{item.icon}</div>
                     <span className="text-lg">{item.text}</span>
                   </div>
@@ -540,7 +540,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Apps for Every <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Industry</span>
             </h2>
-            <p className="text-xl text-violet-200/70 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-200/70 max-w-3xl mx-auto">
               From startups to enterprises, we've built successful apps across all major industries.
             </p>
           </motion.div>
@@ -572,7 +572,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">{category.name}</h3>
                 <div className="text-indigo-400 font-bold text-xl">{category.count}</div>
-                <div className="text-violet-200/60 text-sm">Apps Built</div>
+                <div className="text-blue-200/60 text-sm">Apps Built</div>
               </motion.div>
             ))}
           </div>
@@ -594,7 +594,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Real Apps, <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Real Results</span>
             </h2>
-            <p className="text-xl text-violet-200/70 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-200/70 max-w-3xl mx-auto">
               See our actual mobile applications in action - from concept to deployment.
             </p>
           </motion.div>
@@ -627,8 +627,8 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="flex items-center gap-3 bg-gray-50 rounded-lg p-3">
-                      <div className="w-10 h-10 bg-violet-200 rounded-full flex items-center justify-center">
-                        <Stethoscope className="w-5 h-5 text-violet-700" />
+                      <div className="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center">
+                        <Stethoscope className="w-5 h-5 text-blue-700" />
                       </div>
                       <div className="flex-1">
                         <div className="text-gray-800 font-semibold text-sm">Dr. Mike Chen</div>
@@ -643,11 +643,11 @@ export default function Home() {
               </div>
               <div className="p-5">
                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Healthcare Platform</h3>
-                <p className="text-violet-200/60 text-sm mb-3">Doctor booking, telemedicine, health records management</p>
+                <p className="text-blue-200/60 text-sm mb-3">Doctor booking, telemedicine, health records management</p>
                 <div className="flex flex-wrap gap-1 mb-3">
-                  <span className="text-xs bg-white/10 text-violet-200 px-2 py-0.5 rounded-full">Flutter</span>
-                  <span className="text-xs bg-white/10 text-violet-200 px-2 py-0.5 rounded-full">Node.js</span>
-                  <span className="text-xs bg-white/10 text-violet-200 px-2 py-0.5 rounded-full">AI</span>
+                  <span className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">Flutter</span>
+                  <span className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">Node.js</span>
+                  <span className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">AI</span>
                 </div>
                 <div className="text-green-400 text-sm font-bold">10K+ Consultations</div>
               </div>
@@ -703,11 +703,11 @@ export default function Home() {
               </div>
               <div className="p-5">
                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Travel Booking Platform</h3>
-                <p className="text-violet-200/60 text-sm mb-3">Flight booking, hotel reservations, travel planning</p>
+                <p className="text-blue-200/60 text-sm mb-3">Flight booking, hotel reservations, travel planning</p>
                 <div className="flex flex-wrap gap-1 mb-3">
-                  <span className="text-xs bg-white/10 text-violet-200 px-2 py-0.5 rounded-full">React Native</span>
-                  <span className="text-xs bg-white/10 text-violet-200 px-2 py-0.5 rounded-full">Laravel</span>
-                  <span className="text-xs bg-white/10 text-violet-200 px-2 py-0.5 rounded-full">Maps API</span>
+                  <span className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">React Native</span>
+                  <span className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">Laravel</span>
+                  <span className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">Maps API</span>
                 </div>
                 <div className="text-green-400 text-sm font-bold">25K+ Bookings</div>
               </div>
@@ -756,11 +756,11 @@ export default function Home() {
               </div>
               <div className="p-5">
                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Fitness Tracking App</h3>
-                <p className="text-violet-200/60 text-sm mb-3">Workout tracking, nutrition planning, progress analytics</p>
+                <p className="text-blue-200/60 text-sm mb-3">Workout tracking, nutrition planning, progress analytics</p>
                 <div className="flex flex-wrap gap-1 mb-3">
-                  <span className="text-xs bg-white/10 text-violet-200 px-2 py-0.5 rounded-full">Flutter</span>
-                  <span className="text-xs bg-white/10 text-violet-200 px-2 py-0.5 rounded-full">Firebase</span>
-                  <span className="text-xs bg-white/10 text-violet-200 px-2 py-0.5 rounded-full">ML Kit</span>
+                  <span className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">Flutter</span>
+                  <span className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">Firebase</span>
+                  <span className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">ML Kit</span>
                 </div>
                 <div className="text-green-400 text-sm font-bold">50K+ Active Users</div>
               </div>
@@ -768,7 +768,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-24 bg-violet-950">
+      <section className="py-24 bg-slate-950">
         <div className="container mx-auto max-w-7xl px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -782,7 +782,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               200+ <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400">Successful Projects</span> Delivered
             </h2>
-            <p className="text-xl text-violet-200/70 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-200/70 max-w-3xl mx-auto">
               Real results for real businesses across India, Kuwait, and 10+ countries worldwide.
             </p>
           </motion.div>
@@ -796,7 +796,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-3xl overflow-hidden group cursor-pointer hover:border-orange-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-3xl overflow-hidden group cursor-pointer hover:border-cyan-500/50 transition-all"
               >
                 {/* Real App Screenshot Mockup */}
                 <div className="h-48 bg-white relative overflow-hidden">
@@ -810,7 +810,7 @@ export default function Home() {
                       <div className="space-y-2">
                         <div className="flex gap-2">
                           <div className="flex-1 bg-gray-100 rounded p-2">
-                            <div className="w-full h-16 bg-violet-200 rounded mb-1"></div>
+                            <div className="w-full h-16 bg-blue-200 rounded mb-1"></div>
                             <div className="h-2 bg-gray-300 rounded w-3/4 mb-1"></div>
                             <div className="h-2 bg-green-400 rounded w-1/2"></div>
                           </div>
@@ -820,7 +820,7 @@ export default function Home() {
                             <div className="h-2 bg-green-400 rounded w-1/2"></div>
                           </div>
                         </div>
-                        <div className="bg-violet-600 text-white text-center py-2 rounded text-xs font-semibold">
+                        <div className="bg-blue-600 text-white text-center py-2 rounded text-xs font-semibold">
                           View Properties
                         </div>
                       </div>
@@ -902,12 +902,12 @@ export default function Home() {
                 </div>
                 
                 <div className="p-5">
-                  <span className="text-orange-400 text-xs font-semibold">{project.category}</span>
-                  <h3 className="text-lg font-bold text-white mt-1 mb-2 group-hover:text-orange-400 transition-colors">{project.title}</h3>
-                  <p className="text-violet-200/60 text-sm mb-3 line-clamp-2">{project.desc}</p>
+                  <span className="text-cyan-400 text-xs font-semibold">{project.category}</span>
+                  <h3 className="text-lg font-bold text-white mt-1 mb-2 group-hover:text-cyan-400 transition-colors">{project.title}</h3>
+                  <p className="text-blue-200/60 text-sm mb-3 line-clamp-2">{project.desc}</p>
                   <div className="flex flex-wrap gap-1 mb-3">
                     {project.tech.slice(0, 3).map((tech, j) => (
-                      <span key={j} className="text-xs bg-white/10 text-violet-200 px-2 py-0.5 rounded-full">{tech}</span>
+                      <span key={j} className="text-xs bg-white/10 text-blue-200 px-2 py-0.5 rounded-full">{tech}</span>
                     ))}
                   </div>
                   <div className="text-green-400 text-sm font-bold">{project.result}</div>
@@ -918,7 +918,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <Link href="/portfolio">
-              <Button size="lg" className="bg-gradient-to-r from-violet-600 to-orange-500 text-white font-bold text-lg px-10 py-7 rounded-full">
+              <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg px-10 py-7 rounded-full">
                 View All 200+ Projects <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
@@ -941,7 +941,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               App Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">Pricing</span>
             </h2>
-            <p className="text-xl text-violet-200/70 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-200/70 max-w-3xl mx-auto">
               Flexible pricing for startups, businesses, and enterprises. India & Kuwait rates available.
             </p>
           </motion.div>
@@ -955,27 +955,27 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 border rounded-3xl p-8 ${
-                  tier.popular ? 'border-orange-500 scale-105' : 'border-white/10'
+                  tier.popular ? 'border-cyan-500 scale-105' : 'border-white/10'
                 }`}
               >
                 {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-violet-600 to-orange-500 text-white text-sm font-bold px-6 py-2 rounded-full">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-bold px-6 py-2 rounded-full">
                     Most Popular
                   </div>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-4">{tier.name}</h3>
                 <div className="mb-2">
-                  <span className="text-3xl font-bold text-orange-400">{tier.priceINR}</span>
-                  <span className="text-violet-200/60 ml-2">🇮🇳 India</span>
+                  <span className="text-3xl font-bold text-cyan-400">{tier.priceINR}</span>
+                  <span className="text-blue-200/60 ml-2">🇮🇳 India</span>
                 </div>
                 <div className="mb-6">
                   <span className="text-xl font-bold text-green-400">{tier.priceKWD}</span>
-                  <span className="text-violet-200/60 ml-2">🇰🇼 Kuwait</span>
+                  <span className="text-blue-200/60 ml-2">🇰🇼 Kuwait</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, j) => (
-                    <li key={j} className="flex items-center gap-3 text-violet-200/80">
-                      <CheckCircle2 className="w-5 h-5 text-orange-400 shrink-0" />
+                    <li key={j} className="flex items-center gap-3 text-blue-200/80">
+                      <CheckCircle2 className="w-5 h-5 text-cyan-400 shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -983,7 +983,7 @@ export default function Home() {
                 <Link href="/contact">
                   <Button className={`w-full font-bold py-6 rounded-full ${
                     tier.popular 
-                      ? 'bg-gradient-to-r from-violet-600 to-orange-500 text-white' 
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white' 
                       : 'bg-white/10 text-white hover:bg-white/20'
                   }`}>
                     Get Started
@@ -994,7 +994,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-8">
-            <Link href="/pricing" className="text-orange-400 font-semibold hover:underline">
+            <Link href="/pricing" className="text-cyan-400 font-semibold hover:underline">
               View Detailed Pricing & Custom Quotes →
             </Link>
           </div>
@@ -1019,27 +1019,27 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Dedicated App Development for <span className="text-green-400">Kuwait Businesses</span>
               </h2>
-              <p className="text-xl text-violet-200/70 mb-8">
+              <p className="text-xl text-blue-200/70 mb-8">
                 We understand Kuwait's unique market needs. From Arabic language support to local payment integrations, we build apps that resonate with Kuwaiti users.
               </p>
               
               <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="flex items-center gap-3 text-violet-200/80">
+                <div className="flex items-center gap-3 text-blue-200/80">
                   <CheckCircle2 className="w-5 h-5 text-green-400" /> Local Kuwait Support
                 </div>
-                <div className="flex items-center gap-3 text-violet-200/80">
+                <div className="flex items-center gap-3 text-blue-200/80">
                   <CheckCircle2 className="w-5 h-5 text-green-400" /> Kuwait-based Servers
                 </div>
-                <div className="flex items-center gap-3 text-violet-200/80">
+                <div className="flex items-center gap-3 text-blue-200/80">
                   <Languages className="w-5 h-5 text-green-400" /> Arabic + English Apps
                 </div>
-                <div className="flex items-center gap-3 text-violet-200/80">
+                <div className="flex items-center gap-3 text-blue-200/80">
                   <CreditCard className="w-5 h-5 text-green-400" /> KNET, STC, Tap Payments
                 </div>
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <a href="https://wa.me/918360723410" target="_blank">
+                <a href="https://wa.me/919872364476" target="_blank">
                   <Button size="lg" className="bg-green-500 hover:bg-green-400 text-white font-bold text-lg px-8 py-7 rounded-full">
                     <MessageSquare className="w-5 h-5 mr-2" /> Contact Kuwait Team
                   </Button>
@@ -1066,7 +1066,7 @@ export default function Home() {
               ].map((item, i) => (
                 <div key={i} className="bg-white/5 backdrop-blur-sm border border-green-500/20 rounded-2xl p-6 hover:border-green-500/50 transition-all">
                   <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-violet-200/60 text-sm">{item.desc}</p>
+                  <p className="text-blue-200/60 text-sm">{item.desc}</p>
                 </div>
               ))}
             </motion.div>
@@ -1075,12 +1075,12 @@ export default function Home() {
       </section>
 
       {/* TECHNOLOGIES */}
-      <section className="py-24 bg-violet-950">
+      <section className="py-24 bg-slate-950">
         <div className="container mx-auto max-w-7xl px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">Technologies We Master</h2>
           <div className="flex flex-wrap justify-center gap-4">
             {["Flutter", "React Native", "Next.js", "React", "Node.js", "Laravel", "Python", "TensorFlow", "GPT-4", "AWS", "Firebase", "PostgreSQL", "MongoDB", "Docker", "Kubernetes"].map((tech) => (
-              <span key={tech} className="px-6 py-3 bg-white/5 border border-white/10 rounded-full text-violet-200 font-semibold hover:border-orange-500/50 hover:text-orange-400 transition-all cursor-default">
+              <span key={tech} className="px-6 py-3 bg-white/5 border border-white/10 rounded-full text-blue-200 font-semibold hover:border-cyan-500/50 hover:text-cyan-400 transition-all cursor-default">
                 {tech}
               </span>
             ))}
@@ -1092,14 +1092,14 @@ export default function Home() {
       <TestimonialsSection />
 
       {/* FAQ Section - SEO Rich */}
-      <section className="py-24 bg-violet-950">
+      <section className="py-24 bg-slate-950">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 bg-violet-500/20 text-violet-400 px-5 py-2 rounded-full text-sm font-bold mb-6 border border-violet-500/30">
+            <span className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-400 px-5 py-2 rounded-full text-sm font-bold mb-6 border border-blue-500/30">
               <MessageSquare className="w-4 h-4" /> FAQs
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Frequently Asked <span className="text-orange-400">Questions</span>
+              Frequently Asked <span className="text-cyan-400">Questions</span>
             </h2>
           </div>
           
@@ -1111,10 +1111,10 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-orange-500/30 transition-all"
+                className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-500/30 transition-all"
               >
                 <h3 className="text-lg font-bold text-white mb-3">{faq.question}</h3>
-                <p className="text-violet-200/70">{faq.answer}</p>
+                <p className="text-blue-200/70">{faq.answer}</p>
               </motion.div>
             ))}
           </div>
@@ -1145,13 +1145,13 @@ export default function Home() {
             
             <div className="flex flex-wrap justify-center gap-6 mb-10">
               <Link href="/contact">
-                <Button size="lg" className="bg-white text-violet-600 hover:bg-violet-50 font-bold text-xl px-12 py-8 rounded-full shadow-2xl">
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 font-bold text-xl px-12 py-8 rounded-full shadow-2xl">
                   Get Free Consultation <ArrowRight className="w-6 h-6 ml-2" />
                 </Button>
               </Link>
-              <a href="tel:+918360723410">
+              <a href="tel:+919872364476">
                 <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold text-xl px-12 py-8 rounded-full">
-                  <Phone className="w-6 h-6 mr-2" /> +91 83607 23410
+                  <Phone className="w-6 h-6 mr-2" /> +91 98723 64476
                 </Button>
               </a>
             </div>
@@ -1169,7 +1169,7 @@ export default function Home() {
 
       {/* Floating WhatsApp Button */}
       <a 
-        href="https://wa.me/918360723410" 
+        href="https://wa.me/919872364476" 
         target="_blank"
         className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-white p-4 rounded-full shadow-2xl shadow-green-500/30 transition-all hover:scale-110"
       >

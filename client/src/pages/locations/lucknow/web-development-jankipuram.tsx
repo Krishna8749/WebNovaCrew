@@ -25,7 +25,7 @@ export default function WebDevelopmentJankipuram() {
   ];
 
   const faqs = [
-    { question: "Which is the best web development company in Jankipuram?", answer: "XcFlown is the leading web development company in Jankipuram, Lucknow. We specialize in professional service websites for lawyers, doctors, and government-related businesses. Starting at ₹20,000 with 1-2 week delivery." },
+    { question: "Which is the best web development company in Jankipuram?", answer: "Web Nova Crew is the leading web development company in Jankipuram, Lucknow. We specialize in professional service websites for lawyers, doctors, and government-related businesses. Starting at ₹20,000 with 1-2 week delivery." },
     { question: "Can you build a legal services app for Jankipuram lawyers?", answer: "We build legal consultation apps with video calling, document management, appointment booking, and payment integration. Starting at ₹80,000 with 6-8 week delivery. Our legal platforms have facilitated 2,000+ consultations." },
     { question: "How much does a website cost in Jankipuram?", answer: "Professional service websites in Jankipuram start at ₹20,000. Legal and medical practice websites with appointment systems cost ₹40,000-₹1,50,000. Government portals are custom quoted based on requirements." },
     { question: "Do you offer SEO for legal and medical practices in Jankipuram?", answer: "We provide specialized SEO for Jankipuram's legal and medical professionals to rank for 'best lawyer in Jankipuram', 'doctor near Jankipuram' etc. Starting at ₹10,000/month with first-page results in 90 days." },
@@ -41,11 +41,11 @@ export default function WebDevelopmentJankipuram() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
-      <SEO title="Web Development Company in Jankipuram, Lucknow | Legal & Medical | XcFlown" description="Top web development company in Jankipuram, Lucknow. Legal websites, healthcare apps, government portals, professional services. ₹20,000 onwards. High Court area specialist." keywords="web development company in Jankipuram, app developer in Jankipuram Lucknow, digital marketing agency Jankipuram, lawyer website Jankipuram, doctor website Jankipuram, IT company near High Court Lucknow" />
+    <div className="min-h-screen bg-slate-950 font-sans">
+      <SEO title="Web Development Company in Jankipuram, Lucknow | Legal & Medical | Web Nova Crew" description="Top web development company in Jankipuram, Lucknow. Legal websites, healthcare apps, government portals, professional services. ₹20,000 onwards. High Court area specialist." keywords="web development company in Jankipuram, app developer in Jankipuram Lucknow, digital marketing agency Jankipuram, lawyer website Jankipuram, doctor website Jankipuram, IT company near High Court Lucknow" />
       <LocalBusinessSchema />
-      <BreadcrumbSchema items={[{ name: "Home", url: "https://xcflown.com" }, { name: "Lucknow Areas", url: "https://xcflown.com/locations/app-development-lucknow" }, { name: "Jankipuram", url: "https://xcflown.com/locations/web-development-jankipuram" }]} />
-      <ServiceSchema serviceName="Web Development in Jankipuram" serviceDescription="Professional web and app development services in Jankipuram, Lucknow. Legal services platforms, healthcare apps, government portals, and professional websites." serviceUrl="https://xcflown.com/locations/web-development-jankipuram" />
+      <BreadcrumbSchema items={[{ name: "Home", url: "https://webnovacrew.com" }, { name: "Lucknow Areas", url: "https://webnovacrew.com/locations/app-development-lucknow" }, { name: "Jankipuram", url: "https://webnovacrew.com/locations/web-development-jankipuram" }]} />
+      <ServiceSchema serviceName="Web Development in Jankipuram" serviceDescription="Professional web and app development services in Jankipuram, Lucknow. Legal services platforms, healthcare apps, government portals, and professional websites." serviceUrl="https://webnovacrew.com/locations/web-development-jankipuram" />
       <FAQSchema faqs={faqs} />
       <Navbar />
 
@@ -65,7 +65,7 @@ export default function WebDevelopmentJankipuram() {
             <p className="text-lg text-slate-400 mb-8">Serving legal practitioners, healthcare providers, government offices & professionals near High Court.</p>
             <div className="flex flex-wrap gap-4 justify-center mb-12">
               <Button size="lg" className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-8"><Link href="/contact" className="flex items-center gap-2">Get Free Consultation <ArrowRight className="w-5 h-5" /></Link></Button>
-              <a href="https://wa.me/918360723410" target="_blank"><Button size="lg" variant="outline" className="border-green-500/50 text-green-400 hover:bg-green-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button></a>
+              <a href="https://wa.me/919872364476" target="_blank"><Button size="lg" variant="outline" className="border-green-500/50 text-green-400 hover:bg-green-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button></a>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 max-w-3xl mx-auto">
               <div className="text-center bg-white/5 rounded-xl p-4 border border-indigo-500/20"><div className="text-3xl font-bold text-indigo-400 mb-1">45+</div><div className="text-sm text-slate-400">Jankipuram Clients</div></div>
@@ -77,12 +77,12 @@ export default function WebDevelopmentJankipuram() {
         </div>
       </section>
 
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Our Services in Jankipuram</h2><p className="text-xl text-slate-400 max-w-3xl mx-auto">Professional digital solutions for legal, medical & government services</p></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-8 hover:border-indigo-500/50 transition-all">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-indigo-500/50 transition-all">
                 <div className="w-14 h-14 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-slate-400 mb-4 leading-relaxed">{service.desc}</p>
@@ -98,7 +98,7 @@ export default function WebDevelopmentJankipuram() {
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Jankipuram Success Stories</h2></div>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {caseStudies.map((study, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-indigo-500/50 transition-all">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-indigo-500/50 transition-all">
                 <div className="text-indigo-400 text-sm font-medium mb-2">{study.client}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
                 <p className="text-slate-400 mb-6 leading-relaxed">{study.description}</p>
@@ -113,12 +113,12 @@ export default function WebDevelopmentJankipuram() {
       <FounderBio />
       <TestimonialsSection />
 
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Jankipuram Web Development FAQs</h2></div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
               </motion.div>
@@ -127,22 +127,22 @@ export default function WebDevelopmentJankipuram() {
         </div>
       </section>
 
-      <section className="py-16 bg-violet-900/50 border-t border-violet-800">
+      <section className="py-16 bg-slate-900/50 border-t border-slate-800">
         <div className="container mx-auto max-w-7xl px-4">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Also Serving Nearby Areas</h3>
           <div className="flex flex-wrap gap-3 justify-center">
-            {nearbyAreas.map((area, index) => (<Link key={index} href={`/locations/${area.slug}`}><a className="px-5 py-2.5 bg-violet-800/50 border border-violet-700 rounded-full text-slate-300 hover:border-indigo-500/50 hover:text-indigo-400 transition-all"><MapPin className="w-4 h-4 inline mr-2" />{area.name}</a></Link>))}
+            {nearbyAreas.map((area, index) => (<Link key={index} href={`/locations/${area.slug}`}><a className="px-5 py-2.5 bg-slate-800/50 border border-slate-700 rounded-full text-slate-300 hover:border-indigo-500/50 hover:text-indigo-400 transition-all"><MapPin className="w-4 h-4 inline mr-2" />{area.name}</a></Link>))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-indigo-950/50 to-purple-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-indigo-950/50 to-purple-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Build Your Professional Digital Presence?</h2>
-          <p className="text-xl text-slate-300 mb-8">Join 45+ Jankipuram professionals who chose XcFlown</p>
+          <p className="text-xl text-slate-300 mb-8">Join 45+ Jankipuram professionals who chose Web Nova Crew</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-8"><Link href="/contact" className="flex items-center gap-2"><Phone className="w-5 h-5" />Get Free Quote</Link></Button>
-            <a href="tel:+918360723410"><Button size="lg" variant="outline" className="border-violet-700/50 hover:bg-violet-800 text-white"><Phone className="w-5 h-5 mr-2" />+91 83607 23410</Button></a>
+            <a href="tel:+919872364476"><Button size="lg" variant="outline" className="border-slate-600 hover:bg-slate-800 text-white"><Phone className="w-5 h-5 mr-2" />+91 98723 64476</Button></a>
           </div>
         </div>
       </section>

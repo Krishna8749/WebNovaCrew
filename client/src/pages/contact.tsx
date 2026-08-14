@@ -66,43 +66,43 @@ export default function Contact() {
     <div className="min-h-screen bg-white font-sans pt-20">
       <SEO 
         title="Contact Us - Get a Free Quote" 
-        description="Contact XcFlown for web development, app development, and SEO services. Get a free consultation and custom quote within 24 hours. Call +91 83607 23410 or email info@xcflown.com"
+        description="Contact Web Nova Crew for web development, app development, and SEO services. Get a free consultation and custom quote within 24 hours. Call +91 98723 64476 or email info@webnovacrew.com"
         keywords="contact web development company, hire web developers india, get website quote, app development consultation, web design inquiry, free website consultation"
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Contact", url: "https://xcflown.com/contact" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Contact", url: "https://webnovacrew.com/contact" }
       ]} />
       
       <Navbar />
       
       {/* Header */}
-      <section className="bg-violet-900 text-white py-20 text-center relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-violet-600 rounded-full blur-3xl opacity-20"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-500 rounded-full blur-3xl opacity-10"></div>
+      <section className="bg-blue-900 text-white py-20 text-center relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-lime-500 rounded-full blur-3xl opacity-10"></div>
         <div className="container mx-auto max-w-4xl px-4 relative z-10">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-white/10 text-orange-400 text-sm font-bold mb-6 border border-white/20">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-white/10 text-lime-400 text-sm font-bold mb-6 border border-white/20">
             Get in Touch
           </span>
           <h1 className="text-4xl md:text-6xl font-poppins font-bold mb-6">
-            Let's Build Your <span className="text-orange-400">Dream Project</span>
+            Let's Build Your <span className="text-lime-400">Dream Project</span>
           </h1>
-          <p className="text-xl text-violet-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Ready to transform your business with a stunning website or powerful mobile app? Get a free consultation and custom quote within 24 hours.
           </p>
           
           {/* Quick Contact Options */}
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+918360723410" className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-3 rounded-full hover:bg-white/20 transition-colors">
-              <Phone className="w-5 h-5 text-orange-400" />
-              <span className="font-semibold">+91 83607 23410</span>
+            <a href="tel:+919872364476" className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-3 rounded-full hover:bg-white/20 transition-colors">
+              <Phone className="w-5 h-5 text-lime-400" />
+              <span className="font-semibold">+91 98723 64476</span>
             </a>
-            <a href="mailto:info@xcflown.com" className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-3 rounded-full hover:bg-white/20 transition-colors">
-              <Mail className="w-5 h-5 text-orange-400" />
-              <span className="font-semibold">info@xcflown.com</span>
+            <a href="mailto:info@webnovacrew.com" className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-3 rounded-full hover:bg-white/20 transition-colors">
+              <Mail className="w-5 h-5 text-lime-400" />
+              <span className="font-semibold">info@webnovacrew.com</span>
             </a>
-            <a href="https://wa.me/918360723410" target="_blank" className="flex items-center gap-2 bg-orange-500 text-violet-900 px-5 py-3 rounded-full hover:bg-orange-400 transition-colors font-bold">
+            <a href="https://wa.me/919872364476" target="_blank" className="flex items-center gap-2 bg-lime-500 text-blue-900 px-5 py-3 rounded-full hover:bg-lime-400 transition-colors font-bold">
               <MessageCircle className="w-5 h-5" />
               <span>WhatsApp Us</span>
             </a>
@@ -125,33 +125,33 @@ export default function Contact() {
               <div className="space-y-8">
                 <Card className="border-none shadow-lg">
                   <CardContent className="flex items-start gap-4 p-6">
-                    <div className="w-12 h-12 rounded-full bg-violet-100 flex items-center justify-center text-violet-600 shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
                       <Phone className="w-6 h-6" />
                     </div>
                     <div>
                       <h3 className="font-bold text-lg text-slate-900 mb-1">Call Us</h3>
                       <p className="text-slate-600 mb-1">Mon-Fri from 9am to 6pm IST</p>
-                      <a href="tel:+918360723410" className="text-violet-600 font-bold text-lg hover:underline">+91 83607 23410</a>
+                      <a href="tel:+919872364476" className="text-blue-600 font-bold text-lg hover:underline">+91 98723 64476</a>
                     </div>
                   </CardContent>
                 </Card>
 
                 <Card className="border-none shadow-lg">
                   <CardContent className="flex items-start gap-4 p-6">
-                    <div className="w-12 h-12 rounded-full bg-violet-100 flex items-center justify-center text-violet-600 shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
                       <Mail className="w-6 h-6" />
                     </div>
                     <div>
                       <h3 className="font-bold text-lg text-slate-900 mb-1">Email Us</h3>
                       <p className="text-slate-600 mb-1">For general inquiries and support</p>
-                      <a href="mailto:info@xcflown.com" className="text-violet-600 font-bold text-lg hover:underline">info@xcflown.com</a>
+                      <a href="mailto:info@webnovacrew.com" className="text-blue-600 font-bold text-lg hover:underline">info@webnovacrew.com</a>
                     </div>
                   </CardContent>
                 </Card>
 
                 <Card className="border-none shadow-lg">
                   <CardContent className="flex items-start gap-4 p-6">
-                    <div className="w-12 h-12 rounded-full bg-violet-100 flex items-center justify-center text-violet-600 shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
                       <MapPin className="w-6 h-6" />
                     </div>
                     <div>
@@ -179,25 +179,25 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-slate-700">Full Name</label>
-                    <Input id="name" name="name" autoComplete="name" required value={name} onChange={(e) => setName(e.target.value)} placeholder="Your Name" className="bg-slate-50 border-slate-200 focus-visible:ring-violet-500" />
+                    <Input id="name" name="name" autoComplete="name" required value={name} onChange={(e) => setName(e.target.value)} placeholder="Your Name" className="bg-slate-50 border-slate-200 focus-visible:ring-blue-500" />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium text-slate-700">Email Address</label>
-                    <Input id="email" name="email" type="email" autoComplete="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="your@email.com" className="bg-slate-50 border-slate-200 focus-visible:ring-violet-500" />
+                    <Input id="email" name="email" type="email" autoComplete="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="your@email.com" className="bg-slate-50 border-slate-200 focus-visible:ring-blue-500" />
                   </div>
                 </div>
                 
                 <div className="space-y-2">
                   <label htmlFor="subject" className="text-sm font-medium text-slate-700">Subject</label>
-                  <Input id="subject" name="subject" required value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="Project Inquiry" className="bg-slate-50 border-slate-200 focus-visible:ring-violet-500" />
+                  <Input id="subject" name="subject" required value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="Project Inquiry" className="bg-slate-50 border-slate-200 focus-visible:ring-blue-500" />
                 </div>
 
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium text-slate-700">Message</label>
-                  <Textarea id="message" name="message" required value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Tell us about your project..." className="min-h-[150px] bg-slate-50 border-slate-200 focus-visible:ring-violet-500" />
+                  <Textarea id="message" name="message" required value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Tell us about your project..." className="min-h-[150px] bg-slate-50 border-slate-200 focus-visible:ring-blue-500" />
                 </div>
 
-                <Button type="submit" disabled={isSubmitting} className="w-full bg-violet-600 hover:bg-violet-700 text-white font-bold py-6 text-lg disabled:opacity-70">
+                <Button type="submit" disabled={isSubmitting} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-6 text-lg disabled:opacity-70">
                   <Send className="w-5 h-5 mr-2" /> {isSubmitting ? "Sending…" : "Send Message"}
                 </Button>
               </form>
@@ -217,7 +217,7 @@ export default function Contact() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-poppins font-bold text-slate-900 mb-4">
-              Why Work With XcFlown?
+              Why Work With Web Nova Crew?
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
               When you choose us, you get more than just a development team. You get a dedicated partner committed to your success.
@@ -239,7 +239,7 @@ export default function Contact() {
                 transition={{ delay: i * 0.1 }}
                 className="text-center p-6"
               >
-                <div className="w-14 h-14 rounded-full bg-violet-100 text-violet-600 flex items-center justify-center mx-auto mb-4">
+                <div className="w-14 h-14 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mx-auto mb-4">
                   {item.icon}
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
@@ -261,7 +261,7 @@ export default function Contact() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="XcFlown Office Location"
+            title="Web Nova Crew Office Location"
             className="grayscale hover:grayscale-0 transition-all duration-500"
           ></iframe>
           
@@ -276,7 +276,7 @@ export default function Contact() {
             <a 
               href="https://maps.google.com/?q=26.8467,80.9462" 
               target="_blank" 
-              className="text-violet-600 font-semibold text-sm hover:underline flex items-center gap-1"
+              className="text-blue-600 font-semibold text-sm hover:underline flex items-center gap-1"
             >
               Get Directions <ArrowRight className="w-4 h-4" />
             </a>

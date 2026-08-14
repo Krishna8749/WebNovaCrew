@@ -46,7 +46,7 @@ export function AdUnit({ slot, format = "auto", layoutKey, className = "", label
   if (!slot) {
     return (
       <div
-        className={`flex min-h-[90px] items-center justify-center rounded-lg border border-dashed border-violet-700/50 bg-violet-900/50 text-xs text-slate-500 ${className}`}
+        className={`flex min-h-[90px] items-center justify-center rounded-lg border border-dashed border-slate-600 bg-slate-900/50 text-xs text-slate-500 ${className}`}
         aria-hidden
       >
         {label ?? "Ad space — slot ID not provided"}

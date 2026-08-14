@@ -92,7 +92,7 @@ export default function MobileAppDevelopment() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
         title="Mobile App Development Company | Android, iOS, Flutter | India & Kuwait" 
         description="Leading mobile app development company in India & Kuwait. We build high-performance Android, iOS, and cross-platform apps with AI integration. 250+ apps delivered. ₹25,000 onwards."
@@ -100,14 +100,14 @@ export default function MobileAppDevelopment() {
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Services", url: "https://xcflown.com/services" },
-        { name: "Mobile App Development", url: "https://xcflown.com/services/mobile-app-development" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Services", url: "https://webnovacrew.com/services" },
+        { name: "Mobile App Development", url: "https://webnovacrew.com/services/mobile-app-development" }
       ]} />
       <ServiceSchema 
         serviceName="Mobile App Development"
         serviceDescription="Professional mobile app development services for Android, iOS, and cross-platform applications. Custom apps with modern UI/UX, AI integration, and scalable architecture."
-        serviceUrl="https://xcflown.com/services/mobile-app-development"
+        serviceUrl="https://webnovacrew.com/services/mobile-app-development"
       />
       
       <Navbar />
@@ -115,8 +115,8 @@ export default function MobileAppDevelopment() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/30 to-slate-950">
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-violet-500/20 rounded-full blur-[100px]"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-orange-500/20 rounded-full blur-[80px]"></div>
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[100px]"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-cyan-500/20 rounded-full blur-[80px]"></div>
         </div>
 
         <div className="container mx-auto max-w-7xl px-4 relative z-10">
@@ -126,9 +126,9 @@ export default function MobileAppDevelopment() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-violet-500/10 border border-violet-500/20 rounded-full mb-6">
-              <Star className="w-4 h-4 text-violet-400" />
-              <span className="text-sm text-violet-300">250+ Apps Delivered | 7+ Years Experience</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-6">
+              <Star className="w-4 h-4 text-blue-400" />
+              <span className="text-sm text-blue-300">250+ Apps Delivered | 7+ Years Experience</span>
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
@@ -136,7 +136,7 @@ export default function MobileAppDevelopment() {
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
-              Build high-performance <span className="text-violet-400 font-semibold">Android, iOS, and cross-platform apps</span> with AI-powered features, modern UI/UX, and scalable architecture. Trusted by businesses in India & Kuwait.
+              Build high-performance <span className="text-blue-400 font-semibold">Android, iOS, and cross-platform apps</span> with AI-powered features, modern UI/UX, and scalable architecture. Trusted by businesses in India & Kuwait.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center mb-12">
@@ -145,7 +145,7 @@ export default function MobileAppDevelopment() {
                   Get Free Consultation <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-violet-700 hover:bg-violet-800">
+              <Button size="lg" variant="outline" className="border-slate-700 hover:bg-slate-800">
                 <Link href="/portfolio" className="flex items-center gap-2">
                   View Portfolio
                 </Link>
@@ -154,19 +154,19 @@ export default function MobileAppDevelopment() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-violet-400 mb-1">250+</div>
+                <div className="text-3xl font-bold text-blue-400 mb-1">250+</div>
                 <div className="text-sm text-slate-400">Apps Delivered</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-400 mb-1">7+</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-1">7+</div>
                 <div className="text-sm text-slate-400">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-violet-400 mb-1">7-45</div>
+                <div className="text-3xl font-bold text-blue-400 mb-1">7-45</div>
                 <div className="text-sm text-slate-400">Days Delivery</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-400 mb-1">100%</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-1">100%</div>
                 <div className="text-sm text-slate-400">In-House Team</div>
               </div>
             </div>
@@ -175,7 +175,7 @@ export default function MobileAppDevelopment() {
       </section>
 
       {/* Platforms We Build For */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -193,9 +193,9 @@ export default function MobileAppDevelopment() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-violet-500/50 transition-all"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all"
               >
-                <div className="w-12 h-12 bg-violet-500/10 rounded-lg flex items-center justify-center text-violet-400 mb-4">
+                <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 mb-4">
                   {platform.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{platform.title}</h3>
@@ -225,10 +225,10 @@ export default function MobileAppDevelopment() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-violet-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all"
               >
                 <div className="flex items-center gap-2 mb-3">
-                  <CheckCircle2 className="w-5 h-5 text-violet-400" />
+                  <CheckCircle2 className="w-5 h-5 text-blue-400" />
                   <h3 className="text-lg font-semibold text-white">{type.title}</h3>
                 </div>
                 <p className="text-slate-400 text-sm">{type.desc}</p>
@@ -239,7 +239,7 @@ export default function MobileAppDevelopment() {
       </section>
 
       {/* Features We Include */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -257,9 +257,9 @@ export default function MobileAppDevelopment() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.03 }}
-                className="flex items-center gap-3 bg-violet-800/30 border border-violet-700/50 rounded-lg p-4"
+                className="flex items-center gap-3 bg-slate-800/30 border border-slate-700/50 rounded-lg p-4"
               >
-                <CheckCircle2 className="w-5 h-5 text-violet-400 flex-shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0" />
                 <span className="text-slate-200">{feature}</span>
               </motion.div>
             ))}
@@ -272,7 +272,7 @@ export default function MobileAppDevelopment() {
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-              Why Choose XcFlown
+              Why Choose Web Nova Crew
             </h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
               India & Kuwait's most trusted mobile app development company
@@ -286,9 +286,9 @@ export default function MobileAppDevelopment() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-violet-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all"
               >
-                <div className="w-12 h-12 bg-violet-500/10 rounded-lg flex items-center justify-center text-violet-400 mb-4">
+                <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 mb-4">
                   {item.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
@@ -300,7 +300,7 @@ export default function MobileAppDevelopment() {
       </section>
 
       {/* Development Process */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -318,7 +318,7 @@ export default function MobileAppDevelopment() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 relative"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 relative"
               >
                 <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
                   {item.step}
@@ -353,7 +353,7 @@ export default function MobileAppDevelopment() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
@@ -364,7 +364,7 @@ export default function MobileAppDevelopment() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-950/50 to-cyan-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-blue-950/50 to-cyan-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Ready to Build Your Mobile App?
@@ -379,7 +379,7 @@ export default function MobileAppDevelopment() {
                 Book Free Consultation
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-violet-700/50 hover:bg-violet-800 text-white">
+            <Button size="lg" variant="outline" className="border-slate-600 hover:bg-slate-800 text-white">
               <Link href="/pricing">
                 View Pricing
               </Link>

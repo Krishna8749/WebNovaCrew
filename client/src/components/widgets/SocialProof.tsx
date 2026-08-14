@@ -121,7 +121,7 @@ export function RecentActivity() {
       className="fixed bottom-24 left-6 z-40 bg-white rounded-xl shadow-lg p-4 max-w-xs border border-slate-100"
     >
       <div className="flex items-start gap-3">
-        <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-lime-600 shrink-0">
+        <div className="w-10 h-10 rounded-full bg-lime-100 flex items-center justify-center text-lime-600 shrink-0">
           ✓
         </div>
         <div>

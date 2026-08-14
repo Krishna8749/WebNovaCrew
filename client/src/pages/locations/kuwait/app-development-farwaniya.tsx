@@ -120,46 +120,46 @@ export default function AppDevelopmentFarwaniya() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
-      <SEO title="App Development Company in Farwaniya | Mobile App Developers Kuwait | XcFlown" description="Top app development company in Farwaniya, Kuwait. Retail, healthcare, community apps. Multilingual support. 40% cheaper. Call +91 83607 23410." keywords="app development Farwaniya, mobile app developers Farwaniya Kuwait, Khaitan app development, healthcare app Kuwait" />
+    <div className="min-h-screen bg-slate-950 font-sans">
+      <SEO title="App Development Company in Farwaniya | Mobile App Developers Kuwait | Web Nova Crew" description="Top app development company in Farwaniya, Kuwait. Retail, healthcare, community apps. Multilingual support. 40% cheaper. Call +91 98723 64476." keywords="app development Farwaniya, mobile app developers Farwaniya Kuwait, Khaitan app development, healthcare app Kuwait" />
       <LocalBusinessSchema />
-      <BreadcrumbSchema items={[{ name: "Home", url: "https://xcflown.com" }, { name: "Locations", url: "https://xcflown.com/locations" }, { name: "Kuwait", url: "https://xcflown.com/locations" }, { name: "Farwaniya", url: "https://xcflown.com/locations/app-development-farwaniya" }]} />
-      <ServiceSchema serviceName="App Development in Farwaniya" serviceDescription="Professional mobile app development in Farwaniya, Kuwait." serviceUrl="https://xcflown.com/locations/app-development-farwaniya" />
+      <BreadcrumbSchema items={[{ name: "Home", url: "https://webnovacrew.com" }, { name: "Locations", url: "https://webnovacrew.com/locations" }, { name: "Kuwait", url: "https://webnovacrew.com/locations" }, { name: "Farwaniya", url: "https://webnovacrew.com/locations/app-development-farwaniya" }]} />
+      <ServiceSchema serviceName="App Development in Farwaniya" serviceDescription="Professional mobile app development in Farwaniya, Kuwait." serviceUrl="https://webnovacrew.com/locations/app-development-farwaniya" />
       
       <Navbar />
 
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-cyan-950/30 to-slate-950"><div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-orange-500/20 rounded-full blur-[100px]"></div></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-cyan-950/30 to-slate-950"><div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-[100px]"></div></div>
         <div className="container mx-auto max-w-7xl px-4 relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full mb-6"><MapPin className="w-4 h-4 text-orange-400" /><span className="text-sm text-orange-300">Farwaniya, Kuwait • Most Populous • Commercial Hub</span></div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full mb-6"><MapPin className="w-4 h-4 text-cyan-400" /><span className="text-sm text-cyan-300">Farwaniya, Kuwait • Most Populous • Commercial Hub</span></div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-100 to-teal-100 bg-clip-text text-transparent">#1 App Development Company in Farwaniya</h1>
-            <p className="text-xl text-slate-300 mb-4">Build powerful <span className="text-orange-400 font-semibold">retail, healthcare & community apps</span> for Farwaniya's diverse market.</p>
+            <p className="text-xl text-slate-300 mb-4">Build powerful <span className="text-cyan-400 font-semibold">retail, healthcare & community apps</span> for Farwaniya's diverse market.</p>
             <p className="text-lg text-slate-400 mb-8">🏪 20+ Farwaniya Apps • 🌐 Multilingual • 💳 KNET Ready</p>
             <div className="flex flex-wrap gap-4 justify-center mb-12">
               <Button size="lg" className="bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-8 py-6"><Link href="/contact" className="flex items-center gap-2">Get Free Quote <ArrowRight className="w-5 h-5" /></Link></Button>
-              <a href="https://wa.me/918360723410"><Button size="lg" variant="outline" className="border-green-500/50 text-green-400 px-8 py-6"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp</Button></a>
+              <a href="https://wa.me/919872364476"><Button size="lg" variant="outline" className="border-green-500/50 text-green-400 px-8 py-6"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp</Button></a>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              <div className="text-center bg-white/5 rounded-2xl p-6 border border-orange-500/20"><div className="text-3xl font-bold text-orange-400">20+</div><div className="text-sm text-slate-400">Farwaniya Apps</div></div>
-              <div className="text-center bg-white/5 rounded-2xl p-6 border border-orange-500/20"><div className="text-3xl font-bold text-teal-400">KWD 500</div><div className="text-sm text-slate-400">Starting</div></div>
-              <div className="text-center bg-white/5 rounded-2xl p-6 border border-orange-500/20"><div className="text-3xl font-bold text-orange-400">5+</div><div className="text-sm text-slate-400">Languages</div></div>
-              <div className="text-center bg-white/5 rounded-2xl p-6 border border-orange-500/20"><div className="text-3xl font-bold text-teal-400">40%</div><div className="text-sm text-slate-400">Savings</div></div>
+              <div className="text-center bg-white/5 rounded-2xl p-6 border border-cyan-500/20"><div className="text-3xl font-bold text-cyan-400">20+</div><div className="text-sm text-slate-400">Farwaniya Apps</div></div>
+              <div className="text-center bg-white/5 rounded-2xl p-6 border border-cyan-500/20"><div className="text-3xl font-bold text-teal-400">KWD 500</div><div className="text-sm text-slate-400">Starting</div></div>
+              <div className="text-center bg-white/5 rounded-2xl p-6 border border-cyan-500/20"><div className="text-3xl font-bold text-cyan-400">5+</div><div className="text-sm text-slate-400">Languages</div></div>
+              <div className="text-center bg-white/5 rounded-2xl p-6 border border-cyan-500/20"><div className="text-3xl font-bold text-teal-400">40%</div><div className="text-sm text-slate-400">Savings</div></div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-20 bg-violet-900/50"><div className="container mx-auto max-w-7xl px-4"><div className="text-center mb-16"><h2 className="text-3xl font-bold text-white">Services</h2></div><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{services.map((s, i) => (<div key={i} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-orange-500/50"><div className="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-400 mb-4">{s.icon}</div><h3 className="text-xl font-semibold text-white mb-2">{s.title}</h3><p className="text-slate-400 text-sm mb-4">{s.desc}</p><div className="flex flex-wrap gap-2">{s.features.map((f, j) => (<span key={j} className="text-xs bg-orange-500/10 text-orange-300 px-2 py-1 rounded">{f}</span>))}</div></div>))}</div></div></section>
+      <section className="py-20 bg-slate-900/50"><div className="container mx-auto max-w-7xl px-4"><div className="text-center mb-16"><h2 className="text-3xl font-bold text-white">Services</h2></div><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{services.map((s, i) => (<div key={i} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-cyan-500/50"><div className="w-14 h-14 bg-cyan-500/10 rounded-xl flex items-center justify-center text-cyan-400 mb-4">{s.icon}</div><h3 className="text-xl font-semibold text-white mb-2">{s.title}</h3><p className="text-slate-400 text-sm mb-4">{s.desc}</p><div className="flex flex-wrap gap-2">{s.features.map((f, j) => (<span key={j} className="text-xs bg-cyan-500/10 text-cyan-300 px-2 py-1 rounded">{f}</span>))}</div></div>))}</div></div></section>
 
-      <section className="py-20"><div className="container mx-auto max-w-7xl px-4"><div className="text-center mb-16"><h2 className="text-3xl font-bold text-white">Industries</h2></div><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{industries.map((ind, i) => (<div key={i} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6"><div className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-orange-400 mt-1" /><div><h3 className="text-lg font-semibold text-white mb-1">{ind.name}</h3><p className="text-sm text-slate-400">{ind.desc}</p></div></div></div>))}</div></div></section>
+      <section className="py-20"><div className="container mx-auto max-w-7xl px-4"><div className="text-center mb-16"><h2 className="text-3xl font-bold text-white">Industries</h2></div><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">{industries.map((ind, i) => (<div key={i} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6"><div className="flex items-start gap-3"><CheckCircle2 className="w-6 h-6 text-cyan-400 mt-1" /><div><h3 className="text-lg font-semibold text-white mb-1">{ind.name}</h3><p className="text-sm text-slate-400">{ind.desc}</p></div></div></div>))}</div></div></section>
 
-      <section className="py-20 bg-violet-900/50"><div className="container mx-auto max-w-7xl px-4"><div className="text-center mb-16"><h2 className="text-3xl font-bold text-white">Areas</h2></div><div className="flex flex-wrap gap-4 justify-center">{areas.map((a, i) => (<div key={i} className="px-5 py-3 bg-violet-800/50 border border-violet-700 rounded-full text-slate-300 flex items-center gap-2"><MapPin className="w-4 h-4 text-orange-400" />{a.name}</div>))}</div></div></section>
+      <section className="py-20 bg-slate-900/50"><div className="container mx-auto max-w-7xl px-4"><div className="text-center mb-16"><h2 className="text-3xl font-bold text-white">Areas</h2></div><div className="flex flex-wrap gap-4 justify-center">{areas.map((a, i) => (<div key={i} className="px-5 py-3 bg-slate-800/50 border border-slate-700 rounded-full text-slate-300 flex items-center gap-2"><MapPin className="w-4 h-4 text-cyan-400" />{a.name}</div>))}</div></div></section>
 
-      <section className="py-20"><div className="container mx-auto max-w-7xl px-4"><div className="text-center mb-16"><h2 className="text-3xl font-bold text-white">Why Choose Us</h2></div><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">{whyChooseUs.map((item, i) => (<div key={i} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6"><div className="flex items-center gap-4 mb-4"><div className="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-400">{item.icon}</div><div className="text-sm font-bold text-orange-400 bg-orange-500/10 px-3 py-1 rounded-full">{item.stats}</div></div><h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3><p className="text-slate-400">{item.desc}</p></div>))}</div></div></section>
+      <section className="py-20"><div className="container mx-auto max-w-7xl px-4"><div className="text-center mb-16"><h2 className="text-3xl font-bold text-white">Why Choose Us</h2></div><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">{whyChooseUs.map((item, i) => (<div key={i} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6"><div className="flex items-center gap-4 mb-4"><div className="w-14 h-14 bg-cyan-500/10 rounded-xl flex items-center justify-center text-cyan-400">{item.icon}</div><div className="text-sm font-bold text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full">{item.stats}</div></div><h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3><p className="text-slate-400">{item.desc}</p></div>))}</div></div></section>
 
       {/* Pricing */}
-      <section className="py-20 bg-violet-900/50"><div className="container mx-auto max-w-7xl px-4"><div className="text-center mb-16"><h2 className="text-3xl font-bold text-white">Farwaniya App Development Pricing</h2></div><div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">{pricing.map((p, i) => (<div key={i} className={`bg-violet-800/50 border rounded-xl p-6 ${p.popular ? 'border-orange-500 ring-2 ring-cyan-500/20' : 'border-violet-700'}`}><h3 className="text-xl font-semibold text-white mb-1">{p.tier}</h3><div className="text-2xl font-bold text-orange-400">{p.price}</div><div className="text-sm text-slate-500 mb-4">{p.priceINR}</div><ul className="space-y-2 mb-6">{p.features.map((f, j) => (<li key={j} className="flex items-center gap-2 text-slate-300 text-sm"><CheckCircle2 className="w-4 h-4 text-orange-400" />{f}</li>))}</ul><Button className={`w-full ${p.popular ? 'bg-gradient-to-r from-cyan-600 to-teal-600' : 'bg-slate-700'}`}><Link href="/contact">Get Started</Link></Button></div>))}</div></div></section>
+      <section className="py-20 bg-slate-900/50"><div className="container mx-auto max-w-7xl px-4"><div className="text-center mb-16"><h2 className="text-3xl font-bold text-white">Farwaniya App Development Pricing</h2></div><div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">{pricing.map((p, i) => (<div key={i} className={`bg-slate-800/50 border rounded-xl p-6 ${p.popular ? 'border-cyan-500 ring-2 ring-cyan-500/20' : 'border-slate-700'}`}><h3 className="text-xl font-semibold text-white mb-1">{p.tier}</h3><div className="text-2xl font-bold text-cyan-400">{p.price}</div><div className="text-sm text-slate-500 mb-4">{p.priceINR}</div><ul className="space-y-2 mb-6">{p.features.map((f, j) => (<li key={j} className="flex items-center gap-2 text-slate-300 text-sm"><CheckCircle2 className="w-4 h-4 text-cyan-400" />{f}</li>))}</ul><Button className={`w-full ${p.popular ? 'bg-gradient-to-r from-cyan-600 to-teal-600' : 'bg-slate-700'}`}><Link href="/contact">Get Started</Link></Button></div>))}</div></div></section>
 
       {/* Case Studies */}
       <section className="py-20">
@@ -168,12 +168,12 @@ export default function AppDevelopmentFarwaniya() {
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-orange-500/50 transition-all">
-                <div className="text-orange-400 text-sm font-medium mb-2">{study.client}</div>
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50 transition-all">
+                <div className="text-cyan-400 text-sm font-medium mb-2">{study.client}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
                 <p className="text-slate-400 mb-6 leading-relaxed">{study.description}</p>
                 <div className="grid grid-cols-2 gap-3 mb-6">
-                  {study.results.map((result, i) => (<div key={i} className="bg-orange-500/10 rounded-lg px-3 py-2 text-center"><span className="text-orange-300 text-sm font-medium">{result}</span></div>))}
+                  {study.results.map((result, i) => (<div key={i} className="bg-cyan-500/10 rounded-lg px-3 py-2 text-center"><span className="text-cyan-300 text-sm font-medium">{result}</span></div>))}
                 </div>
                 <div className="flex flex-wrap gap-2">{study.tech.map((tech, i) => (<span key={i} className="text-xs bg-slate-700 text-slate-300 px-2 py-1 rounded">{tech}</span>))}</div>
               </motion.div>
@@ -183,16 +183,16 @@ export default function AppDevelopmentFarwaniya() {
       </section>
 
       {/* Development Process */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-3xl font-bold text-white">Our Development Process</h2></div>
           <div className="grid md:grid-cols-5 gap-6">
             {developmentProcess.map((phase, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="relative">
-                <div className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-orange-500/50 transition-all h-full">
-                  <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mb-4">{phase.step}</div>
+                <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all h-full">
+                  <div className="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold mb-4">{phase.step}</div>
                   <h3 className="text-lg font-semibold text-white mb-1">{phase.title}</h3>
-                  <div className="text-orange-400 text-sm mb-3">{phase.duration}</div>
+                  <div className="text-cyan-400 text-sm mb-3">{phase.duration}</div>
                   <p className="text-slate-400 text-sm leading-relaxed">{phase.desc}</p>
                 </div>
               </motion.div>
@@ -206,7 +206,7 @@ export default function AppDevelopmentFarwaniya() {
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16"><h2 className="text-3xl font-bold text-white">Technologies</h2></div>
           <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {techStack.map((stack, i) => (<motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6"><h3 className="text-lg font-semibold text-orange-400 mb-4">{stack.category}</h3><div className="flex flex-wrap gap-2">{stack.techs.map((tech, j) => (<span key={j} className="text-sm bg-slate-700 text-slate-300 px-3 py-1 rounded-full">{tech}</span>))}</div></motion.div>))}
+            {techStack.map((stack, i) => (<motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6"><h3 className="text-lg font-semibold text-cyan-400 mb-4">{stack.category}</h3><div className="flex flex-wrap gap-2">{stack.techs.map((tech, j) => (<span key={j} className="text-sm bg-slate-700 text-slate-300 px-3 py-1 rounded-full">{tech}</span>))}</div></motion.div>))}
           </div>
         </div>
       </section>
@@ -214,10 +214,10 @@ export default function AppDevelopmentFarwaniya() {
       <TestimonialsSection />
 
       {/* FAQs */}
-      <section className="py-20 bg-violet-900/50"><div className="container mx-auto max-w-4xl px-4"><div className="text-center mb-16"><h2 className="text-3xl font-bold text-white">Farwaniya App Development FAQs</h2></div><div className="space-y-4">{faqs.map((faq, i) => (<motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6"><h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3><p className="text-slate-400 leading-relaxed">{faq.answer}</p></motion.div>))}</div></div></section>
+      <section className="py-20 bg-slate-900/50"><div className="container mx-auto max-w-4xl px-4"><div className="text-center mb-16"><h2 className="text-3xl font-bold text-white">Farwaniya App Development FAQs</h2></div><div className="space-y-4">{faqs.map((faq, i) => (<motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6"><h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3><p className="text-slate-400 leading-relaxed">{faq.answer}</p></motion.div>))}</div></div></section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-br from-cyan-950/50 to-teal-950/50 border-t border-violet-800"><div className="container mx-auto max-w-4xl px-4 text-center"><h2 className="text-3xl font-bold mb-6 text-white">Ready to Build Your Farwaniya App?</h2><p className="text-xl text-slate-300 mb-8">Get a free consultation for your retail, healthcare, or community app.</p><div className="flex flex-wrap gap-4 justify-center"><Button size="lg" className="bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-8 py-6"><Link href="/contact" className="flex items-center gap-2"><Phone className="w-5 h-5" />Get Free Quote</Link></Button><a href="https://wa.me/918360723410" target="_blank"><Button size="lg" variant="outline" className="border-orange-500/50 text-orange-400 hover:bg-orange-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button></a></div></div></section>
+      <section className="py-20 bg-gradient-to-br from-cyan-950/50 to-teal-950/50 border-t border-slate-800"><div className="container mx-auto max-w-4xl px-4 text-center"><h2 className="text-3xl font-bold mb-6 text-white">Ready to Build Your Farwaniya App?</h2><p className="text-xl text-slate-300 mb-8">Get a free consultation for your retail, healthcare, or community app.</p><div className="flex flex-wrap gap-4 justify-center"><Button size="lg" className="bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-8 py-6"><Link href="/contact" className="flex items-center gap-2"><Phone className="w-5 h-5" />Get Free Quote</Link></Button><a href="https://wa.me/919872364476" target="_blank"><Button size="lg" variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button></a></div></div></section>
 
       <Footer />
     </div>

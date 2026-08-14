@@ -41,9 +41,9 @@ export default function CaseStudyPage() {
         keywords={`${caseStudy.industry} case study, ${caseStudy.services.join(", ")}, ${caseStudy.technologies.join(", ")}`}
       />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Portfolio", url: "https://xcflown.com/portfolio" },
-        { name: caseStudy.title, url: `https://xcflown.com/case-study/${caseStudy.slug}` }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Portfolio", url: "https://webnovacrew.com/portfolio" },
+        { name: caseStudy.title, url: `https://webnovacrew.com/case-study/${caseStudy.slug}` }
       ]} />
       
       <Navbar />
@@ -71,7 +71,7 @@ export default function CaseStudyPage() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl pt-20 md:pt-32"
           >
-            <span className="inline-block bg-orange-400 text-violet-900 text-sm font-bold px-4 py-1 rounded-full mb-4">
+            <span className="inline-block bg-lime-400 text-blue-900 text-sm font-bold px-4 py-1 rounded-full mb-4">
               {caseStudy.industry}
             </span>
             <h1 className="text-3xl md:text-5xl font-poppins font-bold text-white mb-6 leading-tight">
@@ -91,7 +91,7 @@ export default function CaseStudyPage() {
       </section>
 
       {/* Results Summary */}
-      <section className="py-12 bg-violet-900 text-white -mt-1">
+      <section className="py-12 bg-blue-900 text-white -mt-1">
         <div className="container mx-auto max-w-6xl px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {caseStudy.results.map((result, index) => (
@@ -103,8 +103,8 @@ export default function CaseStudyPage() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl md:text-5xl font-bold text-orange-400 mb-2">{result.value}</div>
-                <div className="text-violet-200 font-medium">{result.metric}</div>
+                <div className="text-4xl md:text-5xl font-bold text-lime-400 mb-2">{result.value}</div>
+                <div className="text-blue-200 font-medium">{result.metric}</div>
               </motion.div>
             ))}
           </div>
@@ -139,7 +139,7 @@ export default function CaseStudyPage() {
                 viewport={{ once: true }}
               >
                 <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                  <span className="w-10 h-10 rounded-full bg-violet-100 text-violet-600 flex items-center justify-center text-lg font-bold">2</span>
+                  <span className="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-lg font-bold">2</span>
                   Our Solution
                 </h2>
                 <div className="text-slate-600 leading-relaxed whitespace-pre-line">
@@ -161,7 +161,7 @@ export default function CaseStudyPage() {
                   {caseStudy.results.map((result, index) => (
                     <Card key={index} className="border-none shadow-md">
                       <CardContent className="p-6">
-                        <div className="text-3xl font-bold text-violet-600 mb-1">{result.value}</div>
+                        <div className="text-3xl font-bold text-blue-600 mb-1">{result.value}</div>
                         <div className="font-semibold text-slate-900 mb-1">{result.metric}</div>
                         <div className="text-sm text-slate-500">{result.description}</div>
                       </CardContent>
@@ -178,12 +178,12 @@ export default function CaseStudyPage() {
                   viewport={{ once: true }}
                   className="bg-slate-50 rounded-2xl p-8"
                 >
-                  <Quote className="w-12 h-12 text-violet-200 mb-4" />
+                  <Quote className="w-12 h-12 text-blue-200 mb-4" />
                   <blockquote className="text-xl text-slate-700 italic mb-6 leading-relaxed">
                     "{caseStudy.testimonial.quote}"
                   </blockquote>
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-violet-600 flex items-center justify-center text-white font-bold text-lg">
+                    <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-lg">
                       {caseStudy.testimonial.author.charAt(0)}
                     </div>
                     <div>
@@ -204,7 +204,7 @@ export default function CaseStudyPage() {
                   <div className="space-y-2 mb-6">
                     {caseStudy.services.map((service, index) => (
                       <div key={index} className="flex items-center gap-2 text-slate-600">
-                        <CheckCircle2 className="w-4 h-4 text-orange-500" />
+                        <CheckCircle2 className="w-4 h-4 text-lime-500" />
                         {service}
                       </div>
                     ))}
@@ -236,7 +236,7 @@ export default function CaseStudyPage() {
                   </div>
 
                   <Link href="/contact">
-                    <Button className="w-full mt-6 bg-violet-600 hover:bg-violet-700">
+                    <Button className="w-full mt-6 bg-blue-600 hover:bg-blue-700">
                       Start Similar Project
                     </Button>
                   </Link>
@@ -253,7 +253,7 @@ export default function CaseStudyPage() {
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl font-bold text-slate-900">More Case Studies</h2>
             <Link href="/portfolio">
-              <Button variant="ghost" className="text-violet-600">
+              <Button variant="ghost" className="text-blue-600">
                 View All <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
             </Link>
@@ -270,8 +270,8 @@ export default function CaseStudyPage() {
                     />
                   </div>
                   <div className="p-6">
-                    <span className="text-xs font-bold text-violet-600 uppercase">{cs.industry}</span>
-                    <h3 className="font-bold text-slate-900 group-hover:text-violet-600 transition-colors mt-2 line-clamp-2">
+                    <span className="text-xs font-bold text-blue-600 uppercase">{cs.industry}</span>
+                    <h3 className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors mt-2 line-clamp-2">
                       {cs.title}
                     </h3>
                     <p className="text-slate-500 text-sm mt-2">{cs.client}</p>

@@ -915,7 +915,7 @@ function publicOriginFromReq(req: Request): string {
   const host =
     String(req.headers["x-forwarded-host"] ?? "")
       .split(",")[0]
-      ?.trim() || req.get("host") || "xcflown.com";
+      ?.trim() || req.get("host") || "webnovacrew.com";
   return `${proto}://${host}`;
 }
 

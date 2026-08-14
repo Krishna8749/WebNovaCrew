@@ -38,7 +38,7 @@ export function CookieConsent() {
       role="dialog"
       aria-label="Cookie consent"
     >
-      <div className="mx-auto flex max-w-4xl flex-col gap-3 rounded-2xl border border-violet-700 bg-violet-950/95 p-4 sm:p-5 shadow-2xl backdrop-blur-md sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto flex max-w-4xl flex-col gap-3 rounded-2xl border border-slate-700 bg-slate-950/95 p-4 sm:p-5 shadow-2xl backdrop-blur-md sm:flex-row sm:items-center sm:justify-between">
         <div className="min-w-0 text-sm text-slate-300 leading-relaxed">
           <p className="font-semibold text-white mb-1">We use cookies</p>
           <p>
@@ -50,12 +50,12 @@ export function CookieConsent() {
           <Button
             type="button"
             variant="outline"
-            className="h-10 border-violet-700/50 text-slate-300"
+            className="h-10 border-slate-600 text-slate-300"
             onClick={decline}
           >
             Decline
           </Button>
-          <Button type="button" className="h-10 bg-violet-600 hover:bg-violet-500" onClick={accept}>
+          <Button type="button" className="h-10 bg-blue-600 hover:bg-blue-500" onClick={accept}>
             Accept
           </Button>
         </div>

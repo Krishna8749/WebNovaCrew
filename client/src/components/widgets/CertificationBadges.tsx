@@ -24,20 +24,20 @@ const certificationBadges = [
     link: "https://selectedfirms.co",
     description: "Top Mobile App Development",
     color: "from-cyan-500 to-blue-500",
-    accent: "#f97316",
+    accent: "#22c55e",
     rating: "5.0"
   },
   {
     name: "DesignRush",
     link: "https://designrush.com",
     description: "Best App Development Agency",
-    color: "from-violet-600 to-orange-500",
-    accent: "#8b5cf6",
+    color: "from-violet-600 to-purple-600",
+    accent: "#06b6d4",
     rating: "5.0"
   },
   {
     name: "TechReviewer",
-    link: "https://techreviewer.co/companies/web-Xc-Flown",
+    link: "https://techreviewer.co/companies/web-nova-crew",
     description: "Top Web Development Company",
     color: "from-emerald-500 to-teal-600",
     accent: "#f59e0b",
@@ -48,7 +48,7 @@ const certificationBadges = [
     link: "https://topdevelopers.co",
     description: "Top Web Developers",
     color: "from-orange-500 to-red-500",
-    accent: "#7c3aed",
+    accent: "#3b82f6",
     rating: "5.0"
   },
 ];
@@ -73,7 +73,7 @@ export function CertificationBadgesGrid() {
             Recognized Excellence
           </motion.div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-slate-900 mb-6">
-            Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-violet-600">Industry Leaders</span>
+            Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Industry Leaders</span>
           </h2>
           <p className="text-slate-600 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
             Our work speaks for itself. We're proud to be recognized by the world's leading B2B review platforms.
@@ -113,7 +113,7 @@ export function CertificationBadgesGrid() {
               
               {/* Badge Name */}
               <div className="font-bold text-slate-800 text-lg mb-1">{badge.name}</div>
-              <div className="text-sm font-medium text-slate-500 group-hover:text-violet-600 transition-colors leading-tight">
+              <div className="text-sm font-medium text-slate-500 group-hover:text-blue-600 transition-colors leading-tight">
                 {badge.description}
               </div>
             </motion.a>
@@ -128,7 +128,7 @@ export function CertificationBadgesGrid() {
           className="mt-20 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 rounded-3xl p-10 md:p-16 text-white relative overflow-hidden"
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-orange-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-lime-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
           
           <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
             {[
@@ -147,7 +147,7 @@ export function CertificationBadgesGrid() {
                 <div className="text-5xl md:text-6xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-lime-300 to-lime-400">
                   {stat.value}
                 </div>
-                <div className="text-violet-200 text-lg font-medium">{stat.label}</div>
+                <div className="text-blue-200 text-lg font-medium">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -160,9 +160,9 @@ export function CertificationBadgesGrid() {
 export function TrustBar() {
   const trustItems = [
     { label: "Clutch", sub: "Top Rated", color: "bg-emerald-500" },
-    { label: "GoodFirms", sub: "Verified", color: "bg-violet-500" },
+    { label: "GoodFirms", sub: "Verified", color: "bg-blue-500" },
     { label: "DesignRush", sub: "Featured", color: "bg-purple-500" },
-    { label: "SelectedFirms", sub: "Top Agency", color: "bg-orange-500" },
+    { label: "SelectedFirms", sub: "Top Agency", color: "bg-cyan-500" },
   ];
 
   return (
@@ -173,7 +173,7 @@ export function TrustBar() {
           animate={{ opacity: 1 }}
           className="flex items-center justify-center gap-2 mb-4"
         >
-          <CheckCircle className="w-4 h-4 text-orange-400" />
+          <CheckCircle className="w-4 h-4 text-lime-400" />
           <span className="text-slate-400 text-sm font-medium">Trusted & Verified on Leading Platforms</span>
         </motion.div>
         <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12">
@@ -225,7 +225,7 @@ export function CompactBadges() {
               ))}
             </div>
           )}
-          {badge.stars === 0 && <CheckCircle className="w-4 h-4 text-orange-400" />}
+          {badge.stars === 0 && <CheckCircle className="w-4 h-4 text-lime-400" />}
           <span>{badge.label}</span>
         </motion.div>
       ))}

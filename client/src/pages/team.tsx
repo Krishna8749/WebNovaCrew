@@ -17,14 +17,14 @@ export default function Team() {
   return (
     <div className="min-h-screen bg-white font-sans pt-20">
       <SEO 
-        title="Our Team - Meet the Experts Behind XcFlown" 
-        description="Meet the talented team of developers, designers, and strategists at XcFlown. 25+ experts dedicated to building world-class web and mobile solutions."
+        title="Our Team - Meet the Experts Behind Web Nova Crew" 
+        description="Meet the talented team of developers, designers, and strategists at Web Nova Crew. 25+ experts dedicated to building world-class web and mobile solutions."
         keywords="web development team india, app developers mohali, UP, UI/UX designers, tech team, software engineers india"
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Team", url: "https://xcflown.com/team" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Team", url: "https://webnovacrew.com/team" }
       ]} />
       
       <Navbar />
@@ -38,7 +38,7 @@ export default function Team() {
           >
             <span className="text-lime-600 font-bold tracking-wider uppercase text-sm mb-4 block">Our Team</span>
             <h1 className="text-4xl md:text-5xl font-poppins font-bold text-slate-900 mb-6">
-              Meet the <span className="text-violet-600">Experts</span> Behind Our Success
+              Meet the <span className="text-blue-600">Experts</span> Behind Our Success
             </h1>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-12">
               We're a team of 25+ passionate developers, designers, and strategists dedicated to building exceptional digital experiences. Our diverse expertise spans web development, mobile apps, UI/UX design, and digital marketing.
@@ -59,7 +59,7 @@ export default function Team() {
                   transition={{ delay: index * 0.1 }}
                   className="text-center"
                 >
-                  <div className="w-12 h-12 rounded-full bg-violet-100 text-violet-600 flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mx-auto mb-3">
                     {stat.icon}
                   </div>
                   <div className="text-2xl font-bold text-slate-900">{stat.value}</div>
@@ -81,7 +81,7 @@ export default function Team() {
                 onClick={() => setActiveDepartment(dept)}
                 className={`px-5 py-2 rounded-full font-medium text-sm transition-all ${
                   activeDepartment === dept
-                    ? "bg-violet-600 text-white"
+                    ? "bg-blue-600 text-white"
                     : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                 }`}
               >
@@ -117,12 +117,12 @@ export default function Team() {
                   {/* Social Links */}
                   <div className="absolute bottom-4 left-4 flex gap-2">
                     {member.social.linkedin && (
-                      <a href={member.social.linkedin} target="_blank" className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white hover:text-violet-600 transition-colors">
+                      <a href={member.social.linkedin} target="_blank" className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white hover:text-blue-600 transition-colors">
                         <Linkedin className="w-4 h-4" />
                       </a>
                     )}
                     {member.social.twitter && (
-                      <a href={member.social.twitter} target="_blank" className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white hover:text-violet-400 transition-colors">
+                      <a href={member.social.twitter} target="_blank" className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white hover:text-blue-400 transition-colors">
                         <Twitter className="w-4 h-4" />
                       </a>
                     )}
@@ -139,7 +139,7 @@ export default function Team() {
                   <div className="flex items-start justify-between mb-2">
                     <div>
                       <h3 className="text-xl font-bold text-slate-900">{member.name}</h3>
-                      <p className="text-violet-600 font-medium">{member.role}</p>
+                      <p className="text-blue-600 font-medium">{member.role}</p>
                     </div>
                     <span className="text-xs bg-slate-100 text-slate-500 px-2 py-1 rounded-full">
                       {member.department}
@@ -150,7 +150,7 @@ export default function Team() {
                   {/* Skills */}
                   <div className="flex flex-wrap gap-1">
                     {member.skills.slice(0, 4).map((skill, i) => (
-                      <span key={i} className="text-xs bg-violet-50 text-violet-600 px-2 py-1 rounded">
+                      <span key={i} className="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded">
                         {skill}
                       </span>
                     ))}
@@ -168,14 +168,14 @@ export default function Team() {
       </section>
 
       {/* Join Team CTA */}
-      <section className="py-20 bg-violet-900 text-white">
+      <section className="py-20 bg-blue-900 text-white">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 font-poppins">Want to Join Our Team?</h2>
-          <p className="text-violet-100 text-lg mb-8 max-w-2xl mx-auto">
-            We're always looking for talented individuals who are passionate about technology and innovation. Check out our open positions and become part of the XcFlown family.
+          <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+            We're always looking for talented individuals who are passionate about technology and innovation. Check out our open positions and become part of the Web Nova Crew family.
           </p>
           <Link href="/careers">
-            <Button size="lg" className="bg-orange-500 text-violet-900 hover:bg-orange-400 font-bold rounded-full px-8">
+            <Button size="lg" className="bg-lime-500 text-blue-900 hover:bg-lime-400 font-bold rounded-full px-8">
               View Open Positions
             </Button>
           </Link>

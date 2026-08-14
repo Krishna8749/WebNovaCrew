@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/wrangler/config-schema.json",
-  "name": "xcflown-terabox-proxy",
+  "name": "novacrew-terabox-proxy",
   "main": "src/index.ts",
   "compatibility_date": "2026-07-01",
   "workers_dev": true,

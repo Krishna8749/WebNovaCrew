@@ -3,7 +3,7 @@ import { getShareLinkBase } from "./terabox-shares";
 
 function allowedHosts(): string[] {
   const hosts = new Set<string>(["localhost:5000", "127.0.0.1:5000", "localhost:5173"]);
-  const site = (process.env.SITE_HOST ?? "xcflown.com").trim();
+  const site = (process.env.SITE_HOST ?? "webnovacrew.com").trim();
   if (site) {
     hosts.add(site);
     hosts.add(`www.${site.replace(/^www\./, "")}`);

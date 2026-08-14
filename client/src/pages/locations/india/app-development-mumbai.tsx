@@ -301,22 +301,22 @@ export default function AppDevelopmentMumbai() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
-        title="App Development Company in Mumbai | Mobile App Developers Mumbai | XcFlown"
+        title="App Development Company in Mumbai | Mobile App Developers Mumbai | Web Nova Crew"
         description="Top app development company in Mumbai. We build Android, iOS, Flutter apps for startups & enterprises in BKC, Nariman Point, Lower Parel, Andheri. Fintech, e-commerce, entertainment apps. ₹50,000 onwards."
         keywords="app development company Mumbai, mobile app developers Mumbai, Android app Mumbai, iOS app Mumbai, Flutter developers Mumbai, fintech app development Mumbai, e-commerce app Mumbai, BKC app developers"
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Locations", url: "https://xcflown.com/locations" },
-        { name: "Mumbai", url: "https://xcflown.com/locations/app-development-mumbai" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Locations", url: "https://webnovacrew.com/locations" },
+        { name: "Mumbai", url: "https://webnovacrew.com/locations/app-development-mumbai" }
       ]} />
       <ServiceSchema 
         serviceName="App Development in Mumbai"
         serviceDescription="Professional mobile app development for Mumbai businesses. Android, iOS, Flutter apps for fintech, e-commerce, entertainment, and enterprise sectors."
-        serviceUrl="https://xcflown.com/locations/app-development-mumbai"
+        serviceUrl="https://webnovacrew.com/locations/app-development-mumbai"
       />
       
       <Navbar />
@@ -358,7 +358,7 @@ export default function AppDevelopmentMumbai() {
                   Get Free Consultation <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
-              <a href="https://wa.me/918360723410" target="_blank">
+              <a href="https://wa.me/919872364476" target="_blank">
                 <Button size="lg" variant="outline" className="border-green-500/50 text-green-400 hover:bg-green-500/10">
                   <MessageSquare className="w-5 h-5 mr-2" />
                   WhatsApp Us
@@ -389,7 +389,7 @@ export default function AppDevelopmentMumbai() {
       </section>
 
       {/* Services - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -407,7 +407,7 @@ export default function AppDevelopmentMumbai() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-8 hover:border-orange-500/50 transition-all"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-orange-500/50 transition-all"
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-400 flex-shrink-0">
@@ -465,7 +465,7 @@ export default function AppDevelopmentMumbai() {
       </section>
 
       {/* Industries - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -483,7 +483,7 @@ export default function AppDevelopmentMumbai() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-orange-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-orange-500/50 transition-all"
               >
                 <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-400 mb-4">
                   {industry.icon}
@@ -515,7 +515,7 @@ export default function AppDevelopmentMumbai() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-orange-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-orange-500/50 transition-all"
               >
                 <div className="text-orange-400 text-sm font-medium mb-2">{study.client}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
@@ -539,7 +539,7 @@ export default function AppDevelopmentMumbai() {
       </section>
 
       {/* Areas - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -557,7 +557,7 @@ export default function AppDevelopmentMumbai() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.03 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-5 hover:border-orange-500/50 transition-all"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-5 hover:border-orange-500/50 transition-all"
               >
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
@@ -594,7 +594,7 @@ export default function AppDevelopmentMumbai() {
                 transition={{ delay: index * 0.1 }}
                 className="relative"
               >
-                <div className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-orange-500/50 transition-all h-full">
+                <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-orange-500/50 transition-all h-full">
                   <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mb-4">
                     {phase.step}
                   </div>
@@ -612,7 +612,7 @@ export default function AppDevelopmentMumbai() {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -630,7 +630,7 @@ export default function AppDevelopmentMumbai() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6"
               >
                 <h3 className="text-lg font-semibold text-orange-400 mb-4">{stack.category}</h3>
                 <div className="flex flex-wrap gap-2">
@@ -663,7 +663,7 @@ export default function AppDevelopmentMumbai() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-orange-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-orange-500/50 transition-all"
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-400">
@@ -682,7 +682,7 @@ export default function AppDevelopmentMumbai() {
       </section>
 
       {/* Pricing - Detailed */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -700,7 +700,7 @@ export default function AppDevelopmentMumbai() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className={`bg-violet-800/50 border rounded-xl p-8 transition-all ${plan.popular ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-violet-700 hover:border-orange-500/50'}`}
+                className={`bg-slate-800/50 border rounded-xl p-8 transition-all ${plan.popular ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-slate-700 hover:border-orange-500/50'}`}
               >
                 {plan.popular && (
                   <div className="text-center mb-4">
@@ -740,7 +740,7 @@ export default function AppDevelopmentMumbai() {
       <TestimonialsSection />
 
       {/* FAQs */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -758,7 +758,7 @@ export default function AppDevelopmentMumbai() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
@@ -769,7 +769,7 @@ export default function AppDevelopmentMumbai() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-950/50 to-red-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-orange-950/50 to-red-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Ready to Build Your Mumbai App?
@@ -784,10 +784,10 @@ export default function AppDevelopmentMumbai() {
                 Schedule Mumbai Meeting
               </Link>
             </Button>
-            <a href="tel:+918360723410">
-              <Button size="lg" variant="outline" className="border-violet-700/50 hover:bg-violet-800 text-white">
+            <a href="tel:+919872364476">
+              <Button size="lg" variant="outline" className="border-slate-600 hover:bg-slate-800 text-white">
                 <Phone className="w-5 h-5 mr-2" />
-                +91 83607 23410
+                +91 98723 64476
               </Button>
             </a>
           </div>

@@ -24,7 +24,7 @@ const defaultTestimonials: Testimonial[] = [
     name: "Rajesh Kumar",
     role: "CEO",
     company: "TechFlow India",
-    content: "I was skeptical at first—we'd been burned by agencies before. But XcFlown delivered a 300% increase in qualified leads within 90 days. Our website now generates ₹15 lakhs in monthly revenue. They're not just developers; they're growth partners.",
+    content: "I was skeptical at first—we'd been burned by agencies before. But Web Nova Crew delivered a 300% increase in qualified leads within 90 days. Our website now generates ₹15 lakhs in monthly revenue. They're not just developers; they're growth partners.",
     rating: 5,
     location: "Delhi, India"
   },
@@ -32,7 +32,7 @@ const defaultTestimonials: Testimonial[] = [
     name: "Priya Sharma",
     role: "Founder",
     company: "EcoStyle Fashion",
-    content: "Before XcFlown, our e-commerce store converted at 0.8%. After their redesign? 3.2%. That's 4x more sales from the same traffic. The site loads in 1.8 seconds and looks stunning. Best ₹3 lakh investment I've ever made.",
+    content: "Before Web Nova Crew, our e-commerce store converted at 0.8%. After their redesign? 3.2%. That's 4x more sales from the same traffic. The site loads in 1.8 seconds and looks stunning. Best ₹3 lakh investment I've ever made.",
     rating: 5,
     location: "Mumbai, India"
   },
@@ -40,7 +40,7 @@ const defaultTestimonials: Testimonial[] = [
     name: "Dr. Amit Patel",
     role: "Director",
     company: "HealthFirst Clinics",
-    content: "We needed a HIPAA-compliant telemedicine app, and most agencies quoted 8-12 months. XcFlown delivered in 5 months with zero security issues. Patient bookings increased 400%. They saved us from losing patients to competitors.",
+    content: "We needed a HIPAA-compliant telemedicine app, and most agencies quoted 8-12 months. Web Nova Crew delivered in 5 months with zero security issues. Patient bookings increased 400%. They saved us from losing patients to competitors.",
     rating: 5,
     location: "Bangalore, India"
   },
@@ -48,7 +48,7 @@ const defaultTestimonials: Testimonial[] = [
     name: "Sarah Johnson",
     role: "Marketing Head",
     company: "GlobalTech Solutions",
-    content: "We were invisible on Google. Page 5 for our main keywords. XcFlown got us to Page 1 in 4 months. Organic traffic is up 500%, and we've reduced our Google Ads spend by 60%. The ROI is insane.",
+    content: "We were invisible on Google. Page 5 for our main keywords. Web Nova Crew got us to Page 1 in 4 months. Organic traffic is up 500%, and we've reduced our Google Ads spend by 60%. The ROI is insane.",
     rating: 5,
     location: "California, USA"
   },
@@ -56,7 +56,7 @@ const defaultTestimonials: Testimonial[] = [
     name: "Vikram Singh",
     role: "Co-Founder",
     company: "PropEase Real Estate",
-    content: "Our old website was embarrassing. Leads were going to competitors with better sites. XcFlown built us a platform that handles 50,000+ listings and generates ₹2 crore in monthly transactions. Worth every rupee.",
+    content: "Our old website was embarrassing. Leads were going to competitors with better sites. Web Nova Crew built us a platform that handles 50,000+ listings and generates ₹2 crore in monthly transactions. Worth every rupee.",
     rating: 5,
     location: "Chandigarh, India"
   },
@@ -64,7 +64,7 @@ const defaultTestimonials: Testimonial[] = [
     name: "Michael Chen",
     role: "CTO",
     company: "FinanceHub",
-    content: "We interviewed 15 agencies. XcFlown was the only one that understood fintech security requirements. Our Flutter app now serves 100,000+ users with 99.99% uptime. They're our go-to for all development work.",
+    content: "We interviewed 15 agencies. Web Nova Crew was the only one that understood fintech security requirements. Our Flutter app now serves 100,000+ users with 99.99% uptime. They're our go-to for all development work.",
     rating: 5,
     location: "Singapore"
   }
@@ -72,7 +72,7 @@ const defaultTestimonials: Testimonial[] = [
 
 export function TestimonialsSection({ 
   title = "What Our Clients Say",
-  subtitle = "Don't just take our word for it. Here's what business owners and executives say about working with XcFlown.",
+  subtitle = "Don't just take our word for it. Here's what business owners and executives say about working with Web Nova Crew.",
   testimonials = defaultTestimonials,
   className = ""
 }: TestimonialsSectionProps) {
@@ -108,7 +108,7 @@ export function TestimonialsSection({
               <Card className="h-full border-none shadow-lg hover:shadow-xl transition-shadow bg-gradient-to-br from-white to-slate-50">
                 <CardContent className="p-8">
                   {/* Quote Icon */}
-                  <Quote className="w-10 h-10 text-violet-100 mb-4" />
+                  <Quote className="w-10 h-10 text-blue-100 mb-4" />
                   
                   {/* Rating */}
                   <div className="flex gap-1 mb-4">

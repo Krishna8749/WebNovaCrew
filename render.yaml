@@ -3,7 +3,7 @@
 
 services:
   - type: web
-    name: xcflown
+    name: webnovacrew
     runtime: node
     region: oregon
     plan: free

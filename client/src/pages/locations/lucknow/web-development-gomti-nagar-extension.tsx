@@ -25,7 +25,7 @@ export default function WebDevelopmentGomtiNagarExtension() {
   ];
 
   const faqs = [
-    { question: "Which is the best web development company in Gomti Nagar Extension?", answer: "XcFlown is the top web development company near Gomti Nagar Extension, Lucknow. We build modern, responsive websites and apps for the area's growing startup and business community. Starting at ₹15,000 with 1-2 week delivery." },
+    { question: "Which is the best web development company in Gomti Nagar Extension?", answer: "Web Nova Crew is the top web development company near Gomti Nagar Extension, Lucknow. We build modern, responsive websites and apps for the area's growing startup and business community. Starting at ₹15,000 with 1-2 week delivery." },
     { question: "How much does a website cost in Gomti Nagar Extension?", answer: "Website development in Gomti Nagar Extension starts at ₹15,000 for basic sites, ₹40,000-₹1,00,000 for business websites, and ₹1,50,000+ for e-commerce platforms. All packages include SEO optimization and mobile responsiveness." },
     { question: "Can you build a real estate app for my Gomti Nagar Extension project?", answer: "We specialize in real estate app development for Gomti Nagar Extension projects with property listings, virtual tours, CRM integration, and lead management. Starting at ₹1,50,000 with 6-8 week delivery." },
     { question: "How long does app development take near Gomti Nagar Extension?", answer: "MVP apps: 2-4 weeks, business apps: 4-6 weeks, enterprise apps: 8-12 weeks depending on complexity. We follow agile methodology with weekly demos." },
@@ -40,19 +40,19 @@ export default function WebDevelopmentGomtiNagarExtension() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
-        title="Web Development Company in Gomti Nagar Extension, Lucknow | XcFlown"
+        title="Web Development Company in Gomti Nagar Extension, Lucknow | Web Nova Crew"
         description="Top web & app development company near Gomti Nagar Extension, Lucknow. Startup MVPs, real estate platforms, e-commerce sites. ₹15,000 onwards. Fast delivery."
         keywords="web development company in Gomti Nagar Extension, app developer Gomti Nagar Extension, digital marketing agency Gomti Nagar Extension, IT company near Gomti Nagar Extension, website developer Gomti Nagar Extension Lucknow"
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Lucknow Areas", url: "https://xcflown.com/locations/app-development-lucknow" },
-        { name: "Gomti Nagar Extension", url: "https://xcflown.com/locations/web-development-gomti-nagar-extension" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Lucknow Areas", url: "https://webnovacrew.com/locations/app-development-lucknow" },
+        { name: "Gomti Nagar Extension", url: "https://webnovacrew.com/locations/web-development-gomti-nagar-extension" }
       ]} />
-      <ServiceSchema serviceName="Web Development in Gomti Nagar Extension" serviceDescription="Professional web and app development services near Gomti Nagar Extension, Lucknow. Startup MVPs, real estate platforms, and e-commerce solutions." serviceUrl="https://xcflown.com/locations/web-development-gomti-nagar-extension" />
+      <ServiceSchema serviceName="Web Development in Gomti Nagar Extension" serviceDescription="Professional web and app development services near Gomti Nagar Extension, Lucknow. Startup MVPs, real estate platforms, and e-commerce solutions." serviceUrl="https://webnovacrew.com/locations/web-development-gomti-nagar-extension" />
       <FAQSchema faqs={faqs} />
       <Navbar />
 
@@ -78,7 +78,7 @@ export default function WebDevelopmentGomtiNagarExtension() {
               <Button size="lg" className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8">
                 <Link href="/contact" className="flex items-center gap-2">Get Free Quote <ArrowRight className="w-5 h-5" /></Link>
               </Button>
-              <a href="https://wa.me/918360723410" target="_blank">
+              <a href="https://wa.me/919872364476" target="_blank">
                 <Button size="lg" variant="outline" className="border-green-500/50 text-green-400 hover:bg-green-500/10"><MessageSquare className="w-5 h-5 mr-2" />WhatsApp Us</Button>
               </a>
             </div>
@@ -92,7 +92,7 @@ export default function WebDevelopmentGomtiNagarExtension() {
         </div>
       </section>
 
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Our Services in Gomti Nagar Extension</h2>
@@ -100,7 +100,7 @@ export default function WebDevelopmentGomtiNagarExtension() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-8 hover:border-emerald-500/50 transition-all">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-emerald-500/50 transition-all">
                 <div className="w-14 h-14 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-slate-400 mb-4 leading-relaxed">{service.desc}</p>
@@ -118,7 +118,7 @@ export default function WebDevelopmentGomtiNagarExtension() {
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {caseStudies.map((study, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-8 hover:border-emerald-500/50 transition-all">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8 hover:border-emerald-500/50 transition-all">
                 <div className="text-emerald-400 text-sm font-medium mb-2">{study.client}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
                 <p className="text-slate-400 mb-6 leading-relaxed">{study.description}</p>
@@ -133,12 +133,12 @@ export default function WebDevelopmentGomtiNagarExtension() {
       <FounderBio />
       <TestimonialsSection />
 
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Gomti Nagar Extension FAQs</h2></div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-violet-800/50 border border-violet-700 rounded-xl p-6">
+              <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
               </motion.div>
@@ -147,22 +147,22 @@ export default function WebDevelopmentGomtiNagarExtension() {
         </div>
       </section>
 
-      <section className="py-16 bg-violet-900/50 border-t border-violet-800">
+      <section className="py-16 bg-slate-900/50 border-t border-slate-800">
         <div className="container mx-auto max-w-7xl px-4">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Also Serving Nearby Areas</h3>
           <div className="flex flex-wrap gap-3 justify-center">
-            {nearbyAreas.map((area, index) => (<Link key={index} href={`/locations/${area.slug}`}><a className="px-5 py-2.5 bg-violet-800/50 border border-violet-700 rounded-full text-slate-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-all"><MapPin className="w-4 h-4 inline mr-2" />{area.name}</a></Link>))}
+            {nearbyAreas.map((area, index) => (<Link key={index} href={`/locations/${area.slug}`}><a className="px-5 py-2.5 bg-slate-800/50 border border-slate-700 rounded-full text-slate-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-all"><MapPin className="w-4 h-4 inline mr-2" />{area.name}</a></Link>))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-emerald-950/50 to-teal-950/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-emerald-950/50 to-teal-950/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Launch Your Digital Presence?</h2>
           <p className="text-xl text-slate-300 mb-8">Join 40+ Gomti Nagar Extension businesses who chose us</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8"><Link href="/contact" className="flex items-center gap-2"><Phone className="w-5 h-5" />Get Free Quote</Link></Button>
-            <a href="tel:+918360723410"><Button size="lg" variant="outline" className="border-violet-700/50 hover:bg-violet-800 text-white"><Phone className="w-5 h-5 mr-2" />+91 83607 23410</Button></a>
+            <a href="tel:+919872364476"><Button size="lg" variant="outline" className="border-slate-600 hover:bg-slate-800 text-white"><Phone className="w-5 h-5 mr-2" />+91 98723 64476</Button></a>
           </div>
         </div>
       </section>

@@ -12,15 +12,15 @@ export function LocalBusinessSchema({ page }: LocalBusinessSchemaProps) {
     const localBusinessSchema = {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
-      "@id": "https://xcflown.com/#organization",
-      "name": "XcFlown",
-      "alternateName": "xcflown",
-      "url": "https://xcflown.com",
-      "logo": "https://xcflown.com/logo.png",
-      "image": "https://xcflown.com/og-image.jpg",
-      "description": "XcFlown is India's #1 custom web development and mobile app development company. We specialize in React, Next.js, Flutter, SEO, and e-commerce solutions.",
-      "telephone": "+91-83607-23410",
-      "email": "info@xcflown.com",
+      "@id": "https://webnovacrew.com/#organization",
+      "name": "Web Nova Crew",
+      "alternateName": "WebNovaCrew",
+      "url": "https://webnovacrew.com",
+      "logo": "https://webnovacrew.com/logo.png",
+      "image": "https://webnovacrew.com/og-image.jpg",
+      "description": "Web Nova Crew is India's #1 custom web development and mobile app development company. We specialize in React, Next.js, Flutter, SEO, and e-commerce solutions.",
+      "telephone": "+91-98723-64476",
+      "email": "info@webnovacrew.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "2nd Floor, Shree Plaza Complex, Vikas Nagar, Ring Road",
@@ -91,11 +91,11 @@ export function LocalBusinessSchema({ page }: LocalBusinessSchemaProps) {
         ]
       },
       "sameAs": [
-        "https://www.facebook.com/xcflown",
-        "https://twitter.com/xcflown",
-        "https://www.linkedin.com/company/xcflown",
-        "https://www.instagram.com/xcflown",
-        "https://github.com/xcflown"
+        "https://www.facebook.com/webnovacrew",
+        "https://twitter.com/webnovacrew",
+        "https://www.linkedin.com/company/webnovacrew",
+        "https://www.instagram.com/webnovacrew",
+        "https://github.com/webnovacrew"
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -140,15 +140,15 @@ export function WebPageSchema({ title, description, url }: WebPageSchemaProps) {
       "url": url,
       "isPartOf": {
         "@type": "WebSite",
-        "name": "XcFlown",
-        "url": "https://xcflown.com"
+        "name": "Web Nova Crew",
+        "url": "https://webnovacrew.com"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "XcFlown",
+        "name": "Web Nova Crew",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://xcflown.com/logo.png"
+          "url": "https://webnovacrew.com/logo.png"
         }
       }
     };
@@ -222,8 +222,8 @@ export function ServiceSchema({ serviceName, serviceDescription, serviceUrl }: S
       "serviceType": serviceName,
       "provider": {
         "@type": "Organization",
-        "name": "XcFlown",
-        "url": "https://xcflown.com"
+        "name": "Web Nova Crew",
+        "url": "https://webnovacrew.com"
       },
       "description": serviceDescription,
       "url": serviceUrl,
@@ -304,8 +304,8 @@ export function PersonSchema({ name, jobTitle, description, url }: PersonSchemaP
       "url": url,
       "worksFor": {
         "@type": "Organization",
-        "name": "XcFlown",
-        "url": "https://xcflown.com"
+        "name": "Web Nova Crew",
+        "url": "https://webnovacrew.com"
       },
       "nationality": {
         "@type": "Country",
@@ -364,7 +364,7 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
         <ol className="flex items-center gap-2 text-sm flex-wrap">
           <li>
             <Link href="/">
-              <a className="flex items-center gap-1 text-slate-600 hover:text-violet-600 transition-colors">
+              <a className="flex items-center gap-1 text-slate-600 hover:text-blue-600 transition-colors">
                 <Home className="w-4 h-4" />
                 <span className="sr-only">Home</span>
               </a>
@@ -379,7 +379,7 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
                 </span>
               ) : (
                 <Link href={item.url}>
-                  <a className="text-slate-600 hover:text-violet-600 transition-colors">
+                  <a className="text-slate-600 hover:text-blue-600 transition-colors">
                     {item.name}
                   </a>
                 </Link>
@@ -425,14 +425,14 @@ export function ArticleSchema({
       "author": {
         "@type": "Person",
         "name": authorName,
-        "url": "https://xcflown.com/team"
+        "url": "https://webnovacrew.com/team"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "XcFlown",
+        "name": "Web Nova Crew",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://xcflown.com/logo.png"
+          "url": "https://webnovacrew.com/logo.png"
         }
       },
       "image": {
@@ -501,14 +501,14 @@ export function BlogPostingSchema({
       "author": {
         "@type": "Person",
         "name": authorName,
-        "url": "https://xcflown.com/team"
+        "url": "https://webnovacrew.com/team"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "XcFlown",
+        "name": "Web Nova Crew",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://xcflown.com/logo.png"
+          "url": "https://webnovacrew.com/logo.png"
         }
       },
       "image": {

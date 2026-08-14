@@ -105,7 +105,7 @@ export default function iOSAppDevelopment() {
   ];
 
   return (
-    <div className="min-h-screen bg-violet-950 font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <SEO 
         title="iOS App Development Company | Swift, iPhone, iPad | India & Kuwait" 
         description="Leading iOS app development company in India & Kuwait. We build premium iPhone and iPad apps using Swift with Apple Pay, Face ID, ARKit, and App Store optimization. ₹30,000 onwards."
@@ -113,14 +113,14 @@ export default function iOSAppDevelopment() {
       />
       <LocalBusinessSchema />
       <BreadcrumbSchema items={[
-        { name: "Home", url: "https://xcflown.com" },
-        { name: "Services", url: "https://xcflown.com/services" },
-        { name: "iOS App Development", url: "https://xcflown.com/services/ios-app-development" }
+        { name: "Home", url: "https://webnovacrew.com" },
+        { name: "Services", url: "https://webnovacrew.com/services" },
+        { name: "iOS App Development", url: "https://webnovacrew.com/services/ios-app-development" }
       ]} />
       <ServiceSchema 
         serviceName="iOS App Development"
         serviceDescription="Professional iOS app development services using Swift. Premium iPhone and iPad apps with Apple Pay, Face ID, ARKit, and complete App Store optimization."
-        serviceUrl="https://xcflown.com/services/ios-app-development"
+        serviceUrl="https://webnovacrew.com/services/ios-app-development"
       />
       
       <Navbar />
@@ -158,7 +158,7 @@ export default function iOSAppDevelopment() {
                   Get Free Quote <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-violet-700 hover:bg-violet-800">
+              <Button size="lg" variant="outline" className="border-slate-700 hover:bg-slate-800">
                 <Link href="/portfolio" className="flex items-center gap-2">
                   View iOS Apps
                 </Link>
@@ -188,7 +188,7 @@ export default function iOSAppDevelopment() {
       </section>
 
       {/* iOS Features */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -206,7 +206,7 @@ export default function iOSAppDevelopment() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 hover:border-slate-500/50 transition-all"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-slate-500/50 transition-all"
               >
                 <div className="w-12 h-12 bg-slate-500/10 rounded-lg flex items-center justify-center text-slate-400 mb-4">
                   {feature.icon}
@@ -238,7 +238,7 @@ export default function iOSAppDevelopment() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-slate-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-slate-500/50 transition-all"
               >
                 <div className="flex items-center gap-2 mb-3">
                   <CheckCircle2 className="w-5 h-5 text-slate-400" />
@@ -252,7 +252,7 @@ export default function iOSAppDevelopment() {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -270,7 +270,7 @@ export default function iOSAppDevelopment() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-lg p-4 text-center hover:border-slate-500/50 transition-all"
+                className="bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-center hover:border-slate-500/50 transition-all"
               >
                 <div className="text-white font-semibold mb-1">{tech.name}</div>
                 <div className="text-xs text-slate-400">{tech.category}</div>
@@ -299,7 +299,7 @@ export default function iOSAppDevelopment() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.03 }}
-                className="flex items-center gap-3 bg-violet-800/30 border border-violet-700/50 rounded-lg p-4"
+                className="flex items-center gap-3 bg-slate-800/30 border border-slate-700/50 rounded-lg p-4"
               >
                 <CheckCircle2 className="w-5 h-5 text-slate-400 flex-shrink-0" />
                 <span className="text-slate-200">{feature}</span>
@@ -310,7 +310,7 @@ export default function iOSAppDevelopment() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -328,7 +328,7 @@ export default function iOSAppDevelopment() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-violet-700 rounded-xl p-6 hover:border-slate-500/50 transition-all"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-slate-500/50 transition-all"
               >
                 <div className="w-12 h-12 bg-slate-500/10 rounded-lg flex items-center justify-center text-slate-400 mb-4">
                   {item.icon}
@@ -360,7 +360,7 @@ export default function iOSAppDevelopment() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6 relative"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 relative"
               >
                 <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-slate-600 to-slate-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
                   {item.step}
@@ -377,7 +377,7 @@ export default function iOSAppDevelopment() {
       <TestimonialsSection />
 
       {/* FAQs */}
-      <section className="py-20 bg-violet-900/50">
+      <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -395,7 +395,7 @@ export default function iOSAppDevelopment() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-violet-800/50 border border-violet-700 rounded-xl p-6"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
@@ -406,7 +406,7 @@ export default function iOSAppDevelopment() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-900/50 to-slate-800/50 border-t border-violet-800">
+      <section className="py-20 bg-gradient-to-br from-slate-900/50 to-slate-800/50 border-t border-slate-800">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Ready to Build Your iOS App?
@@ -421,7 +421,7 @@ export default function iOSAppDevelopment() {
                 Get Free Consultation
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-violet-700/50 hover:bg-violet-800 text-white">
+            <Button size="lg" variant="outline" className="border-slate-600 hover:bg-slate-800 text-white">
               <Link href="/pricing">
                 View Pricing
               </Link>
