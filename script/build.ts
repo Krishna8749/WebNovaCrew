@@ -74,6 +74,16 @@ async function buildAll() {
     define: {
       "process.env.NODE_ENV": '"production"',
     },
+    banner: {
+      js: [
+        `import { createRequire as __createRequire } from 'module';`,
+        `import { fileURLToPath as __fileURLToPath } from 'url';`,
+        `import { dirname as __dirname2 } from 'path';`,
+        `const require = __createRequire(import.meta.url);`,
+        `const __filename = __fileURLToPath(import.meta.url);`,
+        `const __dirname = __dirname2(__filename);`,
+      ].join('\n'),
+    },
     minify: false,
     logLevel: "info",
   });
