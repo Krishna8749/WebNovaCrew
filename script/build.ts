@@ -77,6 +77,23 @@ async function buildAll() {
   });
 
   console.log("build completed successfully.");
+
+  // On Vercel: delete all source directories after build so Vercel's
+  // deployment scanner only sees dist/ and api/ — eliminates "conflicting
+  // paths" errors caused by source .tsx files being treated as static outputs.
+  if (process.env.VERCEL) {
+    console.log("Vercel env detected – cleaning up source directories...");
+    await Promise.all([
+      rm("client/src", { recursive: true, force: true }),
+      rm("client/public", { recursive: true, force: true }),
+      rm("server", { recursive: true, force: true }),
+      rm("shared", { recursive: true, force: true }),
+      rm("script", { recursive: true, force: true }),
+      rm("scripts", { recursive: true, force: true }),
+      rm("dist-server", { recursive: true, force: true }),
+    ]);
+    console.log("Source cleanup complete.");
+  }
 }
 
 buildAll().catch((err) => {

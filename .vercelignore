@@ -6,6 +6,7 @@ node_modules
 !.env.example
 attached_assets
 data
+dist
 dist-server
 docs
 .vscode
