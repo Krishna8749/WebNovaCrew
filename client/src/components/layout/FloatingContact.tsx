@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, FileText, X, Phone } from "lucide-react";
-import { LeadForm } from "../forms/LeadForm";
+import { LeadForm } from "@/components/forms/LeadForm";
 
 export function FloatingContact() {
   const [isOpen, setIsOpen] = useState(false);

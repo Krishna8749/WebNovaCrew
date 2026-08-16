@@ -7,8 +7,7 @@ import { CTASection } from "@/components/sections/CTASection";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Clock, Users, CheckCircle2, Quote, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { getCaseStudyBySlug, caseStudies } from "../data/caseStudies";
+import { getCaseStudyBySlug, caseStudies } from "@/data/caseStudies";
 
 export default function CaseStudyPage() {
   const { slug } = useParams<{ slug: string }>();
