@@ -15,47 +15,22 @@ app.use(
 
 app.use(express.urlencoded({ extended: false }));
 
-let routesReady = false;
-let initPromise: Promise<void> | null = null;
+// Synchronously register all Express API routes immediately on cold start
+registerRoutes(httpServer, app);
 
-async function init() {
-  if (!initPromise) {
-    initPromise = (async () => {
-      await registerRoutes(httpServer, app);
-      app.use((err: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
-        const status = err.status || err.statusCode || 500;
-        const message = err.message || "Internal Server Error";
-        if (!res.headersSent) {
-          res.status(status).json({ message });
-        }
-      });
-      routesReady = true;
-    })();
+app.use((err: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
+  const status = err.status || err.statusCode || 500;
+  const message = err.message || "Internal Server Error";
+  if (!res.headersSent) {
+    res.status(status).json({ message });
   }
-  return initPromise;
-}
+});
 
-export default async function handler(req: any, res: any) {
-  try {
-    if (!routesReady) {
-      await init();
-    }
-
-    // Ensure req.url retains full path on Vercel rewrites
-    if (req.originalUrl && req.url !== req.originalUrl && req.originalUrl.startsWith("/api")) {
-      req.url = req.originalUrl;
-    }
-
-    return await new Promise<void>((resolve, reject) => {
-      res.on("finish", resolve);
-      res.on("close", resolve);
-      res.on("error", reject);
-      app(req, res);
-    });
-  } catch (err: any) {
-    console.error("[Vercel API Handler Error]", err);
-    if (!res.headersSent) {
-      res.status(500).json({ message: "Internal server error", error: String(err?.message || err) });
-    }
+// Vercel serverless function entrypoint — native Express support
+export default function handler(req: any, res: any) {
+  // Normalize rewrites on Vercel
+  if (req.originalUrl && req.url !== req.originalUrl && req.originalUrl.startsWith("/api")) {
+    req.url = req.originalUrl;
   }
+  return app(req, res);
 }
