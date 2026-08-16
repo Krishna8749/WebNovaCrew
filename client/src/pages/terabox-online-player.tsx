@@ -601,18 +601,22 @@ export default function TeraboxOnlinePlayer() {
           if (Hls?.isSupported()) {
             const hls = new Hls({
               enableWorker: true,
-              lowLatencyMode: false,
-              // Aggressive buffering for smooth non-stop playback
-              maxBufferLength: 120,
-              maxMaxBufferLength: 600,
-              maxBufferSize: 256 * 1024 * 1024, // 256 MB
+              lowLatencyMode: true,
+              // Instant fast playback buffer tuning
+              maxBufferLength: 30,
+              maxMaxBufferLength: 60,
+              maxBufferSize: 64 * 1024 * 1024,
               maxBufferHole: 0.5,
-              // Start at lowest quality for fastest initial load
+              nudgeOffset: 0.1,
+              nudgeMaxRetry: 10,
+              startFragPrefetch: true,
+              testBandwidth: true,
+              backBufferLength: 30,
               startLevel: 0,
               autoStartLoad: true,
-              fragLoadingTimeOut: 60000,
-              manifestLoadingTimeOut: 30000,
-              levelLoadingTimeOut: 30000,
+              fragLoadingTimeOut: 30000,
+              manifestLoadingTimeOut: 20000,
+              levelLoadingTimeOut: 20000,
               fragLoadingMaxRetry: 6,
               manifestLoadingMaxRetry: 4,
               levelLoadingMaxRetry: 4,

@@ -1617,7 +1617,7 @@ export async function handleTeraboxTs(req: Request, res: Response): Promise<void
 
     const outHeaders: Record<string, string> = {
       "Content-Type": resp.headers.get("content-type") || "video/mp2t",
-      "Cache-Control": "private, max-age=300",
+      "Cache-Control": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800",
       "X-Robots-Tag": "noindex, nofollow",
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Expose-Headers": "Content-Length, Content-Range, Accept-Ranges",
