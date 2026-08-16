@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+﻿import { Link } from "wouter";
 import { ArrowRight, CheckCircle2, MapPin, Phone, MessageSquare, Building2, Users, Award, Clock, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -24,7 +24,7 @@ export default function AppDevelopmentDelhi() {
   const faqs = [
     {
       question: "What is the cost of app development in Delhi NCR?",
-      answer: "App development in Delhi NCR starts from ₹25,000 for basic apps to ₹5,00,000+ for enterprise solutions. We offer 20-30% lower pricing than typical Delhi agencies while maintaining premium quality."
+      answer: "App development in Delhi NCR starts from Γé╣25,000 for basic apps to Γé╣5,00,000+ for enterprise solutions. We offer 20-30% lower pricing than typical Delhi agencies while maintaining premium quality."
     },
     {
       question: "Do you work with Delhi startups?",
@@ -96,7 +96,7 @@ export default function AppDevelopmentDelhi() {
                 { value: "100+", label: "Apps in Delhi NCR" },
                 { value: "50+", label: "Startups Served" },
                 { value: "30%", label: "Cost Savings" },
-                { value: "4.9★", label: "Client Rating" },
+                { value: "4.9Γÿà", label: "Client Rating" },
               ].map((stat, i) => (
                 <motion.div key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 + i * 0.1 }}
                   className="bg-white/5 backdrop-blur-sm border border-red-500/20 rounded-2xl p-6">

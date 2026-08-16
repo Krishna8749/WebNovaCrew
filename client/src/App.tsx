@@ -59,7 +59,7 @@ const AIChatbotDevelopment = lazy(() => import("@/pages/services/ai-chatbot-deve
 
 // Lazy load India Location Pages - Tier 1
 const AppDevelopmentMumbai = lazy(() => import("@/pages/locations/india/app-development-mumbai"));
-const AppDevelopmentDelhi = lazy(() => import("@/pages/locations/app-development-delhi"));
+const AppDevelopmentDelhi = lazy(() => import("@/pages/locations/india/app-development-delhi"));
 const AppDevelopmentBangalore = lazy(() => import("@/pages/locations/india/app-development-bangalore"));
 const AppDevelopmentHyderabad = lazy(() => import("@/pages/locations/india/app-development-hyderabad"));
 const AppDevelopmentChennai = lazy(() => import("@/pages/locations/india/app-development-chennai"));
