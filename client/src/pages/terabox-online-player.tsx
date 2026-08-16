@@ -88,7 +88,24 @@ type HlsInstance = {
 
 type HlsConstructor = {
   isSupported: () => boolean;
-  new (config?: Record<string, unknown>): HlsInstance;
+  new (config?: {
+    enableWorker?: boolean;
+    lowLatencyMode?: boolean;
+    maxBufferLength?: number;
+    maxMaxBufferLength?: number;
+    maxBufferSize?: number;
+    maxBufferHole?: number;
+    startLevel?: number;
+    autoStartLoad?: boolean;
+    fragLoadingTimeOut?: number;
+    manifestLoadingTimeOut?: number;
+    levelLoadingTimeOut?: number;
+    fragLoadingMaxRetry?: number;
+    manifestLoadingMaxRetry?: number;
+    levelLoadingMaxRetry?: number;
+    xhrSetup?: (xhr: XMLHttpRequest) => void;
+    [key: string]: unknown;
+  }): HlsInstance;
   Events: { MANIFEST_PARSED: string; ERROR: string };
   ErrorTypes: { NETWORK_ERROR: string; MEDIA_ERROR: string };
 };
@@ -406,6 +423,32 @@ function IconBadge({
   );
 }
 
+async function parseJsonResponse<T>(res: Response, fallbackError: string): Promise<T> {
+  const text = await res.text();
+  let data: any = null;
+  try {
+    data = text ? JSON.parse(text) : {};
+  } catch {
+    // Non-JSON response (plain text, HTML, etc.)
+    if (!res.ok) {
+      // Try to extract a meaningful message from the text
+      const shortText = text?.slice(0, 200).trim();
+      if (res.status >= 500) {
+        throw new Error(
+          "Backend server is temporarily busy or rate-limited. Please try again in a moment.",
+        );
+      }
+      throw new Error(shortText || fallbackError);
+    }
+    // OK response but not JSON — treat as success with empty data
+    return {} as T;
+  }
+  if (!res.ok) {
+    throw new Error(data?.message || data?.error || fallbackError);
+  }
+  return data as T;
+}
+
 export default function TeraboxOnlinePlayer() {
   const { toast } = useToast();
   const [, shareParamsR] = useRoute("/r/:shareId");
@@ -452,10 +495,7 @@ export default function TeraboxOnlinePlayer() {
           ? `/api/terabox/share/${encodeURIComponent(shareId)}?d=${encodeURIComponent(backup)}`
           : `/api/terabox/share/${encodeURIComponent(shareId)}`;
         const res = await fetch(apiPath);
-        const data = (await res.json()) as SharePayload;
-        if (!res.ok) {
-          throw new Error(data.message ?? "Share link not found");
-        }
+        const data = await parseJsonResponse<SharePayload>(res, "Share link not found");
         if (cancelled) return;
         const q = data.quality ?? "360";
         setQuality(q);
@@ -498,10 +538,10 @@ export default function TeraboxOnlinePlayer() {
           quality,
         }),
       });
-      const data = (await res.json()) as SharePayload & { message?: string };
-      if (!res.ok) {
-        throw new Error(data.message ?? "Could not create share link");
-      }
+      const data = await parseJsonResponse<SharePayload & { message?: string }>(
+        res,
+        "Could not create share link",
+      );
       const path = data.path ?? `/r/${data.id ?? ""}`;
       const main =
         data.mainUrl ?? data.permanentUrl ?? data.shareUrl ?? `${window.location.origin}${path}`;
@@ -552,122 +592,132 @@ export default function TeraboxOnlinePlayer() {
       const video = videoRef.current;
       if (!video) return;
 
-      // Same method as Android app: full dlink via proxy (not Terabox HLS preview).
+      const playHls = async (targetQ: string) => {
+        // Use the stream URL directly — avoids blob URL overhead and supports redirects
+        const streamUrl = `/api/terabox/play/${encodeURIComponent(meta.playbackId)}?quality=${targetQ}`;
+
+        try {
+          const Hls = await loadHlsFromCdn();
+          if (Hls?.isSupported()) {
+            const hls = new Hls({
+              enableWorker: true,
+              lowLatencyMode: false,
+              // Aggressive buffering for smooth non-stop playback
+              maxBufferLength: 120,
+              maxMaxBufferLength: 600,
+              maxBufferSize: 256 * 1024 * 1024, // 256 MB
+              maxBufferHole: 0.5,
+              // Start at lowest quality for fastest initial load
+              startLevel: 0,
+              autoStartLoad: true,
+              fragLoadingTimeOut: 60000,
+              manifestLoadingTimeOut: 30000,
+              levelLoadingTimeOut: 30000,
+              fragLoadingMaxRetry: 6,
+              manifestLoadingMaxRetry: 4,
+              levelLoadingMaxRetry: 4,
+              xhrSetup: (xhr: XMLHttpRequest) => {
+                xhr.withCredentials = false;
+              },
+            });
+            hlsRef.current = hls;
+
+            hls.on(Hls.Events.MANIFEST_PARSED, (...args: unknown[]) => {
+              const data = args[1] as { levels?: unknown[] };
+              const levels = data.levels ?? [];
+              setVideoStatus(
+                `▶ Streaming • ${levels.length} quality level${levels.length !== 1 ? "s" : ""} • ${targetQ}p`,
+              );
+              video.play().catch(() => {
+                setVideoStatus("Tap ▶ to play");
+              });
+            });
+
+            let networkErrorCount = 0;
+            let mediaErrorCount = 0;
+            hls.on(Hls.Events.ERROR, (...args: unknown[]) => {
+              const data = args[1] as { fatal?: boolean; type?: string; details?: string };
+              if (!data.fatal) return;
+              if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
+                networkErrorCount++;
+                if (networkErrorCount <= 3) {
+                  setVideoStatus(`Network hiccup — retrying (${networkErrorCount}/3)…`);
+                  setTimeout(() => hls.startLoad(), 1000 * networkErrorCount);
+                } else {
+                  setVideoStatus("Stream lost — try refreshing or use Download");
+                }
+              } else if (data.type === Hls.ErrorTypes.MEDIA_ERROR) {
+                mediaErrorCount++;
+                if (mediaErrorCount <= 2) {
+                  setVideoStatus("Media error — recovering…");
+                  hls.recoverMediaError();
+                } else {
+                  setVideoStatus(`Playback error${data.details ? `: ${data.details}` : ""}`);
+                }
+              } else {
+                setVideoStatus(`Playback error${data.details ? `: ${data.details}` : ""}`);
+              }
+            });
+
+            hls.loadSource(streamUrl);
+            hls.attachMedia(video);
+          } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+            // Native HLS (Safari / iOS) — point directly at the stream URL
+            video.src = streamUrl;
+            video.preload = "auto";
+            video.load();
+            setVideoStatus("Starting native HLS playback…");
+            video.play().catch(() => setVideoStatus("Tap ▶ to play"));
+          } else {
+            setVideoStatus("HLS not supported in this browser — try Download");
+          }
+        } catch (err: any) {
+          if (err.name === "AbortError") {
+            setVideoStatus("Stream timed out — try again");
+          } else {
+            setVideoStatus("Stream failed — please try again");
+          }
+        }
+      };
+
+      // Direct CDN streaming via progressive file proxy (same as mobile app)
       if (meta.fullFile && meta.playbackMode === "progressive") {
         const fileUrl =
           meta.streamUrl ??
-          `/api/terabox/file/${encodeURIComponent(meta.playbackId)}?${meta.needsRemux ? "play=1" : "play=0"}`;
+          `/api/terabox/file/${encodeURIComponent(meta.playbackId)}`;
 
         video.removeAttribute("src");
         video.load();
 
         const onCanPlay = () => {
-          setVideoStatus(
-            meta.needsRemux
-              ? "Playing full file (app backend · remuxed for browser)"
-              : "Playing full file (same direct stream as app)",
-          );
+          setVideoStatus("▶ Playing full file (direct CDN stream)");
         };
-        const onWaiting = () => setVideoStatus("Buffering full video…");
+        const onWaiting = () => setVideoStatus("Buffering…");
+        const onPlaying = () => setVideoStatus("▶ Playing");
         const onError = () => {
-          setVideoStatus(
-            "Full playback failed — use Download, or wait and press Play again",
-          );
+          console.warn("[player] progressive playback failed, trying HLS fallback");
+          video.removeEventListener("waiting", onWaiting);
+          video.removeEventListener("playing", onPlaying);
+          setVideoStatus("Direct stream unavailable — falling back to HLS stream...");
+          void playHls(q);
         };
 
         video.addEventListener("canplay", onCanPlay, { once: true });
         video.addEventListener("waiting", onWaiting);
+        video.addEventListener("playing", onPlaying);
         video.addEventListener("error", onError, { once: true });
 
         video.preload = "auto";
         video.src = fileUrl;
         video.load();
-        setVideoStatus("Starting full file stream (app method)…");
+        setVideoStatus("Starting full file stream…");
         await video.play().catch(() => {
-          setVideoStatus("Tap play — full file is still loading");
+          setVideoStatus("Tap ▶ to play — full file is loading");
         });
         return;
       }
 
-      // HLS preview only when no full dlink (anonymous / fallback).
-      const streamUrl = `/api/terabox/play/${encodeURIComponent(meta.playbackId)}?quality=${q}`;
-
-      try {
-        const resp = await fetch(streamUrl, { signal: AbortSignal.timeout(60000) });
-        if (!resp.ok) {
-          setVideoStatus("Stream failed — try another link");
-          return;
-        }
-
-        const m3u8 = await resp.text();
-        if (m3u8.startsWith("{") || !m3u8.includes("#EXTM3U")) {
-          setVideoStatus("Server error — try again");
-          return;
-        }
-
-        m3u8Ref.current = m3u8;
-
-        const segCount = (m3u8.match(/#EXTINF/g) || []).length;
-
-        const blob = new Blob([m3u8], { type: "application/vnd.apple.mpegurl" });
-        const blobUrl = URL.createObjectURL(blob);
-
-        const Hls = await loadHlsFromCdn();
-        if (Hls?.isSupported()) {
-          const hls = new Hls({
-            enableWorker: true,
-            lowLatencyMode: false,
-            maxBufferLength: 60,
-            maxMaxBufferLength: 120,
-            startLevel: -1,
-            xhrSetup: (xhr: XMLHttpRequest) => {
-              xhr.withCredentials = false;
-            },
-          });
-          hlsRef.current = hls;
-          hls.on(Hls.Events.MANIFEST_PARSED, (...args: unknown[]) => {
-            const data = args[1] as { levels?: { details?: { totalduration?: number } }[] };
-            const totalDuration = (data.levels ?? []).reduce(
-              (a, l) => a + (l.details?.totalduration || 0),
-              0,
-            );
-            const secs = Math.round(totalDuration || segCount * 10);
-            setVideoStatus(
-              `Playing ${secs}s preview • ${segCount} segments • ${q}p` +
-                (meta.fullFile ? "" : " (set TERABOX_NDUS for full app-style file)"),
-            );
-            video.play().catch(() => {});
-          });
-          hls.on(Hls.Events.ERROR, (...args: unknown[]) => {
-            const data = args[1] as { fatal?: boolean; type?: string; details?: string };
-            if (data.fatal) {
-              if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
-                setVideoStatus("Network error — retrying...");
-                hls.startLoad();
-              } else if (data.type === Hls.ErrorTypes.MEDIA_ERROR) {
-                setVideoStatus("Media error — recovering...");
-                hls.recoverMediaError();
-              } else {
-                setVideoStatus(`Playback error${data.details ? `: ${data.details}` : ""}`);
-              }
-            }
-          });
-          hls.loadSource(blobUrl);
-          hls.attachMedia(video);
-        } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
-          video.src = blobUrl;
-          video.load();
-          video.play().catch(() => {});
-        } else {
-          setVideoStatus("HLS not supported in this browser");
-        }
-      } catch (err: any) {
-        if (err.name === "AbortError") {
-          setVideoStatus("Stream timed out");
-        } else {
-          setVideoStatus("Stream fetch failed");
-        }
-      }
+      await playHls(q);
     },
     [result, destroyHls],
   );
@@ -697,8 +747,11 @@ export default function TeraboxOnlinePlayer() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ url: trimmed }),
         });
-        const data = (await res.json()) as ResolveResult & { message?: string; playbackId?: string };
-        if (!res.ok || !data.playbackId) {
+        const data = await parseJsonResponse<ResolveResult & { message?: string; playbackId?: string }>(
+          res,
+          "Could not resolve link",
+        );
+        if (!data.playbackId) {
           throw new Error(data.message ?? "Could not resolve link");
         }
         const resolved: ResolveResult = {

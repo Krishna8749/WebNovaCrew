@@ -30,6 +30,11 @@ function isAllowedHost(hostname: string): boolean {
     h.includes("4funbox") ||
     h.includes("mirrobox") ||
     h.includes("nephobox") ||
+    h.includes("baidupcs") ||
+    h.includes("baidu") ||
+    h.includes("diskwala") ||
+    h.includes("kinxcdn") ||
+    h.includes("hwcdn") ||
     /^v\d+-/.test(h)
   );
 }

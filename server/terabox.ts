@@ -4,23 +4,12 @@ import path from "path";
 import { Readable } from "stream";
 import { createRequire } from "module";
 import { z } from "zod";
+import fs from "fs";
 import {
   createPlaybackSession,
   getPlaybackSession,
   buildProtectedPlaybackPayload,
 } from "./terabox-sessions";
-
-/** Resolve ffmpeg binary path (works in tsx ESM and bundled CJS on Render). */
-function resolveFfmpegPath(): string | null {
-  try {
-    // Do NOT use import.meta.url — esbuild CJS output leaves it empty.
-    const req = createRequire(path.join(process.cwd(), "package.json"));
-    const p = req("ffmpeg-static") as string | null | undefined;
-    return p || null;
-  } catch {
-    return null;
-  }
-}
 
 const HMAC_KEY = "iuuPc64E4Fhn0rTXEzrnbLph0o5qyEEa";
 const WORKER_BASE = "https://novacrew-terabox-proxy.teraboxhigh.workers.dev";
@@ -184,52 +173,101 @@ function extractDiskwalaCode(input: string): string | null {
  */
 export async function resolveDiskwalaViaBackend(shareUrl: string): Promise<VideoBackendLinkInfo | null> {
   const base = getVideoBackendBase();
-  try {
-    const resp = await fetch(`${base}/api/dw/info?url=${encodeURIComponent(shareUrl)}`, {
-      headers: { Accept: "application/json" },
-      signal: AbortSignal.timeout(45000),
-    });
-    if (!resp.ok) {
-      console.warn("[terabox:diskwala] dw/info HTTP", resp.status);
-      return null;
-    }
-    const data = (await resp.json()) as {
-      success?: boolean;
-      data?: {
-        title?: string;
-        sizeBytes?: number | null;
-        size?: string;
-        thumbnail?: string | null;
-        mimeType?: string | null;
-        streamUrl?: string;
-        downloadUrl?: string;
+  const code = extractDiskwalaCode(shareUrl);
+  const canonicalUrl = code ? `https://diskwala.com/app/${code}` : shareUrl;
+
+  const candidateUrls = [
+    `${base}/api/dw/info?url=${encodeURIComponent(canonicalUrl)}`,
+    `${base}/api/dw/info?url=${encodeURIComponent(shareUrl)}`,
+  ];
+
+  for (const fetchUrl of candidateUrls) {
+    try {
+      const resp = await fetch(fetchUrl, {
+        headers: { Accept: "application/json" },
+        signal: AbortSignal.timeout(20000),
+      });
+      if (!resp.ok) continue;
+      const data = (await resp.json()) as {
+        success?: boolean;
+        data?: {
+          title?: string;
+          sizeBytes?: number | null;
+          size?: string;
+          thumbnail?: string | null;
+          mimeType?: string | null;
+          streamUrl?: string;
+          downloadUrl?: string;
+          directUrl?: string;
+          headers?: Record<string, string>;
+        };
+        error?: string;
       };
-      error?: string;
-    };
-    if (!data.success || !data.data) {
-      console.warn("[terabox:diskwala] no data", data.error ?? "");
-      return null;
+      if (!data.success || !data.data) continue;
+      const d = data.data;
+      const directUrl = d.streamUrl || d.downloadUrl || d.directUrl;
+      if (!directUrl?.startsWith("http")) continue;
+      return {
+        title: d.title || "DiskWala Video",
+        size: d.sizeBytes ? Number(d.sizeBytes) : undefined,
+        sizeHuman: d.size,
+        thumbnail: d.thumbnail ?? null,
+        mimeType: d.mimeType || "video/mp4",
+        directUrl,
+        headers: d.headers || {
+          "User-Agent": BROWSER_HEADERS["User-Agent"],
+          Referer: "https://www.diskwala.com/",
+          Accept: "*/*",
+        },
+      };
+    } catch {
+      /* try next candidate */
     }
-    const d = data.data;
-    const directUrl = d.streamUrl || d.downloadUrl;
-    if (!directUrl?.startsWith("http")) return null;
-    return {
-      title: d.title || "DiskWala Video",
-      size: d.sizeBytes ? Number(d.sizeBytes) : undefined,
-      sizeHuman: d.size,
-      thumbnail: d.thumbnail ?? null,
-      mimeType: d.mimeType || "video/mp4",
-      directUrl,
-      headers: {
-        "User-Agent": BROWSER_HEADERS["User-Agent"],
-        Referer: "https://www.diskwala.com/",
-        Accept: "*/*",
-      },
-    };
+  }
+
+  // Fallback: POST /api/link-info
+  try {
+    const resp = await fetch(`${base}/api/link-info`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({ url: canonicalUrl }),
+      signal: AbortSignal.timeout(20000),
+    });
+    if (resp.ok) {
+      const data = (await resp.json()) as {
+        success?: boolean;
+        data?: {
+          title?: string;
+          size?: number;
+          sizeHuman?: string;
+          thumbnail?: string | null;
+          mimeType?: string;
+          directUrl?: string;
+          headers?: Record<string, string>;
+        };
+      };
+      const directUrl = data.data?.directUrl?.trim();
+      if (data.success && directUrl?.startsWith("http")) {
+        return {
+          title: data.data?.title || "DiskWala Video",
+          size: data.data?.size,
+          sizeHuman: data.data?.sizeHuman,
+          thumbnail: data.data?.thumbnail ?? null,
+          mimeType: data.data?.mimeType || "video/mp4",
+          directUrl,
+          headers: data.data?.headers || {
+            "User-Agent": BROWSER_HEADERS["User-Agent"],
+            Referer: "https://www.diskwala.com/",
+            Accept: "*/*",
+          },
+        };
+      }
+    }
   } catch (e) {
     console.warn("[terabox:diskwala]", e instanceof Error ? e.message : e);
-    return null;
   }
+
+  return null;
 }
 
 /** Prefer API surl without the leading "1" used in /s/ path codes. */
@@ -1019,10 +1057,17 @@ export async function handleTeraboxResolve(req: Request, res: Response): Promise
   }
 
   try {
-    // 1) Same path as Flutter app → toofani / video-backend link-info (full dlink).
-    const vb = await resolveViaVideoBackend(url);
-    // 2) Keep legacy metadata for HLS fallback (uk/shareid/fs_id).
-    const resolved = await resolveShareMetadata(url, surlVariants);
+    // Run video-backend and metadata resolve IN PARALLEL for maximum speed.
+    const [vb, resolved] = await Promise.all([
+      resolveViaVideoBackend(url).catch((e) => {
+        console.warn("[terabox:resolve] video-backend failed:", e instanceof Error ? e.message : e);
+        return null;
+      }),
+      resolveShareMetadata(url, surlVariants).catch((e) => {
+        console.warn("[terabox:resolve] metadata failed:", e instanceof Error ? e.message : e);
+        return { meta: null, reason: "Metadata fetch failed" } as { meta: null; reason: string };
+      }),
+    ]);
 
     if (!vb && !resolved.meta?.list?.length) {
       console.error("[terabox:resolve] failed", {
@@ -1070,6 +1115,7 @@ export async function handleTeraboxResolve(req: Request, res: Response): Promise
       fileName: fileName.slice(0, 60),
       via: vb ? "video-backend" : "legacy",
       hasDlink: Boolean(dlink),
+      hasHls: Boolean(uk && shareid && fid),
       surl: surlVariants[0]?.slice(0, 12),
     });
 
@@ -1170,10 +1216,29 @@ export async function handleTeraboxPlay(req: Request, res: Response): Promise<vo
   }
 
   try {
+    // If we have a direct link but no HLS IDs, redirect to the file proxy.
+    // This prevents a 502 JSON error being sent to the HLS parser.
+    if (session.dlink && (!session.uk || !session.shareid || !session.fs_id)) {
+      res.redirect(302, `/api/terabox/file/${encodeURIComponent(playbackId)}`);
+      return;
+    }
+
     const origin = publicOriginFromReq(req);
-    const m3u8 = await getM3U8(session.uk, session.shareid, session.fs_id, q, origin);
+    let m3u8 = await getM3U8(session.uk, session.shareid, session.fs_id, q, origin);
+
+    // Retry once with a refreshed sign timestamp
     if (!m3u8) {
-      res.status(502).json({ message: "Could not start playback." });
+      await new Promise((r) => setTimeout(r, 600));
+      m3u8 = await getM3U8(session.uk, session.shareid, session.fs_id, q, origin);
+    }
+
+    if (!m3u8) {
+      // If we still have a dlink, redirect to progressive proxy instead of returning error JSON
+      if (session.dlink) {
+        res.redirect(302, `/api/terabox/file/${encodeURIComponent(playbackId)}`);
+        return;
+      }
+      res.status(502).json({ message: "Could not start playback. The HLS stream is unavailable for this video." });
       return;
     }
 
@@ -1187,7 +1252,7 @@ export async function handleTeraboxPlay(req: Request, res: Response): Promise<vo
     res.send(m3u8);
   } catch (e) {
     console.error("[terabox:play]", e);
-    res.status(503).json({ message: "Stream fetch failed." });
+    res.status(503).json({ message: "Stream fetch failed. Please try again." });
   }
 }
 
@@ -1241,21 +1306,12 @@ export async function handleTeraboxFile(req: Request, res: Response): Promise<vo
     return;
   }
 
-  const wantPlay = String(req.query.play ?? "1") !== "0";
-  const remux = wantPlay && needsBrowserRemux(session);
-
-  if (!remux && process.env.CLOUDFLARE_WORKER_URL) {
-    const workerUrl = `${process.env.CLOUDFLARE_WORKER_URL.replace(/\/$/, "")}/proxy?url=${encodeURIComponent(dlink)}&filename=${encodeURIComponent(session.fileName || "video")}`;
-    res.redirect(workerUrl);
-    return;
-  }
-
-  // HEAD: advertise playable type without starting ffmpeg/upstream body.
+  // HEAD: advertise streamable type and byte ranges
   if (req.method === "HEAD") {
     res.status(200);
     res.set({
-      "Content-Type": remux ? "video/mp4" : session.mimeType || "application/octet-stream",
-      "Accept-Ranges": remux ? "none" : "bytes",
+      "Content-Type": session.mimeType || "video/mp4",
+      "Accept-Ranges": "bytes",
       "Cache-Control": "private, no-store",
       "Access-Control-Allow-Origin": "*",
       "X-Robots-Tag": "noindex, nofollow",
@@ -1276,10 +1332,6 @@ export async function handleTeraboxFile(req: Request, res: Response): Promise<vo
   }
 
   try {
-    if (remux) {
-      await streamRemuxedMp4(dlink, upstreamHeaders, session, res);
-      return;
-    }
 
     const range = req.headers.range;
     if (typeof range === "string" && range) upstreamHeaders.Range = range;
@@ -1354,156 +1406,7 @@ export async function handleTeraboxFile(req: Request, res: Response): Promise<vo
   }
 }
 
-function needsBrowserRemux(session: {
-  fileName?: string;
-  mimeType?: string | null;
-}): boolean {
-  const name = (session.fileName || "").toLowerCase();
-  const mime = (session.mimeType || "").toLowerCase();
-  if (/\.(mp4|m4v|webm|ogg|ogv)(\?|$)/i.test(name)) return false;
-  if (mime.includes("mp4") || mime.includes("webm") || mime.includes("ogg")) return false;
-  if (/\.(mkv|avi|wmv|flv|ts|m2ts|mpg|mpeg)(\?|$)/i.test(name)) return true;
-  if (
-    mime.includes("matroska") ||
-    mime.includes("x-msvideo") ||
-    mime.includes("x-ms-wmv") ||
-    mime.includes("x-flv") ||
-    mime.includes("mp2t")
-  ) {
-    return true;
-  }
-  return false;
-}
 
-async function streamRemuxedMp4(
-  dlink: string,
-  upstreamHeaders: Record<string, string>,
-  session: { fileName?: string },
-  res: Response,
-): Promise<void> {
-  const ffmpegPath = resolveFfmpegPath();
-  if (!ffmpegPath) {
-    res.status(503).json({
-      message: "Browser remux unavailable (ffmpeg-static missing). Download the original file instead.",
-    });
-    return;
-  }
-
-  // Node fetches the CDN (works on Render). ffmpeg -headers with long cookies fails on Linux.
-  const upstream = await fetch(dlink, {
-    headers: upstreamHeaders,
-    redirect: "follow",
-    signal: AbortSignal.timeout(30 * 60 * 1000),
-  });
-  if (!upstream.ok && upstream.status !== 206) {
-    res.status(502).json({ message: `Upstream file ${upstream.status}` });
-    return;
-  }
-  if (!upstream.body) {
-    res.status(502).json({ message: "Upstream returned empty body." });
-    return;
-  }
-
-  const args = [
-    "-hide_banner",
-    "-loglevel",
-    "error",
-    "-probesize",
-    "32M",
-    "-analyzeduration",
-    "32M",
-    "-i",
-    "pipe:0",
-    "-c",
-    "copy",
-    "-sn",
-    "-f",
-    "mp4",
-    "-movflags",
-    "frag_keyframe+empty_moov+default_base_moof",
-    "pipe:1",
-  ];
-
-  const ff = spawn(ffmpegPath, args, {
-    stdio: ["pipe", "pipe", "pipe"],
-    windowsHide: true,
-  });
-
-  let stderr = "";
-  ff.stderr?.on("data", (chunk: Buffer) => {
-    stderr += chunk.toString("utf8");
-    if (stderr.length > 4000) stderr = stderr.slice(-2000);
-  });
-
-  let headersSent = false;
-  const sendHeaders = () => {
-    if (headersSent || res.headersSent) return;
-    headersSent = true;
-    res.status(200);
-    res.set({
-      "Content-Type": "video/mp4",
-      "Cache-Control": "private, no-store",
-      "Accept-Ranges": "none",
-      "Access-Control-Allow-Origin": "*",
-      "X-Content-Type-Options": "nosniff",
-      "X-Robots-Tag": "noindex, nofollow",
-      "Content-Disposition": `inline; filename="${((session.fileName || "video").replace(/\.[^.]+$/, "") || "video").replace(/"/g, "")}.mp4"`,
-    });
-  };
-
-  const upstreamStream = Readable.fromWeb(upstream.body as import("stream/web").ReadableStream);
-  upstreamStream.on("error", (err) => {
-    console.error("[terabox:remux:upstream]", err);
-    if (!ff.killed) ff.kill("SIGKILL");
-  });
-  upstreamStream.pipe(ff.stdin!);
-  ff.stdin?.on("error", (err) => {
-    // EPIPE when ffmpeg exits early — expected on client abort.
-    if ((err as NodeJS.ErrnoException).code !== "EPIPE") {
-      console.error("[terabox:remux:stdin]", err);
-    }
-  });
-
-  ff.stdout?.once("data", (chunk: Buffer) => {
-    sendHeaders();
-    if (!res.write(chunk)) {
-      ff.stdout?.pause();
-      res.once("drain", () => ff.stdout?.resume());
-    }
-    ff.stdout?.pipe(res);
-  });
-
-  ff.stdout?.on("error", (err) => {
-    console.error("[terabox:remux:stdout]", err);
-  });
-
-  ff.on("error", (err) => {
-    console.error("[terabox:remux:spawn]", err);
-    upstreamStream.destroy();
-    if (!headersSent && !res.headersSent) {
-      res.status(502).json({ message: "Could not start video remux." });
-    } else {
-      res.destroy(err);
-    }
-  });
-
-  ff.on("close", (code) => {
-    upstreamStream.destroy();
-    if (code !== 0 && !headersSent) {
-      console.error("[terabox:remux] ffmpeg exit", code, stderr.slice(0, 500));
-      if (!res.headersSent) {
-        res.status(502).json({
-          message: "Could not remux video for browser playback. Try Download.",
-        });
-      }
-    }
-  });
-
-  res.on("close", () => {
-    upstreamStream.destroy();
-    if (!ff.killed) ff.kill("SIGKILL");
-  });
-}
 
 export async function handleTeraboxDownload(req: Request, res: Response): Promise<void> {
   const playbackId = String(req.query.playbackId ?? req.body?.playbackId ?? "").trim();
@@ -1647,7 +1550,7 @@ export async function handleTeraboxDownload(req: Request, res: Response): Promis
 export async function handleTeraboxTs(req: Request, res: Response): Promise<void> {
   const tsUrl = String(req.query.url ?? "");
   if (!tsUrl || !/^https?:\/\//i.test(tsUrl)) {
-    res.status(400).json({ message: "Invalid segment request." });
+    res.status(400).end();
     return;
   }
 
@@ -1661,11 +1564,11 @@ export async function handleTeraboxTs(req: Request, res: Response): Promise<void
       host.includes("4funbox") ||
       /^v\d+-/.test(host);
     if (!allowed) {
-      res.status(400).json({ message: "Host not allowed." });
+      res.status(400).end();
       return;
     }
   } catch {
-    res.status(400).json({ message: "Invalid segment URL." });
+    res.status(400).end();
     return;
   }
 
@@ -1675,23 +1578,46 @@ export async function handleTeraboxTs(req: Request, res: Response): Promise<void
       "User-Agent":
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
       Accept: "*/*",
+      "Accept-Encoding": "identity",
     };
     const range = req.headers.range;
     if (typeof range === "string" && range) headers.Range = range;
 
     const resp = await fetch(tsUrl, {
       headers,
+      redirect: "follow",
       signal: AbortSignal.timeout(45000),
     });
 
     if (!resp.ok && resp.status !== 206) {
-      res.status(502).json({ message: `Segment upstream ${resp.status}` });
+      // Retry once on transient errors (502, 503, 429)
+      if (resp.status >= 500 || resp.status === 429) {
+        await new Promise((r) => setTimeout(r, 400));
+        const retry = await fetch(tsUrl, { headers, redirect: "follow", signal: AbortSignal.timeout(45000) });
+        if (retry.ok || retry.status === 206) {
+          const outH: Record<string, string> = {
+            "Content-Type": retry.headers.get("content-type") || "video/mp2t",
+            "Cache-Control": "private, max-age=300",
+            "Access-Control-Allow-Origin": "*",
+          };
+          const rLen = retry.headers.get("content-length");
+          if (rLen) outH["Content-Length"] = rLen;
+          res.status(retry.status === 206 ? 206 : 200).set(outH);
+          if (retry.body) {
+            Readable.fromWeb(retry.body as import("stream/web").ReadableStream).pipe(res);
+          } else {
+            res.end();
+          }
+          return;
+        }
+      }
+      res.status(502).end();
       return;
     }
 
     const outHeaders: Record<string, string> = {
-      "Content-Type": "video/mp2t",
-      "Cache-Control": "private, max-age=120",
+      "Content-Type": resp.headers.get("content-type") || "video/mp2t",
+      "Cache-Control": "private, max-age=300",
       "X-Robots-Tag": "noindex, nofollow",
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Expose-Headers": "Content-Length, Content-Range, Accept-Ranges",
@@ -1701,13 +1627,26 @@ export async function handleTeraboxTs(req: Request, res: Response): Promise<void
     if (len) outHeaders["Content-Length"] = len;
     const cr = resp.headers.get("content-range");
     if (cr) outHeaders["Content-Range"] = cr;
+
     res.status(resp.status === 206 ? 206 : 200);
     res.set(outHeaders);
 
-    const buf = Buffer.from(await resp.arrayBuffer());
-    res.end(buf);
+    if (!resp.body) {
+      res.end();
+      return;
+    }
+
+    // Stream segment bytes directly — avoids buffering entire segment in memory
+    const nodeStream = Readable.fromWeb(resp.body as import("stream/web").ReadableStream);
+    nodeStream.on("error", (err) => {
+      console.error("[terabox:ts:pipe]", err);
+      if (!res.headersSent) res.status(502).end();
+      else res.destroy(err as Error);
+    });
+    req.on("close", () => nodeStream.destroy());
+    nodeStream.pipe(res);
   } catch (e) {
     console.error("[terabox:ts]", e);
-    if (!res.headersSent) res.status(502).json({ message: "TS segment fetch failed." });
+    if (!res.headersSent) res.status(502).end();
   }
 }

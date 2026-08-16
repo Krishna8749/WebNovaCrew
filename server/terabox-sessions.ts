@@ -96,32 +96,20 @@ export const PLAYBACK_QUALITY_OPTIONS = ["360", "480", "720", "1080", "1440", "2
 export function buildProtectedPlaybackPayload(sessionId: string, extra?: Record<string, unknown>) {
   const session = getPlaybackSession(sessionId);
   const hasDlink = Boolean(session?.dlink);
-  const name = (session?.fileName ?? "").toLowerCase();
-  const mime = (session?.mimeType ?? "").toLowerCase();
-  const needsRemux =
-    hasDlink &&
-    !/\.(mp4|m4v|webm|ogg|ogv)(\?|$)/i.test(name) &&
-    !mime.includes("mp4") &&
-    !mime.includes("webm") &&
-    !mime.includes("ogg");
-  const playQuery = needsRemux ? "play=1" : "play=0";
   return {
     playbackId: sessionId,
     fileName: session?.fileName ?? "Video",
     quality: session?.quality ?? "360",
     qualityOptions: [...PLAYBACK_QUALITY_OPTIONS],
     thumbnail: session?.thumbnail ?? null,
-    /** Full file dlink available (same path as Flutter video-backend). */
+    /** Full file direct CDN dlink available via Toofani backend. */
     fullFile: hasDlink,
-    /**
-     * Always progressive when we have the app dlink.
-     * Server remuxes MKV/AVI → fragmented MP4 so browsers can play the full file.
-     */
+    /** Direct CDN streaming mode */
     playbackMode: hasDlink ? "progressive" : "hls",
-    mimeType: session?.mimeType ?? null,
-    /** Same as Android app: full-file stream via our proxy (not HLS preview). */
-    streamUrl: hasDlink ? `/api/terabox/file/${sessionId}?${playQuery}` : null,
-    needsRemux,
+    mimeType: session?.mimeType ?? "video/mp4",
+    /** Direct CDN stream via Cloudflare / streaming proxy */
+    streamUrl: hasDlink ? `/api/terabox/file/${sessionId}` : null,
+    needsRemux: false,
     ...extra,
   };
 }
