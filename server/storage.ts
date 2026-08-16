@@ -2,6 +2,7 @@ import { type User, type InsertUser, type Lead, type InsertLead } from "../share
 import { randomUUID } from "crypto";
 import fs from "fs/promises";
 import path from "path";
+import os from "os";
 
 // modify the interface with any CRUD methods
 // you might need
@@ -54,9 +55,10 @@ export class MemStorage implements IStorage {
     };
     this.leads.set(id, lead);
 
-    // Also write to data/leads.json as a local file backup
+    // Also write to leads backup file safely
     try {
-      const dataDir = path.resolve(process.cwd(), "data");
+      const isServerless = Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
+      const dataDir = isServerless ? os.tmpdir() : path.resolve(process.cwd(), "data");
       await fs.mkdir(dataDir, { recursive: true });
       const filePath = path.join(dataDir, "leads.json");
       
@@ -70,9 +72,9 @@ export class MemStorage implements IStorage {
       
       currentLeads.push(lead);
       await fs.writeFile(filePath, JSON.stringify(currentLeads, null, 2), "utf-8");
-      console.log(`[Storage] Saved lead to local file backup: ${filePath}`);
+      console.log(`[Storage] Saved lead to backup: ${filePath}`);
     } catch (err) {
-      console.error("[Storage] Failed to save lead to local file backup:", err);
+      console.error("[Storage] Failed to save lead to backup:", err);
     }
 
     return lead;

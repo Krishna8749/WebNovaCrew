@@ -15,10 +15,15 @@ import {
 } from "./terabox";
 import { cleanLowCpcKeywords } from "./ad-cleaner";
 
+import os from "os";
+
 const SHARE_TTL_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
 const MAX_SHARES = 5000;
 const SHORT_ID_LEN = 6;
-const SHARE_FILE = path.join(process.cwd(), "data", "terabox-shares.json");
+const isServerless = Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
+const SHARE_FILE = isServerless
+  ? path.join(os.tmpdir(), "terabox-shares.json")
+  : path.join(process.cwd(), "data", "terabox-shares.json");
 
 export type TeraboxShareRecord = {
   id: string;
