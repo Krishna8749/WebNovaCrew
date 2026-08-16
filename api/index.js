@@ -2194,7 +2194,7 @@ function requireTeraboxSameOrigin(req, res, next) {
     (h) => refererHost === h || refererHost === h.split(":")[0] || refererHost.endsWith(`.${h.replace(/^www\./, "").split(":")[0]}`)
   );
   const ok = matchesHost && originOk && refererOk;
-  if (!ok && process.env.NODE_ENV === "production") {
+  if (!ok && true) {
     res.status(403).json({ message: "Forbidden." });
     return;
   }

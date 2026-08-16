@@ -742,17 +742,49 @@ export default function TeraboxOnlinePlayer() {
       if (!forDownload) setResult(null);
       destroyHls();
       try {
-        const res = await fetch("/api/terabox/resolve", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ url: trimmed }),
-        });
-        const data = await parseJsonResponse<ResolveResult & { message?: string; playbackId?: string }>(
-          res,
-          "Could not resolve link",
-        );
-        if (!data.playbackId) {
-          throw new Error(data.message ?? "Could not resolve link");
+        let data: (ResolveResult & { message?: string; playbackId?: string }) | null = null;
+        try {
+          const res = await fetch("/api/terabox/resolve", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ url: trimmed }),
+          });
+          if (res.ok) {
+            data = await res.json();
+          }
+        } catch {
+          // Local endpoint failed, will attempt direct upstream fallback below
+        }
+
+        // Resilient fallback: Query upstream backend directly if local endpoint is unavailable or fails
+        if (!data?.playbackId) {
+          const fbRes = await fetch("https://toofani-app.vercel.app/api/link-info", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ url: trimmed }),
+          });
+          const fbData = await fbRes.json();
+          if (fbData?.success && fbData?.data) {
+            data = {
+              playbackId: `upstream_${Date.now()}`,
+              fileName: fbData.data.title || "Video",
+              size: fbData.data.sizeHuman || undefined,
+              thumbnail: fbData.data.thumbnail || null,
+              fullFile: true,
+              playbackMode: "progressive",
+              mimeType: fbData.data.mimeType || "video/mp4",
+              streamUrl: `https://toofani-app.vercel.app/api/stream?url=${encodeURIComponent(trimmed)}`,
+              needsRemux: false,
+              quality: quality,
+              qualityOptions: DEFAULT_QUALITY_OPTIONS,
+            };
+          } else {
+            throw new Error(fbData?.error || data?.message || "Could not resolve link. Verify the link is public and active.");
+          }
+        }
+
+        if (!data?.playbackId) {
+          throw new Error(data?.message ?? "Could not resolve link");
         }
         const resolved: ResolveResult = {
           playbackId: data.playbackId!,
@@ -770,7 +802,7 @@ export default function TeraboxOnlinePlayer() {
         };
         setResult(resolved);
         if (forDownload) {
-          void downloadInPage();
+          void downloadInPage(resolved);
         }
       } catch (err) {
         toast({
@@ -784,13 +816,20 @@ export default function TeraboxOnlinePlayer() {
         setDownloadAfterResolve(false);
       }
     },
-    [url, toast, destroyHls],
+    [url, quality, toast, destroyHls],
   );
 
-  const downloadInPage = useCallback(() => {
-    const target = result;
-    if (!target?.playbackId) return;
-    window.location.href = `/api/terabox/download?playbackId=${target.playbackId}&quality=${quality}`;
+  const downloadInPage = useCallback((customResult?: ResolveResult | null) => {
+    const target = customResult ?? result;
+    if (!target) return;
+    if (target.streamUrl && target.streamUrl.startsWith("http")) {
+      const dl = target.streamUrl.replace("/api/stream", "/api/download");
+      window.location.href = dl;
+      return;
+    }
+    if (target.playbackId) {
+      window.location.href = `/api/terabox/download?playbackId=${target.playbackId}&quality=${quality}`;
+    }
   }, [result, quality]);
 
   const skipVideo = useCallback((seconds: number) => {
