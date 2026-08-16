@@ -1,4 +1,4 @@
-import { type User, type InsertUser, type Lead, type InsertLead } from "@shared/schema";
+import { type User, type InsertUser, type Lead, type InsertLead } from "../shared/schema";
 import { randomUUID } from "crypto";
 import fs from "fs/promises";
 import path from "path";
