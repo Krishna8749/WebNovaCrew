@@ -16,7 +16,6 @@ export default defineConfig({
     metaImagesPlugin(),
   ],
   resolve: {
-    extensions: [".mjs", ".js", ".mts", ".ts", ".jsx", ".tsx", ".json"],
     alias: {
       "@": path.resolve(__dirname, "client", "src"),
       "@shared": path.resolve(__dirname, "shared"),

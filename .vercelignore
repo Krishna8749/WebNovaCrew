@@ -5,7 +5,7 @@ node_modules
 .env.*
 !.env.example
 attached_assets
-data
+/data/
 dist
 dist-server
 docs
