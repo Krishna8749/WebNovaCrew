@@ -15,6 +15,14 @@ app.use(
 
 app.use(express.urlencoded({ extended: false }));
 
+// Normalizer middleware to ensure full path on Vercel rewrites
+app.use((req, _res, next) => {
+  if (req.originalUrl && req.url !== req.originalUrl && req.originalUrl.startsWith("/api")) {
+    req.url = req.originalUrl;
+  }
+  next();
+});
+
 // Synchronously register all Express API routes immediately on cold start
 registerRoutes(httpServer, app);
 
@@ -26,11 +34,5 @@ app.use((err: any, _req: express.Request, res: express.Response, _next: express.
   }
 });
 
-// Vercel serverless function entrypoint — native Express support
-export default function handler(req: any, res: any) {
-  // Normalize rewrites on Vercel
-  if (req.originalUrl && req.url !== req.originalUrl && req.originalUrl.startsWith("/api")) {
-    req.url = req.originalUrl;
-  }
-  return app(req, res);
-}
+// Directly export Express app for native @vercel/node handling
+export default app;

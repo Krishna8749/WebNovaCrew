@@ -2,11 +2,14 @@ import type { Request, Response, NextFunction } from "express";
 import { getShareLinkBase } from "./terabox-shares";
 
 function allowedHosts(): string[] {
-  const hosts = new Set<string>(["localhost:5000", "127.0.0.1:5000", "localhost:5173"]);
+  const hosts = new Set<string>(["localhost:5000", "127.0.0.1:5000", "localhost:5173", "localhost:3000"]);
   const site = (process.env.SITE_HOST ?? "webnovacrew.com").trim();
   if (site) {
     hosts.add(site);
     hosts.add(`www.${site.replace(/^www\./, "")}`);
+  }
+  if (process.env.VERCEL_URL) {
+    hosts.add(process.env.VERCEL_URL.trim());
   }
   const shareBase = getShareLinkBase();
   if (shareBase) {
@@ -34,9 +37,12 @@ export function requireTeraboxSameOrigin(req: Request, res: Response, next: Next
   const originHost = req.headers.origin ? hostFromUrl(String(req.headers.origin)) : null;
   const refererHost = req.headers.referer ? hostFromUrl(String(req.headers.referer)) : null;
 
-  const matchesHost = allowed.some((h) => reqHost === h || reqHost.split(":")[0] === h.split(":")[0]);
+  const matchesHost =
+    reqHost.endsWith(".vercel.app") ||
+    allowed.some((h) => reqHost === h || reqHost.split(":")[0] === h.split(":")[0]);
   const originOk =
     !originHost ||
+    originHost.endsWith(".vercel.app") ||
     allowed.some(
       (h) =>
         originHost === h ||
@@ -45,6 +51,7 @@ export function requireTeraboxSameOrigin(req: Request, res: Response, next: Next
     );
   const refererOk =
     !refererHost ||
+    refererHost.endsWith(".vercel.app") ||
     allowed.some(
       (h) =>
         refererHost === h ||
