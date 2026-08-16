@@ -1,4 +1,4 @@
-// api/index.ts
+// server/vercel-handler.ts
 import express from "express";
 
 // server/contact-email.ts
@@ -2194,7 +2194,7 @@ function requireTeraboxSameOrigin(req, res, next) {
     (h) => refererHost === h || refererHost === h.split(":")[0] || refererHost.endsWith(`.${h.replace(/^www\./, "").split(":")[0]}`)
   );
   const ok = matchesHost && originOk && refererOk;
-  if (!ok && true) {
+  if (!ok && process.env.NODE_ENV === "production") {
     res.status(403).json({ message: "Forbidden." });
     return;
   }
@@ -2258,7 +2258,7 @@ async function registerRoutes(httpServer2, app2) {
   return httpServer2;
 }
 
-// api/index.ts
+// server/vercel-handler.ts
 import { createServer } from "http";
 var app = express();
 var httpServer = createServer(app);
