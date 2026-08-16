@@ -1,9 +1,15 @@
 import express from "express";
-import { registerRoutes } from "../server/routes";
+import { registerRoutes } from "./routes";
 import { createServer } from "http";
 
 const app = express();
 const httpServer = createServer(app);
+
+declare module "http" {
+  interface IncomingMessage {
+    rawBody: unknown;
+  }
+}
 
 app.use(
   express.json({
@@ -30,7 +36,7 @@ async function ensureRoutes() {
   return initPromise;
 }
 
-export default async function handler(req: express.Request, res: express.Response) {
+export async function handler(req: express.Request, res: express.Response) {
   try {
     await ensureRoutes();
     return app(req, res);
@@ -39,3 +45,6 @@ export default async function handler(req: express.Request, res: express.Respons
     res.status(500).json({ message: "Internal server error", error: String(err?.message || err) });
   }
 }
+
+// Also export as default for Vercel compatibility
+export default handler;

@@ -1,17 +1,9 @@
 {
   "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/index.js" },
-    { "source": "/assets/(.*)", "destination": "/dist/assets/$1" },
-    { "source": "/terabox/(.*)", "destination": "/dist/terabox/$1" },
-    { "source": "/favicon.png", "destination": "/dist/favicon.png" },
-    { "source": "/logo.png", "destination": "/dist/logo.png" },
-    { "source": "/webnova-logo.png", "destination": "/dist/webnova-logo.png" },
-    { "source": "/manifest.json", "destination": "/dist/manifest.json" },
-    { "source": "/robots.txt", "destination": "/dist/robots.txt" },
-    { "source": "/sitemap.xml", "destination": "/dist/sitemap.xml" },
-    { "source": "/ads.txt", "destination": "/dist/ads.txt" },
-    { "source": "/service-worker.js", "destination": "/dist/service-worker.js" },
-    { "source": "/(.*)", "destination": "/dist/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
