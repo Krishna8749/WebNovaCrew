@@ -11,7 +11,7 @@ import { FAQSection, homeFAQs } from "@/components/sections/FAQ";
 import { TestimonialsSection } from "@/components/sections/Testimonials";
 import { CTASection } from "@/components/sections/CTASection";
 import { StatsSection } from "@/components/sections/Stats";
-import { CertificationBadgesGrid, TrustBar, CompactBadges } from "@/components/widgets/CertificationBadges";
+import { CertificationBadgesGrid, CompactBadges } from "@/components/widgets/CertificationBadges";
 
 export default function Home() {
   const services = [
@@ -247,7 +247,7 @@ export default function Home() {
       </section>
       
       {/* Trust Bar */}
-      <TrustBar />
+      <CompactBadges />
 
       {/* Problem-Agitation Section */}
       <section className="py-20 bg-gradient-to-b from-slate-50 to-white">

@@ -16,8 +16,8 @@ const navLinks = [
 ];
 
 const menuVariants = {
-  closed: { x: "100%", opacity: 0, transition: { duration: 0.35, ease: [0.4, 0, 1, 1] } },
-  open:   { x: 0, opacity: 1, transition: { duration: 0.4, ease: [0, 0, 0.2, 1] } },
+  closed: { x: "100%", opacity: 0, transition: { duration: 0.35, ease: [0.4, 0, 1, 1] as const } },
+  open:   { x: 0, opacity: 1, transition: { duration: 0.4, ease: [0, 0, 0.2, 1] as const } },
 };
 
 const backdropVariants = {
@@ -29,7 +29,7 @@ const linkVariants = {
   closed: { opacity: 0, x: 30 },
   open: (i: number) => ({
     opacity: 1, x: 0,
-    transition: { delay: 0.1 + i * 0.07, duration: 0.4, ease: [0.22, 1, 0.36, 1] },
+    transition: { delay: 0.1 + i * 0.07, duration: 0.4, ease: [0.22, 1, 0.36, 1] as const },
   }),
 };
 

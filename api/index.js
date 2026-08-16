@@ -32,7 +32,16 @@ var MemStorage = class {
   async createLead(insertLead) {
     const id = randomUUID();
     const createdAt = (/* @__PURE__ */ new Date()).toISOString();
-    const lead = { ...insertLead, id, createdAt };
+    const lead = {
+      id,
+      name: insertLead.name,
+      email: insertLead.email,
+      phone: insertLead.phone ?? null,
+      service: insertLead.service,
+      budget: insertLead.budget ?? null,
+      message: insertLead.message,
+      createdAt
+    };
     this.leads.set(id, lead);
     try {
       const dataDir = path.resolve(process.cwd(), "data");

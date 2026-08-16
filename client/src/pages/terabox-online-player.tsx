@@ -1220,7 +1220,7 @@ export default function TeraboxOnlinePlayer() {
                     </Button>
                     <Button
                       className="h-10 px-4 bg-emerald-600 hover:bg-emerald-500 font-semibold text-sm"
-                      onClick={downloadInPage}
+                      onClick={() => downloadInPage()}
                     >
                       <Download className="h-4 w-4 mr-1.5" />
                       Download
