@@ -40,6 +40,12 @@ export default async function handler(req: any, res: any) {
     if (!routesReady) {
       await init();
     }
+
+    // Ensure req.url retains full path on Vercel rewrites
+    if (req.originalUrl && req.url !== req.originalUrl && req.originalUrl.startsWith("/api")) {
+      req.url = req.originalUrl;
+    }
+
     return await new Promise<void>((resolve, reject) => {
       res.on("finish", resolve);
       res.on("close", resolve);
