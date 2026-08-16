@@ -15,17 +15,30 @@ app.use(
 
 app.use(express.urlencoded({ extended: false }));
 
-// Normalizer middleware to ensure full path on Vercel rewrites
+// Restore full original request URL on Vercel
 app.use((req, _res, next) => {
-  if (req.originalUrl && req.url !== req.originalUrl && req.originalUrl.startsWith("/api")) {
-    req.url = req.originalUrl;
+  const matched =
+    (typeof req.headers["x-matched-path"] === "string" && req.headers["x-matched-path"]) ||
+    (typeof req.headers["x-now-route-matches"] === "string" && req.headers["x-now-route-matches"]) ||
+    (typeof req.originalUrl === "string" && req.originalUrl);
+
+  if (matched && matched.startsWith("/api")) {
+    req.url = matched;
   }
   next();
 });
 
-// Synchronously register all Express API routes immediately on cold start
+// Register all Express API routes
 registerRoutes(httpServer, app);
 
+// 404 catch-all for unmatched API requests so requests never hang
+app.use((_req: express.Request, res: express.Response) => {
+  if (!res.headersSent) {
+    res.status(404).json({ message: "API route not found" });
+  }
+});
+
+// Error handler
 app.use((err: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
   const status = err.status || err.statusCode || 500;
   const message = err.message || "Internal Server Error";
@@ -34,5 +47,4 @@ app.use((err: any, _req: express.Request, res: express.Response, _next: express.
   }
 });
 
-// Directly export Express app for native @vercel/node handling
 export default app;
