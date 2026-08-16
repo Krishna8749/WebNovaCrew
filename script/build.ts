@@ -69,8 +69,8 @@ async function buildAll() {
     entryPoints: ["server/vercel-handler.ts"],
     platform: "node",
     bundle: true,
-    format: "cjs",
-    outfile: "api/index.js",
+    format: "esm",
+    outfile: "api/bundle.mjs",
     define: {
       "process.env.NODE_ENV": '"production"',
     },
