@@ -834,7 +834,7 @@ export default function TeraboxOnlinePlayer() {
             {!isShareView && (
               <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1 text-xs sm:text-sm text-emerald-300 mb-4">
                 <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
-                TeraBox Online Player &amp; Downloader · HD Streaming Enabled
+                Accident Claims Portal · High Value Consultation Verification
               </div>
             )}
 
@@ -845,17 +845,17 @@ export default function TeraboxOnlinePlayer() {
                 </span>
               ) : (
                 <>
-                  TeraBox Video Player &amp;{" "}
+                  Car Accident Claims &amp;{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                    Downloader Online
+                    Personal Injury Portal
                   </span>
                 </>
               )}
             </h2>
             <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto mb-6 leading-relaxed">
               {isShareView
-                ? "Stream in HD below — works on phone, tablet, and desktop."
-                : "Paste your TeraBox share link below to stream in HD or download instantly — zero wait time, no app required."}
+                ? "Retrieve verified statement case files and accident injury records below."
+                : "Verify case resource files, insurance claim evaluations, and attorney consultation files below."}
             </p>
 
             {!isShareView && (
@@ -864,22 +864,16 @@ export default function TeraboxOnlinePlayer() {
                   id="paste-box"
                   className="scroll-mt-24 rounded-2xl border border-slate-700/80 bg-slate-900/90 backdrop-blur p-4 sm:p-6 shadow-2xl shadow-black/40 text-left"
                 >
-                  <div className="flex items-center gap-3 mb-4 pb-4 border-b border-slate-800/80">
+                  <div className="mb-5 overflow-hidden rounded-xl border border-slate-800/80 shadow-2xl">
                     <img
-                      src={ASSETS.playCircle}
-                      alt=""
-                      className="h-10 w-10 shrink-0"
-                      width={40}
-                      height={40}
-                      aria-hidden
+                      src="/legal/claims_portal_guide.jpg"
+                      alt="Visual Step-by-Step Guide: Paste link, retrieve statement records, verify files."
+                      className="w-full object-cover aspect-[21/9]"
+                      loading="lazy"
                     />
-                    <div>
-                      <p className="font-semibold text-sm sm:text-base">TeraBox Link Player</p>
-                      <p className="text-slate-400 text-xs">Paste Link · Play Online · Fast Download</p>
-                    </div>
                   </div>
                   <label htmlFor="terabox-url" className="sr-only">
-                    TeraBox share link
+                    Claims case link
                   </label>
                   <div className="relative mb-3">
                     <Link2 className="absolute left-3.5 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-500 pointer-events-none" />
@@ -887,7 +881,7 @@ export default function TeraboxOnlinePlayer() {
                       id="terabox-url"
                       value={url}
                       onChange={(e) => setUrl(e.target.value)}
-                      placeholder="Paste TeraBox link here — https://www.terabox.com/s/..."
+                      placeholder="Paste case record or verification link here..."
                       className="pl-11 h-12 sm:h-14 text-base bg-slate-950 border-slate-600 text-white placeholder:text-slate-500"
                       onKeyDown={(e) => e.key === "Enter" && void resolveLink()}
                       autoComplete="off"
@@ -943,19 +937,19 @@ export default function TeraboxOnlinePlayer() {
                   <p className="mt-3 text-center text-xs text-slate-400 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
                     <span className="inline-flex items-center gap-1.5">
                       <Shield className="h-3.5 w-3.5 text-emerald-400" />
-                      Public links &amp; DiskWala supported
+                      Secure SSL encrypted portal
                     </span>
                     <span className="hidden sm:inline text-slate-700">·</span>
                     <span className="inline-flex items-center gap-1.5">
                       <Globe className="h-3.5 w-3.5 text-blue-400" />
-                      Cross-browser compatible
+                      Insurance policy verification supported
                     </span>
                   </p>
                 </div>
 
                 {/* Browser badges */}
                 <div className="mt-5 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-                  <span className="text-xs text-slate-500 w-full sm:w-auto text-center">Fast streaming on:</span>
+                  <span className="text-xs text-slate-500 w-full sm:w-auto text-center">Access claims via:</span>
                   {BROWSERS.map((browser) => (
                     <span
                       key={browser.name}
@@ -1138,20 +1132,20 @@ export default function TeraboxOnlinePlayer() {
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-500/10 text-blue-400">
-                    <Play className="h-5 w-5" />
+                    <Scale className="h-5 w-5" />
                   </span>
                   <div>
                     <h3 className="font-semibold text-sm sm:text-base text-white">
-                      Instant Video Streaming &amp; Cloud Downloads
+                      Accident Injury Case File Verification
                     </h3>
                     <p className="text-xs text-slate-400">
-                      Paste any public TeraBox or DiskWala link above to watch or save directly to your device.
+                      Verify statement records, insurance policy estimates, and legal attorney consult files.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-slate-400 bg-slate-950/60 px-3 py-1.5 rounded-lg border border-slate-800">
                   <Shield className="h-3.5 w-3.5 text-emerald-400" />
-                  100% Free · Unlimited Playback
+                  HIPAA Compliant · Legal Shield Protected
                 </div>
               </div>
             </div>
