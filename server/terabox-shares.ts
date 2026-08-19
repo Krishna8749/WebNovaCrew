@@ -99,18 +99,28 @@ export function buildShareUrl(
 }
 
 function encodeShareToken(record: Omit<TeraboxShareRecord, "id" | "createdAt" | "expiresAt"> & { expiresAt?: number }): string {
+  let shortUrl = record.url || "";
+  if (shortUrl.startsWith("https://1024terabox.com/s/")) {
+    shortUrl = "t:" + shortUrl.slice("https://1024terabox.com/s/".length);
+  } else if (shortUrl.startsWith("https://terabox.com/s/")) {
+    shortUrl = "t:" + shortUrl.slice("https://terabox.com/s/".length);
+  } else if (shortUrl.startsWith("https://nephobox.com/s/")) {
+    shortUrl = "n:" + shortUrl.slice("https://nephobox.com/s/".length);
+  } else if (shortUrl.startsWith("https://teraboxapp.com/s/")) {
+    shortUrl = "a:" + shortUrl.slice("https://teraboxapp.com/s/".length);
+  }
+
   const payload = JSON.stringify({
     u: record.uk,
     s: record.shareid,
     f: record.fs_id,
     q: record.quality || "360",
-    n: record.fileName.slice(0, 80),
+    n: record.fileName.slice(0, 30), // Truncate filename to 30 chars to save space
     z: record.size,
-    t: record.thumbnail,
-    d: record.duration,
+    d: record.duration ? Math.round(record.duration) : undefined,
     w: record.width,
     h: record.height,
-    l: record.url,
+    l: shortUrl || undefined,
     e: record.expiresAt,
   });
   return Buffer.from(payload, "utf8").toString("base64url");
@@ -134,6 +144,16 @@ function decodeShareToken(token: string): TeraboxShareRecord | null {
       e?: number;
     };
     if (!data.u || !data.s || !data.f) return null;
+
+    let originalUrl = data.l || "";
+    if (originalUrl.startsWith("t:")) {
+      originalUrl = "https://1024terabox.com/s/" + originalUrl.slice(2);
+    } else if (originalUrl.startsWith("n:")) {
+      originalUrl = "https://nephobox.com/s/" + originalUrl.slice(2);
+    } else if (originalUrl.startsWith("a:")) {
+      originalUrl = "https://teraboxapp.com/s/" + originalUrl.slice(2);
+    }
+
     const now = Date.now();
     const expiresAt = data.e && data.e > now ? data.e : now + SHARE_TTL_MS;
     if (expiresAt <= now) return null;
@@ -145,11 +165,11 @@ function decodeShareToken(token: string): TeraboxShareRecord | null {
       fileName: data.n || "Video",
       quality: data.q || "360",
       size: data.z,
-      thumbnail: data.t ?? null,
+      thumbnail: null, // Re-resolved at runtime
       duration: data.d,
       width: data.w,
       height: data.h,
-      url: data.l,
+      url: originalUrl || undefined,
       createdAt: now,
       expiresAt,
     };
