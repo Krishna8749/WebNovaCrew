@@ -1290,6 +1290,10 @@ export default function TeraboxOnlinePlayer() {
               </div>
             </div>
 
+            <div className="my-8">
+              <AdUnit slot="1009844198" format="fluid" layoutKey="-6t+ed+2i-1n-4w" />
+            </div>
+
             <div className="space-y-4 pt-4 border-t border-slate-800/80">
               <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
@@ -1488,6 +1492,10 @@ export default function TeraboxOnlinePlayer() {
               </div>
             </div>
 
+            <div className="my-8">
+              <AdUnit slot="5063300546" layout="in-article" format="fluid" style={{ display: "block", textAlign: "center" }} />
+            </div>
+
             <div className="space-y-4 pt-4 border-t border-slate-800/80">
               <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
@@ -1580,6 +1588,10 @@ export default function TeraboxOnlinePlayer() {
               </div>
             </div>
 
+            <div className="my-8">
+              <AdUnit slot="5063300546" layout="in-article" format="fluid" style={{ display: "block", textAlign: "center" }} />
+            </div>
+
             <div className="space-y-4 pt-4 border-t border-slate-800/80">
               <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
@@ -1652,17 +1664,23 @@ export default function TeraboxOnlinePlayer() {
 
             <div className="space-y-4">
               {LEGAL_GUIDE_FAQS.map((faq, idx) => (
-                <div
-                  key={idx}
-                  className="rounded-xl border border-slate-800 bg-slate-900/40 p-4 sm:p-5 transition-colors hover:border-slate-700/80"
-                >
-                  <h3 className="text-base sm:text-lg font-semibold text-white flex items-start gap-2.5">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-blue-500/10 text-xs font-bold text-blue-400">Q</span>
-                    {faq.q}
-                  </h3>
-                  <div className="mt-2.5 pl-8 text-xs sm:text-sm text-slate-300 leading-relaxed border-l-2 border-slate-850">
-                    {faq.a}
+                <div key={idx} className="space-y-4">
+                  <div
+                    className="rounded-xl border border-slate-800 bg-slate-900/40 p-4 sm:p-5 transition-colors hover:border-slate-700/80"
+                  >
+                    <h3 className="text-base sm:text-lg font-semibold text-white flex items-start gap-2.5">
+                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-blue-500/10 text-xs font-bold text-blue-400">Q</span>
+                      {faq.q}
+                    </h3>
+                    <div className="mt-2.5 pl-8 text-xs sm:text-sm text-slate-300 leading-relaxed border-l-2 border-slate-850">
+                      {faq.a}
+                    </div>
                   </div>
+                  {(idx + 1) % 3 === 0 && (
+                    <div className="my-6">
+                      <AdUnit slot="5063300546" layout="in-article" format="fluid" style={{ display: "block", textAlign: "center" }} />
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
