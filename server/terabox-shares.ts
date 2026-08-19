@@ -110,42 +110,69 @@ function encodeShareToken(record: Omit<TeraboxShareRecord, "id" | "createdAt" | 
     shortUrl = "a:" + shortUrl.slice("https://teraboxapp.com/s/".length);
   }
 
-  const payload = JSON.stringify({
-    u: record.uk,
-    s: record.shareid,
-    f: record.fs_id,
-    q: record.quality || "360",
-    n: record.fileName.slice(0, 30), // Truncate filename to 30 chars to save space
-    z: record.size,
-    d: record.duration ? Math.round(record.duration) : undefined,
-    w: record.width,
-    h: record.height,
-    l: shortUrl || undefined,
-    e: record.expiresAt,
-  });
+  // Stateless flat array structure: [uk, shareid, fs_id, shortUrl]
+  const payload = JSON.stringify([
+    record.uk,
+    record.shareid,
+    record.fs_id,
+    shortUrl,
+  ]);
   return Buffer.from(payload, "utf8").toString("base64url");
 }
 
 function decodeShareToken(token: string): TeraboxShareRecord | null {
   try {
     const json = Buffer.from(token, "base64url").toString("utf8");
-    const data = JSON.parse(json) as {
-      u?: string;
-      s?: string;
-      f?: string;
-      q?: string;
-      n?: string;
-      z?: string;
-      t?: string | null;
-      d?: number;
-      w?: number;
-      h?: number;
-      l?: string;
-      e?: number;
-    };
-    if (!data.u || !data.s || !data.f) return null;
+    let uk = "";
+    let shareid = "";
+    let fs_id = "";
+    let shortUrl = "";
+    let quality = "360";
+    let fileName = "Video";
+    let size = "";
+    let duration: number | undefined = undefined;
+    let width: number | undefined = undefined;
+    let height: number | undefined = undefined;
+    let expiresAt = Date.now() + SHARE_TTL_MS;
 
-    let originalUrl = data.l || "";
+    if (json.startsWith("[")) {
+      // Flat array structure
+      const arr = JSON.parse(json) as string[];
+      if (arr.length < 3) return null;
+      uk = arr[0];
+      shareid = arr[1];
+      fs_id = arr[2];
+      shortUrl = arr[3] || "";
+    } else {
+      // Legacy JSON object structure
+      const data = JSON.parse(json) as {
+        u?: string;
+        s?: string;
+        f?: string;
+        q?: string;
+        n?: string;
+        z?: string;
+        d?: number;
+        w?: number;
+        h?: number;
+        l?: string;
+        e?: number;
+      };
+      if (!data.u || !data.s || !data.f) return null;
+      uk = data.u;
+      shareid = data.s;
+      fs_id = data.f;
+      shortUrl = data.l || "";
+      quality = data.q || "360";
+      fileName = data.n || "Video";
+      size = data.z || "";
+      duration = data.d;
+      width = data.w;
+      height = data.h;
+      if (data.e) expiresAt = data.e;
+    }
+
+    let originalUrl = shortUrl;
     if (originalUrl.startsWith("t:")) {
       originalUrl = "https://1024terabox.com/s/" + originalUrl.slice(2);
     } else if (originalUrl.startsWith("n:")) {
@@ -155,20 +182,20 @@ function decodeShareToken(token: string): TeraboxShareRecord | null {
     }
 
     const now = Date.now();
-    const expiresAt = data.e && data.e > now ? data.e : now + SHARE_TTL_MS;
     if (expiresAt <= now) return null;
+
     return {
       id: token,
-      uk: data.u,
-      shareid: data.s,
-      fs_id: data.f,
-      fileName: data.n || "Video",
-      quality: data.q || "360",
-      size: data.z,
+      uk,
+      shareid,
+      fs_id,
+      fileName,
+      quality,
+      size,
       thumbnail: null, // Re-resolved at runtime
-      duration: data.d,
-      width: data.w,
-      height: data.h,
+      duration,
+      width,
+      height,
       url: originalUrl || undefined,
       createdAt: now,
       expiresAt,
