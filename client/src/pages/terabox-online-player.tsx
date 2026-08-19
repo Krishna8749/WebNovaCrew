@@ -55,8 +55,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { VectorCardIllustration } from "@/components/illustrations/VectorCardIllustration";
+import { INSURANCE_KEYWORDS_DIRECTORY } from "@/lib/insurance-keywords";
 import { AdUnit } from "@/components/ads/AdSense";
-
 
 const ASSETS = {
   logo: "/terabox/logo.svg",
@@ -328,6 +328,7 @@ export default function TeraboxOnlinePlayer() {
   const [, setPermanentShareUrl] = useState("");
   const [shareLoading, setShareLoading] = useState(false);
   const [loadingShare, setLoadingShare] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const videoRef = useRef<HTMLVideoElement>(null);
   const hlsRef = useRef<HlsInstance | null>(null);
 
@@ -1560,22 +1561,74 @@ export default function TeraboxOnlinePlayer() {
           <section className="rounded-2xl border border-blue-500/30 bg-gradient-to-br from-slate-900 via-slate-900 to-blue-950/40 p-6 sm:p-8 shadow-2xl text-left">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-4 flex items-center gap-3">
               <Sparkles className="h-6 w-6 text-blue-400" />
-              Bottom Line — Protecting Your Health &amp; Legal Rights
+              Bottom Line — Protecting Your Health &amp; Assets
             </h2>
             <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
               <p>
-                In the complex, fast-moving aftermath of a car accident, catastrophic injury, or wrongful death, time is your most critical asset. Physical evidence degrades, skid marks fade, commercial surveillance videos are routinely overwritten within 14 to 30 days, and insurance companies mobilize immediately to insulate their balance sheets against financial exposure.
+                In the complex, fast-moving landscape of insurance coverage, time is your most critical asset. Whether you are renewing a cashless health insurance policy, comparing term life insurance plans under Section 80D and Section 80C, or filing a comprehensive car insurance claim after an accident, keeping accurate documentation and choosing premium network hospitals is paramount.
               </p>
               <p>
-                By prioritizing immediate comprehensive medical evaluation, maintaining meticulous documentary logs, refusing to provide unrepresented recorded statements to third-party adjusters, and partnering with seasoned, trial-tested personal injury counsel on a contingency fee basis, you assert full control over your recovery trajectory. You do not have to confront insurance conglomerates alone—the legal system provides robust statutory mechanisms to hold negligent actors accountable and secure the comprehensive financial restitution you and your family rightfully deserve.
+                By prioritizing comparative policy audits, calculating coverage needs using term premium calculators, and selecting zero depreciation add-on plans, you protect your family and business. You do not have to navigate the insurance sector alone—our independent portal provides the necessary reference indices to compare guidelines, premiums, and cashless hospital settlements.
               </p>
               <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 text-xs text-slate-400 leading-normal mt-4">
                 <p className="font-semibold text-slate-300 mb-1 flex items-center gap-1.5">
                   <AlertCircle className="h-3.5 w-3.5 text-blue-400" />
-                  Legal Disclaimer:
+                  General Disclaimer:
                 </p>
-                The information provided within this comprehensive guide is published for informational and educational purposes only and does not constitute formal legal advice. Tort laws, statutes of limitations, and comparative fault rules differ across individual state jurisdictions. For advice regarding your specific case circumstances, consult a licensed attorney in your state.
+                The information provided within this comprehensive insurance policy guide is published for informational and educational purposes only and does not constitute formal legal, financial, or tax advice. Policy premiums, exclusions, network garages, and cashless terms vary by individual insurance provider and location.
               </div>
+            </div>
+          </section>
+
+          {/* ======================================================================= */}
+          {/* SEARCHABLE POLICY DIRECTORY (2000 KEYWORDS)                            */}
+          {/* ======================================================================= */}
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/30 p-5 sm:p-6 mt-8">
+            <h3 className="text-lg sm:text-xl font-bold text-slate-200 mb-4 flex items-center gap-2">
+              <FileText className="h-5 w-5 text-blue-400" />
+              Comprehensive Insurance Directory Index (2026)
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-400 mb-4">
+              Search and filter our verified database of 2,000+ insurance policies, premium calculators, and cashless medical claim terms. Click any query to load and verify.
+            </p>
+            
+            {/* Search Input */}
+            <div className="flex flex-col gap-2 mb-5">
+              <Input
+                type="text"
+                placeholder="Type to filter 2,000+ queries (e.g. family, cashless, parents, senior)..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="bg-slate-950 border-slate-800 text-slate-200 text-sm h-11 focus:border-blue-500"
+              />
+            </div>
+
+            {/* Keyword Grid scrollable */}
+            <div className="max-h-[350px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-slate-800 scrollbar-track-slate-950/20 text-xs text-slate-400 font-mono">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                {INSURANCE_KEYWORDS_DIRECTORY.filter(kw => 
+                  kw.toLowerCase().includes(searchQuery.toLowerCase())
+                ).map((kw, i) => (
+                  <div 
+                    key={i} 
+                    className="p-2 rounded bg-slate-950/60 border border-slate-800/40 hover:border-blue-500/20 hover:text-slate-200 transition-colors cursor-pointer truncate flex items-center gap-1.5"
+                    onClick={() => {
+                      setUrl(kw);
+                      const playerEl = document.getElementById("player");
+                      if (playerEl) playerEl.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    title={kw}
+                  >
+                    <span className="text-blue-500/60">#</span>
+                    <span>{kw}</span>
+                  </div>
+                ))}
+              </div>
+              {INSURANCE_KEYWORDS_DIRECTORY.filter(kw => 
+                kw.toLowerCase().includes(searchQuery.toLowerCase())
+              ).length === 0 && (
+                <p className="text-slate-500 text-center py-10">No matching policy queries found.</p>
+              )}
             </div>
           </section>
 
@@ -1589,22 +1642,25 @@ export default function TeraboxOnlinePlayer() {
             <div className="flex items-center gap-3">
               <BrandMark />
               <div>
-                <p className="font-bold text-slate-100">Web Nova Crew Legal &amp; Tools</p>
-                <p className="text-slate-500 text-xs sm:text-sm">Car Accident &amp; Injury Claims Guide (2026) · TeraBox Online Player</p>
+                <p className="font-bold text-slate-100">Web Nova Crew Shields &amp; Tools</p>
+                <p className="text-slate-500 text-xs sm:text-sm">Health, Term Life, &amp; Auto Insurance Portal (2026)</p>
               </div>
             </div>
             <nav className="flex flex-wrap justify-center gap-4 text-xs sm:text-sm text-slate-400">
               <a href="#player" className="hover:text-white transition-colors">
-                Player
+                Verification Portal
               </a>
-              <a href="#immediate-steps" className="hover:text-white transition-colors">
-                Accident Steps
+              <a href="#health-insurance" className="hover:text-white transition-colors">
+                Health Cover
               </a>
-              <a href="#personal-injury-law" className="hover:text-white transition-colors">
-                Injury Law
+              <a href="#term-life" className="hover:text-white transition-colors">
+                Term Life
               </a>
-              <a href="#wrongful-death" className="hover:text-white transition-colors">
-                Wrongful Death
+              <a href="#car-insurance" className="hover:text-white transition-colors">
+                Car Insurance
+              </a>
+              <a href="#travel-insurance" className="hover:text-white transition-colors">
+                Travel Insurance
               </a>
               <a href="#faq" className="hover:text-white transition-colors">
                 FAQ
