@@ -1999,5 +1999,5 @@ export const INSURANCE_KEYWORDS_DIRECTORY: string[] = [
   "health insurance after cancer treatment in india",
   "health insurance after cancer treatment 2026",
   "health insurance after cancer treatment for family",
-  "health insurance after cancer treatment for parents  have you added all tehse words"
+  "health insurance after cancer treatment for parents"
 ];
