@@ -41171,7 +41171,7 @@ function statelessShareToken(record) {
   return encodeShareToken(record);
 }
 function buildShortSharePath(record) {
-  return `/r/${record.id}`;
+  return `/r/${statelessShareToken(record)}`;
 }
 function purgeExpiredShares() {
   const now = Date.now();

@@ -188,14 +188,14 @@ function statelessShareToken(record: TeraboxShareRecord): string {
   return encodeShareToken(record);
 }
 
-/** Player route — short id; long token kept as ?d= backup. */
+/** Player route — stateless token ensures no link expiration after deploys. */
 export function buildSharePagePath(record: TeraboxShareRecord): string {
-  return `/s/${record.id}`;
+  return `/s/${statelessShareToken(record)}`;
 }
 
-/** Public share URL — short id keeps URLs tiny; survives via disk store + ?d= token backup. */
+/** Public share URL — stateless token survives via database wipes & redeployments. */
 export function buildShortSharePath(record: TeraboxShareRecord): string {
-  return `/r/${record.id}`;
+  return `/r/${statelessShareToken(record)}`;
 }
 
 export function getShareRecord(id: string, backupToken?: string | null): TeraboxShareRecord | null {
