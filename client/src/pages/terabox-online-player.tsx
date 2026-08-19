@@ -55,6 +55,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { VectorCardIllustration } from "@/components/illustrations/VectorCardIllustration";
+import { AdUnit } from "@/components/ads/AdSense";
 
 
 const ASSETS = {
@@ -1162,6 +1163,10 @@ export default function TeraboxOnlinePlayer() {
         {/* ========================================================================= */}
         <article className="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
           
+          <div className="mb-8">
+            <AdUnit slot="7605569950" format="auto" fullWidthResponsive={true} />
+          </div>
+          
           {/* Main Title & Scope Header */}
           <header className="border-b border-slate-800 pb-8 mb-10 text-left">
             <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3.5 py-1 text-xs text-blue-300 font-medium mb-4">
@@ -1294,6 +1299,10 @@ export default function TeraboxOnlinePlayer() {
                 <p>
                   Immediately contact 911 dispatch to request emergency medical personnel and law enforcement officers. In virtually all jurisdictions, state transportation codes legally require a formal police response whenever a traffic crash results in bodily injury, death, or apparent property damage exceeding statutory reporting minimums (typically ranging between $500 and $1,000). While awaiting dispatch arrival, conduct a swift triage of all vehicle occupants. Never admit fault, apologize, or make speculative assertions regarding causation to other involved motorists, passengers, or bystanders; statements such as <em>&quot;I didn&apos;t see you coming&quot;</em> or <em>&quot;I am so sorry&quot;</em> will routinely be transcribed by insurance adjusters as explicit admissions of comparative negligence.
                 </p>
+
+                <div className="my-8">
+                  <AdUnit slot="5063300546" layout="in-article" format="fluid" style={{ display: "block", textAlign: "center" }} />
+                </div>
                 <p>
                   Leverage your smartphone camera to capture extensive photographic and video documentation before vehicles are displaced by wreckers. Record wide-angle establishing perspectives of the entire intersection or roadway geometry, precise points of vehicular impact, skid marks, debris fields, broken glass dispersion patterns, traffic control signals, posted speed regulatory signs, weather conditions, and visible bodily injuries. Exchange standardized credentials with all involved motorists, including full legal names, residential addresses, telephone numbers, driver&apos;s license numbers, vehicle registration identifiers, vehicle identification numbers (VIN), and detailed insurer policy policyholder numbers. Secure independent contact details from eyewitnesses before they disperse from the scene.
                 </p>
@@ -1592,6 +1601,10 @@ export default function TeraboxOnlinePlayer() {
               </div>
             </div>
 
+            <div className="my-8">
+              <AdUnit slot="5063300546" layout="in-article" format="fluid" style={{ display: "block", textAlign: "center" }} />
+            </div>
+
 
             {/* H3: Contingency Fees Explained (200w) */}
             <div className="space-y-4 pt-4 border-t border-slate-800/80">
@@ -1758,6 +1771,10 @@ export default function TeraboxOnlinePlayer() {
             </div>
           </section>
 
+          <div className="my-8">
+            <AdUnit slot="1009844198" format="fluid" layoutKey="-6t+ed+2i-1n-4w" />
+          </div>
+
           {/* ======================================================================= */}
           {/* SECTION 4: DUI Accidents & Criminal Law                                */}
           {/* ======================================================================= */}
@@ -1876,6 +1893,10 @@ export default function TeraboxOnlinePlayer() {
             </div>
           </section>
 
+          <div className="my-8">
+            <AdUnit slot="7605569950" format="auto" fullWidthResponsive={true} />
+          </div>
+
           {/* ======================================================================= */}
           {/* SECTION 5: Prepaid Legal Plans                                         */}
           {/* ======================================================================= */}
@@ -1977,6 +1998,10 @@ export default function TeraboxOnlinePlayer() {
               </div>
             </div>
 
+            <div className="my-8">
+              <AdUnit slot="1009844198" format="fluid" layoutKey="-6t+ed+2i-1n-4w" />
+            </div>
+
             {/* H3: What's Usually Excluded (200w) */}
             <div className="space-y-4 pt-4 border-t border-slate-800/80">
               <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
@@ -2072,6 +2097,10 @@ export default function TeraboxOnlinePlayer() {
               </div>
             </div>
 
+            <div className="my-8">
+              <AdUnit slot="5063300546" layout="in-article" format="fluid" style={{ display: "block", textAlign: "center" }} />
+            </div>
+
             {/* H3: Red Flags When Hiring an Attorney (200w) */}
             <div className="space-y-4 pt-4 border-t border-slate-800/80">
               <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
@@ -2110,6 +2139,10 @@ export default function TeraboxOnlinePlayer() {
               </div>
             </div>
           </section>
+
+          <div className="my-8">
+            <AdUnit slot="1026156067" format="autorelaxed" />
+          </div>
 
 
           {/* ======================================================================= */}

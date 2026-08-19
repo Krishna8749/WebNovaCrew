@@ -26,11 +26,23 @@ type AdUnitProps = {
   slot?: string;
   format?: string;
   layoutKey?: string;
+  layout?: string;
   className?: string;
   label?: string;
+  style?: React.CSSProperties;
+  fullWidthResponsive?: boolean;
 };
 
-export function AdUnit({ slot, format = "auto", layoutKey, className = "", label }: AdUnitProps) {
+export function AdUnit({
+  slot,
+  format = "auto",
+  layoutKey,
+  layout,
+  className = "",
+  label,
+  style = { display: "block" },
+  fullWidthResponsive,
+}: AdUnitProps) {
   const pushed = useRef(false);
 
   useEffect(() => {
@@ -57,12 +69,14 @@ export function AdUnit({ slot, format = "auto", layoutKey, className = "", label
   return (
     <ins
       className={`adsbygoogle block ${className}`}
-      style={{ display: "block" }}
+      style={style}
       data-ad-client={ADSENSE_CLIENT}
       data-ad-slot={slot}
       data-ad-format={format}
       data-ad-layout-key={layoutKey || undefined}
-      data-full-width-responsive={format === "auto" ? "true" : undefined}
+      data-ad-layout={layout || undefined}
+      data-full-width-responsive={fullWidthResponsive !== undefined ? String(fullWidthResponsive) : (format === "auto" ? "true" : undefined)}
     />
   );
 }
+
