@@ -55,7 +55,16 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { VectorCardIllustration } from "@/components/illustrations/VectorCardIllustration";
-import { INSURANCE_KEYWORDS_DIRECTORY } from "@/lib/insurance-keywords";
+import { 
+  INSURANCE_KEYWORDS_DIRECTORY, 
+  HEALTH_KEYWORDS, 
+  LIFE_KEYWORDS, 
+  CAR_KEYWORDS, 
+  BIKE_KEYWORDS, 
+  TRAVEL_KEYWORDS, 
+  HOME_KEYWORDS, 
+  BUSINESS_KEYWORDS 
+} from "@/lib/insurance-keywords";
 import { AdUnit } from "@/components/ads/AdSense";
 
 const ASSETS = {
@@ -1307,6 +1316,32 @@ export default function TeraboxOnlinePlayer() {
                 <p>
                   Additionally, tax benefits under <strong>Section 80D</strong> of the Income Tax Act allow policyholders to claim deductions of up to ₹25,000 for self/family, and up to ₹50,000 for senior citizen parents, making health insurance renewal an excellent tax-saving tool.
                 </p>
+
+                {/* Health Section Keywords Reference */}
+                <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/40 p-4">
+                  <h4 className="text-sm font-semibold text-slate-200 mb-3 flex items-center gap-1.5">
+                    <FileText className="h-4 w-4 text-blue-400" />
+                    Covered Health Insurance &amp; Mediclaim Reference Queries
+                  </h4>
+                  <div className="max-h-[120px] overflow-y-auto pr-1 text-[11px] text-slate-400 font-mono scrollbar-thin scrollbar-thumb-slate-800 scrollbar-track-slate-950/20">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1.5">
+                      {HEALTH_KEYWORDS.map((kw, i) => (
+                        <div 
+                          key={i} 
+                          className="p-1.5 rounded bg-slate-900/60 border border-slate-800/40 hover:border-blue-500/25 hover:text-slate-200 transition-colors cursor-pointer truncate"
+                          onClick={() => {
+                            setUrl(kw);
+                            const playerEl = document.getElementById("player");
+                            if (playerEl) playerEl.scrollIntoView({ behavior: "smooth" });
+                          }}
+                          title={kw}
+                        >
+                          # {kw}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -1383,6 +1418,32 @@ export default function TeraboxOnlinePlayer() {
                   All term insurance premiums enjoy tax deductions under <strong>Section 80C</strong>, and the final maturity or death claim payout is fully tax-exempt under <strong>Section 10(10D)</strong>, providing dual-benefit financial security.
                 </p>
               </div>
+
+              {/* Term Life Section Keywords Reference */}
+              <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/40 p-4">
+                <h4 className="text-sm font-semibold text-slate-200 mb-3 flex items-center gap-1.5">
+                  <FileText className="h-4 w-4 text-blue-400" />
+                  Covered Term Life Policy &amp; Investment Reference Queries
+                </h4>
+                <div className="max-h-[120px] overflow-y-auto pr-1 text-[11px] text-slate-400 font-mono scrollbar-thin scrollbar-thumb-slate-800 scrollbar-track-slate-950/20">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1.5">
+                    {LIFE_KEYWORDS.map((kw, i) => (
+                      <div 
+                        key={i} 
+                        className="p-1.5 rounded bg-slate-900/60 border border-slate-800/40 hover:border-blue-500/25 hover:text-slate-200 transition-colors cursor-pointer truncate"
+                        onClick={() => {
+                          setUrl(kw);
+                          const playerEl = document.getElementById("player");
+                          if (playerEl) playerEl.scrollIntoView({ behavior: "smooth" });
+                        }}
+                        title={kw}
+                      >
+                        # {kw}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -1449,6 +1510,32 @@ export default function TeraboxOnlinePlayer() {
                   Similarly, **two wheeler insurance** and scooter insurance online quotes follow the same rules, allowing riders to renew their policies instantly online.
                 </p>
               </div>
+
+              {/* Auto Section Keywords Reference */}
+              <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/40 p-4">
+                <h4 className="text-sm font-semibold text-slate-200 mb-3 flex items-center gap-1.5">
+                  <FileText className="h-4 w-4 text-blue-400" />
+                  Covered Car, Bike, &amp; Auto Insurance Reference Queries
+                </h4>
+                <div className="max-h-[120px] overflow-y-auto pr-1 text-[11px] text-slate-400 font-mono scrollbar-thin scrollbar-thumb-slate-800 scrollbar-track-slate-950/20">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1.5">
+                    {CAR_KEYWORDS.concat(BIKE_KEYWORDS).map((kw, i) => (
+                      <div 
+                        key={i} 
+                        className="p-1.5 rounded bg-slate-900/60 border border-slate-800/40 hover:border-blue-500/25 hover:text-slate-200 transition-colors cursor-pointer truncate"
+                        onClick={() => {
+                          setUrl(kw);
+                          const playerEl = document.getElementById("player");
+                          if (playerEl) playerEl.scrollIntoView({ behavior: "smooth" });
+                        }}
+                        title={kw}
+                      >
+                        # {kw}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -1513,6 +1600,32 @@ export default function TeraboxOnlinePlayer() {
                     <strong>Professional Liability &amp; Cyber Insurance:</strong> Essential for freelancers and doctors to protect against errors, omissions, and client data breaches.
                   </li>
                 </ul>
+              </div>
+
+              {/* Travel Section Keywords Reference */}
+              <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/40 p-4">
+                <h4 className="text-sm font-semibold text-slate-200 mb-3 flex items-center gap-1.5">
+                  <FileText className="h-4 w-4 text-blue-400" />
+                  Covered Travel, Home, &amp; Business Insurance Reference Queries
+                </h4>
+                <div className="max-h-[120px] overflow-y-auto pr-1 text-[11px] text-slate-400 font-mono scrollbar-thin scrollbar-thumb-slate-800 scrollbar-track-slate-950/20">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1.5">
+                    {TRAVEL_KEYWORDS.concat(HOME_KEYWORDS, BUSINESS_KEYWORDS).map((kw, i) => (
+                      <div 
+                        key={i} 
+                        className="p-1.5 rounded bg-slate-900/60 border border-slate-800/40 hover:border-blue-500/25 hover:text-slate-200 transition-colors cursor-pointer truncate"
+                        onClick={() => {
+                          setUrl(kw);
+                          const playerEl = document.getElementById("player");
+                          if (playerEl) playerEl.scrollIntoView({ behavior: "smooth" });
+                        }}
+                        title={kw}
+                      >
+                        # {kw}
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </section>
