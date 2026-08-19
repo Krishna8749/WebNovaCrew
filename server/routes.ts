@@ -16,6 +16,7 @@ import {
   handleTeraboxShareConfig,
 } from "./terabox-shares";
 import { requireTeraboxSameOrigin } from "./terabox-guard";
+import { logTraffic, getTrafficStatus } from "./traffic-tracker";
 
 const teraboxGuard = requireTeraboxSameOrigin;
 
@@ -86,6 +87,14 @@ export async function registerRoutes(
 
   app.get("/api/terabox/share-config", (req, res, next) => {
     void handleTeraboxShareConfig(req, res).catch(next);
+  });
+
+  app.post("/api/traffic/log", (req, res, next) => {
+    void logTraffic(req, res).catch(next);
+  });
+
+  app.get("/api/traffic/status", (req, res) => {
+    getTrafficStatus(req, res);
   });
 
   return httpServer;

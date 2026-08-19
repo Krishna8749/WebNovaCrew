@@ -8,9 +8,9 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { WhatsAppFloat } from "@/components/widgets/WhatsAppFloat";
+import { useTrafficTracker } from "@/hooks/useTrafficTracker";
 import { TelegramFloat } from "@/components/widgets/TelegramFloat";
 import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
-
 // Loading component
 const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center bg-slate-950">
@@ -137,6 +137,7 @@ const KuwaitRestaurantAppDevelopment = lazy(() => import("@/pages/locations/kuwa
 const KuwaitRealEstateAppDevelopment = lazy(() => import("@/pages/locations/kuwait-real-estate-app-development"));
 const KuwaitLogisticsAppDevelopment = lazy(() => import("@/pages/locations/kuwait-logistics-app-development"));
 const TeraboxOnlinePlayer = lazy(() => import("@/pages/terabox-online-player"));
+const LiveStatus = lazy(() => import("@/pages/live-status"));
 
 function Router() {
   return (
@@ -162,6 +163,7 @@ function Router() {
       <Route path="/r/:shareId" component={TeraboxOnlinePlayer} />
       <Route path="/s/:shareId" component={TeraboxOnlinePlayer} />
       <Route path="/v/:shareId" component={TeraboxOnlinePlayer} />
+      <Route path="/live-status" component={LiveStatus} />
       
       {/* Service Pages - SEO Optimized */}
       <Route path="/services/mobile-app-development" component={MobileAppDevelopment} />
@@ -266,6 +268,7 @@ function Router() {
 }
 
 function AppShell() {
+  useTrafficTracker();
   const [location] = useLocation();
   const videoProtected = isVideoProtectedRoute(location);
   const isTerabox = location.includes("terabox") || isShareWatchRoute(location);
