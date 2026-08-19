@@ -211,60 +211,44 @@ const SUPPORTED_DOMAINS = [
 
 const LEGAL_GUIDE_FAQS = [
   {
-    q: "What is the single most critical step immediately following a car accident?",
-    a: "Your immediate priority is ensuring personal and passenger safety, calling 911 for emergency medical services and a formal police report, and seeking a comprehensive medical evaluation within 24 to 72 hours—even if you feel uninjured. Documenting injuries early connects trauma directly to the collision for insurance claim validity.",
+    q: "What is the difference between family floater health insurance and individual health insurance plans?",
+    a: "An individual health insurance plan covers a single person with a dedicated sum insured, whereas a family floater health insurance plan covers multiple family members (including spouse, children, and parents) under a single shared sum insured. Family plans are typically more cost-effective for families, but if one member exhausts the limit, other members have reduced coverage unless a restoration benefit is included.",
   },
   {
-    q: "How does comparative negligence affect my accident settlement payout?",
-    a: "Under comparative negligence rules, your final recovery is reduced proportionately by your share of fault. In pure comparative states (like California or Florida), you can recover damages even if 90% at fault (recovering 10%). In modified comparative fault states (the 50% or 51% bar rule), you are barred from any recovery if your fault exceeds the statutory threshold.",
+    q: "How can I calculate my health insurance premium and compare plans online?",
+    a: "You can use an online health insurance premium calculator to estimate costs by inputting age, family members, location, and pre-existing medical conditions. The best health insurance online portals allow health insurance comparison, helping you evaluate premiums, deductibles, room rent limits, and no-claim bonuses (NCB) before buying cashless health insurance policies.",
   },
   {
-    q: "How is 'pain and suffering' mathematically calculated in personal injury claims?",
-    a: "Insurers and courts typically utilize two primary methods: the Multiplier Method (multiplying total special damages like medical bills and lost earnings by a factor of 1.5 to 5 depending on injury severity) and the Per Diem Method (assigning a daily monetary rate, such as your daily wage, for every day spent enduring pain until maximum medical improvement).",
+    q: "What are the tax benefits of health insurance under Section 80D in India?",
+    a: "Under Section 80D of the Income Tax Act, you can claim a deduction of up to ₹25,000 per year for health insurance premiums paid for yourself, spouse, and children. An additional deduction of up to ₹25,000 is available for parents' health insurance. If your parents are senior citizens (above 60 years), the limit increases to ₹50,000, allowing a total maximum deduction of up to ₹75,000 or ₹100,000 depending on age eligibility.",
   },
   {
-    q: "What options do I have if the at-fault driver is uninsured or underinsured?",
-    a: "You can file a claim against your own policy under Uninsured Motorist (UM) or Underinsured Motorist (UIM) coverage, or Personal Injury Protection (PIP) / MedPay. These coverages step into the shoes of the absent liability policy up to your purchased policy limits without raising your baseline rates when you were not at fault.",
+    q: "How does a cashless health insurance claim process work at network hospitals?",
+    a: "Cashless health insurance allows you to receive medical treatment at network hospitals without paying the bill upfront. The hospital third-party administrator (TPA) coordinates with the insurance company for pre-authorization. Once approved, the insurer settles the hospitalization costs directly, excluding non-medical consumables, deductibles, or copays.",
   },
   {
-    q: "What is the standard statute of limitations for filing a personal injury lawsuit?",
-    a: "The deadline varies strictly by jurisdiction and claim type. Most states enforce a 2- to 3-year statute of limitations for general personal injury and auto accidents from the date of the crash. However, medical malpractice, wrongful death, and claims against government entities often have much shorter statutory notice windows (often 6 months to 1 year).",
+    q: "What is a 1 Crore term insurance plan and how do I choose the best term plan?",
+    a: "A 1 Crore term insurance plan is a popular high-coverage term life insurance policy that provides a financial shield of ₹1 Crore to your nominee/beneficiary in the event of your death. To choose the best term plan, use a term insurance calculator to compare quotes, check the insurer's claim settlement ratio (CSR), and opt for riders like critical illness insurance or waiver of premium.",
   },
   {
-    q: "What does hiring a personal injury attorney on a contingency fee basis mean?",
-    a: "Under a contingency fee agreement, you pay zero upfront retainer or hourly legal fees. Your attorney only gets paid if they successfully recover compensation via a settlement or court judgment. The standard fee ranges between 33.3% (pre-litigation settlement) and 40% (if the case proceeds to trial or formal arbitration).",
+    q: "How does zero cost term insurance with return of premium (ROP) work?",
+    a: "A regular term plan provides only a death benefit. A term insurance with return of premium (ROP) returns all paid premiums if you survive the policy term. A zero cost term plan is a newer option that allows you to exit the policy at specific intervals (like age 60 or 65) and receive a full refund of premiums paid, minus taxes, without paying extra charges.",
   },
   {
-    q: "Who possesses the legal standing to file a wrongful death claim?",
-    a: "Statutory beneficiaries generally include the surviving spouse, registered domestic partner, biological or adopted children, and surviving dependent parents. In jurisdictions following personal representative statutes, the suit is initiated by the court-appointed executor of the deceased person's estate on behalf of all heirs.",
+    q: "What is the difference between comprehensive car insurance and third party car insurance?",
+    a: "Third party car insurance is legally mandatory in India and only covers damage or injury caused to other people or property in an accident. Comprehensive car insurance covers both third-party liability and own damage (OD) to your vehicle due to accidents, theft, fire, or natural calamities. It can be enhanced with add-on covers like zero depreciation.",
   },
   {
-    q: "What types of damages are recoverable in a wrongful death lawsuit?",
-    a: "Recoverable damages span economic damages (funeral and burial expenses, deceased's lost lifetime expected earnings, loss of financial support and benefits) and non-economic damages (loss of love, companionship, comfort, guidance, and consortium). In gross negligence cases, punitive damages may also be awarded.",
+    q: "What is zero depreciation (zero dep) bumper-to-bumper car insurance?",
+    a: "Zero depreciation car insurance (also called zero dep or bumper-to-bumper cover) is an add-on that ensures the insurance company pays the full cost of replacing damaged parts (like plastic, rubber, or glass) without deducting depreciation during a claim. It is highly recommended for new cars and luxury cars up to 5 years old.",
   },
   {
-    q: "How does a criminal DUI conviction against the other driver impact my civil lawsuit?",
-    a: "A criminal DUI conviction significantly strengthens your civil claim under the doctrine of negligence per se. The conviction proves that the driver breached statutory duty of care as a matter of law, drastically accelerating liability determinations and opening the door for substantial punitive damage awards.",
+    q: "Why is international travel insurance necessary for Schengen visa, USA, or Canada trips?",
+    a: "Many countries, including the Schengen zone in Europe, make international travel insurance mandatory for visa approvals. A robust travel medical insurance policy covers emergency medical evacuation, baggage loss, trip/flight cancellation, and repatriation, protecting you from massive out-of-pocket expenses when traveling to expensive countries like the USA or Canada.",
   },
   {
-    q: "Can a commercial truck or rideshare accident claim yield higher settlement limits?",
-    a: "Yes. Commercial motor carriers and transportation network companies (such as Uber and Lyft) are federally and state mandated to carry high liability coverage limits—often $1,000,000 to $5,000,000+ per occurrence during active rides—providing adequate coverage for catastrophic injury and multi-party claims.",
-  },
-  {
-    q: "What are prepaid legal service plans and what do they cover?",
-    a: "Prepaid legal plans operate like legal insurance memberships for a fixed monthly subscription (typically $20–$50/month). They cover routine document reviews, basic estate planning (wills/POAs), uncontested legal notices, and discounted hourly consultation rates. They generally exclude high-stakes contingency tort litigation and contested trials.",
-  },
-  {
-    q: "What red flags should I watch for when hiring a personal injury law firm?",
-    a: "Be cautious of attorneys who make upfront monetary settlement guarantees, law firms that push non-lawyer case managers to handle vital communications, firms with zero documented trial experience that habitually settle early for lowball offers, and unsolicited in-person solicitations ('ambulance chasing').",
-  },
-  {
-    q: "Should I provide a recorded statement to the insurance adjuster before consulting a lawyer?",
-    a: "No. You are under no legal obligation to provide a recorded statement to the other driver's insurance adjuster. Insurance adjusters are trained to elicit statements that minimize claim liability, downplay injury severity, or shift comparative fault. Consult legal counsel first.",
-  },
-  {
-    q: "How long does the average personal injury or wrongful death case take to resolve?",
-    a: "Straightforward auto accident claims with clear liability and resolved injuries typically settle in 4 to 9 months. Complex litigation involving commercial vehicles, severe permanent disabilities, disputed fault, or wrongful death often spans 12 to 24+ months, especially if formal trial discovery is required.",
+    q: "What does a home insurance policy cover in India?",
+    a: "A comprehensive home insurance policy protects your house against losses from fire, theft, floods, earthquakes, and vandalism. It is split into structure insurance (covering the building's physical walls and ceilings) and home contents insurance (covering expensive items inside like furniture, electronics, appliances, and jewelry).",
   },
 ];
 
@@ -724,13 +708,11 @@ export default function TeraboxOnlinePlayer() {
   };
 
   const navLinks = [
-    { href: "#player", label: "Player", icon: Play },
-    { href: "#immediate-steps", label: "Immediate Steps", icon: Car },
-    { href: "#personal-injury-law", label: "Injury Law", icon: Scale },
-    { href: "#wrongful-death", label: "Wrongful Death", icon: ShieldAlert },
-    { href: "#dui-accidents", label: "DUI Law", icon: Gavel },
-    { href: "#prepaid-legal", label: "Prepaid Plans", icon: ShieldCheck },
-    { href: "#finding-lawyer", label: "Find Lawyer", icon: Building2 },
+    { href: "#player", label: "Verification", icon: Play },
+    { href: "#health-insurance", label: "Health Insurance", icon: ShieldCheck },
+    { href: "#term-life", label: "Term Life Plan", icon: ShieldAlert },
+    { href: "#car-insurance", label: "Car & Bike Cover", icon: Car },
+    { href: "#travel-insurance", label: "Travel & Home", icon: Globe },
     { href: "#faq", label: "FAQ", icon: HelpCircle },
   ];
 
@@ -751,18 +733,18 @@ export default function TeraboxOnlinePlayer() {
         title={
           isShareView
             ? sharePreviewTitle
-            : "Car Accident & Injury Claims: Complete Legal Guide (2026)"
+            : "Complete Guide to Insurance: Health, Life, Car & Travel Policies (2026)"
         }
         description={
           isShareView
             ? sharePreviewDescription
-            : "Everything about car accident claims, personal injury law, wrongful death suits, DUI cases, and finding the right lawyer — all in one guide."
+            : "Compare and choose the best health insurance plans, term life policies, car/bike coverage, and travel plans. Calculate premiums and claims online."
         }
       />
       <BreadcrumbSchema
         items={[
           {
-            name: isShareView ? "Watch Video" : "Legal & Injury Claims Guide",
+            name: isShareView ? "Watch Video" : "Complete Insurance Guide 2026",
             url: isShareView
               ? shareUrl || "https://webnovacrew.com/terabox-online-player"
               : "https://webnovacrew.com/terabox-online-player",
@@ -778,10 +760,10 @@ export default function TeraboxOnlinePlayer() {
             <BrandMark />
             <div className="flex flex-col">
               <span className="font-bold text-base sm:text-lg leading-tight">
-                Nova<span className="text-blue-400">Legal</span> &amp; Player
+                Nova<span className="text-blue-400">Shield</span> &amp; Player
               </span>
               <span className="text-[10px] text-slate-400 font-medium hidden sm:inline">
-                Car Accident &amp; Injury Claims Portal 2026
+                Health, Life, &amp; Car Insurance Verification Portal 2026
               </span>
             </div>
           </div>
@@ -1165,25 +1147,25 @@ export default function TeraboxOnlinePlayer() {
           <header className="border-b border-slate-800 pb-8 mb-10 text-left">
             <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3.5 py-1 text-xs text-blue-300 font-medium mb-4">
               <Scale className="h-3.5 w-3.5 text-blue-400" />
-              National Legal &amp; Injury Tort Compendium (2026 Edition)
+              National Health, Life, &amp; Auto Insurance Portal (2026 Edition)
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 leading-[1.15]">
-              The Complete Car Accident &amp; Injury Claims Guide
+              The Complete Guide to Insurance: Health, Life, Car &amp; Travel Policies
             </h1>
 
-            {/* Intro (~200w) */}
+            {/* Intro */}
             <div className="rounded-2xl border border-slate-800/90 bg-gradient-to-br from-slate-900/90 via-slate-900/60 to-blue-950/20 p-6 sm:p-8 backdrop-blur text-slate-300 text-base sm:text-lg leading-relaxed shadow-xl">
               <p className="mb-4">
-                Navigating the aftermath of a vehicular collision, catastrophic personal injury, or the devastating wrongful death of a family member is one of the most legally and financially daunting challenges an individual or household can endure. In the contemporary legal landscape of 2026, insurance corporations employ algorithmic settlement valuation models designed specifically to minimize payout reserves, while strict comparative fault statutes, tight statutes of limitations, and complex medical lien subrogation rules make prompt, educated legal action imperative.
+                Navigating the complex landscape of insurance policies is one of the most critical steps in securing your family&apos;s financial future and medical safety. In 2026, comparing the best health insurance, finding an affordable term life insurance plan, calculating zero depreciation car insurance premium rates, and purchasing international travel insurance are essential processes that can be executed easily online.
               </p>
               <p className="mb-4">
-                This comprehensive, authoritative manual serves as an exhaustive single-source compendium for accident victims, claimants, and families seeking justice. Whether you are dealing with an immediate post-crash investigation, managing severe medical expenses, calculating equitable non-economic pain and suffering restitution, navigating DUI-related criminal and civil cross-claims, evaluating prepaid legal expense coverage, or retaining premier local trial litigation counsel, every facet of the personal injury and civil litigation framework is meticulously deconstructed below.
+                This comprehensive single-page guide serves as your complete insurance compendium. Whether you need to evaluate individual health insurance versus family floater health insurance plans, calculate a 1 Crore term insurance monthly premium, verify own damage car insurance coverage, or find a cashless health insurance policy for senior citizen parents, we provide detailed statutory and practical guides for all major insurance categories.
               </p>
               <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-400 pt-2 border-t border-slate-800">
-                <span className="flex items-center gap-1.5"><Clock className="h-3.5 w-3.5 text-blue-400" /> Comprehensive 35-Min Read</span>
-                <span className="flex items-center gap-1.5"><BookOpen className="h-3.5 w-3.5 text-emerald-400" /> All 50 States Legal Frameworks</span>
-                <span className="flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5 text-cyan-400" /> Fully Updated for 2026 Case Law</span>
+                <span className="flex items-center gap-1.5"><Clock className="h-3.5 w-3.5 text-blue-400" /> Comprehensive 30-Min Read</span>
+                <span className="flex items-center gap-1.5"><BookOpen className="h-3.5 w-3.5 text-emerald-400" /> Complete Coverage Matrix</span>
+                <span className="flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5 text-cyan-400" /> Fully Updated for 2026 Guidelines</span>
               </div>
             </div>
           </header>
@@ -1197,53 +1179,37 @@ export default function TeraboxOnlinePlayer() {
               </h2>
             </div>
             <p className="text-slate-400 text-xs sm:text-sm mb-6">
-              Click any section below to jump directly to detailed statutory analyses, compensation calculation methodologies, case timelines, and legal guides.
+              Click any section below to jump directly to detailed policy comparisons, premium calculations, tax benefits, and claim settlement processes.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-              <a href="#immediate-steps" className="group flex items-center justify-between rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3.5 text-slate-300 hover:border-blue-500/50 hover:bg-slate-800/80 hover:text-white transition-all">
+              <a href="#health-insurance" className="group flex items-center justify-between rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3.5 text-slate-300 hover:border-blue-500/50 hover:bg-slate-800/80 hover:text-white transition-all">
                 <span className="flex items-center gap-2.5 font-medium">
                   <span className="flex h-6 w-6 items-center justify-center rounded-md bg-blue-500/10 text-xs font-bold text-blue-400">1</span>
-                  Immediate Steps After an Accident
+                  Health Insurance &amp; Mediclaim Plans
                 </span>
                 <ChevronRight className="h-4 w-4 text-slate-500 group-hover:text-blue-400 transition-colors" />
               </a>
 
-              <a href="#personal-injury-law" className="group flex items-center justify-between rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3.5 text-slate-300 hover:border-blue-500/50 hover:bg-slate-800/80 hover:text-white transition-all">
+              <a href="#term-life" className="group flex items-center justify-between rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3.5 text-slate-300 hover:border-blue-500/50 hover:bg-slate-800/80 hover:text-white transition-all">
                 <span className="flex items-center gap-2.5 font-medium">
                   <span className="flex h-6 w-6 items-center justify-center rounded-md bg-blue-500/10 text-xs font-bold text-blue-400">2</span>
-                  How Personal Injury Claims Work
+                  Term Life &amp; Financial Protection
                 </span>
                 <ChevronRight className="h-4 w-4 text-slate-500 group-hover:text-blue-400 transition-colors" />
               </a>
 
-              <a href="#wrongful-death" className="group flex items-center justify-between rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3.5 text-slate-300 hover:border-blue-500/50 hover:bg-slate-800/80 hover:text-white transition-all">
+              <a href="#car-insurance" className="group flex items-center justify-between rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3.5 text-slate-300 hover:border-blue-500/50 hover:bg-slate-800/80 hover:text-white transition-all">
                 <span className="flex items-center gap-2.5 font-medium">
                   <span className="flex h-6 w-6 items-center justify-center rounded-md bg-blue-500/10 text-xs font-bold text-blue-400">3</span>
-                  Wrongful Death Claims
+                  Comprehensive Car &amp; Bike Insurance
                 </span>
                 <ChevronRight className="h-4 w-4 text-slate-500 group-hover:text-blue-400 transition-colors" />
               </a>
 
-              <a href="#dui-accidents" className="group flex items-center justify-between rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3.5 text-slate-300 hover:border-blue-500/50 hover:bg-slate-800/80 hover:text-white transition-all">
+              <a href="#travel-insurance" className="group flex items-center justify-between rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3.5 text-slate-300 hover:border-blue-500/50 hover:bg-slate-800/80 hover:text-white transition-all">
                 <span className="flex items-center gap-2.5 font-medium">
                   <span className="flex h-6 w-6 items-center justify-center rounded-md bg-blue-500/10 text-xs font-bold text-blue-400">4</span>
-                  DUI Accidents &amp; Criminal Law
-                </span>
-                <ChevronRight className="h-4 w-4 text-slate-500 group-hover:text-blue-400 transition-colors" />
-              </a>
-
-              <a href="#prepaid-legal" className="group flex items-center justify-between rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3.5 text-slate-300 hover:border-blue-500/50 hover:bg-slate-800/80 hover:text-white transition-all">
-                <span className="flex items-center gap-2.5 font-medium">
-                  <span className="flex h-6 w-6 items-center justify-center rounded-md bg-blue-500/10 text-xs font-bold text-blue-400">5</span>
-                  Prepaid Legal Plans
-                </span>
-                <ChevronRight className="h-4 w-4 text-slate-500 group-hover:text-blue-400 transition-colors" />
-              </a>
-
-              <a href="#finding-lawyer" className="group flex items-center justify-between rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3.5 text-slate-300 hover:border-blue-500/50 hover:bg-slate-800/80 hover:text-white transition-all">
-                <span className="flex items-center gap-2.5 font-medium">
-                  <span className="flex h-6 w-6 items-center justify-center rounded-md bg-blue-500/10 text-xs font-bold text-blue-400">6</span>
-                  Finding the Right Lawyer
+                  Travel, Home &amp; Business Coverages
                 </span>
                 <ChevronRight className="h-4 w-4 text-slate-500 group-hover:text-blue-400 transition-colors" />
               </a>
@@ -1251,7 +1217,7 @@ export default function TeraboxOnlinePlayer() {
               <a href="#faq" className="group col-span-1 sm:col-span-2 flex items-center justify-between rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3.5 text-slate-300 hover:border-blue-500/50 hover:bg-slate-800/80 hover:text-white transition-all">
                 <span className="flex items-center gap-2.5 font-medium">
                   <span className="flex h-6 w-6 items-center justify-center rounded-md bg-cyan-500/10 text-xs font-bold text-cyan-400">?</span>
-                  Frequently Asked Questions (14 Detailed Q&amp;As)
+                  Frequently Asked Questions (10 Detailed Insurance Q&amp;As)
                 </span>
                 <ChevronRight className="h-4 w-4 text-slate-500 group-hover:text-blue-400 transition-colors" />
               </a>
@@ -1259,338 +1225,38 @@ export default function TeraboxOnlinePlayer() {
           </nav>
 
           {/* ======================================================================= */}
-          {/* SECTION 1: Immediate Steps After a Car Accident                        */}
+          {/* SECTION 1: Health Insurance & Mediclaim Plans                          */}
           {/* ======================================================================= */}
-          <section id="immediate-steps" className="scroll-mt-24 mb-16 space-y-8">
+          <section id="health-insurance" className="scroll-mt-24 mb-16 space-y-8">
             <div className="border-b border-slate-800 pb-4">
               <span className="text-xs font-bold tracking-wider text-blue-400 uppercase">Section 1</span>
               <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1 flex items-center gap-3">
-                <Car className="h-7 w-7 text-blue-400" />
-                Section 1 — Immediate Steps After a Car Accident
+                <ShieldCheck className="h-7 w-7 text-blue-400" />
+                Section 1 — Comprehensive Health Insurance &amp; Mediclaim Policies
               </h2>
             </div>
 
             <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl border border-slate-800/80 shadow-2xl transition-transform hover:scale-[1.01] duration-300">
               <img
-                src="/legal/accident_scene.jpg"
-                alt="Documenting car accident damage scene"
+                src="/legal/prepaid_legal_shield.jpg"
+                alt="Health Insurance cashless shield cover"
                 className="h-full w-full object-cover object-center"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e17]/80 via-transparent to-transparent" />
             </div>
 
-            {/* H3: Immediate Steps After an Accident (300w) */}
             <div className="space-y-4">
               <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                Immediate Steps After an Accident
+                Individual vs. Family Health Insurance Floater Plans
               </h3>
               <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
                 <p>
-                  The moments immediately succeeding a motor vehicle crash are frequently marked by acute shock, elevated adrenaline, and severe disorientation. However, the precise physical and documentary actions you execute during the first sixty minutes at the collision scene establish the foundational evidentiary bedrock upon which your entire personal injury and property damage recovery will either succeed or falter. First and foremost, prioritize physical safety: if vehicles remain operational and are obstructing active traffic lanes without catastrophic injuries present, activate hazard lighting and transition vehicles to the nearest highway shoulder or safe emergency turnout to avert secondary pileup collisions.
+                  Choosing the right <strong>health insurance plan</strong> or <strong>medical insurance policy</strong> is a foundational element of financial planning. An <em>individual health insurance</em> plan secures a single policyholder with a dedicated sum insured. In contrast, a <strong>family health insurance plan</strong> (or family floater policy) covers multiple family members—including your spouse, children, and parents—under a single shared sum insured pool. Family floaters generally offer a much lower premium cost per member, making them the best option for young households.
                 </p>
                 <p>
-                  Immediately contact 911 dispatch to request emergency medical personnel and law enforcement officers. In virtually all jurisdictions, state transportation codes legally require a formal police response whenever a traffic crash results in bodily injury, death, or apparent property damage exceeding statutory reporting minimums (typically ranging between $500 and $1,000). While awaiting dispatch arrival, conduct a swift triage of all vehicle occupants. Never admit fault, apologize, or make speculative assertions regarding causation to other involved motorists, passengers, or bystanders; statements such as <em>&quot;I didn&apos;t see you coming&quot;</em> or <em>&quot;I am so sorry&quot;</em> will routinely be transcribed by insurance adjusters as explicit admissions of comparative negligence.
-                </p>
-
-                <div className="my-8">
-                  <AdUnit slot="5063300546" layout="in-article" format="fluid" style={{ display: "block", textAlign: "center" }} />
-                </div>
-                <p>
-                  Leverage your smartphone camera to capture extensive photographic and video documentation before vehicles are displaced by wreckers. Record wide-angle establishing perspectives of the entire intersection or roadway geometry, precise points of vehicular impact, skid marks, debris fields, broken glass dispersion patterns, traffic control signals, posted speed regulatory signs, weather conditions, and visible bodily injuries. Exchange standardized credentials with all involved motorists, including full legal names, residential addresses, telephone numbers, driver&apos;s license numbers, vehicle registration identifiers, vehicle identification numbers (VIN), and detailed insurer policy policyholder numbers. Secure independent contact details from eyewitnesses before they disperse from the scene.
-                </p>
-              </div>
-            </div>
-
-            {/* H3: How Fault Is Determined (250w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                How Fault Is Determined
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  Liability determinations in car accident claims are governed by civil tort principles of negligence, state statutory motor vehicle codes, and formal comparative fault doctrines. Establishing legal culpability requires proving four core elements: Duty of Care (every motorist owes a legal obligation to operate their vehicle reasonably and obey traffic statutes), Breach of Duty (the defendant committed an act of negligence, such as speeding, texting while driving, or failing to yield), Causation (the breach directly and proximately induced the collision), and Damages (the plaintiff sustained quantifiable economic or physical harm).
-                </p>
-                <p>
-                  Insurance claim adjusters and juries reconstruct collisions by synthesizing multiple independent evidence streams. These include the official police crash report, cited motor vehicle code violations (which establish <em>negligence per se</em> in many jurisdictions), Event Data Recorder (&quot;black box&quot;) telemetry indicating pre-crash velocity, braking inputs, and steering angles, nearby commercial or municipal surveillance cameras, dashcam footage, and sworn eyewitness depositions. 
-                </p>
-                <p>
-                  Furthermore, jurisdiction plays a defining role: in <strong>Pure Comparative Negligence</strong> states (e.g., California, New York, Florida), an injured plaintiff can recover damages even if they were 90% responsible for the accident, receiving 10% of total verified losses. In <strong>Modified Comparative Negligence</strong> states (such as Texas, Illinois, Ohio), plaintiffs are barred from financial recovery if their allocated liability exceeds the statutory 50% or 51% threshold. In rare <strong>Contributory Negligence</strong> jurisdictions (e.g., Virginia, North Carolina, Maryland, Alabama), contributing even 1% of fault completely disqualifies the victim from any financial recovery.
-                </p>
-              </div>
-            </div>
-
-            {/* H3: Filing an Insurance Claim (300w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                Filing an Insurance Claim
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  Initiating an insurance claim requires strategic precision and strict adherence to contractual notification timelines outlined in your standard auto insurance policy. Virtually all auto insurance contracts include a prompt reporting clause requiring insureds to notify the carrier within a reasonable timeframe (typically 24 to 72 hours) following any collision. When contacting your own insurer, provide purely objective factual identifiers: date, time, geographical coordinates, vehicle identification, and the police incident report number. Refrain from discussing complex injury prognoses or giving unscripted opinions until you have undergone thorough diagnostic testing.
-                </p>
-                <p>
-                  When communicating with the third-party at-fault driver&apos;s insurance company, recognize from the outset that the third-party claims adjuster operates under a fiduciary directive to minimize corporate payout liabilities. Third-party adjusters frequently initiate contact within hours of a crash, adopting a polite, empathetic demeanor while requesting a &quot;recorded statement to quickly process your property rental or medical bills.&quot; <strong>You are under zero statutory obligation to provide a recorded statement to a third-party insurer without legal representation present.</strong> Adjusters are trained to ask open-ended or leading questions designed to elicit statements downplaying physical pain (e.g., <em>&quot;How are you feeling today?&quot; — &quot;I&apos;m okay, thanks&quot;</em>) or inadvertently suggesting shared liability.
-                </p>
-                <p>
-                  Organize a structured claim repository comprising every medical intake summary, emergency room discharge order, diagnostic imaging scan (MRI, CT, X-ray), pharmacy prescription receipt, physical therapy attendance log, vehicle repair estimate, towing bill, and certified employer wage-loss verification statement. Maintaining meticulous chronological documentation ensures every dollar of special economic damages is substantiated by verifiable documentary proof when drafting the formal settlement demand package.
-                </p>
-              </div>
-            </div>
-
-            {/* H3: How Settlements Are Calculated (300w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                How Settlements Are Calculated — Pain and Suffering Settlement &amp; Average Car Accident Settlement
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  Insurance settlement calculations are categorized into two fundamental legal damage classifications: <strong>Special Damages</strong> (quantifiable economic losses) and <strong>General Damages</strong> (non-economic intangible losses, commonly designated as pain and suffering). Special damages encompass past and future medical treatment costs, surgical fees, prescription medication, medical assistive devices, property loss or diminished vehicular value, lost wages, and documented impairment of future earning capacity.
-                </p>
-                <p>
-                  General damages for pain, emotional distress, physical impairment, and loss of enjoyment of life are primarily computed through two recognized legal formulas:
-                </p>
-                <ul className="list-disc pl-5 space-y-2 text-slate-300">
-                  <li>
-                    <strong>The Multiplier Method:</strong> Total special medical damages are multiplied by a coefficient ranging between 1.5 and 5 (and in catastrophic cases, up to 7 or 10). Minor soft-tissue whiplash injuries with full recovery typically warrant a 1.5x to 2x multiplier, whereas complex fractures, spinal disc herniations, traumatic brain injuries (TBI), or permanent disfigurement command multipliers of 3.5x to 5x or higher.
-                  </li>
-                  <li>
-                    <strong>The Per Diem (Daily Rate) Method:</strong> A specific daily dollar figure—frequently equivalent to the victim&apos;s daily wage or an established baseline rate of $150 to $300 per day—is multiplied by the total number of consecutive calendar days the victim endured active physical pain and rehabilitation prior to reaching Maximum Medical Improvement (MMI).
-                  </li>
-                </ul>
-                <p>
-                  While nationwide industry statistics cite an &quot;average car accident settlement&quot; ranging between $20,000 and $35,000 for minor to moderate collision claims, true settlement valuation is heavily skewed by individual injury severity, policy coverage ceilings, commercial carrier involvement, and quality of trial representation. Severe spinal cord trauma, polytrauma, or commercial trucking accidents regularly settle for $500,000 to multiple millions of dollars.
-                </p>
-              </div>
-
-              {/* Settlement Calculation Formula Box */}
-              <div className="rounded-xl border border-blue-500/30 bg-slate-950/70 p-5 my-4">
-                <div className="flex items-center gap-2 font-semibold text-blue-300 mb-2">
-                  <Calculator className="h-4 w-4" />
-                  Standard Claim Valuation Formula Model:
-                </div>
-                <div className="p-3 bg-slate-900 rounded-lg text-xs sm:text-sm font-mono text-emerald-400 border border-slate-800">
-                  Total Settlement Value = [Past &amp; Future Medical Expenses + Lost Earnings/Capacity] + [(Medical Expenses) × Multiplier (1.5–5.0)] - [Comparative Fault Reduction %]
-                </div>
-              </div>
-            </div>
-
-            {/* H3: What If the Other Driver Has No Insurance? (200w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                What If the Other Driver Has No Insurance? — Uninsured Motorist Claim
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  According to the Insurance Research Council (IRC), approximately one in eight motorists across the United States operates a motor vehicle without active liability insurance coverage. If you are struck by an uninsured driver, or if the collision is a criminal hit-and-run where the perpetrator evades apprehension, your primary avenue of financial restitution is filing an <strong>Uninsured Motorist (UM)</strong> or <strong>Underinsured Motorist (UIM)</strong> bodily injury claim through your personal auto insurer.
-                </p>
-                <p>
-                  UM/UIM coverage directly substitutes for the liability insurance policy the at-fault motorist should have possessed, covering your emergency hospital care, surgery, lost wages, and general pain and suffering up to your purchased policy limits (e.g., $100,000/$300,000 or $250,000/$500,000). In addition, <strong>Personal Injury Protection (PIP)</strong> and <strong>Medical Payments (MedPay)</strong> cover initial medical costs regardless of fault. Because UM claims are technically first-party actions against your own carrier, disputes often arise over claim valuation; an experienced personal injury attorney can demand binding insurance arbitration to enforce fair claim disbursements.
-                </p>
-              </div>
-            </div>
-
-          </section>
-
-          {/* ======================================================================= */}
-          {/* SECTION 2: Personal Injury Law                                         */}
-          {/* ======================================================================= */}
-          <section id="personal-injury-law" className="scroll-mt-24 mb-16 space-y-8">
-            <div className="border-b border-slate-800 pb-4">
-              <span className="text-xs font-bold tracking-wider text-blue-400 uppercase">Section 2</span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1 flex items-center gap-3">
-                <Scale className="h-7 w-7 text-blue-400" />
-                Section 2 — Personal Injury Law
-              </h2>
-            </div>
-
-            <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl border border-slate-800/80 shadow-2xl transition-transform hover:scale-[1.01] duration-300">
-              <img
-                src="/legal/legal_gavel.jpg"
-                alt="Gavel and scales of justice representing personal injury law"
-                className="h-full w-full object-cover object-center"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e17]/80 via-transparent to-transparent" />
-            </div>
-
-            {/* H3: What Counts as Personal Injury? (250w) */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                What Counts as Personal Injury?
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  In civil jurisprudence, <strong>Personal Injury Law</strong> (tort law) provides a legal mechanism for an injured individual to obtain monetary compensation when another person, corporate entity, or governmental agency causes physical harm, emotional trauma, or psychological impairment through negligent, reckless, or intentional conduct. Unlike criminal law, which seeks to penalize offenders with incarceration or state fines on behalf of society, personal injury civil litigation is designed to make the injured victim &quot;whole again&quot; through financial restitution.
-                </p>
-                <p>
-                  Legally actionable personal injuries extend beyond acute physical trauma such as fractured bones, spinal cord severances, and lacerations. They encompass cognitive brain trauma, internal organ damage, toxic exposure, severe burn trauma, emotional distress, post-traumatic stress disorder (PTSD), and catastrophic chronic pain syndromes. The underlying principle requires establishing that the injury directly derived from a legally cognizable breach of safety standards or duty of care.
-                </p>
-              </div>
-            </div>
-
-            {/* H3: Types of Personal Injury Cases (300w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                Types of Personal Injury Cases — Slip and Fall, Medical Malpractice, Product Liability, Workplace Injury
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  The personal injury spectrum spans multiple distinct legal categories, each governed by specialized statutory standards and evidentiary rules:
-                </p>
-                <ul className="list-disc pl-5 space-y-2.5 text-slate-300">
-                  <li>
-                    <strong>Motor Vehicle &amp; Commercial Trucking Accidents:</strong> Claims arising from car crashes, pedestrian strikes, motorcycle wrecks, and interstate commercial carrier collisions governed by Federal Motor Carrier Safety Administration (FMCSA) safety mandates.
-                  </li>
-                  <li>
-                    <strong>Premises Liability (Slip and Fall):</strong> Property owners and commercial landlords possess a legal duty to maintain reasonably safe environments for invitees. Claims arise from hazardous wet floors, unlighted stairwells, broken flooring, ice accumulations, or negligent security leading to third-party assaults.
-                  </li>
-                  <li>
-                    <strong>Medical Malpractice:</strong> Occurs when physicians, surgeons, nurses, or healthcare facilities deviate from the accepted medical standard of care, resulting in surgical errors, misdiagnoses, birth injuries, medication overdoses, or anesthesia errors.
-                  </li>
-                  <li>
-                    <strong>Product Liability:</strong> Strict liability actions brought against manufacturers, designers, and distributors of defective consumer goods, automotive parts (such as exploding airbags or defective tires), pharmaceuticals, and medical devices.
-                  </li>
-                  <li>
-                    <strong>Workplace Injuries &amp; Third-Party Claims:</strong> While workers&apos; compensation provides no-fault statutory benefits, injured workers can initiate third-party civil lawsuits against negligent subcontractors, equipment manufacturers, or property owners for full pain and suffering damages.
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* H3: Statute of Limitations by Claim Type (250w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                Statute of Limitations by Claim Type
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  The <strong>Statute of Limitations</strong> is a strict legislative deadline that establishes the maximum time frame following an incident within which a plaintiff must formally file a complaint in a court of law. Failing to file before the expiration of the statutory window irrevocably forfeits your constitutional right to seek financial recovery, resulting in immediate judicial dismissal with prejudice.
-                </p>
-                <p>
-                  Statutory deadlines vary substantially based on jurisdiction and case classification:
-                </p>
-                <div className="overflow-x-auto my-3">
-                  <table className="w-full text-left text-xs sm:text-sm border border-slate-800 rounded-lg overflow-hidden">
-                    <thead className="bg-slate-900 text-slate-200 font-semibold border-b border-slate-800">
-                      <tr>
-                        <th className="p-3">Claim Classification</th>
-                        <th className="p-3">Typical Statutory Window</th>
-                        <th className="p-3">Critical Legal Exceptions / Tolling</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-slate-800/60 text-slate-300">
-                      <tr className="hover:bg-slate-900/40">
-                        <td className="p-3 font-medium text-white">Car &amp; Motor Vehicle Accidents</td>
-                        <td className="p-3">2 to 3 Years (Most States; KY/TN: 1 Yr)</td>
-                        <td className="p-3">Discovery rule for latent internal or neurological trauma</td>
-                      </tr>
-                      <tr className="hover:bg-slate-900/40">
-                        <td className="p-3 font-medium text-white">Slip and Fall / Premises Liability</td>
-                        <td className="p-3">2 to 4 Years (State-dependent)</td>
-                        <td className="p-3">Strict notice windows if on municipal/government property</td>
-                      </tr>
-                      <tr className="hover:bg-slate-900/40">
-                        <td className="p-3 font-medium text-white">Medical Malpractice</td>
-                        <td className="p-3">1 to 3 Years from discovery (Cap 4–7 Yrs)</td>
-                        <td className="p-3">Tolled until foreign object discovered or victim reaches majority</td>
-                      </tr>
-                      <tr className="hover:bg-slate-900/40">
-                        <td className="p-3 font-medium text-white">Wrongful Death Suits</td>
-                        <td className="p-3">2 Years from date of death</td>
-                        <td className="p-3">Tolled during pending criminal murder/manslaughter proceedings</td>
-                      </tr>
-                      <tr className="hover:bg-slate-900/40">
-                        <td className="p-3 font-medium text-white">Claims Against Government Entities</td>
-                        <td className="p-3">6 Months to 1 Year (Formal Notice)</td>
-                        <td className="p-3">Tort claims notice mandatory before filing civil lawsuit</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-            {/* H3: Proving Negligence (250w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                Proving Negligence
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  Prevailing in a personal injury action requires establishing the defendant&apos;s liability by a <em>preponderance of the evidence</em> (meaning the claim is more likely true than not, or &gt;50% probability). The four indispensable pillars of actionable civil negligence are:
-                </p>
-                <ol className="list-decimal pl-5 space-y-2 text-slate-300">
-                  <li>
-                    <strong>Legal Duty of Care:</strong> Establishing that the defendant possessed a recognized legal obligation to exercise reasonable caution toward the plaintiff (e.g., motorists must obey traffic laws; physicians must adhere to clinical standards; store owners must inspect premises).
-                  </li>
-                  <li>
-                    <strong>Breach of Duty:</strong> Demonstrating through objective proof that the defendant failed to act as a reasonably prudent entity under identical circumstances (e.g., distracted driving, violating OSHA mandates, failing to repair known hazards).
-                  </li>
-                  <li>
-                    <strong>Proximate &amp; Direct Causation:</strong> Proving that the defendant&apos;s specific breach directly caused the collision or incident, and that the resulting injuries were a foreseeable consequence of that negligent act.
-                  </li>
-                  <li>
-                    <strong>Documented Compensable Damages:</strong> Substantiating actual physical, financial, and emotional injuries through certified medical billing, economic loss appraisals, and pain logs.
-                  </li>
-                </ol>
-              </div>
-            </div>
-
-            {/* H3: Personal Injury Lawyer Costs (200w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                Personal Injury Lawyer Costs — Personal Injury Law &amp; Lawyer Fees
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  Unlike corporate attorneys or criminal defense lawyers who bill hourly retainers ranging from $300 to $800+ per hour, personal injury litigation attorneys represent injured claimants exclusively on a <strong>contingency fee basis</strong>. This payment structure ensures that any injured person, regardless of their current financial liquidity, can retain top-tier legal advocacy against massive insurance corporations.
-                </p>
-                <p>
-                  Under a standard contingency agreement, the client pays zero upfront fees. The law firm advances all case development expenses—including medical record retrieval fees, accident reconstruction engineer retainers, expert physician testimony fees, deposition court reporter transcripts, and court filing fees. If the lawyer fails to recover compensation through a negotiated settlement or courtroom trial verdict, the client owes zero legal fees.
-                </p>
-              </div>
-            </div>
-
-            {/* H3: When to Hire an Accident Lawyer (300w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                When to Hire an Accident Lawyer — Accident Lawyer Near Me &amp; Personal Injury Attorney
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  While minor, low-speed vehicular fender-benders involving zero bodily injuries and purely cosmetic bumper damage can often be handled directly through insurance property claims adjusters, seeking an experienced <em>accident lawyer near me</em> or specialized <em>personal injury attorney</em> is critical under the following circumstances:
-                </p>
-                <ul className="list-disc pl-5 space-y-2 text-slate-300">
-                  <li>
-                    <strong>Moderate to Severe Bodily Injuries:</strong> Fractures, spinal disc bulges, concussions, internal bleeding, nerve impingement, or injuries requiring surgical intervention, hospitalization, or extended physical therapy.
-                  </li>
-                  <li>
-                    <strong>Disputed Liability &amp; Comparative Fault Allegations:</strong> If the insurance carrier attempts to blame you for the accident or claims you were partially negligent to reduce their financial exposure.
-                  </li>
-                  <li>
-                    <strong>Commercial Trucks, Rideshare (Uber/Lyft), or Multi-Vehicle Pileups:</strong> Corporate carriers deploy rapid-response defense teams to crash scenes within hours to conceal telemetry and limit corporate liability.
-                  </li>
-                  <li>
-                    <strong>Catastrophic Long-Term Disability or Lost Earning Capacity:</strong> Injuries that permanently prevent you from returning to your prior profession or necessitate lifetime nursing care.
-                  </li>
-                  <li>
-                    <strong>Bad Faith Insurance Tactics:</strong> Unreasonable claim delays, deceptive lowball settlement offers, or wrongful claim denials.
-                  </li>
-                </ul>
-                <p>
-                  Retaining seasoned personal injury counsel immediately levels the playing field, ensuring critical electronic evidence (such as commercial dashcams and black box data) is preserved via formal spoliation letters.
+                  To find the optimal fit, policyholders should use a <strong>health insurance calculator</strong> online to compare different plans, evaluate premium structures, and check the network hospital list. Opting for a <strong>cashless health insurance policy</strong> ensures that hospitalization costs are directly settled by the insurer, eliminating the need to pay out of pocket during emergencies.
                 </p>
               </div>
             </div>
@@ -1599,168 +1265,47 @@ export default function TeraboxOnlinePlayer() {
               <AdUnit slot="5063300546" layout="in-article" format="fluid" style={{ display: "block", textAlign: "center" }} />
             </div>
 
-
-            {/* H3: Contingency Fees Explained (200w) */}
             <div className="space-y-4 pt-4 border-t border-slate-800/80">
               <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                Contingency Fees Explained
+                Senior Citizen Health Insurance &amp; Pre-Existing Diseases
               </h3>
               <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
                 <p>
-                  A contingency fee agreement is a formal contract between client and attorney establishing that legal compensation is strictly contingent upon securing a financial recovery. The fee structure typically adheres to a tiered percentage schedule:
-                </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-slate-300">
-                  <li><strong>33.3% (One-Third):</strong> Applied to recoveries achieved through pre-litigation settlement negotiations prior to the formal filing of a civil lawsuit.</li>
-                  <li><strong>40.0%:</strong> Applied if the case requires filing a formal complaint, conducting extensive depositions, expert disclosures, and proceeding through trial litigation.</li>
-                </ul>
-                <p>
-                  Prior to signing a representation agreement, ensure the contract explicitly specifies how litigation costs (court fees, expert witness costs) are deducted—whether from the gross settlement amount or net recovery—providing full financial transparency.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* ======================================================================= */}
-          {/* SECTION 3: Wrongful Death Claims                                       */}
-          {/* ======================================================================= */}
-          <section id="wrongful-death" className="scroll-mt-24 mb-16 space-y-8">
-            <div className="border-b border-slate-800 pb-4">
-              <span className="text-xs font-bold tracking-wider text-blue-400 uppercase">Section 3</span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1 flex items-center gap-3">
-                <ShieldAlert className="h-7 w-7 text-blue-400" />
-                Section 3 — Wrongful Death Claims
-              </h2>
-            </div>
-
-            <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl border border-slate-800/80 shadow-2xl transition-transform hover:scale-[1.01] duration-300">
-              <img
-                src="/legal/wrongful_death_memorial.jpg"
-                alt="Family silhouette at sunset representing wrongful death remembrance"
-                className="h-full w-full object-cover object-center"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e17]/80 via-transparent to-transparent" />
-            </div>
-
-            {/* H3: What Qualifies as Wrongful Death (250w) */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                What Qualifies as Wrongful Death
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  A <strong>Wrongful Death Claim</strong> arises when a human being loses their life due to the legal fault, negligence, recklessness, medical malpractice, or intentional criminal violence of another individual or entity. In essence, a wrongful death lawsuit represents the underlying personal injury claim the deceased victim would have been entitled to file had they survived the catastrophic event.
+                  Securing parents&apos; health insurance becomes critical as they age. A dedicated <strong>senior citizen health insurance</strong> policy is designed for retired, elderly parents above 60, 65, or 70 years old. These specialized policies feature tailored benefits such as restoration benefits (replenishing the sum insured if exhausted) and zero copay options, although they may carry waiting periods for pre-existing medical conditions.
                 </p>
                 <p>
-                  Common catalysts for wrongful death litigation include fatal car and commercial trucking collisions, drunk driving crashes, workplace industrial disasters (construction collapses, refinery explosions), defective pharmaceutical or consumer product malfunctions, fatal hospital malpractice, nursing home elder neglect, and intentional acts of homicide or violent assault.
+                  Many senior parents live with chronic illnesses such as diabetes, hypertension, asthma, thyroid disorders, or heart and kidney conditions. Finding specialized <em>health insurance for diabetic patients</em> or <em>pre-existing disease health cover</em> is vital. While these plans might carry higher premiums, they provide a essential safety net, protecting senior parents after major surgeries or hospitalization.
                 </p>
               </div>
             </div>
 
-            {/* H3: Who Can File a Claim (250w) */}
             <div className="space-y-4 pt-4 border-t border-slate-800/80">
               <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                Who Can File a Claim — Spouse, Children, Estate
+                Maternity Cover, OPD Benefits, and Policy Riders
               </h3>
               <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
                 <p>
-                  Legal standing to initiate a wrongful death action is strictly defined by state statutory codes. While statutory frameworks vary, priority standing is universally allocated in descending hierarchical tiers:
+                  Modern health insurance plans offer multiple micro-coverages and riders that expand basic hospitalization benefits:
                 </p>
                 <ul className="list-disc pl-5 space-y-2 text-slate-300">
-                  <li><strong>Surviving Spouse &amp; Registered Domestic Partners:</strong> Primary claimants entitled to recover for loss of financial support, companionship, and marital consortium.</li>
-                  <li><strong>Biological &amp; Adopted Children:</strong> Minor and adult children entitled to compensation for lost parental guidance, nurturing, financial maintenance, and inheritance loss.</li>
-                  <li><strong>Surviving Dependent Parents &amp; Siblings:</strong> If the deceased had no surviving spouse or descendants, dependent parents or immediate siblings may qualify as statutory beneficiaries.</li>
-                  <li><strong>Personal Representative of the Estate:</strong> In many states (e.g., Florida, New York), the lawsuit must be formally filed by the court-appointed personal representative (executor) of the deceased&apos;s estate on behalf of all surviving statutory heirs.</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* H3: How Damages Are Calculated (300w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                How Damages Are Calculated — Wrongful Death Lawsuit &amp; Wrongful Death Settlement
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  Valuing a <em>wrongful death lawsuit</em> or negotiating a multi-million-dollar <em>wrongful death settlement</em> requires rigorous forensic financial modeling and expert economic testimony. Recoverable damages are categorized across two distinct damage recovery tracks:
-                </p>
-                <p>
-                  <strong>1. Economic (Pecuniary) Damages:</strong>
-                </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-slate-300">
-                  <li>Emergency medical treatment, surgical procedures, and intensive care costs incurred between the initial trauma and the time of death.</li>
-                  <li>Reasonable funeral, cremation, and burial expenses.</li>
-                  <li>The deceased&apos;s projected lifetime lost earnings, salary increases, bonuses, retirement pensions, and employer-sponsored healthcare benefits.</li>
-                  <li>The monetary value of household services the deceased provided (childcare, property maintenance, family management).</li>
+                  <li>
+                    <strong>Maternity Health Insurance &amp; Newborn Cover:</strong> Covers pregnancy-related expenses and newborn baby care, usually subject to a 2-to-4-year waiting period.
+                  </li>
+                  <li>
+                    <strong>OPD Health Insurance:</strong> Covers outpatient doctor consultations, pharmacy bills, and diagnostic tests without requiring 24-hour hospitalization.
+                  </li>
+                  <li>
+                    <strong>Dental &amp; Mental Health Coverage:</strong> Includes expenses for dental treatments and psychiatric counseling, which are increasingly bundled under premium cashless policies.
+                  </li>
+                  <li>
+                    <strong>No Claim Bonus (NCB) &amp; Restoration:</strong> Boosts your sum insured by 10% to 50% for every claim-free year, or restores coverage limits if fully exhausted during active treatment.
+                  </li>
                 </ul>
                 <p>
-                  <strong>2. Non-Economic &amp; Survival Damages:</strong>
+                  Additionally, tax benefits under <strong>Section 80D</strong> of the Income Tax Act allow policyholders to claim deductions of up to ₹25,000 for self/family, and up to ₹50,000 for senior citizen parents, making health insurance renewal an excellent tax-saving tool.
                 </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-slate-300">
-                  <li>Loss of love, society, companionship, comfort, and protection.</li>
-                  <li>Loss of spousal consortium and marital intimacy.</li>
-                  <li>Loss of parental training, moral guidance, and instruction for surviving children.</li>
-                  <li><strong>Survival Action Damages:</strong> Conscious pain and suffering and mental anguish experienced by the decedent between the moment of injury and final passing.</li>
-                </ul>
-              </div>
-            </div>
-
-
-            {/* H3: Wrongful Death vs. Criminal Charges (250w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                Wrongful Death vs. Criminal Charges
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  Families frequently confuse state criminal prosecutions with civil wrongful death lawsuits. While both actions can originate from the exact same fatal event (such as a fatal drunk driving crash or homicide), they operate in entirely separate judicial venues under distinct legal standards:
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-3 text-xs sm:text-sm">
-                  <div className="p-4 rounded-xl bg-slate-900 border border-slate-800">
-                    <p className="font-bold text-red-400 mb-2 flex items-center gap-1.5"><Gavel className="h-4 w-4" /> Criminal Prosecution</p>
-                    <p className="text-slate-300 leading-relaxed">Initiated exclusively by the District Attorney / State. Burden of proof is <strong>Beyond a Reasonable Doubt</strong> (99%+ certainty). Objective is punishment (prison sentence, state fines). Surviving family has no direct control over plea agreements.</p>
-                  </div>
-                  <div className="p-4 rounded-xl bg-slate-900 border border-slate-800">
-                    <p className="font-bold text-emerald-400 mb-2 flex items-center gap-1.5"><Scale className="h-4 w-4" /> Civil Wrongful Death Suit</p>
-                    <p className="text-slate-300 leading-relaxed">Filed directly by surviving heirs / estate. Burden of proof is <strong>Preponderance of the Evidence</strong> (&gt;50% probability). Objective is financial compensation for the family. An acquittal in criminal court does not bar civil liability (as demonstrated in the O.J. Simpson civil trial).</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* H3: Case Timeline (200w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                Case Timeline
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  Wrongful death cases follow a structured procedural timeline:
-                </p>
-                <div className="space-y-2 text-xs sm:text-sm text-slate-300">
-                  <div className="p-2.5 rounded-lg bg-slate-950/60 border border-slate-800 flex items-center gap-3">
-                    <span className="text-blue-400 font-bold w-24 shrink-0">Months 1–3:</span>
-                    <span>Estate probate qualification, evidence preservation, toxicology/black box subpoena, medical lien audits.</span>
-                  </div>
-                  <div className="p-2.5 rounded-lg bg-slate-950/60 border border-slate-800 flex items-center gap-3">
-                    <span className="text-blue-400 font-bold w-24 shrink-0">Months 4–6:</span>
-                    <span>Forensic economic lifetime earning modeling and comprehensive demand package delivery.</span>
-                  </div>
-                  <div className="p-2.5 rounded-lg bg-slate-950/60 border border-slate-800 flex items-center gap-3">
-                    <span className="text-blue-400 font-bold w-24 shrink-0">Months 7–18:</span>
-                    <span>Formal lawsuit filing, written interrogatories, depositions of corporate executives and witnesses.</span>
-                  </div>
-                  <div className="p-2.5 rounded-lg bg-slate-950/60 border border-slate-800 flex items-center gap-3">
-                    <span className="text-blue-400 font-bold w-24 shrink-0">Months 18–24+:</span>
-                    <span>Court-ordered mediation, trial preparation, and jury trial verdict.</span>
-                  </div>
-                </div>
               </div>
             </div>
           </section>
@@ -1770,118 +1315,71 @@ export default function TeraboxOnlinePlayer() {
           </div>
 
           {/* ======================================================================= */}
-          {/* SECTION 4: DUI Accidents & Criminal Law                                */}
+          {/* SECTION 2: Term Life & Financial Protection                            */}
           {/* ======================================================================= */}
-          <section id="dui-accidents" className="scroll-mt-24 mb-16 space-y-8">
+          <section id="term-life" className="scroll-mt-24 mb-16 space-y-8">
             <div className="border-b border-slate-800 pb-4">
-              <span className="text-xs font-bold tracking-wider text-blue-400 uppercase">Section 4</span>
+              <span className="text-xs font-bold tracking-wider text-blue-400 uppercase">Section 2</span>
               <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1 flex items-center gap-3">
-                <Gavel className="h-7 w-7 text-blue-400" />
-                Section 4 — DUI Accidents &amp; Criminal Law
+                <ShieldAlert className="h-7 w-7 text-blue-400" />
+                Section 2 — Term Life Insurance &amp; 1 Crore Financial Protection
               </h2>
             </div>
 
             <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl border border-slate-800/80 shadow-2xl transition-transform hover:scale-[1.01] duration-300">
               <img
-                src="/legal/dui_warning.jpg"
-                alt="Car keys next to glass of alcohol representing DUI and criminal law hazards"
+                src="/legal/wrongful_death_memorial.jpg"
+                alt="Term life insurance security family protection"
                 className="h-full w-full object-cover object-center"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e17]/80 via-transparent to-transparent" />
             </div>
 
-            {/* H3: DUI Laws — Overview (300w) */}
             <div className="space-y-4">
               <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                DUI Laws — Overview — DUI Laws
+                Term Life Plans vs. Investment Policies
               </h3>
               <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
                 <p>
-                  Driving Under the Influence (DUI) and Driving While Intoxicated (DWI) statutes across all 50 states enforce strict, zero-tolerance legal limits for vehicular operation. Under federal and state mandates, operating a non-commercial motor vehicle with a <strong>Blood Alcohol Concentration (BAC) of 0.08% or higher</strong> constitutes an automatic <em>per se</em> violation of the law. For commercial drivers holding a CDL, the statutory ceiling is lowered to <strong>0.04% BAC</strong>, while strict Zero-Tolerance laws prohibit drivers under age 21 from operating with any detectable alcohol (0.00%–0.02% BAC).
+                  A <strong>term insurance plan</strong> (or term life insurance) is the purest form of financial protection. Unlike endowment, savings, or ULIP (Unit Linked Insurance Plans) which mix insurance with investment returns, a term policy focuses 100% on providing a high death benefit payout to your nominee if you pass away during the policy term.
                 </p>
                 <p>
-                  Furthermore, contemporary DUI statutes encompass drug-impaired driving (DUID), penalizing operation under the influence of cannabis, illicit narcotics, prescription opioids, sedatives, or over-the-counter medications that impair cognitive or motor faculties. Law enforcement agencies deploy specialized Drug Recognition Experts (DRE) and standardized field sobriety tests (SFSTs) to document impairment.
-                </p>
-                <p>
-                  All states enforce <strong>Implied Consent Laws</strong>: by obtaining a driver&apos;s license and utilizing public roadways, motorists legally consent to chemical testing (breathalyzer, blood, or urine tests) upon a lawful arrest for suspected DUI. Refusing chemical tests triggers immediate administrative driver&apos;s license suspensions ranging from 6 to 12 months, independent of whether the driver is subsequently convicted in court.
+                  For young adults, a <strong>1 Crore term insurance</strong> policy is highly affordable, offering massive coverage for a low monthly or annual premium. To optimize plans, use a <strong>term insurance calculator</strong> to compute the required sum insured based on your current debts, liabilities, and family expenses. Zero cost term plans and return of premium (ROP) options are also popular, refunding all paid premiums if you survive the policy term.
                 </p>
               </div>
             </div>
 
-            {/* H3: First Offense DUI: What Happens (250w) */}
+            <div className="my-8">
+              <AdUnit slot="5063300546" layout="in-article" format="fluid" style={{ display: "block", textAlign: "center" }} />
+            </div>
+
             <div className="space-y-4 pt-4 border-t border-slate-800/80">
               <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                First Offense DUI: What Happens
+                Key Term Riders &amp; Claim Settlement Ratios (CSR)
               </h3>
               <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
                 <p>
-                  A first-offense DUI without vehicular collision or bodily injury is universally charged as a Class 1 or Class A misdemeanor. However, statutory penalties remain severe and life-altering:
+                  When comparing the <em>best term insurance policies in India</em>, checking the insurer&apos;s <strong>claim settlement ratio (CSR)</strong> is paramount. A high CSR (ideally above 98%) indicates the company has a strong record of settling death claims.
                 </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-slate-300">
-                  <li><strong>Incarceration:</strong> Mandatory jail terms ranging from 24 hours up to 6 months (often converted to supervised probation or community labor).</li>
-                  <li><strong>Financial Fines:</strong> Statutory court assessments ranging between $500 and $2,500, plus mandatory penalty surcharges.</li>
-                  <li><strong>License Sanctions:</strong> Administrative driver&apos;s license suspension lasting between 90 days and 1 year.</li>
-                  <li><strong>Ignition Interlock Device (IID):</strong> Mandatory installation of an in-car breathalyzer device for 6 to 12 months at the offender&apos;s personal expense ($100–$150/mo).</li>
-                  <li><strong>DUI School:</strong> Mandatory completion of state-approved alcohol and drug rehabilitation education programs (3 to 9 months).</li>
-                  <li><strong>Insurance Fallout:</strong> Mandatory SR-22 / FR-44 high-risk insurance certificate filings resulting in auto insurance rate spikes of 150% to 300% for 3 to 5 years.</li>
+                <p>
+                  Policyholders can customize their basic term coverage using key policy riders:
+                </p>
+                <ul className="list-disc pl-5 space-y-2 text-slate-300">
+                  <li>
+                    <strong>Critical Illness Rider:</strong> Provides a lump-sum payout if diagnosed with life-threatening illnesses such as cancer or heart attacks.
+                  </li>
+                  <li>
+                    <strong>Accidental Death Benefit:</strong> Pays out an additional sum insured if the death occurs due to an accident.
+                  </li>
+                  <li>
+                    <strong>Waiver of Premium Rider:</strong> Waives all future premiums if the policyholder suffers a permanent disability, keeping the term plan active.
+                  </li>
                 </ul>
-              </div>
-            </div>
-
-            {/* H3: When a DUI Accident Becomes a Criminal Case (250w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                When a DUI Accident Becomes a Criminal Case — Criminal Law &amp; DUI Charges
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
                 <p>
-                  The moment an impaired driver causes a vehicular collision resulting in bodily injury or property destruction, the charge immediately escalates from a routine traffic misdemeanor to high-stakes <strong>Felony DUI</strong> under state criminal codes.
-                </p>
-                <p>
-                  Specific aggravating statutory thresholds include:
-                </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-slate-300">
-                  <li><strong>DUI with Great Bodily Injury (GBI):</strong> Charged as a serious felony carrying mandatory state prison sentences ranging from 2 to 10+ years per injured victim.</li>
-                  <li><strong>Vehicular Manslaughter while Intoxicated / Intoxication Manslaughter:</strong> Charged when a crash results in fatalities, carrying sentences of 4 to 20 years in prison.</li>
-                  <li><strong>Second-Degree Murder (Watson Murder):</strong> In jurisdictions like California, repeat DUI offenders who kill another person can be charged with second-degree malice murder, carrying 15 years to life imprisonment.</li>
-                  <li><strong>DUI with Minor Passengers (Child Endangerment):</strong> Triggers additional felony child abuse penalties and mandatory minimum incarceration enhancements.</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* H3: How a DUI Affects Your Civil Injury Claim (250w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                How a DUI Affects Your Civil Injury Claim
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  If you were injured by an intoxicated motorist, the existence of criminal DUI charges significantly bolsters your civil personal injury claim under the legal doctrine of <strong>Negligence Per Se</strong>. Negligence per se establishes that when a defendant breaches a statutory safety law designed to protect the public, liability is established automatically as a matter of law, eliminating the need to debate liability.
-                </p>
-                <p>
-                  Crucially, DUI injury lawsuits unlock substantial <strong>Punitive Damages</strong> (exemplary damages). Standard insurance policies do not willingly pay punitive damages, but the catastrophic exposure of a jury awarding punitive damages compels the insurer to settle for full policy limits immediately. Additionally, under state <strong>Dram Shop Acts</strong> and Social Host Liability laws, injury victims can sue commercial bars, taverns, and restaurants that continued serving alcohol to a visibly intoxicated patron prior to the crash.
-                </p>
-              </div>
-            </div>
-
-
-            {/* H3: Defense Lawyers vs. Prosecution (200w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                Defense Lawyers vs. Prosecution — Defense Lawyers Near Me
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  In criminal DUI proceedings, the <strong>Prosecution</strong> (State or District Attorney) represents the sovereign jurisdiction, utilizing state crime laboratory toxicologists, police dashboard videos, and arresting officer testimonies to secure guilty convictions.
-                </p>
-                <p>
-                  Conversely, specialized private <em>defense lawyers near me</em> rigorously challenge the prosecution&apos;s evidentiary chain of custody. Defense strategies include disputing reasonable suspicion for the initial traffic stop, challenging whether breathalyzer instruments were properly calibrated according to Title 17 standards, uncovering physiological medical conditions (e.g., GERD/acid reflux) that generate false-high BAC readings, and suppressing unlawful officer statements.
+                  All term insurance premiums enjoy tax deductions under <strong>Section 80C</strong>, and the final maturity or death claim payout is fully tax-exempt under <strong>Section 10(10D)</strong>, providing dual-benefit financial security.
                 </p>
               </div>
             </div>
@@ -1892,243 +1390,127 @@ export default function TeraboxOnlinePlayer() {
           </div>
 
           {/* ======================================================================= */}
-          {/* SECTION 5: Prepaid Legal Plans                                         */}
+          {/* SECTION 3: Comprehensive Car & Bike Insurance                          */}
           {/* ======================================================================= */}
-          <section id="prepaid-legal" className="scroll-mt-24 mb-16 space-y-8">
+          <section id="car-insurance" className="scroll-mt-24 mb-16 space-y-8">
             <div className="border-b border-slate-800 pb-4">
-              <span className="text-xs font-bold tracking-wider text-blue-400 uppercase">Section 5</span>
+              <span className="text-xs font-bold tracking-wider text-blue-400 uppercase">Section 3</span>
               <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1 flex items-center gap-3">
-                <ShieldCheck className="h-7 w-7 text-blue-400" />
-                Section 5 — Prepaid Legal Plans
+                <Car className="h-7 w-7 text-blue-400" />
+                Section 3 — Comprehensive Car &amp; Bike Insurance
               </h2>
             </div>
 
             <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl border border-slate-800/80 shadow-2xl transition-transform hover:scale-[1.01] duration-300">
               <img
-                src="/legal/prepaid_legal_shield.jpg"
-                alt="Digital secure shield emblem for prepaid legal services plans"
+                src="/legal/accident_scene.jpg"
+                alt="Car accident damage claim insurance inspection"
                 className="h-full w-full object-cover object-center"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e17]/80 via-transparent to-transparent" />
             </div>
 
-            {/* H3: What Is Prepaid Legal? (250w) */}
             <div className="space-y-4">
               <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                What Is Prepaid Legal? — Prepaid Legal &amp; Prepaid Legal Services
+                Third-Party Liability vs. Comprehensive Car Insurance
               </h3>
               <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
                 <p>
-                  <strong>Prepaid Legal Services</strong> (often designated as legal insurance or legal subscription plans) operate on an actuarial membership model analogous to health or dental insurance. For a predictable recurring monthly subscription fee (typically ranging between $20 and $50 per month), members obtain direct, on-demand access to a nationwide network of credentialed attorneys for routine personal, family, and small-business legal matters.
+                  Motor vehicle insurance is a legal mandate. <strong>Third-party car insurance</strong> covers bodily injury, death, or property damage caused to a third party in an accident. However, it does not cover damages to your own vehicle.
                 </p>
                 <p>
-                  Prominent providers (such as LegalShield, MetLife Legal Plans, ARAG, and Rocket Lawyer) bridge the access-to-justice gap, allowing middle-income families to consult licensed attorneys without fearing prohibitive $400/hour retainer invoices for everyday legal inquiries.
+                  To secure your own vehicle, a <strong>comprehensive car insurance</strong> policy is highly recommended. It covers own damage (OD) resulting from collisions, theft, fire, floods, and natural calamities, along with third-party liability. When choosing a plan, use an online <strong>car insurance premium calculator</strong> to evaluate the vehicle&apos;s <strong>Insured Declared Value (IDV)</strong> and verify nearby cashless network garages.
                 </p>
               </div>
             </div>
 
-            {/* H3: What's Typically Covered (300w) */}
             <div className="space-y-4 pt-4 border-t border-slate-800/80">
               <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                What&apos;s Typically Covered
+                Zero Depreciation (Zero Dep) and Motor Add-Ons
               </h3>
               <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
                 <p>
-                  Standard prepaid legal benefit packages cover a broad spectrum of preventative and administrative legal transactions:
+                  Standard comprehensive policies deduct depreciation costs when replacing damaged car parts. By adding a <strong>zero depreciation car insurance</strong> rider (also known as zero dep or bumper-to-bumper cover), the insurer pays the complete replacement value of plastic, fiber, and glass parts without depreciation cuts.
+                </p>
+                <p>
+                  Other essential car insurance add-on covers include:
                 </p>
                 <ul className="list-disc pl-5 space-y-2 text-slate-300">
-                  <li><strong>Comprehensive Estate Planning:</strong> Drafting and updating Last Wills and Testaments, Healthcare Directives (Living Wills), and Financial Durable Powers of Attorney.</li>
-                  <li><strong>Document &amp; Contract Review:</strong> Professional attorney review of residential lease agreements, real estate purchase contracts, automotive sales agreements, and contractor proposals (up to specified page limits).</li>
-                  <li><strong>Official Attorney Letters &amp; Phone Calls:</strong> Formal legal demand letters and phone interventions on attorney letterhead to resolve consumer disputes, debt collector harassment, or landlord-tenant breaches.</li>
-                  <li><strong>Traffic Ticket Defense:</strong> Legal representation in municipal court for non-criminal moving violations, speeding tickets, and license point defense.</li>
-                  <li><strong>Uncontested Family Law:</strong> Preparation of uncontested name changes, adoption filings, and uncontested legal separation documents.</li>
-                  <li><strong>Discounted Hourly Rates:</strong> A guaranteed 25% to 33% discount on standard attorney hourly rates for complex contested matters outside plan scope.</li>
+                  <li><strong>Return to Invoice:</strong> Pays the full original on-road purchase price (invoice value) if the car is stolen or suffers a total loss.</li>
+                  <li><strong>Engine Protection:</strong> Covers mechanical and electrical repair bills of the engine due to water logging or hydrostatic lock.</li>
+                  <li><strong>Roadside Assistance (RSA):</strong> Provides flat tyre changes, towing, and emergency fuel delivery.</li>
+                  <li><strong>No Claim Bonus (NCB) Protect:</strong> Preserves your earned NCB discount (up to 50%) even if you file a claim during the policy year.</li>
                 </ul>
-              </div>
-            </div>
-
-            {/* H3: Prepaid Legal vs. Pay-As-You-Go (250w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                Prepaid Legal vs. Pay-As-You-Go
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
                 <p>
-                  Evaluating prepaid legal plans versus traditional pay-as-you-go hourly legal retention depends upon your projected legal exposure:
+                  Similarly, **two wheeler insurance** and scooter insurance online quotes follow the same rules, allowing riders to renew their policies instantly online.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-3 text-xs sm:text-sm">
-                  <div className="p-4 rounded-xl bg-slate-900 border border-slate-800">
-                    <p className="font-bold text-blue-400 mb-1.5">Prepaid Subscription Plan ($300–$500/Year)</p>
-                    <p className="text-slate-300 leading-relaxed">Cost-effective for families needing regular contract reviews, basic wills, traffic ticket defense, and unlimited short phone consultations. Fixed, predictable monthly budget with zero surprises.</p>
-                  </div>
-                  <div className="p-4 rounded-xl bg-slate-900 border border-slate-800">
-                    <p className="font-bold text-amber-400 mb-1.5">Traditional Pay-As-You-Go ($350–$650/Hour)</p>
-                    <p className="text-slate-300 leading-relaxed">Necessary for high-asset complex litigation, contested divorces, corporate mergers, patent filings, or serious felony criminal defense requiring dedicated trial boutique specialists.</p>
-                  </div>
-                </div>
               </div>
             </div>
-
-            {/* H3: Best Use Cases (250w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                Best Use Cases
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  Prepaid legal plans deliver maximum return on investment for specific demographic groups:
-                </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-slate-300">
-                  <li><strong>New Homebuyers &amp; Residential Tenants:</strong> Reviewing complex closing escrow covenants, HOA bylaws, and resolving landlord security deposit disputes.</li>
-                  <li><strong>Young Parents &amp; Families:</strong> Establishing comprehensive guardianship designations and estate wills for minor children without paying $2,500 estate planner fees.</li>
-                  <li><strong>Small Business Owners &amp; Freelancers:</strong> Reviewing client vendor master services agreements, independent contractor agreements, and issuing formal collection demand letters.</li>
-                  <li><strong>Commercial Drivers &amp; Commuters:</strong> Ongoing representation for highway traffic citations to prevent insurance rate surges.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="my-8">
-              <AdUnit slot="1009844198" format="fluid" layoutKey="-6t+ed+2i-1n-4w" />
-            </div>
-
-            {/* H3: What's Usually Excluded (200w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                What&apos;s Usually Excluded
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  Prepaid legal plans contain strict contractual exclusions. Standard memberships strictly exclude:
-                </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-slate-300">
-                  <li><strong>Pre-Existing Legal Disputes:</strong> Lawsuits or disputes initiated prior to plan enrollment.</li>
-                  <li><strong>Complex High-Stakes Trial Litigation:</strong> Contested custody battles, complex business patent litigation, or multi-week jury trials.</li>
-                  <li><strong>Felony Criminal Defense:</strong> Serious violent felony charges or complex federal white-collar prosecutions.</li>
-                  <li><strong>Actions Against Your Employer:</strong> If the plan is provided as a voluntary corporate employee benefit, it cannot be used to sue the sponsoring employer.</li>
-                </ul>
-              </div>
-            </div>
-
           </section>
 
+          <div className="my-8">
+            <AdUnit slot="1009844198" format="fluid" layoutKey="-6t+ed+2i-1n-4w" />
+          </div>
+
           {/* ======================================================================= */}
-          {/* SECTION 6: Finding the Right Lawyer                                    */}
+          {/* SECTION 4: Travel, Home & Business Coverages                            */}
           {/* ======================================================================= */}
-          <section id="finding-lawyer" className="scroll-mt-24 mb-16 space-y-8">
+          <section id="travel-insurance" className="scroll-mt-24 mb-16 space-y-8">
             <div className="border-b border-slate-800 pb-4">
-              <span className="text-xs font-bold tracking-wider text-blue-400 uppercase">Section 6</span>
+              <span className="text-xs font-bold tracking-wider text-blue-400 uppercase">Section 4</span>
               <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1 flex items-center gap-3">
-                <Building2 className="h-7 w-7 text-blue-400" />
-                Section 6 — Finding the Right Lawyer
+                <Globe className="h-7 w-7 text-blue-400" />
+                Section 4 — Travel, Home &amp; Business Coverages
               </h2>
             </div>
 
             <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl border border-slate-800/80 shadow-2xl transition-transform hover:scale-[1.01] duration-300">
               <img
                 src="/legal/lawyer_consultation.jpg"
-                alt="Lawyer consultation meeting inside modern law office"
+                alt="Travel and home insurance policies consultation"
                 className="h-full w-full object-cover object-center"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e17]/80 via-transparent to-transparent" />
             </div>
 
-            {/* H3: Law Offices Near Me — What to Look For (250w) */}
             <div className="space-y-4">
               <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                Law Offices Near Me — What to Look For — Law Offices Near Me
+                International Travel Insurance Requirements
               </h3>
               <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
                 <p>
-                  When searching for <em>law offices near me</em> following a catastrophic injury or accident, look beyond glossy billboard advertisements and television commercials. You are selecting a legal fiduciary who will directly control your financial future and medical rehabilitation recovery.
+                  When traveling abroad, buying <strong>travel insurance online</strong> is a vital step. Many countries, including European nations in the Schengen zone, require mandatory <em>Schengen travel insurance</em> coverage (minimum €30,000 medical cover) for visa approval.
                 </p>
                 <p>
-                  Key criteria for evaluating top-tier law firms include:
+                  Travel policies protect against expensive emergency medical treatment, trip cancellations, lost baggage, flight delays, and repatriation. Dedicated student travel insurance is available for young adults studying in the USA, UK, Canada, or Australia, securing their health and academic stays.
                 </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-slate-300">
-                  <li><strong>Direct Subject-Matter Specialization:</strong> Retain attorneys whose practice is dedicated 100% to personal injury, auto collisions, or wrongful death litigation—not general practitioners dabbling in divorce, bankruptcy, and criminal defense simultaneously.</li>
-                  <li><strong>Documented Courtroom Trial Experience:</strong> Insurance adjusters maintain detailed actuarial databases on every law firm. Firms that never go to trial are offered lowball settlements; firms with verified multi-million-dollar jury verdicts command top-dollar settlement values.</li>
-                  <li><strong>Financial Resources:</strong> High-stakes litigation requires tens of thousands of dollars advanced for accident reconstruction engineers, medical illustrators, and vocational economists.</li>
-                </ul>
               </div>
             </div>
 
-            {/* H3: Questions to Ask in a Free Consultation (250w) */}
             <div className="space-y-4 pt-4 border-t border-slate-800/80">
               <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                Questions to Ask in a Free Consultation
+                Home &amp; Business Liability Insurances
               </h3>
               <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
                 <p>
-                  Virtually all reputable personal injury law firms provide free, confidential initial case consultations. Arrive prepared with these crucial questions:
+                  Your physical assets require robust security against disasters:
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm my-2">
-                  <div className="p-3 bg-slate-900/90 rounded-lg border border-slate-800">
-                    <p className="font-semibold text-white mb-1">1. Who will handle my case?</p>
-                    <p className="text-slate-400">Will an experienced partner manage my file, or will it be passed to an overworked paralegal or junior associate?</p>
-                  </div>
-                  <div className="p-3 bg-slate-900/90 rounded-lg border border-slate-800">
-                    <p className="font-semibold text-white mb-1">2. What is your jury trial record?</p>
-                    <p className="text-slate-400">How many personal injury cases have you personally tried to a jury verdict over the past 36 months?</p>
-                  </div>
-                  <div className="p-3 bg-slate-900/90 rounded-lg border border-slate-800">
-                    <p className="font-semibold text-white mb-1">3. How are costs deducted?</p>
-                    <p className="text-slate-400">Are advanced litigation expenses deducted before or after calculating your contingency percentage?</p>
-                  </div>
-                  <div className="p-3 bg-slate-900/90 rounded-lg border border-slate-800">
-                    <p className="font-semibold text-white mb-1">4. What is your realistic case appraisal?</p>
-                    <p className="text-slate-400">What specific challenges, comparative fault risks, or coverage limits do you foresee in my claim?</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="my-8">
-              <AdUnit slot="5063300546" layout="in-article" format="fluid" style={{ display: "block", textAlign: "center" }} />
-            </div>
-
-            {/* H3: Red Flags When Hiring an Attorney (200w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                Red Flags When Hiring an Attorney
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  Protect yourself against predatory or substandard legal operators by recognizing these major warning signs:
-                </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-slate-300">
-                  <li><strong>Guaranteed Settlement Numbers:</strong> Any attorney who promises a specific dollar amount during an initial consultation is engaging in unethical puffery.</li>
-                  <li><strong>Unsolicited In-Person Solicitations (&quot;Ambulance Chasing&quot;):</strong> Direct solicitation in hospitals or collision scenes violates professional bar ethics.</li>
-                  <li><strong>High-Volume &quot;Settlement Mills&quot;:</strong> Firms that process thousands of cases with zero intention of ever filing a formal lawsuit, frequently settling claims for pennies on the dollar to maximize turnover.</li>
-                  <li><strong>Poor Communication &amp; Unreturned Calls:</strong> If you cannot speak to an attorney during intake, communication will only worsen once you sign a retainer.</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* H3: Understanding Reviews and Ratings (200w) */}
-            <div className="space-y-4 pt-4 border-t border-slate-800/80">
-              <h3 className="text-xl font-semibold text-slate-100 flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
-                Understanding Reviews and Ratings
-              </h3>
-              <div className="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-3">
-                <p>
-                  Cross-examine lawyer reputation across established, peer-reviewed legal directories:
-                </p>
-                <ul className="list-disc pl-5 space-y-1.5 text-slate-300">
-                  <li><strong>Martindale-Hubbell AV Preeminent Rating:</strong> The gold standard in peer-review ratings for ethical standing and legal capability.</li>
-                  <li><strong>Super Lawyers / Best Lawyers in America:</strong> Independent patented selection processes evaluating trial achievements.</li>
-                  <li><strong>State Bar Disciplinary Records:</strong> Check your official State Bar Association website to verify the attorney has an active license free from disciplinary reprimands or malpractice suspensions.</li>
-                  <li><strong>Google Business &amp; Avvo Client Testimonials:</strong> Look for detailed client stories describing responsive communication, compassionate advocacy, and successful outcomes.</li>
+                <ul className="list-disc pl-5 space-y-2 text-slate-300">
+                  <li>
+                    <strong>Home Insurance:</strong> Covers the building structure against fire, earthquakes, and floods (structure insurance), along with protection for jewelry, furniture, and appliances (home contents insurance).
+                  </li>
+                  <li>
+                    <strong>Small Business &amp; Shopkeeper Insurance:</strong> Protects retail shops, warehouses, and offices from business interruption, theft, and physical damage.
+                  </li>
+                  <li>
+                    <strong>Professional Liability &amp; Cyber Insurance:</strong> Essential for freelancers and doctors to protect against errors, omissions, and client data breaches.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -2137,7 +1519,6 @@ export default function TeraboxOnlinePlayer() {
           <div className="my-8">
             <AdUnit slot="1026156067" format="autorelaxed" />
           </div>
-
 
           {/* ======================================================================= */}
           {/* FREQUENTLY ASKED QUESTIONS                                             */}
@@ -2150,29 +1531,25 @@ export default function TeraboxOnlinePlayer() {
                 Frequently Asked Questions
               </h2>
             </div>
-            <p className="text-slate-400 text-sm">
-              Explore 14 comprehensive legal answers addressing accident claims, comparative negligence, settlement calculation formulas, and attorney selection.
+
+            <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+              Find quick answers to vital questions regarding health floater premiums, Section 80D tax deductions, cashless network authorization, 1 Crore term life insurance calculations, and zero depreciation car insurance policies.
             </p>
 
-            <div className="space-y-3">
+            <div className="space-y-4">
               {LEGAL_GUIDE_FAQS.map((faq, idx) => (
-                <details
+                <div
                   key={idx}
-                  className="group rounded-xl border border-slate-800 bg-slate-900/60 open:border-blue-500/40 open:bg-slate-900/90 transition-colors"
+                  className="rounded-xl border border-slate-800 bg-slate-900/40 p-4 sm:p-5 transition-colors hover:border-slate-700/80"
                 >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 p-4 sm:p-5 font-semibold text-sm sm:text-base text-slate-200">
-                    <span className="flex items-start gap-3 text-left">
-                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-blue-500/10 text-xs font-bold text-blue-400 mt-0.5">
-                        {idx + 1}
-                      </span>
-                      {faq.q}
-                    </span>
-                    <ChevronRight className="h-5 w-5 text-slate-500 shrink-0 group-open:rotate-90 transition-transform" />
-                  </summary>
-                  <div className="px-4 sm:px-5 pb-5 pl-12 text-slate-300 text-sm leading-relaxed border-t border-slate-800/40 pt-3">
+                  <h3 className="text-base sm:text-lg font-semibold text-white flex items-start gap-2.5">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-blue-500/10 text-xs font-bold text-blue-400">Q</span>
+                    {faq.q}
+                  </h3>
+                  <div className="mt-2.5 pl-8 text-xs sm:text-sm text-slate-300 leading-relaxed border-l-2 border-slate-850">
                     {faq.a}
                   </div>
-                </details>
+                </div>
               ))}
             </div>
           </section>
