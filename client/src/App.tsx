@@ -1,12 +1,14 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { CookieConsent } from "@/components/ads/CookieConsent";
 import { AdSenseKeywordContext } from "@/components/ads/AdSenseKeywordContext";
 import { AdSenseRouteGuard } from "@/components/ads/AdSenseRouteGuard";
+import { isShareWatchRoute } from "@/lib/video-protected-routes";
 import { lazy, Suspense } from "react";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { WhatsAppFloat } from "@/components/widgets/WhatsAppFloat";
+import { TelegramFloat } from "@/components/widgets/TelegramFloat";
 import { useTrafficTracker } from "@/hooks/useTrafficTracker";
 import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
 // Loading component
@@ -135,6 +137,8 @@ const KuwaitRestaurantAppDevelopment = lazy(() => import("@/pages/locations/kuwa
 const KuwaitRealEstateAppDevelopment = lazy(() => import("@/pages/locations/kuwait-real-estate-app-development"));
 const KuwaitLogisticsAppDevelopment = lazy(() => import("@/pages/locations/kuwait-logistics-app-development"));
 const LiveStatus = lazy(() => import("@/pages/live-status"));
+// Protected video player — content protection DRM active on these routes
+const TeraboxOnlinePlayer = lazy(() => import("@/pages/terabox-online-player"));
 
 function Router() {
   return (
@@ -156,6 +160,12 @@ function Router() {
       <Route path="/terms-of-service" component={TermsOfService} />
       <Route path="/founder" component={Founder} />
       <Route path="/live-status" component={LiveStatus} />
+      {/* Video player — DRM / content-protected routes */}
+      <Route path="/terabox-online-player" component={TeraboxOnlinePlayer} />
+      <Route path="/terabox" component={TeraboxOnlinePlayer} />
+      <Route path="/r/:shareId" component={TeraboxOnlinePlayer} />
+      <Route path="/s/:shareId" component={TeraboxOnlinePlayer} />
+      <Route path="/v/:shareId" component={TeraboxOnlinePlayer} />
       
       {/* Service Pages - SEO Optimized */}
       <Route path="/services/mobile-app-development" component={MobileAppDevelopment} />
@@ -261,14 +271,18 @@ function Router() {
 
 function AppShell() {
   useTrafficTracker();
+  const [location] = useLocation();
+  const isTerabox = location.includes("terabox") || isShareWatchRoute(location);
 
   return (
     <>
       <AdSenseRouteGuard />
-      <AdSenseKeywordContext />
+      {/* Hide AdSense keyword context on video/share pages — bots already blocked server-side */}
+      {!isTerabox && <AdSenseKeywordContext />}
       <Router />
       <CookieConsent />
-      <WhatsAppFloat />
+      {!isTerabox && <WhatsAppFloat />}
+      {isTerabox && <TelegramFloat />}
     </>
   );
 }

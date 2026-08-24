@@ -1300,8 +1300,8 @@ var require_node = __commonJS({
           }
           break;
         case "FILE":
-          var fs2 = __require("fs");
-          stream2 = new fs2.SyncWriteStream(fd2, { autoClose: false });
+          var fs3 = __require("fs");
+          stream2 = new fs3.SyncWriteStream(fd2, { autoClose: false });
           stream2._type = "fs";
           break;
         case "PIPE":
@@ -4727,13 +4727,13 @@ var require_extend_node = __commonJS({
           return length;
         };
         if (iconv.supportsStreams) {
-          var Readable = __require("stream").Readable;
-          original.ReadableSetEncoding = Readable.prototype.setEncoding;
-          Readable.prototype.setEncoding = function setEncoding(enc, options) {
+          var Readable2 = __require("stream").Readable;
+          original.ReadableSetEncoding = Readable2.prototype.setEncoding;
+          Readable2.prototype.setEncoding = function setEncoding(enc, options) {
             this._readableState.decoder = iconv.getDecoder(enc, options);
             this._readableState.encoding = enc;
           };
-          Readable.prototype.collect = iconv._collect;
+          Readable2.prototype.collect = iconv._collect;
         }
       };
       iconv.undoExtendNodeEncodings = function undoExtendNodeEncodings() {
@@ -4750,9 +4750,9 @@ var require_extend_node = __commonJS({
         Buffer2.prototype.toString = original.BufferToString;
         Buffer2.prototype.write = original.BufferWrite;
         if (iconv.supportsStreams) {
-          var Readable = __require("stream").Readable;
-          Readable.prototype.setEncoding = original.ReadableSetEncoding;
-          delete Readable.prototype.collect;
+          var Readable2 = __require("stream").Readable;
+          Readable2.prototype.setEncoding = original.ReadableSetEncoding;
+          delete Readable2.prototype.collect;
         }
         original = void 0;
       };
@@ -14088,11 +14088,11 @@ var require_mime_types = __commonJS({
       }
       return exts[0];
     }
-    function lookup(path2) {
-      if (!path2 || typeof path2 !== "string") {
+    function lookup(path3) {
+      if (!path3 || typeof path3 !== "string") {
         return false;
       }
-      var extension2 = extname("x." + path2).toLowerCase().substr(1);
+      var extension2 = extname("x." + path3).toLowerCase().substr(1);
       if (!extension2) {
         return false;
       }
@@ -17733,8 +17733,8 @@ var require_node2 = __commonJS({
           }
           break;
         case "FILE":
-          var fs2 = __require("fs");
-          stream2 = new fs2.SyncWriteStream(fd2, { autoClose: false });
+          var fs3 = __require("fs");
+          stream2 = new fs3.SyncWriteStream(fd2, { autoClose: false });
           stream2._type = "fs";
           break;
         case "PIPE":
@@ -18452,8 +18452,8 @@ var require_node3 = __commonJS({
           }
           break;
         case "FILE":
-          var fs2 = __require("fs");
-          stream2 = new fs2.SyncWriteStream(fd2, { autoClose: false });
+          var fs3 = __require("fs");
+          stream2 = new fs3.SyncWriteStream(fd2, { autoClose: false });
           stream2._type = "fs";
           break;
         case "PIPE":
@@ -18541,7 +18541,7 @@ var require_path_to_regexp = __commonJS({
   "node_modules/path-to-regexp/index.js"(exports, module) {
     module.exports = pathToRegexp;
     var MATCHING_GROUP_REGEXP = /\\.|\((?:\?<(.*?)>)?(?!\?)/g;
-    function pathToRegexp(path2, keys, options) {
+    function pathToRegexp(path3, keys, options) {
       options = options || {};
       keys = keys || [];
       var strict = options.strict;
@@ -18555,8 +18555,8 @@ var require_path_to_regexp = __commonJS({
       var pos = 0;
       var backtrack = "";
       var m;
-      if (path2 instanceof RegExp) {
-        while (m = MATCHING_GROUP_REGEXP.exec(path2.source)) {
+      if (path3 instanceof RegExp) {
+        while (m = MATCHING_GROUP_REGEXP.exec(path3.source)) {
           if (m[0][0] === "\\") continue;
           keys.push({
             name: m[1] || name++,
@@ -18564,18 +18564,18 @@ var require_path_to_regexp = __commonJS({
             offset: m.index
           });
         }
-        return path2;
+        return path3;
       }
-      if (Array.isArray(path2)) {
-        path2 = path2.map(function(value) {
+      if (Array.isArray(path3)) {
+        path3 = path3.map(function(value) {
           return pathToRegexp(value, keys, options).source;
         });
-        return new RegExp(path2.join("|"), flags);
+        return new RegExp(path3.join("|"), flags);
       }
-      if (typeof path2 !== "string") {
+      if (typeof path3 !== "string") {
         throw new TypeError("path must be a string, array of strings, or regular expression");
       }
-      path2 = path2.replace(
+      path3 = path3.replace(
         /\\.|(\/)?(\.)?:(\w+)(\(.*?\))?(\*)?(\?)?|[.*]|\/\(/g,
         function(match, slash, format, key, capture, star, optional, offset) {
           if (match[0] === "\\") {
@@ -18592,7 +18592,7 @@ var require_path_to_regexp = __commonJS({
           if (slash || format) {
             backtrack = "";
           } else {
-            backtrack += path2.slice(pos, offset);
+            backtrack += path3.slice(pos, offset);
           }
           pos = offset + match.length;
           if (match === "*") {
@@ -18622,7 +18622,7 @@ var require_path_to_regexp = __commonJS({
           return result;
         }
       );
-      while (m = MATCHING_GROUP_REGEXP.exec(path2)) {
+      while (m = MATCHING_GROUP_REGEXP.exec(path3)) {
         if (m[0][0] === "\\") continue;
         if (keysOffset + i === keys.length || keys[keysOffset + i].offset > m.index) {
           keys.splice(keysOffset + i, 0, {
@@ -18634,13 +18634,13 @@ var require_path_to_regexp = __commonJS({
         }
         i++;
       }
-      path2 += strict ? "" : path2[path2.length - 1] === "/" ? "?" : "/?";
+      path3 += strict ? "" : path3[path3.length - 1] === "/" ? "?" : "/?";
       if (end) {
-        path2 += "$";
-      } else if (path2[path2.length - 1] !== "/") {
-        path2 += lookahead ? "(?=/|$)" : "(?:/|$)";
+        path3 += "$";
+      } else if (path3[path3.length - 1] !== "/") {
+        path3 += lookahead ? "(?=/|$)" : "(?:/|$)";
       }
-      return new RegExp("^" + path2, flags);
+      return new RegExp("^" + path3, flags);
     }
   }
 });
@@ -18653,19 +18653,19 @@ var require_layer = __commonJS({
     var debug = require_src3()("express:router:layer");
     var hasOwnProperty = Object.prototype.hasOwnProperty;
     module.exports = Layer;
-    function Layer(path2, options, fn) {
+    function Layer(path3, options, fn) {
       if (!(this instanceof Layer)) {
-        return new Layer(path2, options, fn);
+        return new Layer(path3, options, fn);
       }
-      debug("new %o", path2);
+      debug("new %o", path3);
       var opts = options || {};
       this.handle = fn;
       this.name = fn.name || "<anonymous>";
       this.params = void 0;
       this.path = void 0;
-      this.regexp = pathRegexp(path2, this.keys = [], opts);
-      this.regexp.fast_star = path2 === "*";
-      this.regexp.fast_slash = path2 === "/" && opts.end === false;
+      this.regexp = pathRegexp(path3, this.keys = [], opts);
+      this.regexp.fast_star = path3 === "*";
+      this.regexp.fast_slash = path3 === "/" && opts.end === false;
     }
     Layer.prototype.handle_error = function handle_error(error, req, res, next) {
       var fn = this.handle;
@@ -18689,20 +18689,20 @@ var require_layer = __commonJS({
         next(err);
       }
     };
-    Layer.prototype.match = function match(path2) {
+    Layer.prototype.match = function match(path3) {
       var match2;
-      if (path2 != null) {
+      if (path3 != null) {
         if (this.regexp.fast_slash) {
           this.params = {};
           this.path = "";
           return true;
         }
         if (this.regexp.fast_star) {
-          this.params = { "0": decode_param(path2) };
-          this.path = path2;
+          this.params = { "0": decode_param(path3) };
+          this.path = path3;
           return true;
         }
-        match2 = this.regexp.exec(path2);
+        match2 = this.regexp.exec(path3);
       }
       if (!match2) {
         this.params = void 0;
@@ -18795,10 +18795,10 @@ var require_route = __commonJS({
     var slice = Array.prototype.slice;
     var toString = Object.prototype.toString;
     module.exports = Route;
-    function Route(path2) {
-      this.path = path2;
+    function Route(path3) {
+      this.path = path3;
       this.stack = [];
-      debug("new %o", path2);
+      debug("new %o", path3);
       this.methods = {};
     }
     Route.prototype._handles_method = function _handles_method(method) {
@@ -19010,8 +19010,8 @@ var require_router = __commonJS({
         if (++sync > 100) {
           return setImmediate(next, err);
         }
-        var path2 = getPathname(req);
-        if (path2 == null) {
+        var path3 = getPathname(req);
+        if (path3 == null) {
           return done(layerError);
         }
         var layer;
@@ -19019,7 +19019,7 @@ var require_router = __commonJS({
         var route;
         while (match !== true && idx < stack.length) {
           layer = stack[idx++];
-          match = matchLayer(layer, path2);
+          match = matchLayer(layer, path3);
           route = layer.route;
           if (typeof match !== "boolean") {
             layerError = layerError || match;
@@ -19057,18 +19057,18 @@ var require_router = __commonJS({
           } else if (route) {
             layer.handle_request(req, res, next);
           } else {
-            trim_prefix(layer, layerError, layerPath, path2);
+            trim_prefix(layer, layerError, layerPath, path3);
           }
           sync = 0;
         });
       }
-      function trim_prefix(layer, layerError, layerPath, path2) {
+      function trim_prefix(layer, layerError, layerPath, path3) {
         if (layerPath.length !== 0) {
-          if (layerPath !== path2.slice(0, layerPath.length)) {
+          if (layerPath !== path3.slice(0, layerPath.length)) {
             next(layerError);
             return;
           }
-          var c = path2[layerPath.length];
+          var c = path3[layerPath.length];
           if (c && c !== "/" && c !== ".") return next(layerError);
           debug("trim prefix (%s) from url %s", layerPath, req.url);
           removed = layerPath;
@@ -19146,7 +19146,7 @@ var require_router = __commonJS({
     };
     proto.use = function use(fn) {
       var offset = 0;
-      var path2 = "/";
+      var path3 = "/";
       if (typeof fn !== "function") {
         var arg = fn;
         while (Array.isArray(arg) && arg.length !== 0) {
@@ -19154,7 +19154,7 @@ var require_router = __commonJS({
         }
         if (typeof arg !== "function") {
           offset = 1;
-          path2 = fn;
+          path3 = fn;
         }
       }
       var callbacks = flatten(slice.call(arguments, offset));
@@ -19166,8 +19166,8 @@ var require_router = __commonJS({
         if (typeof fn !== "function") {
           throw new TypeError("Router.use() requires a middleware function but got a " + gettype(fn));
         }
-        debug("use %o %s", path2, fn.name || "<anonymous>");
-        var layer = new Layer(path2, {
+        debug("use %o %s", path3, fn.name || "<anonymous>");
+        var layer = new Layer(path3, {
           sensitive: this.caseSensitive,
           strict: false,
           end: false
@@ -19177,9 +19177,9 @@ var require_router = __commonJS({
       }
       return this;
     };
-    proto.route = function route(path2) {
-      var route2 = new Route(path2);
-      var layer = new Layer(path2, {
+    proto.route = function route(path3) {
+      var route2 = new Route(path3);
+      var layer = new Layer(path3, {
         sensitive: this.caseSensitive,
         strict: this.strict,
         end: true
@@ -19189,8 +19189,8 @@ var require_router = __commonJS({
       return route2;
     };
     methods.concat("all").forEach(function(method) {
-      proto[method] = function(path2) {
-        var route = this.route(path2);
+      proto[method] = function(path3) {
+        var route = this.route(path3);
         route[method].apply(route, slice.call(arguments, 1));
         return this;
       };
@@ -19226,9 +19226,9 @@ var require_router = __commonJS({
       }
       return toString.call(obj).replace(objectRegExp, "$1");
     }
-    function matchLayer(layer, path2) {
+    function matchLayer(layer, path3) {
       try {
-        return layer.match(path2);
+        return layer.match(path3);
       } catch (err) {
         return err;
       }
@@ -19346,13 +19346,13 @@ var require_view = __commonJS({
   "node_modules/express/lib/view.js"(exports, module) {
     "use strict";
     var debug = require_src3()("express:view");
-    var path2 = __require("path");
-    var fs2 = __require("fs");
-    var dirname = path2.dirname;
-    var basename = path2.basename;
-    var extname = path2.extname;
-    var join = path2.join;
-    var resolve = path2.resolve;
+    var path3 = __require("path");
+    var fs3 = __require("fs");
+    var dirname = path3.dirname;
+    var basename = path3.basename;
+    var extname = path3.extname;
+    var join = path3.join;
+    var resolve = path3.resolve;
     module.exports = View;
     function View(name, options) {
       var opts = options || {};
@@ -19381,17 +19381,17 @@ var require_view = __commonJS({
       this.path = this.lookup(fileName);
     }
     View.prototype.lookup = function lookup(name) {
-      var path3;
+      var path4;
       var roots = [].concat(this.root);
       debug('lookup "%s"', name);
-      for (var i = 0; i < roots.length && !path3; i++) {
+      for (var i = 0; i < roots.length && !path4; i++) {
         var root = roots[i];
         var loc = resolve(root, name);
         var dir = dirname(loc);
         var file = basename(loc);
-        path3 = this.resolve(dir, file);
+        path4 = this.resolve(dir, file);
       }
-      return path3;
+      return path4;
     };
     View.prototype.render = function render(options, callback) {
       debug('render "%s"', this.path);
@@ -19399,21 +19399,21 @@ var require_view = __commonJS({
     };
     View.prototype.resolve = function resolve2(dir, file) {
       var ext = this.ext;
-      var path3 = join(dir, file);
-      var stat = tryStat(path3);
+      var path4 = join(dir, file);
+      var stat = tryStat(path4);
       if (stat && stat.isFile()) {
-        return path3;
+        return path4;
       }
-      path3 = join(dir, basename(file, ext), "index" + ext);
-      stat = tryStat(path3);
+      path4 = join(dir, basename(file, ext), "index" + ext);
+      stat = tryStat(path4);
       if (stat && stat.isFile()) {
-        return path3;
+        return path4;
       }
     };
-    function tryStat(path3) {
-      debug('stat "%s"', path3);
+    function tryStat(path4) {
+      debug('stat "%s"', path4);
       try {
-        return fs2.statSync(path3);
+        return fs3.statSync(path4);
       } catch (e) {
         return void 0;
       }
@@ -20018,8 +20018,8 @@ var require_node4 = __commonJS({
           }
           break;
         case "FILE":
-          var fs2 = __require("fs");
-          stream2 = new fs2.SyncWriteStream(fd2, { autoClose: false });
+          var fs3 = __require("fs");
+          stream2 = new fs3.SyncWriteStream(fd2, { autoClose: false });
           stream2._type = "fs";
           break;
         case "PIPE":
@@ -20071,14 +20071,14 @@ var require_etag = __commonJS({
   "node_modules/etag/index.js"(exports, module) {
     "use strict";
     module.exports = etag;
-    var crypto = __require("crypto");
+    var crypto2 = __require("crypto");
     var Stats = __require("fs").Stats;
     var toString = Object.prototype.toString;
     function entitytag(entity) {
       if (entity.length === 0) {
         return '"0-2jmj7l5rSw0yVb/vlWAYkK/YBwk"';
       }
-      var hash = crypto.createHash("sha1").update(entity, "utf8").digest("base64").substring(0, 27);
+      var hash = crypto2.createHash("sha1").update(entity, "utf8").digest("base64").substring(0, 27);
       var len = typeof entity === "string" ? Buffer.byteLength(entity, "utf8") : entity.length;
       return '"' + len.toString(16) + "-" + hash + '"';
     }
@@ -20191,8 +20191,8 @@ var require_types = __commonJS({
 // node_modules/mime/mime.js
 var require_mime = __commonJS({
   "node_modules/mime/mime.js"(exports, module) {
-    var path2 = __require("path");
-    var fs2 = __require("fs");
+    var path3 = __require("path");
+    var fs3 = __require("fs");
     function Mime() {
       this.types = /* @__PURE__ */ Object.create(null);
       this.extensions = /* @__PURE__ */ Object.create(null);
@@ -20213,7 +20213,7 @@ var require_mime = __commonJS({
     };
     Mime.prototype.load = function(file) {
       this._loading = file;
-      var map = {}, content = fs2.readFileSync(file, "ascii"), lines = content.split(/[\r\n]+/);
+      var map = {}, content = fs3.readFileSync(file, "ascii"), lines = content.split(/[\r\n]+/);
       lines.forEach(function(line) {
         var fields = line.replace(/\s*#.*|^\s*|\s*$/g, "").split(/\s+/);
         map[fields.shift()] = fields;
@@ -20221,8 +20221,8 @@ var require_mime = __commonJS({
       this.define(map);
       this._loading = null;
     };
-    Mime.prototype.lookup = function(path3, fallback) {
-      var ext = path3.replace(/^.*[\.\/\\]/, "").toLowerCase();
+    Mime.prototype.lookup = function(path4, fallback) {
+      var ext = path4.replace(/^.*[\.\/\\]/, "").toLowerCase();
       return this.types[ext] || fallback || this.default_type;
     };
     Mime.prototype.extension = function(mimeType) {
@@ -20451,33 +20451,33 @@ var require_send = __commonJS({
     var escapeHtml2 = require_escape_html();
     var etag = require_etag();
     var fresh = require_fresh();
-    var fs2 = __require("fs");
+    var fs3 = __require("fs");
     var mime = require_mime();
     var ms = require_ms5();
     var onFinished = require_on_finished();
     var parseRange = require_range_parser();
-    var path2 = __require("path");
+    var path3 = __require("path");
     var statuses = require_statuses();
     var Stream = __require("stream");
     var util2 = __require("util");
-    var extname = path2.extname;
-    var join = path2.join;
-    var normalize = path2.normalize;
-    var resolve = path2.resolve;
-    var sep = path2.sep;
+    var extname = path3.extname;
+    var join = path3.join;
+    var normalize = path3.normalize;
+    var resolve = path3.resolve;
+    var sep = path3.sep;
     var BYTES_RANGE_REGEXP = /^ *bytes=/;
     var MAX_MAXAGE = 60 * 60 * 24 * 365 * 1e3;
     var UP_PATH_REGEXP = /(?:^|[\\/])\.\.(?:[\\/]|$)/;
     module.exports = send;
     module.exports.mime = mime;
-    function send(req, path3, options) {
-      return new SendStream(req, path3, options);
+    function send(req, path4, options) {
+      return new SendStream(req, path4, options);
     }
-    function SendStream(req, path3, options) {
+    function SendStream(req, path4, options) {
       Stream.call(this);
       var opts = options || {};
       this.options = opts;
-      this.path = path3;
+      this.path = path4;
       this.req = req;
       this._acceptRanges = opts.acceptRanges !== void 0 ? Boolean(opts.acceptRanges) : true;
       this._cacheControl = opts.cacheControl !== void 0 ? Boolean(opts.cacheControl) : true;
@@ -20523,8 +20523,8 @@ var require_send = __commonJS({
       this._index = index2;
       return this;
     }, "send.index: pass index as option");
-    SendStream.prototype.root = function root(path3) {
-      this._root = resolve(String(path3));
+    SendStream.prototype.root = function root(path4) {
+      this._root = resolve(String(path4));
       debug("root %s", this._root);
       return this;
     };
@@ -20637,10 +20637,10 @@ var require_send = __commonJS({
       var lastModified = this.res.getHeader("Last-Modified");
       return parseHttpDate(lastModified) <= parseHttpDate(ifRange);
     };
-    SendStream.prototype.redirect = function redirect(path3) {
+    SendStream.prototype.redirect = function redirect(path4) {
       var res = this.res;
       if (hasListeners(this, "directory")) {
-        this.emit("directory", res, path3);
+        this.emit("directory", res, path4);
         return;
       }
       if (this.hasTrailingSlash()) {
@@ -20660,42 +20660,42 @@ var require_send = __commonJS({
     SendStream.prototype.pipe = function pipe(res) {
       var root = this._root;
       this.res = res;
-      var path3 = decode(this.path);
-      if (path3 === -1) {
+      var path4 = decode(this.path);
+      if (path4 === -1) {
         this.error(400);
         return res;
       }
-      if (~path3.indexOf("\0")) {
+      if (~path4.indexOf("\0")) {
         this.error(400);
         return res;
       }
       var parts;
       if (root !== null) {
-        if (path3) {
-          path3 = normalize("." + sep + path3);
+        if (path4) {
+          path4 = normalize("." + sep + path4);
         }
-        if (UP_PATH_REGEXP.test(path3)) {
-          debug('malicious path "%s"', path3);
+        if (UP_PATH_REGEXP.test(path4)) {
+          debug('malicious path "%s"', path4);
           this.error(403);
           return res;
         }
-        parts = path3.split(sep);
-        path3 = normalize(join(root, path3));
+        parts = path4.split(sep);
+        path4 = normalize(join(root, path4));
       } else {
-        if (UP_PATH_REGEXP.test(path3)) {
-          debug('malicious path "%s"', path3);
+        if (UP_PATH_REGEXP.test(path4)) {
+          debug('malicious path "%s"', path4);
           this.error(403);
           return res;
         }
-        parts = normalize(path3).split(sep);
-        path3 = resolve(path3);
+        parts = normalize(path4).split(sep);
+        path4 = resolve(path4);
       }
       if (containsDotFile(parts)) {
         var access = this._dotfiles;
         if (access === void 0) {
           access = parts[parts.length - 1][0] === "." ? this._hidden ? "allow" : "ignore" : "allow";
         }
-        debug('%s dotfile "%s"', access, path3);
+        debug('%s dotfile "%s"', access, path4);
         switch (access) {
           case "allow":
             break;
@@ -20709,13 +20709,13 @@ var require_send = __commonJS({
         }
       }
       if (this._index.length && this.hasTrailingSlash()) {
-        this.sendIndex(path3);
+        this.sendIndex(path4);
         return res;
       }
-      this.sendFile(path3);
+      this.sendFile(path4);
       return res;
     };
-    SendStream.prototype.send = function send2(path3, stat) {
+    SendStream.prototype.send = function send2(path4, stat) {
       var len = stat.size;
       var options = this.options;
       var opts = {};
@@ -20727,9 +20727,9 @@ var require_send = __commonJS({
         this.headersAlreadySent();
         return;
       }
-      debug('pipe "%s"', path3);
-      this.setHeader(path3, stat);
-      this.type(path3);
+      debug('pipe "%s"', path4);
+      this.setHeader(path4, stat);
+      this.type(path4);
       if (this.isConditionalGET()) {
         if (this.isPreconditionFailure()) {
           this.error(412);
@@ -20778,28 +20778,28 @@ var require_send = __commonJS({
         res.end();
         return;
       }
-      this.stream(path3, opts);
+      this.stream(path4, opts);
     };
-    SendStream.prototype.sendFile = function sendFile(path3) {
+    SendStream.prototype.sendFile = function sendFile(path4) {
       var i = 0;
       var self = this;
-      debug('stat "%s"', path3);
-      fs2.stat(path3, function onstat(err, stat) {
-        if (err && err.code === "ENOENT" && !extname(path3) && path3[path3.length - 1] !== sep) {
+      debug('stat "%s"', path4);
+      fs3.stat(path4, function onstat(err, stat) {
+        if (err && err.code === "ENOENT" && !extname(path4) && path4[path4.length - 1] !== sep) {
           return next(err);
         }
         if (err) return self.onStatError(err);
-        if (stat.isDirectory()) return self.redirect(path3);
-        self.emit("file", path3, stat);
-        self.send(path3, stat);
+        if (stat.isDirectory()) return self.redirect(path4);
+        self.emit("file", path4, stat);
+        self.send(path4, stat);
       });
       function next(err) {
         if (self._extensions.length <= i) {
           return err ? self.onStatError(err) : self.error(404);
         }
-        var p = path3 + "." + self._extensions[i++];
+        var p = path4 + "." + self._extensions[i++];
         debug('stat "%s"', p);
-        fs2.stat(p, function(err2, stat) {
+        fs3.stat(p, function(err2, stat) {
           if (err2) return next(err2);
           if (stat.isDirectory()) return next();
           self.emit("file", p, stat);
@@ -20807,7 +20807,7 @@ var require_send = __commonJS({
         });
       }
     };
-    SendStream.prototype.sendIndex = function sendIndex(path3) {
+    SendStream.prototype.sendIndex = function sendIndex(path4) {
       var i = -1;
       var self = this;
       function next(err) {
@@ -20815,9 +20815,9 @@ var require_send = __commonJS({
           if (err) return self.onStatError(err);
           return self.error(404);
         }
-        var p = join(path3, self._index[i]);
+        var p = join(path4, self._index[i]);
         debug('stat "%s"', p);
-        fs2.stat(p, function(err2, stat) {
+        fs3.stat(p, function(err2, stat) {
           if (err2) return next(err2);
           if (stat.isDirectory()) return next();
           self.emit("file", p, stat);
@@ -20826,10 +20826,10 @@ var require_send = __commonJS({
       }
       next();
     };
-    SendStream.prototype.stream = function stream(path3, options) {
+    SendStream.prototype.stream = function stream(path4, options) {
       var self = this;
       var res = this.res;
-      var stream2 = fs2.createReadStream(path3, options);
+      var stream2 = fs3.createReadStream(path4, options);
       this.emit("stream", stream2);
       stream2.pipe(res);
       function cleanup() {
@@ -20844,10 +20844,10 @@ var require_send = __commonJS({
         self.emit("end");
       });
     };
-    SendStream.prototype.type = function type(path3) {
+    SendStream.prototype.type = function type(path4) {
       var res = this.res;
       if (res.getHeader("Content-Type")) return;
-      var type2 = mime.lookup(path3);
+      var type2 = mime.lookup(path4);
       if (!type2) {
         debug("no content-type");
         return;
@@ -20856,9 +20856,9 @@ var require_send = __commonJS({
       debug("content-type %s", type2);
       res.setHeader("Content-Type", type2 + (charset ? "; charset=" + charset : ""));
     };
-    SendStream.prototype.setHeader = function setHeader(path3, stat) {
+    SendStream.prototype.setHeader = function setHeader(path4, stat) {
       var res = this.res;
-      this.emit("headers", res, path3, stat);
+      this.emit("headers", res, path4, stat);
       if (this._acceptRanges && !res.getHeader("Accept-Ranges")) {
         debug("accept ranges");
         res.setHeader("Accept-Ranges", "bytes");
@@ -20917,9 +20917,9 @@ var require_send = __commonJS({
       }
       return err instanceof Error ? createError(status, err, { expose: false }) : createError(status, err);
     }
-    function decode(path3) {
+    function decode(path4) {
       try {
-        return decodeURIComponent(path3);
+        return decodeURIComponent(path4);
       } catch (err) {
         return -1;
       }
@@ -21828,10 +21828,10 @@ var require_utils2 = __commonJS({
     var querystring = __require("querystring");
     exports.etag = createETagGenerator({ weak: false });
     exports.wetag = createETagGenerator({ weak: true });
-    exports.isAbsolute = function(path2) {
-      if ("/" === path2[0]) return true;
-      if (":" === path2[1] && ("\\" === path2[2] || "/" === path2[2])) return true;
-      if ("\\\\" === path2.substring(0, 2)) return true;
+    exports.isAbsolute = function(path3) {
+      if ("/" === path3[0]) return true;
+      if (":" === path3[1] && ("\\" === path3[2] || "/" === path3[2])) return true;
+      if ("\\\\" === path3.substring(0, 2)) return true;
     };
     exports.flatten = deprecate.function(
       flatten,
@@ -22043,7 +22043,7 @@ var require_application = __commonJS({
     };
     app2.use = function use(fn) {
       var offset = 0;
-      var path2 = "/";
+      var path3 = "/";
       if (typeof fn !== "function") {
         var arg = fn;
         while (Array.isArray(arg) && arg.length !== 0) {
@@ -22051,7 +22051,7 @@ var require_application = __commonJS({
         }
         if (typeof arg !== "function") {
           offset = 1;
-          path2 = fn;
+          path3 = fn;
         }
       }
       var fns = flatten(slice.call(arguments, offset));
@@ -22062,12 +22062,12 @@ var require_application = __commonJS({
       var router = this._router;
       fns.forEach(function(fn2) {
         if (!fn2 || !fn2.handle || !fn2.set) {
-          return router.use(path2, fn2);
+          return router.use(path3, fn2);
         }
-        debug(".use app under %s", path2);
-        fn2.mountpath = path2;
+        debug(".use app under %s", path3);
+        fn2.mountpath = path3;
         fn2.parent = this;
-        router.use(path2, function mounted_app(req, res, next) {
+        router.use(path3, function mounted_app(req, res, next) {
           var orig = req.app;
           fn2.handle(req, res, function(err) {
             setPrototypeOf(req, orig.request);
@@ -22079,9 +22079,9 @@ var require_application = __commonJS({
       }, this);
       return this;
     };
-    app2.route = function route(path2) {
+    app2.route = function route(path3) {
       this.lazyrouter();
-      return this._router.route(path2);
+      return this._router.route(path3);
     };
     app2.engine = function engine(ext, fn) {
       if (typeof fn !== "function") {
@@ -22132,7 +22132,7 @@ var require_application = __commonJS({
       }
       return this;
     };
-    app2.path = function path2() {
+    app2.path = function path3() {
       return this.parent ? this.parent.path() + this.mountpath : "";
     };
     app2.enabled = function enabled(setting) {
@@ -22148,19 +22148,19 @@ var require_application = __commonJS({
       return this.set(setting, false);
     };
     methods.forEach(function(method) {
-      app2[method] = function(path2) {
+      app2[method] = function(path3) {
         if (method === "get" && arguments.length === 1) {
-          return this.set(path2);
+          return this.set(path3);
         }
         this.lazyrouter();
-        var route = this._router.route(path2);
+        var route = this._router.route(path3);
         route[method].apply(route, slice.call(arguments, 1));
         return this;
       };
     });
-    app2.all = function all(path2) {
+    app2.all = function all(path3) {
       this.lazyrouter();
-      var route = this._router.route(path2);
+      var route = this._router.route(path3);
       var args = slice.call(arguments, 1);
       for (var i = 0; i < methods.length; i++) {
         route[methods[i]].apply(route, args);
@@ -22919,7 +22919,7 @@ var require_request = __commonJS({
       var subdomains2 = !isIP(hostname) ? hostname.split(".").reverse() : [hostname];
       return subdomains2.slice(offset);
     });
-    defineGetter(req, "path", function path2() {
+    defineGetter(req, "path", function path3() {
       return parse(this).pathname;
     });
     defineGetter(req, "hostname", function hostname() {
@@ -22971,11 +22971,11 @@ var require_request = __commonJS({
 // node_modules/cookie-signature/index.js
 var require_cookie_signature = __commonJS({
   "node_modules/cookie-signature/index.js"(exports) {
-    var crypto = __require("crypto");
+    var crypto2 = __require("crypto");
     exports.sign = function(val, secret) {
       if ("string" !== typeof val) throw new TypeError("Cookie value must be provided as a string.");
       if (null == secret) throw new TypeError("Secret key must be provided.");
-      return val + "." + crypto.createHmac("sha256", secret).update(val).digest("base64").replace(/\=+$/, "");
+      return val + "." + crypto2.createHmac("sha256", secret).update(val).digest("base64").replace(/\=+$/, "");
     };
     exports.unsign = function(val, secret) {
       if ("string" !== typeof val) throw new TypeError("Signed cookie string must be provided.");
@@ -22984,7 +22984,7 @@ var require_cookie_signature = __commonJS({
       return sha1(mac) == sha1(val) ? str : false;
     };
     function sha1(str) {
-      return crypto.createHash("sha1").update(str).digest("hex");
+      return crypto2.createHash("sha1").update(str).digest("hex");
     }
   }
 });
@@ -23241,7 +23241,7 @@ var require_response = __commonJS({
     var http = __require("http");
     var isAbsolute = require_utils2().isAbsolute;
     var onFinished = require_on_finished();
-    var path2 = __require("path");
+    var path3 = __require("path");
     var statuses = require_statuses();
     var merge = require_utils_merge();
     var sign = require_cookie_signature().sign;
@@ -23250,9 +23250,9 @@ var require_response = __commonJS({
     var setCharset = require_utils2().setCharset;
     var cookie = require_cookie();
     var send = require_send();
-    var extname = path2.extname;
+    var extname = path3.extname;
     var mime = send.mime;
-    var resolve = path2.resolve;
+    var resolve = path3.resolve;
     var vary = require_vary();
     var res = Object.create(http.ServerResponse.prototype);
     module.exports = res;
@@ -23429,26 +23429,26 @@ var require_response = __commonJS({
       this.type("txt");
       return this.send(body);
     };
-    res.sendFile = function sendFile(path3, options, callback) {
+    res.sendFile = function sendFile(path4, options, callback) {
       var done = callback;
       var req = this.req;
       var res2 = this;
       var next = req.next;
       var opts = options || {};
-      if (!path3) {
+      if (!path4) {
         throw new TypeError("path argument is required to res.sendFile");
       }
-      if (typeof path3 !== "string") {
+      if (typeof path4 !== "string") {
         throw new TypeError("path must be a string to res.sendFile");
       }
       if (typeof options === "function") {
         done = options;
         opts = {};
       }
-      if (!opts.root && !isAbsolute(path3)) {
+      if (!opts.root && !isAbsolute(path4)) {
         throw new TypeError("path must be absolute or specify root to res.sendFile");
       }
-      var pathname = encodeURI(path3);
+      var pathname = encodeURI(path4);
       var file = send(req, pathname, opts);
       sendfile(res2, file, opts, function(err) {
         if (done) return done(err);
@@ -23458,7 +23458,7 @@ var require_response = __commonJS({
         }
       });
     };
-    res.sendfile = function(path3, options, callback) {
+    res.sendfile = function(path4, options, callback) {
       var done = callback;
       var req = this.req;
       var res2 = this;
@@ -23468,7 +23468,7 @@ var require_response = __commonJS({
         done = options;
         opts = {};
       }
-      var file = send(req, path3, opts);
+      var file = send(req, path4, opts);
       sendfile(res2, file, opts, function(err) {
         if (done) return done(err);
         if (err && err.code === "EISDIR") return next();
@@ -23481,7 +23481,7 @@ var require_response = __commonJS({
       res.sendfile,
       "res.sendfile: Use res.sendFile instead"
     );
-    res.download = function download(path3, filename, options, callback) {
+    res.download = function download(path4, filename, options, callback) {
       var done = callback;
       var name = filename;
       var opts = options || null;
@@ -23498,7 +23498,7 @@ var require_response = __commonJS({
         opts = filename;
       }
       var headers = {
-        "Content-Disposition": contentDisposition(name || path3)
+        "Content-Disposition": contentDisposition(name || path4)
       };
       if (opts && opts.headers) {
         var keys = Object.keys(opts.headers);
@@ -23511,7 +23511,7 @@ var require_response = __commonJS({
       }
       opts = Object.create(opts);
       opts.headers = headers;
-      var fullPath = !opts.root ? resolve(path3) : path3;
+      var fullPath = !opts.root ? resolve(path4) : path4;
       return this.sendFile(fullPath, opts, done);
     };
     res.contentType = res.type = function contentType(type) {
@@ -23812,11 +23812,11 @@ var require_serve_static = __commonJS({
         }
         var forwardError = !fallthrough;
         var originalUrl = parseUrl.original(req);
-        var path2 = parseUrl(req).pathname;
-        if (path2 === "/" && originalUrl.pathname.substr(-1) !== "/") {
-          path2 = "";
+        var path3 = parseUrl(req).pathname;
+        if (path3 === "/" && originalUrl.pathname.substr(-1) !== "/") {
+          path3 = "";
         }
-        var stream = send(req, path2, opts);
+        var stream = send(req, path3, opts);
         stream.on("directory", onDirectory);
         if (setHeaders) {
           stream.on("headers", setHeaders);
@@ -24087,8 +24087,8 @@ var require_cookies = __commonJS({
         if (urlparts.hostname !== cookie.domain && (cookie.domain.charAt(0) !== "." || ("." + urlparts.hostname).substr(-cookie.domain.length) !== cookie.domain)) {
           return false;
         }
-        let path2 = this.getPath(urlparts.pathname);
-        if (path2.substr(0, cookie.path.length) !== cookie.path) {
+        let path3 = this.getPath(urlparts.pathname);
+        if (path3.substr(0, cookie.path.length) !== cookie.path) {
           return false;
         }
         if (cookie.secure && urlparts.protocol !== "https:") {
@@ -24148,16 +24148,16 @@ var require_cookies = __commonJS({
        * @returns {String} Normalized path
        */
       getPath(pathname) {
-        let path2 = (pathname || "/").split("/");
-        path2.pop();
-        path2 = path2.join("/").trim();
-        if (path2.charAt(0) !== "/") {
-          path2 = "/" + path2;
+        let path3 = (pathname || "/").split("/");
+        path3.pop();
+        path3 = path3.join("/").trim();
+        if (path3.charAt(0) !== "/") {
+          path3 = "/" + path3;
         }
-        if (path2.substr(-1) !== "/") {
-          path2 += "/";
+        if (path3.substr(-1) !== "/") {
+          path3 += "/";
         }
-        return path2;
+        return path3;
       }
     };
     module.exports = Cookies;
@@ -24458,15 +24458,15 @@ var require_shared = __commonJS({
     "use strict";
     var urllib = __require("url");
     var util2 = __require("util");
-    var fs2 = __require("fs");
+    var fs3 = __require("fs");
     var nmfetch = require_fetch();
     var dns = __require("dns");
     var net = __require("net");
-    var os2 = __require("os");
+    var os3 = __require("os");
     var DNS_TTL = 5 * 60 * 1e3;
     var networkInterfaces;
     try {
-      networkInterfaces = os2.networkInterfaces();
+      networkInterfaces = os3.networkInterfaces();
     } catch (err) {
     }
     module.exports.networkInterfaces = networkInterfaces;
@@ -24844,7 +24844,7 @@ var require_shared = __commonJS({
           }
           return callback(null, parsedDataUri.data);
         } else if (content.path) {
-          return resolveStream(fs2.createReadStream(content.path), callback);
+          return resolveStream(fs3.createReadStream(content.path), callback);
         }
       }
       if (typeof data[key].content === "string" && !["utf8", "usascii", "ascii"].includes(encoding)) {
@@ -24968,7 +24968,7 @@ var require_shared = __commonJS({
 var require_mime_types2 = __commonJS({
   "node_modules/nodemailer/lib/mime-funcs/mime-types.js"(exports, module) {
     "use strict";
-    var path2 = __require("path");
+    var path3 = __require("path");
     var defaultMimeType = "application/octet-stream";
     var defaultExtension = "bin";
     var mimeTypes = /* @__PURE__ */ new Map([
@@ -27026,7 +27026,7 @@ var require_mime_types2 = __commonJS({
         if (!filename) {
           return defaultMimeType;
         }
-        let parsed = path2.parse(filename);
+        let parsed = path3.parse(filename);
         let extension = (parsed.ext.substr(1) || parsed.name || "").split("?").shift().trim().toLowerCase();
         let value = defaultMimeType;
         if (extensions.has(extension)) {
@@ -28427,8 +28427,8 @@ var require_le_unix = __commonJS({
 var require_mime_node = __commonJS({
   "node_modules/nodemailer/lib/mime-node/index.js"(exports, module) {
     "use strict";
-    var crypto = __require("crypto");
-    var fs2 = __require("fs");
+    var crypto2 = __require("crypto");
+    var fs3 = __require("fs");
     var punycode = require_punycode();
     var PassThrough = __require("stream").PassThrough;
     var shared = require_shared();
@@ -28444,7 +28444,7 @@ var require_mime_node = __commonJS({
       constructor(contentType, options) {
         this.nodeCounter = 0;
         options = options || {};
-        this.baseBoundary = options.baseBoundary || crypto.randomBytes(8).toString("hex");
+        this.baseBoundary = options.baseBoundary || crypto2.randomBytes(8).toString("hex");
         this.boundaryPrefix = options.boundaryPrefix || "--_NmP";
         this.disableFileAccess = !!options.disableFileAccess;
         this.disableUrlAccess = !!options.disableUrlAccess;
@@ -29143,7 +29143,7 @@ var require_mime_node = __commonJS({
             setImmediate(() => contentStream.emit("error", new Error("File access rejected for " + content.path)));
             return contentStream;
           }
-          return fs2.createReadStream(content.path);
+          return fs3.createReadStream(content.path);
         } else if (content && typeof content.href === "string") {
           if (this.disableUrlAccess) {
             contentStream = new PassThrough();
@@ -29387,8 +29387,8 @@ var require_mime_node = __commonJS({
       _generateMessageId() {
         return "<" + [2, 2, 2, 6].reduce(
           // crux to generate UUID-like random strings
-          (prev, len) => prev + "-" + crypto.randomBytes(len).toString("hex"),
-          crypto.randomBytes(4).toString("hex")
+          (prev, len) => prev + "-" + crypto2.randomBytes(len).toString("hex"),
+          crypto2.randomBytes(4).toString("hex")
         ) + "@" + // try to use the domain of the FROM address or fallback to server hostname
         (this.getEnvelope().from || this.hostname || "localhost").split("@").pop() + ">";
       }
@@ -29979,14 +29979,14 @@ var require_relaxed_body = __commonJS({
   "node_modules/nodemailer/lib/dkim/relaxed-body.js"(exports, module) {
     "use strict";
     var Transform = __require("stream").Transform;
-    var crypto = __require("crypto");
+    var crypto2 = __require("crypto");
     var RelaxedBody = class extends Transform {
       constructor(options) {
         super();
         options = options || {};
         this.chunkBuffer = [];
         this.chunkBufferLen = 0;
-        this.bodyHash = crypto.createHash(options.hashAlgo || "sha1");
+        this.bodyHash = crypto2.createHash(options.hashAlgo || "sha1");
         this.remainder = "";
         this.byteLength = 0;
         this.debug = options.debug;
@@ -30089,7 +30089,7 @@ var require_sign2 = __commonJS({
     "use strict";
     var punycode = require_punycode();
     var mimeFuncs = require_mime_funcs();
-    var crypto = __require("crypto");
+    var crypto2 = __require("crypto");
     module.exports = (headers, hashAlgo, bodyHash, options) => {
       options = options || {};
       let defaultFieldNames = "From:Sender:Reply-To:Subject:Date:Message-ID:To:Cc:MIME-Version:Content-Type:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive";
@@ -30098,7 +30098,7 @@ var require_sign2 = __commonJS({
       let dkimHeader = generateDKIMHeader(options.domainName, options.keySelector, canonicalizedHeaderData.fieldNames, hashAlgo, bodyHash);
       let signer, signature;
       canonicalizedHeaderData.headers += "dkim-signature:" + relaxedHeaderLine(dkimHeader);
-      signer = crypto.createSign(("rsa-" + hashAlgo).toUpperCase());
+      signer = crypto2.createSign(("rsa-" + hashAlgo).toUpperCase());
       signer.update(canonicalizedHeaderData.headers);
       try {
         signature = signer.sign(options.privateKey, "base64");
@@ -30164,9 +30164,9 @@ var require_dkim = __commonJS({
     var RelaxedBody = require_relaxed_body();
     var sign = require_sign2();
     var PassThrough = __require("stream").PassThrough;
-    var fs2 = __require("fs");
-    var path2 = __require("path");
-    var crypto = __require("crypto");
+    var fs3 = __require("fs");
+    var path3 = __require("path");
+    var crypto2 = __require("crypto");
     var DKIM_ALGO = "sha256";
     var MAX_MESSAGE_SIZE = 128 * 1024;
     var DKIMSigner = class {
@@ -30179,7 +30179,7 @@ var require_dkim = __commonJS({
         this.chunks = [];
         this.chunklen = 0;
         this.readPos = 0;
-        this.cachePath = this.cacheDir ? path2.join(this.cacheDir, "message." + Date.now() + "-" + crypto.randomBytes(14).toString("hex")) : false;
+        this.cachePath = this.cacheDir ? path3.join(this.cacheDir, "message." + Date.now() + "-" + crypto2.randomBytes(14).toString("hex")) : false;
         this.cache = false;
         this.headers = false;
         this.bodyHash = false;
@@ -30199,10 +30199,10 @@ var require_dkim = __commonJS({
         if (!this.cache || !this.cachePath) {
           return;
         }
-        fs2.unlink(this.cachePath, () => false);
+        fs3.unlink(this.cachePath, () => false);
       }
       createReadCache() {
-        this.cache = fs2.createReadStream(this.cachePath);
+        this.cache = fs3.createReadStream(this.cachePath);
         this.cache.once("error", (err) => {
           this.cleanup();
           this.output.emit("error", err);
@@ -30258,7 +30258,7 @@ var require_dkim = __commonJS({
       }
       createWriteCache() {
         this.output.usingCache = true;
-        this.cache = fs2.createWriteStream(this.cachePath);
+        this.cache = fs3.createWriteStream(this.cachePath);
         this.cache.once("error", (err) => {
           this.cleanup();
           this.relaxedBody.unpipe(this.cache);
@@ -30735,7 +30735,7 @@ var require_mailer = __commonJS({
     var MailMessage = require_mail_message();
     var net = __require("net");
     var dns = __require("dns");
-    var crypto = __require("crypto");
+    var crypto2 = __require("crypto");
     var Mail = class extends EventEmitter {
       constructor(transporter, options, defaults) {
         super();
@@ -31059,7 +31059,7 @@ var require_mailer = __commonJS({
           }
           let cidCounter = 0;
           html = (html || "").toString().replace(/(<img\b[^<>]{0,1024} src\s{0,20}=[\s"']{0,20})(data:([^;]+);[^"'>\s]+)/gi, (match, prefix, dataUri, mimeType) => {
-            let cid = crypto.randomBytes(10).toString("hex") + "@localhost";
+            let cid = crypto2.randomBytes(10).toString("hex") + "@localhost";
             if (!mail.data.attachments) {
               mail.data.attachments = [];
             }
@@ -31185,8 +31185,8 @@ var require_smtp_connection = __commonJS({
     var EventEmitter = __require("events").EventEmitter;
     var net = __require("net");
     var tls = __require("tls");
-    var os2 = __require("os");
-    var crypto = __require("crypto");
+    var os3 = __require("os");
+    var crypto2 = __require("crypto");
     var DataStream = require_data_stream();
     var PassThrough = __require("stream").PassThrough;
     var shared = require_shared();
@@ -31197,7 +31197,7 @@ var require_smtp_connection = __commonJS({
     var SMTPConnection = class extends EventEmitter {
       constructor(options) {
         super(options);
-        this.id = crypto.randomBytes(8).toString("base64").replace(/\W/g, "");
+        this.id = crypto2.randomBytes(8).toString("base64").replace(/\W/g, "");
         this.stage = "init";
         this.options = options || {};
         this.secureConnection = !!this.options.secure;
@@ -32290,7 +32290,7 @@ var require_smtp_connection = __commonJS({
         } else {
           challengeString = challengeMatch[1];
         }
-        let base64decoded = Buffer.from(challengeString, "base64").toString("ascii"), hmacMD5 = crypto.createHmac("md5", this._auth.credentials.pass);
+        let base64decoded = Buffer.from(challengeString, "base64").toString("ascii"), hmacMD5 = crypto2.createHmac("md5", this._auth.credentials.pass);
         hmacMD5.update(base64decoded);
         let prepended = this._auth.credentials.user + " " + hmacMD5.digest("hex");
         this._responseActions.push((str2) => {
@@ -32578,7 +32578,7 @@ var require_smtp_connection = __commonJS({
       _getHostname() {
         let defaultHostname;
         try {
-          defaultHostname = os2.hostname() || "";
+          defaultHostname = os3.hostname() || "";
         } catch (err) {
           defaultHostname = "localhost";
         }
@@ -32601,7 +32601,7 @@ var require_xoauth2 = __commonJS({
     "use strict";
     var Stream = __require("stream").Stream;
     var nmfetch = require_fetch();
-    var crypto = __require("crypto");
+    var crypto2 = __require("crypto");
     var shared = require_shared();
     var XOAuth2 = class extends Stream {
       constructor(options, logger) {
@@ -32892,7 +32892,7 @@ var require_xoauth2 = __commonJS({
        */
       jwtSignRS256(payload) {
         payload = ['{"alg":"RS256","typ":"JWT"}', JSON.stringify(payload)].map((val) => this.toBase64URL(val)).join(".");
-        let signature = crypto.createSign("RSA-SHA256").update(payload).sign(this.options.privateKey);
+        let signature = crypto2.createSign("RSA-SHA256").update(payload).sign(this.options.privateKey);
         return payload + "." + this.toBase64URL(signature);
       }
     };
@@ -35627,8 +35627,8 @@ function getErrorMap() {
 
 // node_modules/zod/v3/helpers/parseUtil.js
 var makeIssue = (params) => {
-  const { data, path: path2, errorMaps, issueData } = params;
-  const fullPath = [...path2, ...issueData.path || []];
+  const { data, path: path3, errorMaps, issueData } = params;
+  const fullPath = [...path3, ...issueData.path || []];
   const fullIssue = {
     ...issueData,
     path: fullPath
@@ -35744,11 +35744,11 @@ var errorUtil;
 
 // node_modules/zod/v3/types.js
 var ParseInputLazyPath = class {
-  constructor(parent, value, path2, key) {
+  constructor(parent, value, path3, key) {
     this._cachedPath = [];
     this.parent = parent;
     this.data = value;
-    this._path = path2;
+    this._path = path3;
     this._key = key;
   }
   get path() {
@@ -39231,8 +39231,8 @@ var MemStorage = class {
     };
     this.leads.set(id, lead);
     try {
-      const isServerless = Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
-      const dataDir = isServerless ? os.tmpdir() : path.resolve(process.cwd(), "data");
+      const isServerless2 = Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
+      const dataDir = isServerless2 ? os.tmpdir() : path.resolve(process.cwd(), "data");
       await fs.mkdir(dataDir, { recursive: true });
       const filePath = path.join(dataDir, "leads.json");
       let currentLeads = [];
@@ -39647,6 +39647,1905 @@ async function handleJobApply(req, res) {
   }
 }
 
+// server/terabox.ts
+import { Readable } from "stream";
+
+// server/terabox-sessions.ts
+import { randomBytes } from "crypto";
+var SESSION_TTL_MS = 2 * 60 * 60 * 1e3;
+var MAX_SESSIONS = 3e3;
+var sessions = /* @__PURE__ */ new Map();
+function purgeSessions() {
+  const now = Date.now();
+  sessions.forEach((s, id) => {
+    if (s.expiresAt <= now) sessions.delete(id);
+  });
+  if (sessions.size <= MAX_SESSIONS) return;
+  const sorted = Array.from(sessions.entries()).sort((a, b) => a[1].createdAt - b[1].createdAt);
+  for (const [id] of sorted.slice(0, sessions.size - MAX_SESSIONS)) sessions.delete(id);
+}
+function newSessionId() {
+  return randomBytes(18).toString("base64url");
+}
+function createPlaybackSession(input) {
+  purgeSessions();
+  let id = newSessionId();
+  while (sessions.has(id)) id = newSessionId();
+  const now = Date.now();
+  sessions.set(id, {
+    id,
+    uk: input.uk,
+    shareid: input.shareid,
+    fs_id: input.fs_id,
+    fileName: input.fileName,
+    quality: input.quality || "360",
+    size: input.size,
+    duration: input.duration,
+    thumbnail: input.thumbnail ?? null,
+    width: input.width,
+    height: input.height,
+    dlink: input.dlink ?? null,
+    shareUrl: input.shareUrl ?? null,
+    upstreamHeaders: input.upstreamHeaders ?? null,
+    mimeType: input.mimeType ?? null,
+    createdAt: now,
+    expiresAt: now + SESSION_TTL_MS
+  });
+  return id;
+}
+function getPlaybackSession(id) {
+  purgeSessions();
+  const session = sessions.get(id);
+  if (!session || session.expiresAt <= Date.now()) return null;
+  return session;
+}
+var PLAYBACK_QUALITY_OPTIONS = ["360", "480", "720", "1080", "1440", "2160"];
+function buildProtectedPlaybackPayload(sessionId, extra) {
+  const session = getPlaybackSession(sessionId);
+  const hasDlink = Boolean(session?.dlink);
+  return {
+    playbackId: sessionId,
+    fileName: session?.fileName ?? "Video",
+    quality: session?.quality ?? "360",
+    qualityOptions: [...PLAYBACK_QUALITY_OPTIONS],
+    thumbnail: session?.thumbnail ?? null,
+    /** Full file direct CDN dlink available via Toofani backend. */
+    fullFile: hasDlink,
+    /** Direct CDN streaming mode */
+    playbackMode: hasDlink ? "progressive" : "hls",
+    mimeType: session?.mimeType ?? "video/mp4",
+    /** Direct CDN stream via Cloudflare / streaming proxy */
+    streamUrl: hasDlink ? `/api/terabox/file/${sessionId}` : null,
+    needsRemux: false,
+    ...extra
+  };
+}
+
+// server/terabox.ts
+var HMAC_KEY = "iuuPc64E4Fhn0rTXEzrnbLph0o5qyEEa";
+var WORKER_BASE = "https://novacrew-terabox-proxy.teraboxhigh.workers.dev";
+function getVideoBackendBase() {
+  return process.env.VIDEO_BACKEND_URL?.trim().replace(/\/+$/, "") || "https://toofani-app.vercel.app";
+}
+function getTeraboxNdus() {
+  const raw = (process.env.TERABOX_NDUS ?? "").trim();
+  if (!raw) return null;
+  return raw.startsWith("ndus=") ? raw.slice(5) : raw;
+}
+function teraboxCookieHeader() {
+  const ndus = getTeraboxNdus();
+  return ndus ? `ndus=${ndus}` : void 0;
+}
+async function resolveViaVideoBackend(shareUrl) {
+  const base = getVideoBackendBase();
+  try {
+    const resp = await fetch(`${base}/api/link-info`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({ url: shareUrl }),
+      signal: AbortSignal.timeout(45e3)
+    });
+    if (!resp.ok) {
+      console.warn("[terabox:video-backend] link-info HTTP", resp.status);
+      return null;
+    }
+    const data = await resp.json();
+    const directUrl = data.data?.directUrl?.trim();
+    if (!data.success || !directUrl?.startsWith("http")) {
+      console.warn("[terabox:video-backend] no directUrl", data.error ?? "");
+      return null;
+    }
+    const headers = {};
+    const src = data.data?.headers ?? {};
+    for (const key of ["User-Agent", "Referer", "Origin", "Accept", "Accept-Language", "Cookie"]) {
+      const val = src[key];
+      if (typeof val === "string" && val) headers[key] = val;
+    }
+    return {
+      title: data.data?.title || "Video",
+      size: data.data?.size,
+      sizeHuman: data.data?.sizeHuman,
+      thumbnail: data.data?.thumbnail ?? null,
+      mimeType: data.data?.mimeType,
+      directUrl,
+      headers
+    };
+  } catch (e) {
+    console.warn("[terabox:video-backend]", e instanceof Error ? e.message : e);
+    return null;
+  }
+}
+function idsFromDirectUrl(directUrl) {
+  try {
+    const fid = new URL(directUrl).searchParams.get("fid") || "";
+    const parts = fid.split("-");
+    if (parts.length >= 3) {
+      return { uk: parts[0], fs_id: parts[parts.length - 1] };
+    }
+  } catch {
+  }
+  return {};
+}
+var resolveSchema = external_exports.object({
+  url: external_exports.string().trim().max(2048),
+  quality: external_exports.enum(["360", "480", "720", "1080", "1440", "2160"]).optional().default("360")
+});
+var TERABOX_HOSTS = [
+  "terabox.com",
+  "1024terabox.com",
+  "teraboxapp.com",
+  "terabox.app",
+  "4funbox.com",
+  "mirrobox.com",
+  "nephobox.com",
+  "freeterabox.com",
+  "terasharelink.com",
+  "tibibox.com",
+  "momerybox.com",
+  "terabox.fun",
+  "1024tera.com",
+  "teraboxlink.com",
+  "terasharefile.com"
+];
+var TERABOX_REDIRECT_HOSTS = ["terasharefile.com"];
+var DISKWALA_HOSTS = [
+  "diskwala.com",
+  "disk-wala.com",
+  "diskwala.app",
+  "disk-wala.app",
+  "diskwala.me",
+  "disk-wala.me",
+  "diskwala.net"
+];
+function hostMatches(host, hosts) {
+  return hosts.some((h) => host === h || host.endsWith(`.${h}`));
+}
+function isTeraboxUrl(url) {
+  try {
+    const host = new URL(url).hostname.toLowerCase();
+    return hostMatches(host, TERABOX_HOSTS);
+  } catch {
+    return false;
+  }
+}
+function isDiskwalaUrl(url) {
+  try {
+    const host = new URL(url).hostname.toLowerCase();
+    return hostMatches(host, DISKWALA_HOSTS);
+  } catch {
+    return false;
+  }
+}
+function extractDiskwalaCode(input) {
+  const bare = input.trim();
+  const m = bare.match(/([a-f0-9]{24})/i);
+  return m?.[1] ?? null;
+}
+async function resolveDiskwalaViaBackend(shareUrl) {
+  const base = getVideoBackendBase();
+  const code = extractDiskwalaCode(shareUrl);
+  const canonicalUrl = code ? `https://diskwala.com/app/${code}` : shareUrl;
+  const candidateUrls = [
+    `${base}/api/dw/info?url=${encodeURIComponent(canonicalUrl)}`,
+    `${base}/api/dw/info?url=${encodeURIComponent(shareUrl)}`
+  ];
+  for (const fetchUrl of candidateUrls) {
+    try {
+      const resp = await fetch(fetchUrl, {
+        headers: { Accept: "application/json" },
+        signal: AbortSignal.timeout(2e4)
+      });
+      if (!resp.ok) continue;
+      const data = await resp.json();
+      if (!data.success || !data.data) continue;
+      const d = data.data;
+      const directUrl = d.streamUrl || d.downloadUrl || d.directUrl;
+      if (!directUrl?.startsWith("http")) continue;
+      return {
+        title: d.title || "DiskWala Video",
+        size: d.sizeBytes ? Number(d.sizeBytes) : void 0,
+        sizeHuman: d.size,
+        thumbnail: d.thumbnail ?? null,
+        mimeType: d.mimeType || "video/mp4",
+        directUrl,
+        headers: d.headers || {
+          "User-Agent": BROWSER_HEADERS["User-Agent"],
+          Referer: "https://www.diskwala.com/",
+          Accept: "*/*"
+        }
+      };
+    } catch {
+    }
+  }
+  try {
+    const resp = await fetch(`${base}/api/link-info`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({ url: canonicalUrl }),
+      signal: AbortSignal.timeout(2e4)
+    });
+    if (resp.ok) {
+      const data = await resp.json();
+      const directUrl = data.data?.directUrl?.trim();
+      if (data.success && directUrl?.startsWith("http")) {
+        return {
+          title: data.data?.title || "DiskWala Video",
+          size: data.data?.size,
+          sizeHuman: data.data?.sizeHuman,
+          thumbnail: data.data?.thumbnail ?? null,
+          mimeType: data.data?.mimeType || "video/mp4",
+          directUrl,
+          headers: data.data?.headers || {
+            "User-Agent": BROWSER_HEADERS["User-Agent"],
+            Referer: "https://www.diskwala.com/",
+            Accept: "*/*"
+          }
+        };
+      }
+    }
+  } catch (e) {
+    console.warn("[terabox:diskwala]", e instanceof Error ? e.message : e);
+  }
+  return null;
+}
+function extractSurlVariants(input) {
+  const bare = input.replace(/\s+/g, "");
+  const raw = /* @__PURE__ */ new Set();
+  if (/^[A-Za-z0-9_-]+$/.test(bare) && bare.length >= 8) raw.add(bare);
+  try {
+    const u = new URL(bare.startsWith("http") ? bare : `https://${bare}`);
+    const s = u.searchParams.get("surl");
+    if (s) raw.add(s);
+  } catch {
+  }
+  const m = bare.match(/\/s\/([A-Za-z0-9_-]+)/);
+  if (m?.[1]) raw.add(m[1]);
+  const stripped = [];
+  const withOne = [];
+  for (const code of Array.from(raw)) {
+    if (!code) continue;
+    if (code.startsWith("1") && code.length > 10) {
+      withOne.push(code);
+      stripped.push(code.slice(1));
+    } else {
+      stripped.push(code);
+      withOne.push(`1${code}`);
+    }
+  }
+  return Array.from(/* @__PURE__ */ new Set([...stripped, ...withOne]));
+}
+function normalizeShareUrl(input) {
+  let bare = input.trim().replace(/[\u200B-\u200D\uFEFF]/g, "");
+  if (!/^https?:\/\//i.test(bare)) bare = `https://${bare}`;
+  return bare;
+}
+async function resolveRedirectUrl(url) {
+  try {
+    const resp = await fetch(url, {
+      redirect: "manual",
+      headers: { "User-Agent": BROWSER_HEADERS["User-Agent"], Accept: "*/*" },
+      signal: AbortSignal.timeout(15e3)
+    });
+    const loc = resp.headers.get("location");
+    if (resp.status >= 300 && resp.status < 400 && loc) {
+      return new URL(loc, url).toString();
+    }
+    if (resp.ok) return url;
+    return null;
+  } catch (e) {
+    console.warn("[terabox:redirect]", e instanceof Error ? e.message : e);
+    return null;
+  }
+}
+function surlFromReferer(referer) {
+  try {
+    const s = new URL(referer).searchParams.get("surl");
+    return s ? s.replace(/^1/, "") : null;
+  } catch {
+    return null;
+  }
+}
+function teraboxErrnoMessage(errno) {
+  const code = Number(errno);
+  if (Number.isNaN(code)) return null;
+  if (code === 400141 || code === 4001412) {
+    return "This TeraBox link is password-protected. Use a public link without an extraction code.";
+  }
+  if (code === 105 || code === 404) {
+    return "Share not found. Check the link is correct, public, and not expired.";
+  }
+  if (code === 130) {
+    return "Video is still processing on TeraBox. Wait a few minutes and try again.";
+  }
+  if (code === 9100 || code === 9101) {
+    return "TeraBox rate-limited this request. Wait 1\u20132 minutes and try again.";
+  }
+  return null;
+}
+function extractJsTokenFromHtml(html) {
+  const patterns = [
+    /decodeURIComponent\(`([^`]+)`\)/,
+    /decodeURIComponent\('([^']+)'\)/,
+    /decodeURIComponent\("([^"]+)"\)/
+  ];
+  for (const pattern of patterns) {
+    const encoded = html.match(pattern);
+    if (encoded?.[1]) {
+      try {
+        const decoded = decodeURIComponent(encoded[1]);
+        const fromEval = decoded.match(/fn\("([^"]+)"/);
+        if (fromEval?.[1]) return fromEval[1];
+      } catch {
+      }
+    }
+  }
+  const direct = html.match(/fn\("([A-F0-9]{40,})"/i);
+  if (direct?.[1]) return direct[1];
+  const assign = html.match(/jsToken["']?\s*[:=]\s*["']([A-F0-9]{40,})["']/i);
+  return assign?.[1] ?? null;
+}
+function detectSharePageIssue(html) {
+  if (/id=["']pwd["']|name=["']pwd["']|please enter the extraction code|input the extraction code/i.test(
+    html
+  )) {
+    return "This TeraBox link is password-protected. Use a public link without an extraction code.";
+  }
+  if (/verify you are human|access denied|unusual traffic/i.test(html) && html.length < 4e3) {
+    return "TeraBox temporarily blocked the server. Wait 1\u20132 minutes and try again.";
+  }
+  return null;
+}
+function buildSharePageCandidates(shareUrl, surlVariants) {
+  const normalized = normalizeShareUrl(shareUrl);
+  const candidates = [normalized];
+  try {
+    const u = new URL(normalized);
+    if (!u.hostname.startsWith("www.")) {
+      u.hostname = `www.${u.hostname}`;
+      candidates.push(u.toString());
+    }
+  } catch {
+  }
+  const primary = surlVariants.find((s) => !s.startsWith("1") || s.length <= 10) ?? surlVariants[0];
+  if (primary) {
+    for (const domain of ["www.1024tera.com", "www.terabox.app", "www.1024terabox.com"]) {
+      candidates.push(`https://${domain}/sharing/link?surl=${encodeURIComponent(primary)}`);
+    }
+  }
+  return Array.from(new Set(candidates));
+}
+var BROWSER_HEADERS = {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+  "Accept-Language": "en-US,en;q=0.9",
+  Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+};
+async function fetchHtmlDirect(url) {
+  try {
+    const resp = await fetch(url, {
+      headers: BROWSER_HEADERS,
+      redirect: "follow",
+      signal: AbortSignal.timeout(2e4)
+    });
+    if (!resp.ok) return null;
+    return { html: await resp.text(), finalUrl: resp.url };
+  } catch {
+    return null;
+  }
+}
+async function fetchHtmlViaWorker(url) {
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const resp = await fetch(`${WORKER_BASE}/proxy?url=${encodeURIComponent(url)}`, {
+        headers: { Accept: "text/html", "User-Agent": BROWSER_HEADERS["User-Agent"] },
+        signal: AbortSignal.timeout(25e3)
+      });
+      if (!resp.ok) continue;
+      const html = await resp.text();
+      if (!html || html.length < 2e3) {
+        if (attempt === 0) await new Promise((r) => setTimeout(r, 400));
+        continue;
+      }
+      return { html, finalUrl: url };
+    } catch {
+    }
+  }
+  return null;
+}
+async function fetchSharePage(shareUrl, surlVariants) {
+  const candidates = buildSharePageCandidates(shareUrl, surlVariants);
+  let fallback = null;
+  for (const url of candidates) {
+    for (const fetchHtml of [fetchHtmlViaWorker, fetchHtmlDirect]) {
+      const result = await fetchHtml(url);
+      if (!result) continue;
+      const finalHost = hostFromShareUrl(result.finalUrl) ?? hostFromShareUrl(url) ?? "www.terabox.app";
+      const domain = finalHost.startsWith("www.") ? finalHost : `www.${finalHost}`;
+      const jsToken = extractJsTokenFromHtml(result.html);
+      const issue = detectSharePageIssue(result.html) ?? void 0;
+      const refererSurl = surlFromReferer(result.finalUrl) ?? surlVariants.find((s) => !s.startsWith("1") || s.length <= 10) ?? surlVariants[0];
+      const referer = refererSurl ? `https://${domain}/sharing/link?surl=${encodeURIComponent(refererSurl)}` : result.finalUrl;
+      if (jsToken) {
+        return { html: result.html, referer, domain, jsToken, issue };
+      }
+      if (!fallback || result.html.length > fallback.html.length) {
+        fallback = { html: result.html, referer, domain, issue };
+      }
+    }
+  }
+  if (fallback) {
+    return { ...fallback, jsToken: null };
+  }
+  return null;
+}
+function hostFromShareUrl(url) {
+  try {
+    return new URL(url).hostname;
+  } catch {
+    return null;
+  }
+}
+function pickThumbnail(raw) {
+  const direct = raw.thumbnail ?? raw.thumb ?? raw.poster ?? raw.thumburl ?? raw.thumbUrl;
+  if (typeof direct === "string" && direct.startsWith("http")) return direct;
+  const thumbs = raw.thumbs;
+  if (thumbs) {
+    for (const key of ["url3", "url2", "url1", "icon"]) {
+      if (thumbs[key]?.startsWith("http")) return thumbs[key];
+    }
+  }
+  return null;
+}
+function isDirEntry(file) {
+  return file.isdir === 1 || file.isdir === "1" || file.is_dir === 1;
+}
+function pickPlayableFile(list) {
+  const files = list.filter((f) => !isDirEntry(f));
+  const video = files.find(
+    (f) => /\.(mp4|mkv|webm|mov|m4v|avi|ts|flv)$/i.test(String(f.server_filename ?? ""))
+  );
+  return video ?? files[0] ?? null;
+}
+function mapListResponse(data) {
+  const list = data.list;
+  if (data.errno !== 0 || !list?.length) return null;
+  const file = pickPlayableFile(list);
+  if (!file) return null;
+  return {
+    uk: String(data.uk),
+    share_id: String(data.share_id),
+    list: [
+      {
+        fs_id: String(file.fs_id),
+        server_filename: String(file.server_filename ?? "Video"),
+        size: file.size ? String(file.size) : void 0,
+        duration: typeof file.duration === "number" ? file.duration : void 0,
+        thumbnail: pickThumbnail(file),
+        width: typeof file.width === "number" ? file.width : void 0,
+        height: typeof file.height === "number" ? file.height : void 0
+      }
+    ]
+  };
+}
+async function hmacSha1(data) {
+  const enc = new TextEncoder();
+  const key = await crypto.subtle.importKey(
+    "raw",
+    enc.encode(HMAC_KEY),
+    { name: "HMAC", hash: "SHA-1" },
+    false,
+    ["sign"]
+  );
+  const sig = await crypto.subtle.sign("HMAC", key, enc.encode(data));
+  return Array.from(new Uint8Array(sig)).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+async function fetchShareList(domain, surl, jsToken, opts) {
+  const referer = `https://${domain}/sharing/link?surl=${encodeURIComponent(surl)}`;
+  const root = opts?.root ?? 1;
+  const dirParam = opts?.dir ? `&dir=${encodeURIComponent(opts.dir)}` : "";
+  let lastErrno;
+  for (const ct of [0, 5]) {
+    const apiUrl = `https://${domain}/share/list?app_id=250528&web=1&channel=dubox&clienttype=${ct}&page=1&num=100&shorturl=${encodeURIComponent(surl)}&root=${root}${dirParam}&jsToken=${encodeURIComponent(jsToken)}`;
+    try {
+      const resp = await fetch(apiUrl, {
+        headers: {
+          "User-Agent": BROWSER_HEADERS["User-Agent"],
+          Accept: "application/json, text/plain, */*",
+          Referer: referer
+        },
+        signal: AbortSignal.timeout(15e3)
+      });
+      if (!resp.ok) continue;
+      const data = await resp.json();
+      if (data.errno === 0) return { data };
+      if (typeof data.errno === "number") lastErrno = data.errno;
+    } catch {
+    }
+  }
+  return { data: null, errno: lastErrno };
+}
+async function fetchMetadataWithJsToken(domain, surl, jsToken) {
+  const root = await fetchShareList(domain, surl, jsToken, { root: 1 });
+  if (root.data) {
+    const mapped = mapListResponse(root.data);
+    if (mapped) return { meta: mapped };
+    const list = root.data.list ?? [];
+    const folder = list.find((f) => isDirEntry(f));
+    if (folder) {
+      const path3 = String(folder.path ?? `/${folder.server_filename ?? ""}`);
+      const child = await fetchShareList(domain, surl, jsToken, { root: 0, dir: path3 });
+      if (child.data) {
+        const mappedChild = mapListResponse(child.data);
+        if (mappedChild) return { meta: mappedChild };
+      }
+      if (child.errno !== void 0) return { meta: null, errno: child.errno };
+    }
+  }
+  return { meta: null, errno: root.errno };
+}
+function sleep(ms) {
+  return new Promise((r) => setTimeout(r, ms));
+}
+async function fetchMetadata(surl) {
+  const domains = ["www.1024terabox.com", "www.terabox.app", "dm.1024terabox.com"];
+  const clienttypes = [5, 0, 3];
+  for (const domain of domains) {
+    for (const ct of clienttypes) {
+      const url = `https://${domain}/share/list?app_id=250528&web=1&channel=dubox&clienttype=${ct}&page=1&num=20&shorturl=${surl}&root=1&jsToken=0`;
+      try {
+        const resp = await fetch(url, {
+          headers: {
+            "User-Agent": "Mozilla/5.0 (Linux; Android 14; RMX3491) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36",
+            "Accept": "application/json, text/plain, */*",
+            "Referer": `https://${domain}/`,
+            "Accept-Language": "en-US,en;q=0.9"
+          },
+          redirect: "manual",
+          signal: AbortSignal.timeout(1e4)
+        });
+        if (resp.status !== 200) continue;
+        const data = await resp.json();
+        if (data.errno === 0 && data.list?.length) return data;
+        if (data.errno === 140) {
+          await sleep(500);
+          continue;
+        }
+        if (data.errno === 400141) {
+          await sleep(1e3);
+          continue;
+        }
+      } catch {
+        await sleep(300);
+      }
+    }
+  }
+  for (const domain of domains) {
+    for (const ct of clienttypes) {
+      const url = `https://${domain}/share/list?app_id=250528&web=1&channel=dubox&clienttype=${ct}&page=1&num=20&shorturl=${surl}&root=1&jsToken=0`;
+      try {
+        const resp = await fetch(url, {
+          headers: {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+            "Accept": "application/json, text/plain, */*",
+            "Referer": `https://${domain}/`,
+            "Accept-Language": "en-US,en;q=0.9"
+          },
+          redirect: "manual",
+          signal: AbortSignal.timeout(1e4)
+        });
+        if (resp.status !== 200) continue;
+        const data = await resp.json();
+        if (data.errno === 0 && data.list?.length) return data;
+      } catch {
+      }
+    }
+  }
+  return null;
+}
+async function resolveShareMetadata(shareUrl, surlVariants) {
+  const page = await fetchSharePage(shareUrl, surlVariants);
+  const jsToken = page?.jsToken ?? null;
+  const refererSurl = page ? surlFromReferer(page.referer) : null;
+  const variants = Array.from(
+    /* @__PURE__ */ new Set([
+      ...surlVariants,
+      ...refererSurl ? extractSurlVariants(refererSurl) : [],
+      ...refererSurl ? [refererSurl] : []
+    ])
+  );
+  let lastErrno;
+  if (page && jsToken) {
+    const hostHint = hostFromShareUrl(shareUrl)?.replace(/^www\./, "") ?? "";
+    const preferredDomain = hostHint.includes("1024tera") && !hostHint.includes("terabox") ? "www.1024tera.com" : hostHint.includes("1024terabox") ? "www.1024terabox.com" : page.domain;
+    const domains = Array.from(
+      /* @__PURE__ */ new Set([
+        preferredDomain,
+        "www.1024tera.com",
+        "www.terabox.app",
+        "www.1024terabox.com",
+        page.domain
+      ])
+    );
+    for (const surl of variants) {
+      for (const domain of domains) {
+        const attempt = await fetchMetadataWithJsToken(domain, surl, jsToken);
+        if (attempt.meta) return { meta: attempt.meta };
+        if (attempt.errno !== void 0) lastErrno = attempt.errno;
+      }
+    }
+  }
+  for (const surl of variants) {
+    const meta = await fetchMetadata(surl) ?? await resolveViaWorker(shareUrl);
+    if (meta) return { meta };
+  }
+  if (page?.issue) {
+    return { meta: null, reason: page.issue };
+  }
+  const specific = teraboxErrnoMessage(lastErrno);
+  if (!page) {
+    return {
+      meta: null,
+      reason: "Could not reach TeraBox. Check the link and try again."
+    };
+  }
+  if (!jsToken) {
+    return {
+      meta: null,
+      reason: "TeraBox blocked the request. Wait a minute and try again."
+    };
+  }
+  if (lastErrno === 400141 || lastErrno === 4001412) {
+    return {
+      meta: null,
+      reason: "This TeraBox link needs a password (extraction code), or TeraBox is verifying the request. Use a public link."
+    };
+  }
+  return {
+    meta: null,
+    reason: specific ?? `Could not fetch file metadata${lastErrno != null ? ` (code ${lastErrno})` : ""}. Link may be private, expired, or Terabox is rate-limiting.`
+  };
+}
+async function resolveViaWorker(shareUrl) {
+  const workerUrl = `${WORKER_BASE}/resolve?url=${encodeURIComponent(shareUrl)}`;
+  try {
+    const resp = await fetch(workerUrl, {
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        Accept: "application/json"
+      },
+      signal: AbortSignal.timeout(3e4)
+    });
+    if (!resp.ok) return null;
+    const data = await resp.json();
+    if (!data.success || !data.uk || !data.shareid || !data.fs_id) return null;
+    const thumbnail = pickThumbnail(data);
+    return {
+      uk: String(data.uk),
+      share_id: String(data.shareid),
+      list: [
+        {
+          fs_id: String(data.fs_id),
+          server_filename: data.filename ?? "Video",
+          size: data.size_mb ? String(Math.round(data.size_mb * 1024 * 1024)) : void 0,
+          duration: data.duration_s,
+          thumbnail,
+          width: data.width,
+          height: data.height
+        }
+      ]
+    };
+  } catch {
+    return null;
+  }
+}
+async function fetchShareDlink(uk, shareid, fid) {
+  const cookie = teraboxCookieHeader();
+  if (!cookie) return null;
+  const ts = Math.floor(Date.now() / 1e3);
+  const sign = await hmacSha1("0dubox" + ts);
+  const domains = ["www.terabox.app", "www.terabox.com", "www.1024terabox.com"];
+  for (const domain of domains) {
+    const params = new URLSearchParams({
+      app_id: "250528",
+      web: "1",
+      channel: "dubox",
+      clienttype: "0",
+      uk,
+      primaryid: shareid,
+      product: "share",
+      fid_list: `[${fid}]`,
+      sign,
+      timestamp: String(ts)
+    });
+    const url = `https://${domain}/share/download?${params.toString()}`;
+    try {
+      const resp = await fetch(url, {
+        headers: {
+          "User-Agent": BROWSER_HEADERS["User-Agent"],
+          Accept: "application/json, text/plain, */*",
+          Referer: `https://${domain}/`,
+          Cookie: cookie
+        },
+        signal: AbortSignal.timeout(2e4)
+      });
+      if (!resp.ok) continue;
+      const data = await resp.json();
+      const dlink = data.list?.[0]?.dlink;
+      if (data.errno === 0 && typeof dlink === "string" && dlink.startsWith("http")) {
+        return dlink.includes("origin=") ? dlink : `${dlink}&origin=dlna`;
+      }
+    } catch {
+    }
+  }
+  return null;
+}
+function formatSize(bytes) {
+  if (bytes >= 1024 * 1024 * 1024) return `${(bytes / (1024 * 1024 * 1024)).toFixed(2)} GB`;
+  return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
+}
+function buildStreamingUrl(uk, shareid, fid, quality, sign, ts, host = "dm.terabox.app") {
+  const q = quality || "360";
+  const params = new URLSearchParams({
+    uk,
+    shareid,
+    type: `M3U8_AUTO_${q}`,
+    fid,
+    sign,
+    timestamp: String(ts),
+    jsToken: "",
+    esl: "1",
+    isplayer: "1",
+    ehps: "1",
+    clienttype: "0",
+    app_id: "250528",
+    web: "1",
+    channel: "dubox"
+  });
+  return `https://${host}/share/streaming?${params.toString()}`;
+}
+function rewritePlaylistForBrowser(m3u8, segmentProxyBase) {
+  const workerBase = process.env.CLOUDFLARE_WORKER_URL?.trim().replace(/\/$/, "");
+  const base = workerBase || segmentProxyBase.replace(/\/$/, "");
+  return m3u8.split("\n").map((line) => {
+    const trimmed = line.trim();
+    if (!trimmed.startsWith("http")) return line;
+    if (trimmed.includes("/api/terabox/ts?") || trimmed.includes("/proxy?url=")) return line;
+    if (workerBase) {
+      return `${base}/proxy?url=${encodeURIComponent(trimmed)}`;
+    }
+    return `${base}/api/terabox/ts?url=${encodeURIComponent(trimmed)}`;
+  }).join("\n");
+}
+function publicOriginFromReq(req) {
+  const xfProto = String(req.headers["x-forwarded-proto"] ?? "").split(",")[0]?.trim();
+  const proto = xfProto || req.protocol || "https";
+  const host = String(req.headers["x-forwarded-host"] ?? "").split(",")[0]?.trim() || req.get("host") || "webnovacrew.com";
+  return `${proto}://${host}`;
+}
+async function fetchPlaylistText(url, referer) {
+  try {
+    const resp = await fetch(url, {
+      headers: {
+        "User-Agent": BROWSER_HEADERS["User-Agent"],
+        Accept: "*/*",
+        Referer: referer
+      },
+      signal: AbortSignal.timeout(3e4)
+    });
+    if (!resp.ok) return null;
+    const text = await resp.text();
+    if (!text.includes("#EXTM3U")) return null;
+    return text;
+  } catch {
+    return null;
+  }
+}
+async function getM3U8(uk, shareid, fid, quality, segmentProxyBase) {
+  const q = quality || "360";
+  const ts = Math.floor(Date.now() / 1e3);
+  const sign = await hmacSha1("0dubox" + ts);
+  const finalize = (body) => segmentProxyBase ? rewritePlaylistForBrowser(body, segmentProxyBase) : body;
+  const hosts = ["dm.terabox.app", "dm.terabox.com", "www.terabox.app"];
+  for (const host of hosts) {
+    const streamUrl = buildStreamingUrl(uk, shareid, fid, q, sign, ts, host);
+    const direct = await fetchPlaylistText(streamUrl, `https://${host}/`);
+    if (direct) return finalize(direct);
+  }
+  try {
+    const workerUrl = `${WORKER_BASE}/m3u8?uk=${uk}&shareid=${shareid}&fid=${fid}&quality=${q}&sign=${sign}&timestamp=${ts}`;
+    const resp = await fetch(workerUrl, { signal: AbortSignal.timeout(3e4) });
+    if (resp.ok) {
+      const text = await resp.text();
+      if (text.includes("#EXTM3U")) return finalize(text);
+    }
+  } catch {
+  }
+  return null;
+}
+async function handleTeraboxResolve(req, res) {
+  const parsed = resolveSchema.safeParse(req.body);
+  if (!parsed.success) {
+    res.status(400).json({ message: "Paste a valid TeraBox share link." });
+    return;
+  }
+  const { url: rawUrl, quality } = parsed.data;
+  let url = normalizeShareUrl(rawUrl);
+  if (isDiskwalaUrl(url)) {
+    await handleDiskwalaResolve(url, quality, res);
+    return;
+  }
+  if (hostMatches(new URL(url).hostname.toLowerCase(), TERABOX_REDIRECT_HOSTS)) {
+    const target = await resolveRedirectUrl(url);
+    if (target && isTeraboxUrl(target)) {
+      url = target;
+    } else {
+      res.status(502).json({ message: "Could not follow the mirror link to TeraBox. Try the original TeraBox link." });
+      return;
+    }
+  }
+  if (!isTeraboxUrl(url)) {
+    res.status(400).json({ message: "URL must be a TeraBox share link (include terabox.com or 1024terabox.com)." });
+    return;
+  }
+  const surlVariants = extractSurlVariants(url);
+  if (!surlVariants.length) {
+    res.status(400).json({ message: "Could not extract share code from URL." });
+    return;
+  }
+  try {
+    const [vb, resolved] = await Promise.all([
+      resolveViaVideoBackend(url).catch((e) => {
+        console.warn("[terabox:resolve] video-backend failed:", e instanceof Error ? e.message : e);
+        return null;
+      }),
+      resolveShareMetadata(url, surlVariants).catch((e) => {
+        console.warn("[terabox:resolve] metadata failed:", e instanceof Error ? e.message : e);
+        return { meta: null, reason: "Metadata fetch failed" };
+      })
+    ]);
+    if (!vb && !resolved.meta?.list?.length) {
+      console.error("[terabox:resolve] failed", {
+        surlVariants,
+        url: url.slice(0, 80),
+        reason: resolved.reason,
+        videoBackend: Boolean(vb)
+      });
+      res.status(502).json({
+        message: resolved.reason ?? "Could not fetch file metadata. Link may be private, expired, or Terabox is rate-limiting."
+      });
+      return;
+    }
+    const file = resolved.meta?.list?.[0];
+    const fromDlink = vb?.directUrl ? idsFromDirectUrl(vb.directUrl) : {};
+    const uk = String(resolved.meta?.uk || fromDlink.uk || "");
+    const shareid = String(resolved.meta?.share_id || "");
+    const fid = String(file?.fs_id || fromDlink.fs_id || "");
+    let dlink = vb?.directUrl || null;
+    let upstreamHeaders = vb?.headers || null;
+    if (!dlink && uk && shareid && fid) {
+      dlink = await fetchShareDlink(uk, shareid, fid);
+      if (dlink) {
+        const cookie = teraboxCookieHeader();
+        upstreamHeaders = {
+          "User-Agent": BROWSER_HEADERS["User-Agent"],
+          Referer: "https://www.terabox.com/",
+          Accept: "*/*",
+          ...cookie ? { Cookie: cookie } : {}
+        };
+      }
+    }
+    const fileName = vb?.title || file?.server_filename || "Video";
+    const sizeLabel = vb?.sizeHuman || (vb?.size ? formatSize(vb.size) : void 0) || (file?.size ? formatSize(parseInt(file.size, 10)) : void 0);
+    console.log("[terabox:resolve] ok", {
+      fileName: fileName.slice(0, 60),
+      via: vb ? "video-backend" : "legacy",
+      hasDlink: Boolean(dlink),
+      hasHls: Boolean(uk && shareid && fid),
+      surl: surlVariants[0]?.slice(0, 12)
+    });
+    const playbackId = createPlaybackSession({
+      uk,
+      shareid,
+      fs_id: fid,
+      fileName,
+      quality,
+      size: sizeLabel,
+      duration: file?.duration ? Math.round(file.duration) : void 0,
+      thumbnail: vb?.thumbnail ?? file?.thumbnail ?? null,
+      width: file?.width,
+      height: file?.height,
+      dlink,
+      shareUrl: url,
+      upstreamHeaders,
+      mimeType: vb?.mimeType ?? null
+    });
+    res.json({
+      ok: true,
+      ...buildProtectedPlaybackPayload(playbackId, {
+        size: sizeLabel,
+        duration: file?.duration ? Math.round(file.duration) : void 0
+      })
+    });
+  } catch (e) {
+    console.error("[terabox]", e);
+    res.status(500).json({ message: "Failed to resolve link. Please try again." });
+  }
+}
+async function handleDiskwalaResolve(url, quality, res) {
+  const code = extractDiskwalaCode(url);
+  if (!code) {
+    res.status(400).json({ message: "Could not extract DiskWala share code from URL." });
+    return;
+  }
+  try {
+    const dw = await resolveDiskwalaViaBackend(url);
+    if (!dw?.directUrl) {
+      console.error("[terabox:diskwala:resolve] failed", { url: url.slice(0, 80) });
+      res.status(502).json({
+        message: "Could not fetch DiskWala file. Link may be private, expired, or DiskWala is rate-limiting."
+      });
+      return;
+    }
+    console.log("[terabox:diskwala:resolve] ok", {
+      fileName: (dw.title ?? "Video").slice(0, 60),
+      hasStream: Boolean(dw.directUrl)
+    });
+    const playbackId = createPlaybackSession({
+      uk: "",
+      shareid: "",
+      fs_id: "",
+      fileName: dw.title ?? "Video",
+      quality,
+      size: dw.sizeHuman ?? (dw.size ? formatSize(dw.size) : void 0),
+      thumbnail: dw.thumbnail ?? null,
+      dlink: dw.directUrl,
+      shareUrl: url,
+      upstreamHeaders: dw.headers ?? null,
+      mimeType: dw.mimeType ?? "video/mp4"
+    });
+    res.json({
+      ok: true,
+      ...buildProtectedPlaybackPayload(playbackId, {
+        size: dw.sizeHuman ?? (dw.size ? formatSize(dw.size) : void 0)
+      })
+    });
+  } catch (e) {
+    console.error("[terabox:diskwala]", e);
+    res.status(500).json({ message: "Failed to resolve DiskWala link. Please try again." });
+  }
+}
+async function handleTeraboxPlay(req, res) {
+  const playbackId = String(req.params.playbackId ?? "").trim();
+  const q = String(req.query.quality ?? "360");
+  const session = getPlaybackSession(playbackId);
+  if (!session) {
+    res.status(404).json({ message: "Playback session expired. Reload the video." });
+    return;
+  }
+  try {
+    if (session.dlink && (!session.uk || !session.shareid || !session.fs_id)) {
+      res.redirect(302, `/api/terabox/file/${encodeURIComponent(playbackId)}`);
+      return;
+    }
+    const origin = publicOriginFromReq(req);
+    let m3u8 = await getM3U8(session.uk, session.shareid, session.fs_id, q, origin);
+    if (!m3u8) {
+      await new Promise((r) => setTimeout(r, 600));
+      m3u8 = await getM3U8(session.uk, session.shareid, session.fs_id, q, origin);
+    }
+    if (!m3u8) {
+      if (session.dlink) {
+        res.redirect(302, `/api/terabox/file/${encodeURIComponent(playbackId)}`);
+        return;
+      }
+      res.status(502).json({ message: "Could not start playback. The HLS stream is unavailable for this video." });
+      return;
+    }
+    res.set({
+      "Content-Type": "application/vnd.apple.mpegurl",
+      "Cache-Control": "no-store, private",
+      "X-Content-Type-Options": "nosniff",
+      "X-Robots-Tag": "noindex, nofollow",
+      "Access-Control-Allow-Origin": "*"
+    });
+    res.send(m3u8);
+  } catch (e) {
+    console.error("[terabox:play]", e);
+    res.status(503).json({ message: "Stream fetch failed. Please try again." });
+  }
+}
+async function handleTeraboxStream(req, res) {
+  res.status(410).json({
+    message: "Direct stream URLs are disabled. Use the site player."
+  });
+}
+async function handleTeraboxFile(req, res) {
+  const playbackId = String(req.params.playbackId ?? "").trim();
+  const session = getPlaybackSession(playbackId);
+  if (!session) {
+    res.status(404).json({ message: "Playback session expired. Reload the video." });
+    return;
+  }
+  let dlink = session.dlink;
+  if (!dlink && session.shareUrl) {
+    if (isDiskwalaUrl(session.shareUrl)) {
+      const dw = await resolveDiskwalaViaBackend(session.shareUrl);
+      if (dw?.directUrl) {
+        dlink = dw.directUrl;
+        session.dlink = dlink;
+        session.upstreamHeaders = dw.headers ?? null;
+        if (dw.mimeType) session.mimeType = dw.mimeType;
+      }
+    } else {
+      const vb = await resolveViaVideoBackend(session.shareUrl);
+      if (vb?.directUrl) {
+        dlink = vb.directUrl;
+        session.dlink = dlink;
+        session.upstreamHeaders = vb.headers ?? null;
+        if (vb.mimeType) session.mimeType = vb.mimeType;
+      }
+    }
+  }
+  if (!dlink && session.uk && session.shareid && session.fs_id) {
+    dlink = await fetchShareDlink(session.uk, session.shareid, session.fs_id);
+    if (dlink) session.dlink = dlink;
+  }
+  if (!dlink) {
+    res.status(502).json({
+      message: "Full file link unavailable. Video backend did not return a direct URL."
+    });
+    return;
+  }
+  if (req.method === "HEAD") {
+    res.status(200);
+    res.set({
+      "Content-Type": session.mimeType || "video/mp4",
+      "Accept-Ranges": "bytes",
+      "Cache-Control": "private, no-store",
+      "Access-Control-Allow-Origin": "*",
+      "X-Robots-Tag": "noindex, nofollow"
+    });
+    res.end();
+    return;
+  }
+  let upstreamHeaders = {
+    "User-Agent": BROWSER_HEADERS["User-Agent"],
+    Referer: "https://dm.1024terabox.com/",
+    Accept: "*/*",
+    ...session.upstreamHeaders || {}
+  };
+  if (!upstreamHeaders.Cookie) {
+    const cookie = teraboxCookieHeader();
+    if (cookie) upstreamHeaders.Cookie = cookie;
+  }
+  try {
+    const range = req.headers.range;
+    if (typeof range === "string" && range) upstreamHeaders.Range = range;
+    let upstream = await fetch(dlink, {
+      headers: upstreamHeaders,
+      redirect: "follow",
+      // Long-lived stream — do not abort mid-transfer.
+      signal: AbortSignal.timeout(30 * 60 * 1e3)
+    });
+    if (!upstream.ok && upstream.status !== 206 && session.shareUrl && isDiskwalaUrl(session.shareUrl)) {
+      console.warn("[terabox:diskwala:file] dlink expired, re-resolving");
+      const dw = await resolveDiskwalaViaBackend(session.shareUrl);
+      if (dw?.directUrl) {
+        session.dlink = dw.directUrl;
+        session.upstreamHeaders = dw.headers ?? null;
+        const retry = await fetch(dw.directUrl, {
+          headers: { ...upstreamHeaders, ...dw.headers ?? {} },
+          redirect: "follow",
+          signal: AbortSignal.timeout(30 * 60 * 1e3)
+        });
+        if (retry.ok || retry.status === 206) {
+          dlink = dw.directUrl;
+          upstreamHeaders = { ...upstreamHeaders, ...dw.headers ?? {} };
+          upstream = retry;
+        }
+      }
+    }
+    if (!upstream.ok && upstream.status !== 206) {
+      res.status(502).json({ message: `Upstream file ${upstream.status}` });
+      return;
+    }
+    const out = {
+      "Content-Type": upstream.headers.get("content-type") || session.mimeType || "application/octet-stream",
+      "Cache-Control": "private, no-store",
+      "Accept-Ranges": "bytes",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Expose-Headers": "Content-Length, Content-Range, Accept-Ranges",
+      "X-Robots-Tag": "noindex, nofollow",
+      "Content-Disposition": `inline; filename="${(session.fileName || "video").replace(/"/g, "")}"`
+    };
+    const len = upstream.headers.get("content-length");
+    if (len) out["Content-Length"] = len;
+    const cr = upstream.headers.get("content-range");
+    if (cr) out["Content-Range"] = cr;
+    res.status(upstream.status === 206 ? 206 : 200);
+    res.set(out);
+    if (!upstream.body) {
+      res.end();
+      return;
+    }
+    const nodeStream = Readable.fromWeb(upstream.body);
+    nodeStream.on("error", (err) => {
+      console.error("[terabox:file:pipe]", err);
+      if (!res.headersSent) res.status(502).end();
+      else res.destroy(err);
+    });
+    req.on("close", () => {
+      nodeStream.destroy();
+    });
+    nodeStream.pipe(res);
+  } catch (e) {
+    console.error("[terabox:file]", e);
+    if (!res.headersSent) res.status(502).json({ message: "Full file fetch failed." });
+  }
+}
+async function handleTeraboxDownload(req, res) {
+  const playbackId = String(req.query.playbackId ?? req.body?.playbackId ?? "").trim();
+  const q = String(req.query.quality ?? req.body?.quality ?? "360");
+  const session = getPlaybackSession(playbackId);
+  if (!session) {
+    res.status(404).json({ message: "Playback session expired. Play the video again." });
+    return;
+  }
+  let dlink = session.dlink;
+  if (!dlink && session.shareUrl) {
+    if (isDiskwalaUrl(session.shareUrl)) {
+      const dw = await resolveDiskwalaViaBackend(session.shareUrl);
+      if (dw?.directUrl) {
+        dlink = dw.directUrl;
+        session.dlink = dlink;
+        session.upstreamHeaders = dw.headers ?? null;
+      }
+    } else {
+      const vb = await resolveViaVideoBackend(session.shareUrl);
+      if (vb?.directUrl) {
+        dlink = vb.directUrl;
+        session.dlink = dlink;
+        session.upstreamHeaders = vb.headers ?? null;
+      }
+    }
+  }
+  if (!dlink && session.uk && session.shareid && session.fs_id) {
+    dlink = await fetchShareDlink(session.uk, session.shareid, session.fs_id);
+  }
+  if (dlink) {
+    session.dlink = dlink;
+    if (process.env.CLOUDFLARE_WORKER_URL) {
+      const workerUrl = `${process.env.CLOUDFLARE_WORKER_URL.replace(/\/$/, "")}/proxy?url=${encodeURIComponent(dlink)}&filename=${encodeURIComponent(session.fileName || "video")}`;
+      res.redirect(workerUrl);
+      return;
+    }
+    try {
+      const headers = {
+        "User-Agent": BROWSER_HEADERS["User-Agent"],
+        Referer: "https://dm.1024terabox.com/",
+        Accept: "*/*",
+        ...session.upstreamHeaders || {}
+      };
+      if (!headers.Cookie) {
+        const cookie = teraboxCookieHeader();
+        if (cookie) headers.Cookie = cookie;
+      }
+      const upstream = await fetch(dlink, {
+        headers,
+        redirect: "follow",
+        signal: AbortSignal.timeout(12e4)
+      });
+      if (!upstream.ok) {
+        res.status(502).json({ message: "Could not prepare download." });
+        return;
+      }
+      const fileName2 = session.fileName.replace(/[^\w.\-() ]+/g, "_") || "video.bin";
+      res.set({
+        "Content-Type": upstream.headers.get("content-type") || "application/octet-stream",
+        "Content-Disposition": `attachment; filename="${fileName2}"`,
+        "Cache-Control": "no-store, private",
+        "X-Robots-Tag": "noindex, nofollow"
+      });
+      const len = upstream.headers.get("content-length");
+      if (len) res.set("Content-Length", len);
+      const buf = Buffer.from(await upstream.arrayBuffer());
+      res.end(buf);
+      return;
+    } catch (e) {
+      console.error("[terabox:download:dlink]", e);
+    }
+  }
+  const m3u8Content = await getM3U8(session.uk, session.shareid, session.fs_id, q);
+  if (!m3u8Content || !m3u8Content.includes("#EXTM3U")) {
+    res.status(502).json({ message: "Could not prepare download." });
+    return;
+  }
+  const segmentUrls = [];
+  for (const line of m3u8Content.split("\n")) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) continue;
+    if (trimmed.startsWith("http")) {
+      segmentUrls.push(trimmed);
+    }
+  }
+  if (!segmentUrls.length) {
+    res.status(400).json({ message: "No video segments found in M3U8." });
+    return;
+  }
+  console.log(`[terabox:download] Starting ${segmentUrls.length} segments at ${q}p`);
+  const fileName = session.fileName.replace(/[^\w.\-() ]+/g, "_") || "video.ts";
+  res.set({
+    "Content-Type": "video/mp2t",
+    "Content-Disposition": `attachment; filename="${fileName}"`,
+    "Transfer-Encoding": "chunked",
+    "Cache-Control": "no-store, private",
+    "X-Robots-Tag": "noindex, nofollow"
+  });
+  let downloaded = 0;
+  let failed = 0;
+  for (let i = 0; i < segmentUrls.length; i++) {
+    try {
+      const segResp = await fetch(segmentUrls[i], {
+        headers: {
+          "Referer": "https://dm.terabox.app/",
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+        },
+        signal: AbortSignal.timeout(3e4)
+      });
+      if (!segResp.ok) {
+        failed++;
+        continue;
+      }
+      if (segResp.body) {
+        const reader = segResp.body.getReader();
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          res.write(value);
+          downloaded += value.byteLength;
+        }
+      }
+    } catch {
+      failed++;
+    }
+  }
+  console.log(`[terabox:download] Done: ${(downloaded / 1024 / 1024).toFixed(1)} MB, ${failed} failed`);
+  res.end();
+}
+async function handleTeraboxTs(req, res) {
+  const tsUrl = String(req.query.url ?? "");
+  if (!tsUrl || !/^https?:\/\//i.test(tsUrl)) {
+    res.status(400).end();
+    return;
+  }
+  try {
+    const host = new URL(tsUrl).hostname.toLowerCase();
+    const allowed = host.includes("terabox") || host.includes("freeterabox") || host.includes("dubox") || host.includes("4funbox") || /^v\d+-/.test(host);
+    if (!allowed) {
+      res.status(400).end();
+      return;
+    }
+  } catch {
+    res.status(400).end();
+    return;
+  }
+  try {
+    const headers = {
+      Referer: "https://dm.terabox.app/",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      Accept: "*/*",
+      "Accept-Encoding": "identity"
+    };
+    const range = req.headers.range;
+    if (typeof range === "string" && range) headers.Range = range;
+    const resp = await fetch(tsUrl, {
+      headers,
+      redirect: "follow",
+      signal: AbortSignal.timeout(45e3)
+    });
+    if (!resp.ok && resp.status !== 206) {
+      if (resp.status >= 500 || resp.status === 429) {
+        await new Promise((r) => setTimeout(r, 400));
+        const retry = await fetch(tsUrl, { headers, redirect: "follow", signal: AbortSignal.timeout(45e3) });
+        if (retry.ok || retry.status === 206) {
+          const outH = {
+            "Content-Type": retry.headers.get("content-type") || "video/mp2t",
+            "Cache-Control": "private, max-age=300",
+            "Access-Control-Allow-Origin": "*"
+          };
+          const rLen = retry.headers.get("content-length");
+          if (rLen) outH["Content-Length"] = rLen;
+          res.status(retry.status === 206 ? 206 : 200).set(outH);
+          if (retry.body) {
+            Readable.fromWeb(retry.body).pipe(res);
+          } else {
+            res.end();
+          }
+          return;
+        }
+      }
+      res.status(502).end();
+      return;
+    }
+    const outHeaders = {
+      "Content-Type": resp.headers.get("content-type") || "video/mp2t",
+      "Cache-Control": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800",
+      "X-Robots-Tag": "noindex, nofollow",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Expose-Headers": "Content-Length, Content-Range, Accept-Ranges",
+      "Accept-Ranges": "bytes"
+    };
+    const len = resp.headers.get("content-length");
+    if (len) outHeaders["Content-Length"] = len;
+    const cr = resp.headers.get("content-range");
+    if (cr) outHeaders["Content-Range"] = cr;
+    res.status(resp.status === 206 ? 206 : 200);
+    res.set(outHeaders);
+    if (!resp.body) {
+      res.end();
+      return;
+    }
+    const nodeStream = Readable.fromWeb(resp.body);
+    nodeStream.on("error", (err) => {
+      console.error("[terabox:ts:pipe]", err);
+      if (!res.headersSent) res.status(502).end();
+      else res.destroy(err);
+    });
+    req.on("close", () => nodeStream.destroy());
+    nodeStream.pipe(res);
+  } catch (e) {
+    console.error("[terabox:ts]", e);
+    if (!res.headersSent) res.status(502).end();
+  }
+}
+
+// server/terabox-shares.ts
+import { randomBytes as randomBytes2 } from "crypto";
+import fs2 from "fs";
+import path2 from "path";
+
+// server/ad-cleaner.ts
+var lowCpcReplacements = {
+  free: "premium",
+  cheap: "affordable",
+  download: "cloud stream",
+  downloader: "cloud player",
+  "video app": "media portal",
+  "video player": "media player",
+  "short video": "clips",
+  "viral video": "featured content",
+  reels: "media streams",
+  "scratch card": "rewards tier",
+  "spin wheel": "loyalty portal",
+  "daily reward": "exclusive benefit",
+  "coin reward": "member benefit",
+  "earn coin": "acquire points",
+  "free coin": "member credits",
+  "earn money online fast": "financial consulting services"
+};
+function cleanLowCpcKeywords(text) {
+  if (!text) return text;
+  let cleaned = text;
+  for (const [badWord, replacement] of Object.entries(lowCpcReplacements)) {
+    const regex = new RegExp(`\\b${badWord}\\b`, "gi");
+    cleaned = cleaned.replace(regex, (match) => {
+      if (match === match.toUpperCase()) return replacement.toUpperCase();
+      if (match[0] === match[0].toUpperCase()) {
+        return replacement[0].toUpperCase() + replacement.slice(1);
+      }
+      return replacement;
+    });
+  }
+  return cleaned;
+}
+
+// server/terabox-shares.ts
+import os2 from "os";
+var SHARE_TTL_MS = 30 * 24 * 60 * 60 * 1e3;
+var MAX_SHARES = 5e3;
+var SHORT_ID_LEN = 6;
+var isServerless = Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
+var SHARE_FILE = isServerless ? path2.join(os2.tmpdir(), "terabox-shares.json") : path2.join(process.cwd(), "data", "terabox-shares.json");
+var shares = /* @__PURE__ */ new Map();
+function loadShareStore() {
+  try {
+    if (!fs2.existsSync(SHARE_FILE)) return;
+    const raw = fs2.readFileSync(SHARE_FILE, "utf8");
+    const data = JSON.parse(raw);
+    const now = Date.now();
+    for (const [id, record] of Object.entries(data)) {
+      if (record.expiresAt > now) shares.set(id, record);
+    }
+  } catch {
+  }
+}
+function persistShareStore() {
+  try {
+    const dir = path2.dirname(SHARE_FILE);
+    if (!fs2.existsSync(dir)) fs2.mkdirSync(dir, { recursive: true });
+    const data = {};
+    shares.forEach((record, id) => {
+      data[id] = record;
+    });
+    fs2.writeFileSync(SHARE_FILE, JSON.stringify(data), "utf8");
+  } catch {
+  }
+}
+loadShareStore();
+function getShareLinkBase() {
+  return (process.env.SHARE_LINK_BASE ?? process.env.VITE_SHARE_LINK_BASE ?? "").trim().replace(/\/$/, "");
+}
+function buildShareUrl(sharePath, req) {
+  const configured = getShareLinkBase();
+  if (configured) return `${configured}${sharePath}`;
+  if (req) {
+    const proto = String(req.headers["x-forwarded-proto"] ?? req.protocol ?? "https");
+    const host = String(req.headers["x-forwarded-host"] ?? req.get("host") ?? "localhost");
+    return `${proto}://${host}${sharePath}`;
+  }
+  return sharePath;
+}
+function encodeShareToken(record) {
+  let shortUrl = record.url || "";
+  if (shortUrl.startsWith("https://1024terabox.com/s/")) {
+    shortUrl = "t:" + shortUrl.slice("https://1024terabox.com/s/".length);
+  } else if (shortUrl.startsWith("https://terabox.com/s/")) {
+    shortUrl = "t:" + shortUrl.slice("https://terabox.com/s/".length);
+  } else if (shortUrl.startsWith("https://nephobox.com/s/")) {
+    shortUrl = "n:" + shortUrl.slice("https://nephobox.com/s/".length);
+  } else if (shortUrl.startsWith("https://teraboxapp.com/s/")) {
+    shortUrl = "a:" + shortUrl.slice("https://teraboxapp.com/s/".length);
+  }
+  const payload = JSON.stringify([
+    record.uk,
+    record.shareid,
+    record.fs_id,
+    shortUrl
+  ]);
+  return Buffer.from(payload, "utf8").toString("base64url");
+}
+function decodeShareToken(token) {
+  try {
+    const json = Buffer.from(token, "base64url").toString("utf8");
+    let uk = "";
+    let shareid = "";
+    let fs_id = "";
+    let shortUrl = "";
+    let quality = "360";
+    let fileName = "Video";
+    let size = "";
+    let duration = void 0;
+    let width = void 0;
+    let height = void 0;
+    let expiresAt = Date.now() + SHARE_TTL_MS;
+    if (json.startsWith("[")) {
+      const arr = JSON.parse(json);
+      if (arr.length < 3) return null;
+      uk = arr[0];
+      shareid = arr[1];
+      fs_id = arr[2];
+      shortUrl = arr[3] || "";
+    } else {
+      const data = JSON.parse(json);
+      if (!data.u || !data.s || !data.f) return null;
+      uk = data.u;
+      shareid = data.s;
+      fs_id = data.f;
+      shortUrl = data.l || "";
+      quality = data.q || "360";
+      fileName = data.n || "Video";
+      size = data.z || "";
+      duration = data.d;
+      width = data.w;
+      height = data.h;
+      if (data.e) expiresAt = data.e;
+    }
+    let originalUrl = shortUrl;
+    if (originalUrl.startsWith("t:")) {
+      originalUrl = "https://1024terabox.com/s/" + originalUrl.slice(2);
+    } else if (originalUrl.startsWith("n:")) {
+      originalUrl = "https://nephobox.com/s/" + originalUrl.slice(2);
+    } else if (originalUrl.startsWith("a:")) {
+      originalUrl = "https://teraboxapp.com/s/" + originalUrl.slice(2);
+    }
+    const now = Date.now();
+    if (expiresAt <= now) return null;
+    return {
+      id: token,
+      uk,
+      shareid,
+      fs_id,
+      fileName,
+      quality,
+      size,
+      thumbnail: null,
+      // Re-resolved at runtime
+      duration,
+      width,
+      height,
+      url: originalUrl || void 0,
+      createdAt: now,
+      expiresAt
+    };
+  } catch {
+    return null;
+  }
+}
+function resolveShareRecord(id, backupToken) {
+  purgeExpiredShares();
+  const trimmed = id.trim();
+  if (!trimmed && !backupToken) return null;
+  if (backupToken) {
+    const fromBackup = decodeShareToken(backupToken.trim());
+    if (fromBackup) return fromBackup;
+  }
+  if (trimmed.length > SHORT_ID_LEN + 2) {
+    const decoded = decodeShareToken(trimmed);
+    if (decoded) return decoded;
+  }
+  if (trimmed.length <= SHORT_ID_LEN + 2) {
+    const stored = shares.get(trimmed);
+    if (stored && stored.expiresAt > Date.now()) return stored;
+  }
+  return null;
+}
+function statelessShareToken(record) {
+  return encodeShareToken(record);
+}
+function buildShortSharePath(record) {
+  return `/r/${statelessShareToken(record)}`;
+}
+function purgeExpiredShares() {
+  const now = Date.now();
+  let changed = false;
+  shares.forEach((record, id) => {
+    if (record.expiresAt <= now) {
+      shares.delete(id);
+      changed = true;
+    }
+  });
+  if (shares.size <= MAX_SHARES) {
+    if (changed) persistShareStore();
+    return;
+  }
+  const sorted = Array.from(shares.entries()).sort((a, b) => a[1].createdAt - b[1].createdAt);
+  const remove = sorted.slice(0, shares.size - MAX_SHARES);
+  for (const [id] of remove) shares.delete(id);
+  persistShareStore();
+}
+function generateShortId() {
+  const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  const bytes = randomBytes2(SHORT_ID_LEN);
+  return Array.from(bytes, (b) => chars[b % chars.length]).join("");
+}
+async function toPublicPayload(record, req) {
+  const q = record.quality || "360";
+  const publicPath = buildShortSharePath(record);
+  let dlink = null;
+  let upstreamHeaders = null;
+  let thumbnail = record.thumbnail ?? null;
+  let size = record.size;
+  if (record.url) {
+    try {
+      if (isDiskwalaUrl(record.url)) {
+        const dw = await resolveDiskwalaViaBackend(record.url);
+        if (dw?.directUrl) {
+          dlink = dw.directUrl;
+          upstreamHeaders = dw.headers ?? null;
+        }
+        if (dw?.thumbnail) thumbnail = dw.thumbnail;
+        if (dw?.sizeHuman) size = dw.sizeHuman;
+      } else {
+        const vb = await resolveViaVideoBackend(record.url);
+        if (vb?.directUrl) {
+          dlink = vb.directUrl;
+          upstreamHeaders = vb.headers ?? null;
+        }
+        if (vb?.thumbnail) thumbnail = vb.thumbnail;
+        if (vb?.sizeHuman) size = vb.sizeHuman;
+      }
+    } catch {
+    }
+  }
+  const cleanedFileName = cleanLowCpcKeywords(record.fileName);
+  const playbackId = createPlaybackSession({
+    uk: record.uk,
+    shareid: record.shareid,
+    fs_id: record.fs_id,
+    fileName: cleanedFileName,
+    quality: q,
+    size,
+    duration: record.duration,
+    thumbnail,
+    width: record.width,
+    height: record.height,
+    dlink,
+    shareUrl: record.url,
+    upstreamHeaders
+  });
+  const shareUrl = buildShareUrl(publicPath, req);
+  return {
+    ...buildProtectedPlaybackPayload(playbackId, {
+      id: record.id,
+      path: publicPath,
+      shareUrl,
+      shortUrl: shareUrl,
+      permanentUrl: shareUrl,
+      size,
+      thumbnail,
+      duration: record.duration ? Math.round(record.duration) : void 0,
+      backupToken: statelessShareToken(record),
+      expiresAt: record.expiresAt
+    })
+  };
+}
+var createShareSchema = external_exports.object({
+  playbackId: external_exports.string().min(8).max(256).optional(),
+  uk: external_exports.string().min(1).optional(),
+  shareid: external_exports.string().min(1).optional(),
+  fs_id: external_exports.string().min(1).optional(),
+  fileName: external_exports.string().min(1).max(512).optional(),
+  size: external_exports.string().optional(),
+  sizeBytes: external_exports.number().optional(),
+  thumbnail: external_exports.string().nullable().optional(),
+  url: external_exports.string().optional(),
+  duration: external_exports.number().optional(),
+  width: external_exports.number().optional(),
+  height: external_exports.number().optional(),
+  quality: external_exports.enum(["360", "480", "720", "1080", "1440", "2160"]).optional().default("360")
+}).refine(
+  (d) => Boolean(d.playbackId) || Boolean(d.uk) && Boolean(d.shareid) && Boolean(d.fs_id) && Boolean(d.fileName),
+  { message: "Invalid share data." }
+);
+async function handleTeraboxShareCreate(req, res) {
+  const parsed = createShareSchema.safeParse(req.body);
+  if (!parsed.success) {
+    res.status(400).json({ message: "Invalid share data." });
+    return;
+  }
+  purgeExpiredShares();
+  const now = Date.now();
+  const expiresAt = now + SHARE_TTL_MS;
+  let source;
+  if (parsed.data.playbackId) {
+    const session = getPlaybackSession(parsed.data.playbackId);
+    if (!session) {
+      res.status(400).json({ message: "Playback expired. Play the video again before sharing." });
+      return;
+    }
+    source = {
+      uk: session.uk,
+      shareid: session.shareid,
+      fs_id: session.fs_id,
+      fileName: session.fileName,
+      size: session.size,
+      duration: session.duration,
+      thumbnail: session.thumbnail ?? null,
+      width: session.width,
+      height: session.height,
+      url: session.shareUrl ?? void 0,
+      quality: parsed.data.quality ?? session.quality
+    };
+  } else {
+    source = {
+      uk: parsed.data.uk,
+      shareid: parsed.data.shareid,
+      fs_id: parsed.data.fs_id,
+      fileName: parsed.data.fileName,
+      size: parsed.data.size,
+      sizeBytes: parsed.data.sizeBytes,
+      thumbnail: parsed.data.thumbnail ?? null,
+      url: parsed.data.url,
+      quality: parsed.data.quality ?? "360"
+    };
+  }
+  const base = { ...source, createdAt: now, expiresAt };
+  let shortId = generateShortId();
+  while (shares.has(shortId)) shortId = generateShortId();
+  const record = { id: shortId, ...base };
+  shares.set(shortId, record);
+  persistShareStore();
+  const mainUrl = buildShareUrl(buildShortSharePath(record), req);
+  res.status(201).json({
+    ...await toPublicPayload(record, req),
+    shareUrl: mainUrl,
+    mainUrl,
+    permanentUrl: mainUrl
+  });
+}
+async function handleTeraboxShareGet(req, res) {
+  const id = String(req.params.id ?? "").trim();
+  const backup = typeof req.query.d === "string" ? req.query.d.trim() : "";
+  if (id && !/^[a-zA-Z0-9_-]{4,2048}$/.test(id)) {
+    res.status(400).json({ message: "Invalid share link." });
+    return;
+  }
+  if (!id && !backup) {
+    res.status(400).json({ message: "Invalid share link." });
+    return;
+  }
+  const record = resolveShareRecord(id, backup || null);
+  if (!record) {
+    res.status(404).json({ message: "This share link expired or does not exist." });
+    return;
+  }
+  res.json(await toPublicPayload(record, req));
+}
+async function handleTeraboxShareConfig(_req, res) {
+  res.json({ shareOrigin: getShareLinkBase() || null });
+}
+
+// server/terabox-guard.ts
+function allowedHosts() {
+  const hosts = /* @__PURE__ */ new Set(["localhost:5000", "127.0.0.1:5000", "localhost:5173", "localhost:3000"]);
+  const site = (process.env.SITE_HOST ?? "webnovacrew.com").trim();
+  if (site) {
+    hosts.add(site);
+    hosts.add(`www.${site.replace(/^www\./, "")}`);
+  }
+  if (process.env.VERCEL_URL) {
+    hosts.add(process.env.VERCEL_URL.trim());
+  }
+  const shareBase = getShareLinkBase();
+  if (shareBase) {
+    try {
+      hosts.add(new URL(shareBase).host);
+    } catch {
+    }
+  }
+  return Array.from(hosts);
+}
+function hostFromUrl(value) {
+  try {
+    return new URL(value).host;
+  } catch {
+    return null;
+  }
+}
+function requireTeraboxSameOrigin(req, res, next) {
+  const allowed = allowedHosts();
+  const reqHost = String(req.headers.host ?? "");
+  const originHost = req.headers.origin ? hostFromUrl(String(req.headers.origin)) : null;
+  const refererHost = req.headers.referer ? hostFromUrl(String(req.headers.referer)) : null;
+  const matchesHost = reqHost.endsWith(".vercel.app") || allowed.some((h) => reqHost === h || reqHost.split(":")[0] === h.split(":")[0]);
+  const originOk = !originHost || originHost.endsWith(".vercel.app") || allowed.some(
+    (h) => originHost === h || originHost === h.split(":")[0] || originHost.endsWith(`.${h.replace(/^www\./, "").split(":")[0]}`)
+  );
+  const refererOk = !refererHost || refererHost.endsWith(".vercel.app") || allowed.some(
+    (h) => refererHost === h || refererHost === h.split(":")[0] || refererHost.endsWith(`.${h.replace(/^www\./, "").split(":")[0]}`)
+  );
+  const ok = matchesHost && originOk && refererOk;
+  if (!ok && true) {
+    res.status(403).json({ message: "Forbidden." });
+    return;
+  }
+  next();
+}
+
+// server/player-guard.ts
+var BOT_UA_PATTERNS = [
+  /Googlebot/i,
+  /AdsBot-Google/i,
+  /Mediapartners-Google/i,
+  /Google-InspectionTool/i,
+  /APIs-Google/i,
+  /Bingbot/i,
+  /Slurp/i,
+  // Yahoo
+  /DuckDuckBot/i,
+  /Baiduspider/i,
+  /YandexBot/i,
+  /Sogou/i,
+  /Exabot/i,
+  /facebot/i,
+  /facebookexternalhit/i,
+  /LinkedInBot/i,
+  /Twitterbot/i,
+  /WhatsApp/i,
+  /TelegramBot/i,
+  /Discordbot/i,
+  /Slackbot/i,
+  /python-requests/i,
+  /python-urllib/i,
+  /Scrapy/i,
+  /curl\//i,
+  /wget\//i,
+  /axios\//i,
+  /got\//i,
+  /node-fetch/i,
+  /node-superagent/i,
+  /java\//i,
+  /okhttp/i,
+  /Postman/i,
+  /insomnia/i,
+  /HeadlessChrome/i,
+  /PhantomJS/i,
+  /Selenium/i,
+  /WebdriverIO/i,
+  /Puppeteer/i,
+  /Playwright/i,
+  /UptimeRobot/i,
+  /Pingdom/i,
+  /StatusCake/i,
+  /DatadogSynthetics/i,
+  /SiteCheck/i,
+  /MJ12bot/i,
+  /SemrushBot/i,
+  /AhrefsBot/i,
+  /DotBot/i,
+  /Rogerbot/i,
+  /CCBot/i,
+  /archive\.org_bot/i,
+  /ia_archiver/i
+];
+function isBotOrScraper(ua) {
+  if (!ua || ua.trim().length < 5) return true;
+  return BOT_UA_PATTERNS.some((pattern) => pattern.test(ua));
+}
+var BLOCKED_HTML = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>403 Forbidden</title>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+  <meta name="googlebot" content="noindex, nofollow" />
+  <meta name="Mediapartners-Google" content="noindex" />
+</head>
+<body>
+  <h1>403 - Access Restricted</h1>
+  <p>Automated access to this page is not permitted.</p>
+</body>
+</html>`;
+function requireHumanBrowser(req, res, next) {
+  const ua = req.headers["user-agent"];
+  if (isBotOrScraper(ua)) {
+    res.status(403).set({
+      "Content-Type": "text/html; charset=utf-8",
+      "X-Robots-Tag": "noindex, nofollow, noarchive, nosnippet",
+      "Cache-Control": "no-store, no-cache"
+    }).send(BLOCKED_HTML);
+    return;
+  }
+  res.set({
+    "X-Robots-Tag": "noindex, nofollow, noarchive, nosnippet, noimageindex",
+    "Cache-Control": "private, no-store, no-cache, must-revalidate",
+    "Pragma": "no-cache",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY",
+    "Content-Security-Policy": [
+      "default-src 'self'",
+      "media-src 'self' blob: https://*.1024terabox.com https://*.terabox.com",
+      "img-src 'self' data: blob: https://*.1024terabox.com https://*.terabox.com",
+      "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net",
+      "style-src 'self' 'unsafe-inline'",
+      "connect-src 'self' https://*.1024terabox.com https://*.terabox.com",
+      "frame-ancestors 'none'"
+    ].join("; "),
+    // Prevent embedding in iframes (screenshot via iframe)
+    "Permissions-Policy": "clipboard-read=(), clipboard-write=(), camera=(), microphone=(), display-capture=()"
+  });
+  next();
+}
+
 // server/traffic-tracker.ts
 var visitors = /* @__PURE__ */ new Map();
 var totalHits = 0;
@@ -39693,19 +41592,19 @@ function parseUserAgent(ua) {
   } else if (lowerUA.includes("ipad") || lowerUA.includes("tablet") || lowerUA.includes("playbook")) {
     deviceType = "Tablet";
   }
-  let os2 = "Unknown OS";
-  if (lowerUA.includes("windows")) os2 = "Windows";
-  else if (lowerUA.includes("android")) os2 = "Android";
-  else if (lowerUA.includes("iphone") || lowerUA.includes("ipad") || lowerUA.includes("ipod")) os2 = "iOS";
-  else if (lowerUA.includes("mac os") || lowerUA.includes("macintosh")) os2 = "macOS";
-  else if (lowerUA.includes("linux")) os2 = "Linux";
+  let os3 = "Unknown OS";
+  if (lowerUA.includes("windows")) os3 = "Windows";
+  else if (lowerUA.includes("android")) os3 = "Android";
+  else if (lowerUA.includes("iphone") || lowerUA.includes("ipad") || lowerUA.includes("ipod")) os3 = "iOS";
+  else if (lowerUA.includes("mac os") || lowerUA.includes("macintosh")) os3 = "macOS";
+  else if (lowerUA.includes("linux")) os3 = "Linux";
   let browser = "Unknown Browser";
   if (lowerUA.includes("chrome") && !lowerUA.includes("chromium") && !lowerUA.includes("edg")) browser = "Chrome";
   else if (lowerUA.includes("safari") && !lowerUA.includes("chrome")) browser = "Safari";
   else if (lowerUA.includes("firefox")) browser = "Firefox";
   else if (lowerUA.includes("edg")) browser = "Edge";
   else if (lowerUA.includes("opr") || lowerUA.includes("opera")) browser = "Opera";
-  return { isBot, deviceType, os: os2, browser };
+  return { isBot, deviceType, os: os3, browser };
 }
 async function logTraffic(req, res) {
   try {
@@ -39795,12 +41694,58 @@ function getTrafficStatus(req, res) {
 }
 
 // server/routes.ts
+var teraboxGuard = requireTeraboxSameOrigin;
 async function registerRoutes(httpServer2, app2) {
   app2.post("/api/contact", (req, res, next) => {
     void handleContactPost(req, res).catch(next);
   });
   app2.post("/api/careers/apply", (req, res, next) => {
     void handleJobApply(req, res).catch(next);
+  });
+  app2.post("/api/terabox/resolve", teraboxGuard, requireHumanBrowser, (req, res, next) => {
+    void handleTeraboxResolve(req, res).catch(next);
+  });
+  app2.get("/api/terabox/play/:playbackId", teraboxGuard, (req, res, next) => {
+    void handleTeraboxPlay(req, res).catch(next);
+  });
+  app2.get("/api/terabox/file/:playbackId", teraboxGuard, (req, res, next) => {
+    void handleTeraboxFile(req, res).catch(next);
+  });
+  app2.options("/api/terabox/file/:playbackId", (_req, res) => {
+    res.set({
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, HEAD, OPTIONS",
+      "Access-Control-Allow-Headers": "Range, Content-Type, Accept, Origin",
+      "Access-Control-Max-Age": "86400"
+    });
+    res.status(204).end();
+  });
+  app2.get("/api/terabox/stream", teraboxGuard, (req, res, next) => {
+    void handleTeraboxStream(req, res).catch(next);
+  });
+  app2.get("/api/terabox/ts", teraboxGuard, (req, res, next) => {
+    void handleTeraboxTs(req, res).catch(next);
+  });
+  app2.options("/api/terabox/ts", (_req, res) => {
+    res.set({
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, HEAD, OPTIONS",
+      "Access-Control-Allow-Headers": "Range, Content-Type, Accept, Origin",
+      "Access-Control-Max-Age": "86400"
+    });
+    res.status(204).end();
+  });
+  app2.post("/api/terabox/download", teraboxGuard, (req, res, next) => {
+    void handleTeraboxDownload(req, res).catch(next);
+  });
+  app2.post("/api/terabox/share", teraboxGuard, requireHumanBrowser, (req, res, next) => {
+    void handleTeraboxShareCreate(req, res).catch(next);
+  });
+  app2.get("/api/terabox/share/:id", requireHumanBrowser, (req, res, next) => {
+    void handleTeraboxShareGet(req, res).catch(next);
+  });
+  app2.get("/api/terabox/share-config", requireHumanBrowser, (req, res, next) => {
+    void handleTeraboxShareConfig(req, res).catch(next);
   });
   app2.post("/api/traffic/log", (req, res, next) => {
     void logTraffic(req, res).catch(next);

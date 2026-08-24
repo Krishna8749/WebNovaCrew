@@ -55,6 +55,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { VectorCardIllustration } from "@/components/illustrations/VectorCardIllustration";
+import { ContentProtectionShield } from "@/components/player/ContentProtectionShield";
 import { 
   INSURANCE_KEYWORDS_DIRECTORY, 
   HEALTH_KEYWORDS, 
@@ -733,6 +734,7 @@ export default function TeraboxOnlinePlayer() {
     : "Watch this video online in HD — free streaming player.";
 
   return (
+    <ContentProtectionShield>
     <div className="min-h-screen bg-[#0a0e17] text-slate-100 font-sans overflow-x-hidden">
       <SEO
         canonicalUrl={shareUrl || undefined}
@@ -1807,5 +1809,6 @@ export default function TeraboxOnlinePlayer() {
         </div>
       </footer>
     </div>
+    </ContentProtectionShield>
   );
 }
