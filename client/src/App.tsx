@@ -1,15 +1,13 @@
-import { Switch, Route, useLocation } from "wouter";
+import { Switch, Route } from "wouter";
 import { CookieConsent } from "@/components/ads/CookieConsent";
 import { AdSenseKeywordContext } from "@/components/ads/AdSenseKeywordContext";
 import { AdSenseRouteGuard } from "@/components/ads/AdSenseRouteGuard";
-import { isVideoProtectedRoute, isShareWatchRoute } from "@/lib/video-protected-routes";
 import { lazy, Suspense } from "react";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { WhatsAppFloat } from "@/components/widgets/WhatsAppFloat";
-import { TelegramFloat } from "@/components/widgets/TelegramFloat";
-import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
+
 
 // Loading component
 const PageLoader = () => (
@@ -136,7 +134,6 @@ const KuwaitEcommerceAppDevelopment = lazy(() => import("@/pages/locations/kuwai
 const KuwaitRestaurantAppDevelopment = lazy(() => import("@/pages/locations/kuwait-restaurant-app-development"));
 const KuwaitRealEstateAppDevelopment = lazy(() => import("@/pages/locations/kuwait-real-estate-app-development"));
 const KuwaitLogisticsAppDevelopment = lazy(() => import("@/pages/locations/kuwait-logistics-app-development"));
-const TeraboxOnlinePlayer = lazy(() => import("@/pages/terabox-online-player"));
 
 function Router() {
   return (
@@ -157,12 +154,7 @@ function Router() {
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-of-service" component={TermsOfService} />
       <Route path="/founder" component={Founder} />
-      <Route path="/terabox-online-player" component={TeraboxOnlinePlayer} />
-      <Route path="/terabox" component={TeraboxOnlinePlayer} />
-      <Route path="/r/:shareId" component={TeraboxOnlinePlayer} />
-      <Route path="/s/:shareId" component={TeraboxOnlinePlayer} />
-      <Route path="/v/:shareId" component={TeraboxOnlinePlayer} />
-      
+
       {/* Service Pages - SEO Optimized */}
       <Route path="/services/mobile-app-development" component={MobileAppDevelopment} />
       <Route path="/services/android-app-development" component={AndroidAppDevelopment} />
@@ -178,7 +170,7 @@ function Router() {
       <Route path="/services/react-native-development" component={ReactNativeDevelopment} />
       <Route path="/services/erp-crm-development" component={ERPCRMDevelopment} />
       <Route path="/services/ai-chatbot-development" component={AIChatbotDevelopment} />
-      
+
       {/* India Location Pages - Tier 1 Metro Cities */}
       <Route path="/locations/app-development-mumbai" component={AppDevelopmentMumbai} />
       <Route path="/locations/app-development-delhi" component={AppDevelopmentDelhi} />
@@ -188,10 +180,10 @@ function Router() {
       <Route path="/locations/app-development-kolkata" component={AppDevelopmentKolkata} />
       <Route path="/locations/app-development-pune" component={AppDevelopmentPune} />
       <Route path="/locations/app-development-ahmedabad" component={AppDevelopmentAhmedabad} />
-      
+
       {/* India Location Pages - Tier 2 Progress Cities */}
       <Route path="/locations/app-development-lucknow" component={AppDevelopmentLucknow} />
-      
+
       {/* Lucknow Area Pages */}
       <Route path="/locations/web-development-gomti-nagar" component={WebDevelopmentGomtiNagar} />
       <Route path="/locations/web-development-gomti-nagar-extension" component={WebDevelopmentGomtiNagarExtension} />
@@ -212,7 +204,7 @@ function Router() {
       <Route path="/locations/web-development-sultanpur-road" component={WebDevelopmentSultanpurRoad} />
       <Route path="/locations/web-development-shaheed-path" component={WebDevelopmentShaheedPath} />
       <Route path="/locations/web-development-sushant-golf-city" component={WebDevelopmentSushantGolfCity} />
-      
+
       <Route path="/locations/app-development-jaipur" component={AppDevelopmentJaipur} />
       <Route path="/locations/app-development-indore" component={AppDevelopmentIndore} />
       <Route path="/locations/app-development-bhopal" component={AppDevelopmentBhopal} />
@@ -226,14 +218,14 @@ function Router() {
       <Route path="/locations/app-development-noida" component={AppDevelopmentNoida} />
       <Route path="/locations/app-development-gurgaon" component={AppDevelopmentGurgaon} />
       <Route path="/locations/app-development-ghaziabad" component={AppDevelopmentGhaziabad} />
-      
+
       {/* India Location Pages - Tier 3 Fast-Growing Cities */}
       <Route path="/locations/app-development-ranchi" component={AppDevelopmentRanchi} />
       <Route path="/locations/app-development-raipur" component={AppDevelopmentRaipur} />
       <Route path="/locations/app-development-dehradun" component={AppDevelopmentDehradun} />
       <Route path="/locations/app-development-patna" component={AppDevelopmentPatna} />
       <Route path="/locations/app-development-nagpur" component={AppDevelopmentNagpur} />
-      
+
       {/* Kuwait Location Pages */}
       <Route path="/locations/app-development-kuwait-city" component={AppDevelopmentKuwaitCity} />
       <Route path="/locations/app-development-hawally" component={AppDevelopmentHawally} />
@@ -251,14 +243,14 @@ function Router() {
       <Route path="/locations/app-development-fintas" component={AppDevelopmentFintas} />
       <Route path="/locations/app-development-sabah-al-salem" component={AppDevelopmentSabahAlSalem} />
       <Route path="/locations/app-development-mubarak-al-kabeer" component={AppDevelopmentMubarakAlKabeer} />
-      
+
       {/* Locations Index & Kuwait Industry Pages */}
       <Route path="/locations" component={LocationsIndex} />
       <Route path="/locations/kuwait-ecommerce-app-development" component={KuwaitEcommerceAppDevelopment} />
       <Route path="/locations/kuwait-restaurant-app-development" component={KuwaitRestaurantAppDevelopment} />
       <Route path="/locations/kuwait-real-estate-app-development" component={KuwaitRealEstateAppDevelopment} />
       <Route path="/locations/kuwait-logistics-app-development" component={KuwaitLogisticsAppDevelopment} />
-      
+
       <Route component={NotFound} />
     </Switch>
     </Suspense>
@@ -266,18 +258,13 @@ function Router() {
 }
 
 function AppShell() {
-  const [location] = useLocation();
-  const videoProtected = isVideoProtectedRoute(location);
-  const isTerabox = location.includes("terabox") || isShareWatchRoute(location);
-
   return (
     <>
       <AdSenseRouteGuard />
-      {!videoProtected && <AdSenseKeywordContext />}
+      <AdSenseKeywordContext />
       <Router />
-      {!videoProtected && <CookieConsent />}
-      {!videoProtected && !isTerabox && <WhatsAppFloat />}
-      {!videoProtected && isTerabox && <TelegramFloat />}
+      <CookieConsent />
+      <WhatsAppFloat />
     </>
   );
 }
@@ -285,10 +272,8 @@ function AppShell() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <SmoothScrollProvider>
-        <Toaster />
-        <AppShell />
-      </SmoothScrollProvider>
+      <Toaster />
+      <AppShell />
     </QueryClientProvider>
   );
 }

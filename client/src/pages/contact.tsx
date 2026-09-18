@@ -4,7 +4,7 @@ import { SEO } from "@/components/seo/Head";
 import { LocalBusinessSchema, BreadcrumbSchema } from "@/components/seo/SchemaMarkup";
 import { FAQSection, homeFAQs } from "@/components/sections/FAQ";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock, MessageCircle, Globe, CheckCircle2, Calendar } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle, Globe, CheckCircle2, Calendar, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { LeadForm } from "@/components/forms/LeadForm";

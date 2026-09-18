@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
 import { z } from "zod";
-import { storage } from "./storage";
+import { storage } from "./storage.js";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1).max(200),

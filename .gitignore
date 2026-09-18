@@ -20,3 +20,4 @@ web-nova-crew-ai-company/
 
 # Runtime share link store (project root only)
 /data/
+.vercel
